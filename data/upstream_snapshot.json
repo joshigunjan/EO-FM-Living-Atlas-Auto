@@ -1,0 +1,10 @@
+{
+  "sources": {
+    "test": {
+      "name": "Test Source",
+      "repo": "test/repo",
+      "priority": "high",
+      "status": "ok"
+    }
+  }
+}

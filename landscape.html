@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landscape · EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero small">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">Method</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Landscape</p>
+      <h1>Interactive landscape</h1>
+      <p class="subtitle">Curated model map with configurable X–Y axes.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel controls-panel landscape-controls compact-landscape-controls">
+      <div class="toolbar landscape-toolbar dynamic-toolbar filter-only-toolbar">
+        <input id="landscapeSearch" type="search" placeholder="Search model, modality, task, architecture...">
+        <select id="landscapeOpen"><option value="">All access types</option></select>
+        <select id="landscapeModality"><option value="">All modalities</option></select>
+        <select id="landscapeTask"><option value="">All downstream tasks</option></select>
+        <select id="landscapeArchitecture"><option value="">All architectures</option></select>
+        <select id="landscapeFamily"><option value="">All modelling paradigms</option></select>
+        <label class="check"><input id="showLabels" type="checkbox"> Show labels</label>
+        <button id="landscapeReset">Reset</button>
+      </div>
+      <div id="axisHint" class="hint">Default: modality complexity × reported downstream evaluations.</div>
+    </section>
+
+    <section class="landscape-layout improved-landscape-layout">
+      <div class="panel landscape-panel improved-landscape-panel">
+        <div class="table-headline landscape-headline landscape-headline-v8">
+          <div>
+            <h2>Foundation-model landscape</h2>
+            <p id="landscapeCount" class="muted"></p>
+          </div>
+          <div class="axis-picker-card" aria-label="Landscape axis controls">
+            <label>X-axis
+              <select id="xMetric"></select>
+            </label>
+            <label>Y-axis
+              <select id="yMetric"></select>
+            </label>
+          </div>
+        </div>
+
+        <div class="legend-grid-v8">
+          <div class="legend-card-v8">
+            <div class="legend-title">Color: access</div>
+            <div class="legend" id="landscapeLegend"></div>
+          </div>
+          <div class="legend-card-v8">
+            <div class="legend-title">Shape: modelling paradigm</div>
+            <div class="shape-legend" id="familyLegend"></div>
+          </div>
+        </div>
+
+        <div id="plotWrap" class="plot-wrap improved-plot-wrap">
+          <svg id="landscapePlot" role="img" aria-label="Configurable scatter plot of EO foundation models"></svg>
+        </div>
+      </div>
+
+      <aside class="panel detail-panel landscape-detail-panel">
+        <p class="eyebrow dark">Selected model</p>
+        <h2 id="landscapeTitle">No model selected</h2>
+        <div id="landscapeDetails" class="details empty">Click a point on the landscape. The model summary and source links will open here.</div>
+      </aside>
+    </section>
+
+    <section class="panel compact-note"><b>Note.</b> Default positions use curated plotting fields; filters and axes are exploratory.</section>
+  </main>
+
+  <footer><p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p></footer>
+  <script src="landscape.js"></script>
+</body>
+</html>

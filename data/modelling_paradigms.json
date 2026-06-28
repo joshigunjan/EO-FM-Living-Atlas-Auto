@@ -1,0 +1,38 @@
+{
+  "transformer_masked": {
+    "label": "Transformer / masked-reconstruction encoder",
+    "short": "Transformer / MAE",
+    "shape": "circle",
+    "description": "Models dominated by Transformer-style visual encoders, masked image modelling, masked reconstruction, or reconstruction-oriented pretraining."
+  },
+  "joint_embedding": {
+    "label": "Joint-embedding / contrastive-predictive encoder",
+    "short": "Joint embedding",
+    "shape": "square",
+    "description": "Models dominated by contrastive learning, CLIP-style alignment, DINO/BYOL-style representation learning, JEPA, or predictive embedding alignment."
+  },
+  "vision_language": {
+    "label": "Vision-language / EO MLLM",
+    "short": "VLM / MLLM",
+    "shape": "triangle",
+    "description": "Vision-language models, multimodal LLMs, CLIP/VLM systems, chat models, VQA models, captioning models, and language-grounded EO models."
+  },
+  "state_space": {
+    "label": "State-space / sequence model",
+    "short": "State-space",
+    "shape": "diamond",
+    "description": "Models whose dominant architecture is based on Mamba, state-space models, or sequence-state modelling."
+  },
+  "embedding_field": {
+    "label": "Embedding product / representation field",
+    "short": "Embedding field",
+    "shape": "cross",
+    "description": "Models or products whose main output is a reusable geospatial embedding field or representation product rather than only a task-specific checkpoint."
+  },
+  "generative_hybrid": {
+    "label": "Any-to-any generative / hybrid multimodal system",
+    "short": "Generative / hybrid",
+    "shape": "downTriangle",
+    "description": "Any-to-any, multimodal generative, hybrid, or modality-to-modality EO systems that can synthesize or reconstruct across multiple observation streams."
+  }
+}

@@ -1,0 +1,106 @@
+name: Add model, benchmark, or dataset
+description: Suggest a model, benchmark, dataset, or tool for the EO-FM Living Atlas.
+title: "[Add]: "
+labels: [candidate-entry]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Model / benchmark / dataset name
+      placeholder: e.g., TerraMind, Copernicus-FM, GEO-Bench-VLM
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Original paper, DOI, arXiv, or project URL
+      placeholder: https://arxiv.org/abs/... or project URL
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Code repository URL
+      placeholder: https://github.com/...
+  - type: input
+    id: weights
+    attributes:
+      label: Model weights / Hugging Face / checkpoint URL
+      placeholder: https://huggingface.co/...
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Vision / multimodal EO FM
+        - Multimodal / generative EO FM
+        - SAR / radar-specialized FM
+        - Spectral / hyperspectral FM
+        - Earth-system / climate FM
+        - Vision-language / MLLM
+        - Benchmark
+        - Dataset
+        - Tool / agent
+    validations:
+      required: true
+  - type: textarea
+    id: modalities
+    attributes:
+      label: Modalities / sensors
+      description: List the modalities and sensors if known.
+      placeholder: Sentinel-1 SAR; Sentinel-2 optical; Landsat; GEDI; DEM; ERA5; text/captions...
+  - type: textarea
+    id: architecture
+    attributes:
+      label: Architecture
+      placeholder: ViT/MAE, Transformer, Mamba, CLIP, LLaVA-style MLLM, diffusion, JEPA...
+
+  - type: dropdown
+    id: modelling_paradigm
+    attributes:
+      label: Dominant modelling paradigm
+      description: Choose the closest family. This controls marker shape on the Landscape page.
+      options:
+        - Transformer / masked-reconstruction encoder
+        - Joint-embedding / contrastive-predictive encoder
+        - Vision-language / EO MLLM
+        - State-space / sequence model
+        - Embedding product / representation field
+        - Any-to-any generative / hybrid multimodal system
+        - Unsure / needs review
+
+  - type: dropdown
+    id: modality_complexity_tier
+    attributes:
+      label: Modality complexity tier
+      description: This controls the default X-position on the Landscape page.
+      options:
+        - Single-modality encoders
+        - Multi-modality encoders
+        - Vision-language / MLLM
+        - Generalist models
+        - Unsure / needs review
+  - type: input
+    id: reported_downstream_task_count
+    attributes:
+      label: Reported downstream task / evaluation count
+      description: Optional. Use the number reported in the paper if available.
+      placeholder: e.g., 7, 15, 22
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Downstream tasks
+      description: Be specific. Avoid only writing “many downstream tasks.”
+      placeholder: semantic segmentation; crop-type mapping; change detection; flood mapping; VQA; captioning; retrieval...
+    validations:
+      required: true
+  - type: textarea
+    id: openness
+    attributes:
+      label: Access / openness
+      placeholder: code open? weights open? dataset open? license?
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / caveats / LinkedIn post text
+      placeholder: Anything useful for review.

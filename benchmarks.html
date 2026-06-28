@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmarks · EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero compact-hero">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">Method</a>
+      </div>
+    </nav>
+    <div class="hero-content narrow">
+      <p class="eyebrow">Benchmark datasets</p>
+      <h1>Benchmarks and datasets</h1>
+      <p class="subtitle">Evaluation benchmarks, pre-training datasets, embedding resources, and dataset links detected from upstream EO-FM lists.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="benchmarkStats"></section>
+
+    <section class="panel controls-panel">
+      <div class="toolbar">
+        <input id="benchmarkSearch" type="search" placeholder="Search benchmark, dataset, task, modality, paper...">
+        <select id="typeFilter"><option value="">All benchmark/dataset types</option></select>
+        <select id="accessFilter"><option value="">All access types</option></select>
+        <button id="benchmarkResetBtn">Reset</button>
+      </div>
+      <div class="hint">Auto-detected from upstream benchmark, dataset, pre-training dataset, and embedding-data sections. Entries should be reviewed before being cited as verified.</div>
+    </section>
+
+    <section class="panel table-panel full-width-panel">
+      <div class="table-headline">
+        <div>
+          <h2>Benchmark and dataset catalogue</h2>
+          <p id="benchmarkResultCount" class="muted"></p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="benchmarksTable" class="benchmarks-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Title / scope</th>
+              <th>Tasks / attributes</th>
+              <th>Modalities</th>
+              <th>Access</th>
+              <th>Paper</th>
+              <th>Code</th>
+              <th>Dataset / project</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
+  </footer>
+
+  <script src="benchmarks.js"></script>
+</body>
+</html>

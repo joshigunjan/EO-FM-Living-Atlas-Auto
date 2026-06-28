@@ -1,0 +1,48 @@
+{
+  "project": "EO-FM Living Atlas",
+  "version": "v22-benchmarks-bootstrap",
+  "generated_on": "2026-06-25",
+  "catalogue_entries": 0,
+  "public_pages": [
+    "Catalogue",
+    "Landscape",
+    "Benchmarks",
+    "Add entry",
+    "Method"
+  ],
+  "primary_fields": [
+    "name",
+    "scope",
+    "category",
+    "modalities",
+    "architecture",
+    "downstream_tasks",
+    "openness",
+    "paper_url",
+    "code_url",
+    "weights_url",
+    "project_url"
+  ],
+  "source_note": "Catalogue rows should point to primary sources: original papers, official code repositories, official project pages, and official weight/model pages where available.",
+  "modelling_paradigms": 6,
+  "notes": "Catalogue includes explicit modelling_paradigm_key and modelling_paradigm fields used by the Landscape marker shapes.",
+  "landscape_default_fields": {
+    "x": "modality_complexity_score",
+    "y": "reported_downstream_task_count",
+    "note": "Default landscape uses explicit curated plotting fields rather than inferred tag counts."
+  },
+  "latest_update": "Added upstream-derived benchmark/dataset tab and push-trigger bootstrap run.",
+  "description": "An upstream-derived living catalogue of Earth observation foundation models, benchmarks, datasets, and related resources.",
+  "positioning": "Curated living companion resource for EO foundation model surveys.",
+  "catalogue_mode": "upstream_auto",
+  "entry_count": 0,
+  "source": "Generated from configured upstream awesome-list sources, then deduplicated and normalized. Benchmark/dataset entries are written separately to data/benchmarks.json.",
+  "review_note": "Entries are auto-detected from upstream lists and should be reviewed before being cited as verified catalogue data.",
+  "manual_seed_catalogue": "data/manual_seed_catalogue.json",
+  "benchmark_dataset_count": 0,
+  "benchmark_dataset_source": "Generated from upstream benchmark, dataset, pre-training dataset, and embedding-data sections.",
+  "benchmarks_generated_at": "2026-06-28T20:28:25+00:00",
+  "benchmark_dataset_count_excluded_from_model_catalogue": 0,
+  "generated_at": "2026-06-28T20:28:27+00:00",
+  "benchmark_dataset_tab": "data/benchmarks.json is generated from upstream benchmark, dataset, pre-training-dataset, and embedding-data sections."
+}

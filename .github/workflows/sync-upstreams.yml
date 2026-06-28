@@ -1,0 +1,82 @@
+name: Build upstream-derived EO-FM catalogue
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/catalogue.json"
+      - "data/catalogue.csv"
+      - "data/metadata.json"
+      - "data/benchmarks.json"
+      - "data/benchmarks.csv"
+      - "data/candidates/**"
+      - "data/parsed/**"
+      - "data/upstream_raw/**"
+      - "data/upstream_snapshot.json"
+      - "data/upstream_snapshot.current.json"
+  schedule:
+    # Twice a month, automatic only: 1st and 15th at 04:17 UTC.
+    # 04:17 avoids the top-of-hour Actions congestion window.
+    - cron: "17 4 1,15 * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout atlas
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check OpenAI API key
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY is required for the final LLM-enriched atlas build. Add it under Settings → Secrets and variables → Actions → New repository secret."
+            exit 1
+          fi
+
+      - name: Fetch upstream sources
+        run: python scripts/fetch_upstreams.py
+
+      - name: Parse upstream lists
+        run: python scripts/parse_awesome_lists.py
+
+      - name: Deduplicate upstream records
+        run: python scripts/detect_new_entries.py
+
+      - name: Fetch paper/code metadata
+        run: python scripts/fetch_metadata.py
+
+      - name: Extract structured catalogue fields
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python scripts/extract_candidate_entry.py
+
+      - name: Build public upstream-derived model catalogue
+        run: python scripts/build_upstream_catalogue.py
+
+      - name: Build benchmark and dataset catalogue
+        run: python scripts/build_benchmarks_catalogue.py
+
+      - name: Validate candidate records
+        run: python scripts/validate_candidate.py
+
+      - name: Commit generated catalogue to main
+        run: python scripts/commit_generated_catalogue.py

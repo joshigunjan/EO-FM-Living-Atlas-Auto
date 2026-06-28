@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">Method</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Curated EO-FM living catalogue</p>
+      <h1>Explore EO foundation models</h1>
+      <p class="subtitle">A living catalogue of EO foundation models, benchmark datasets, modalities, tasks, and source links.</p>
+      <p class="hero-actions"><a class="link-pill" href="landscape.html">Open landscape</a></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="stats"></section>
+
+    <section class="panel controls-panel">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search model, modality, task, architecture, sensor, dataset, paper...">
+        <select id="categoryFilter"><option value="">All categories</option></select>
+        <select id="opennessFilter"><option value="">All access types</option></select>
+        <select id="modalityFilter"><option value="">All modalities</option></select>
+        <select id="taskFilter"><option value="">All tasks</option></select>
+        <select id="paradigmFilter"><option value="">All modelling paradigms</option></select>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <div class="hint">Search by model, modality, task, sensor, architecture, or access.</div>
+    </section>
+
+    <section class="catalogue-layout">
+      <div class="panel table-panel">
+        <div class="table-headline">
+          <div>
+            <h2>Catalogue</h2>
+            <p id="resultCount" class="muted"></p>
+          </div>
+          <button id="clearSelection" class="ghost">Clear selection</button>
+        </div>
+        <div class="table-wrap">
+          <table id="catalogueTable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Scope</th>
+                <th>Paradigm</th>
+                <th>Modalities</th>
+                <th>Architecture</th>
+                <th>Downstream tasks</th>
+                <th>Access</th>
+                <th>Paper</th>
+                <th>Code</th>
+                <th>Weights</th>
+                <th>Project</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="panel detail-panel">
+        <div class="detail-title-row">
+          <div>
+            <p class="eyebrow dark">Entry details</p>
+            <h2 id="detailTitle">No entry selected</h2>
+          </div>
+        </div>
+        <div id="details" class="details empty">Click a row. Details open here next to the table.</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

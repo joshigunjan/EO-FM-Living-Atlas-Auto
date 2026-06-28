@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EO-FM Living Atlas catalogue",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "scope",
+      "category",
+      "downstream_tasks",
+      "modelling_paradigm",
+      "modelling_paradigm_key",
+      "modality_complexity_tier",
+      "modality_complexity_score",
+      "reported_downstream_task_count"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "input_modality": {
+        "type": "string"
+      },
+      "modality_tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "architecture": {
+        "type": "string"
+      },
+      "architecture_tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "task_tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "downstream_tasks": {
+        "type": "string"
+      },
+      "training_scale": {
+        "type": "string"
+      },
+      "openness": {
+        "type": "string",
+        "enum": [
+          "open",
+          "partial",
+          "closed",
+          "unknown"
+        ]
+      },
+      "openness_label": {
+        "type": "string"
+      },
+      "paper_url": {
+        "type": "string"
+      },
+      "code_url": {
+        "type": "string"
+      },
+      "weights_url": {
+        "type": "string"
+      },
+      "project_url": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "modelling_paradigm_key": {
+        "type": "string",
+        "enum": [
+          "transformer_masked",
+          "joint_embedding",
+          "vision_language",
+          "state_space",
+          "embedding_field",
+          "generative_hybrid"
+        ]
+      },
+      "modelling_paradigm": {
+        "type": "string"
+      },
+      "modality_complexity_tier_key": {
+        "type": "string",
+        "enum": [
+          "single_modality",
+          "multi_modality",
+          "vision_language",
+          "generalist"
+        ]
+      },
+      "modality_complexity_tier": {
+        "type": "string"
+      },
+      "modality_complexity_score": {
+        "type": "number"
+      },
+      "reported_downstream_task_count": {
+        "type": "integer"
+      },
+      "reported_downstream_task_count_basis": {
+        "type": "string"
+      },
+      "primary_source_url": {
+        "type": "string"
+      },
+      "source_provenance": {
+        "type": "string"
+      },
+      "last_updated": {
+        "type": "string"
+      }
+    }
+  }
+}

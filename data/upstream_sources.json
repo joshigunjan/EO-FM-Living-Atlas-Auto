@@ -1,0 +1,47 @@
+[
+  {
+    "id": "jackbo-awesome-remote-sensing-foundation-models",
+    "name": "Awesome Remote Sensing Foundation Models",
+    "repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+    "branch": "main",
+    "file": "README.md",
+    "priority": "high",
+    "raw_url": "https://raw.githubusercontent.com/Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models/main/README.md"
+  },
+  {
+    "id": "xiaoaoran-awesome-rsfms",
+    "name": "awesome-RSFMs",
+    "repo": "xiaoaoran/awesome-RSFMs",
+    "branch": "master",
+    "file": "README.md",
+    "priority": "high",
+    "raw_url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md"
+  },
+  {
+    "id": "licongren-awesome-remote-sensing-foundation-models",
+    "name": "Awesome Remote Sensing Foundation Models mirror",
+    "repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+    "branch": "main",
+    "file": "README.md",
+    "priority": "medium",
+    "raw_url": "https://raw.githubusercontent.com/licongren/Awesome-Remote-Sensing-Foundation-Models/main/README.md"
+  },
+  {
+    "id": "memoryecho-geospatial-foundation-models",
+    "name": "Awesome Geospatial Foundation Models",
+    "repo": "MemoryEchoTech/awesome-geospatial-foundation-models",
+    "branch": "main",
+    "file": "README.md",
+    "priority": "medium",
+    "raw_url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md"
+  },
+  {
+    "id": "homayounrezaie-awesome-geoai",
+    "name": "awesome-geoai",
+    "repo": "homayounrezaie/awesome-geoai",
+    "branch": "main",
+    "file": "README.md",
+    "priority": "low",
+    "raw_url": "https://raw.githubusercontent.com/homayounrezaie/awesome-geoai/main/README.md"
+  }
+]

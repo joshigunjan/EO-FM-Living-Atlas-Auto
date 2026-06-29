@@ -110,6 +110,45 @@ def unique(values: list[str]) -> list[str]:
     return out
 
 
+
+BAD_MODEL_NAMES = {"", "-", "—", "–", "n/a", "na", "none", "unknown", "entry", "unnamed candidate"}
+
+
+def clean_name_value(value: str) -> str:
+    value = strip_md(value or "").strip()
+    if value.lower() in BAD_MODEL_NAMES:
+        return ""
+    return value
+
+
+def name_from_url(url: str) -> str:
+    url = (url or "").split("?")[0].rstrip("/")
+    if not url:
+        return ""
+    parts = [x for x in url.split("/") if x]
+    lower = url.lower()
+    if "github.com" in lower and len(parts) >= 2:
+        return clean_name_value(parts[-1])
+    if "huggingface.co" in lower and len(parts) >= 2:
+        return clean_name_value(parts[-1])
+    return ""
+
+
+def name_from_title(title: str) -> str:
+    title = strip_md(title or "").strip()
+    if ":" not in title:
+        return ""
+    prefix = clean_name_value(title.split(":", 1)[0])
+    if not prefix:
+        return ""
+    low = prefix.lower()
+    if low.startswith(("a ", "an ", "the ", "towards ", "toward ", "review ", "survey ")):
+        return ""
+    if len(prefix.split()) > 5 or len(prefix) > 45:
+        return ""
+    return prefix
+
+
 def make_candidate(group: list[dict], sync_date: str) -> dict:
     names = unique([r.get("name", "") for r in group])
     titles = unique([r.get("title", "") for r in group])
@@ -120,7 +159,8 @@ def make_candidate(group: list[dict], sync_date: str) -> dict:
     all_urls = unique([u for r in group for u in r.get("all_urls", [])])
 
     url_names = [name_from_url(u) for u in (code_urls + weights_urls + project_urls)]
-    name = choose_first(names) or choose_first(url_names) or choose_first(titles) or "Unnamed candidate"
+    title_names = [name_from_title(t) for t in titles]
+    name = choose_first(names) or choose_first(url_names) or choose_first(title_names) or "Unnamed candidate"
     title = choose_first(titles) or name
     text_blob = "\n".join([name, title] + [r.get("raw_row", "") for r in group])
     modality_tags = infer_modality_tags(text_blob)

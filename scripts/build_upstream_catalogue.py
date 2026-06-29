@@ -107,9 +107,92 @@ def is_benchmark_like(c: dict) -> bool:
     return False
 
 
+
+BAD_MODEL_NAMES_PUBLIC = {"", "-", "—", "–", "n/a", "na", "none", "unknown", "entry", "unnamed candidate", "unnamed entry"}
+
+PAPER_TITLE_STARTS = (
+    "a ", "an ", "the ", "towards ", "toward ",
+    "a review", "review of", "survey of", "a survey",
+    "a genealogy", "challenges and applications",
+    "self-supervised learning of", "self-supervised vision transformers for",
+)
+
+
+def _clean_public_name(value: str) -> str:
+    value = str(value or "").strip()
+    if value.lower() in BAD_MODEL_NAMES_PUBLIC:
+        return ""
+    return value
+
+
+def _url_tail_name(url: str) -> str:
+    url = str(url or "").split("?")[0].rstrip("/")
+    if not url:
+        return ""
+    parts = [p for p in url.split("/") if p]
+    lower = url.lower()
+    if ("github.com" in lower or "huggingface.co" in lower) and len(parts) >= 2:
+        return _clean_public_name(parts[-1])
+    return ""
+
+
+def _title_prefix_name(title: str) -> str:
+    title = str(title or "").strip()
+    if ":" not in title:
+        return ""
+    prefix = _clean_public_name(title.split(":", 1)[0])
+    if not prefix:
+        return ""
+    low = prefix.lower()
+    if low.startswith(("a ", "an ", "the ", "towards ", "toward ", "review ", "survey ")):
+        return ""
+    if len(prefix.split()) > 5 or len(prefix) > 45:
+        return ""
+    return prefix
+
+
+def _looks_like_paper_title(name: str) -> bool:
+    n = str(name or "").strip()
+    low = n.lower()
+    if low.startswith(PAPER_TITLE_STARTS):
+        return True
+    # Long prose-like names are usually paper titles, not model names.
+    if len(n.split()) > 8 and ":" not in n:
+        return True
+    return False
+
+
+def choose_public_model_name(c: dict) -> str:
+    candidates = []
+
+    candidates.append(c.get("name", ""))
+
+    for alias in c.get("aliases", []) or []:
+        candidates.append(alias)
+
+    for field in ["code_url", "weights_url", "project_url"]:
+        candidates.append(_url_tail_name(c.get(field, "")))
+
+    candidates.append(_title_prefix_name(c.get("title", "")))
+
+    for ev in c.get("source_evidence", []) or []:
+        if isinstance(ev, dict):
+            candidates.append(ev.get("detected_name", ""))
+
+    for name in candidates:
+        name = _clean_public_name(name)
+        if not name:
+            continue
+        if _looks_like_paper_title(name):
+            continue
+        return name
+
+    return ""
+
+
 def to_catalogue_entry(c: dict, used_ids: Counter) -> dict:
     title = (c.get("title") or c.get("name") or "").strip()
-    name = (c.get("name") or title.split(":", 1)[0] or "Unnamed entry").strip()
+    name = choose_public_model_name(c) or "Unnamed entry"
     category = (c.get("category") or "Upstream-listed EO-FM entry").strip()
     source_evidence = c.get("source_evidence") or []
     if category == "Upstream candidate" and source_evidence:
@@ -272,12 +355,13 @@ def main() -> int:
 
     used_ids: Counter = Counter()
 
-    # Fully automated public catalogue:
-    # publish all upstream-derived model candidates.
-    # Benchmark/dataset-like records are excluded here and written to data/benchmarks.json.
+    # Fully automated model catalogue:
+    # publish every upstream-derived candidate that has an actual model/framework/repository name.
+    # Do not publish paper-only rows, reviews, surveys, or long paper titles as model names.
     model_candidates = [c for c in candidates if not is_benchmark_like(c)]
+    publishable_candidates = [c for c in model_candidates if choose_public_model_name(c)]
 
-    entries = [to_catalogue_entry(c, used_ids) for c in model_candidates]
+    entries = [to_catalogue_entry(c, used_ids) for c in publishable_candidates]
     entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
 
     dump_json(OUT_PATH, entries)
@@ -285,21 +369,25 @@ def main() -> int:
 
     metadata = load_json(META_PATH, {}) or {}
     metadata.update({
-        "catalogue_mode": "fully_automated_upstream_catalogue",
+        "catalogue_mode": "fully_automated_named_model_catalogue",
         "entry_count": len(entries),
         "auto_candidates_detected": len(candidates),
+        "auto_model_candidates_detected": len(model_candidates),
         "auto_model_entries_published": len(entries),
+        "paper_or_unnamed_candidates_held_for_review": len(model_candidates) - len(publishable_candidates),
         "benchmark_dataset_count_excluded_from_model_catalogue": len(candidates) - len(model_candidates),
-        "source": "Public catalogue is generated automatically from configured upstream awesome-list sources, then deduplicated, metadata-enriched, and LLM-normalized.",
+        "source": "Public catalogue is generated automatically from upstream awesome-list sources, but only actual named model/framework/repository entries are published as model entries. Paper-only rows remain in data/candidates for review.",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "review_note": "Entries are automatically generated and should be treated as upstream-derived candidates unless manually verified.",
+        "review_note": "Long paper titles, surveys, reviews, and unnamed paper-only rows are not treated as model names.",
         "manual_seed_catalogue": str(SEED_PATH.relative_to(DATA.parent)) if SEED_PATH.exists() else "",
     })
     dump_json(META_PATH, metadata)
 
-    print(f"Wrote fully automated public catalogue with {len(entries)} model entries.")
+    print(f"Wrote fully automated named-model catalogue with {len(entries)} entries.")
     print(f"Total auto candidates detected: {len(candidates)}")
-    print(f"Benchmark/dataset entries excluded from model catalogue: {len(candidates) - len(model_candidates)}")
+    print(f"Auto model candidates detected: {len(model_candidates)}")
+    print(f"Published named model entries: {len(entries)}")
+    print(f"Paper/unnamed candidates held for review: {len(model_candidates) - len(publishable_candidates)}")
     return 0
 
 

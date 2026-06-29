@@ -19,6 +19,7 @@ def main() -> int:
         return 0
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     run(["git", "commit", "-m", f"Refresh upstream-derived catalogue ({today})"])
+    run(["git", "pull", "--rebase", "origin", "main"], check=False)
     run(["git", "push"])
     return 0
 

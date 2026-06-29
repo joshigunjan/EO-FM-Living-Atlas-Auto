@@ -1,9 +1,50 @@
 {
+  "fetched_at": "2026-06-29T02:06:29+00:00",
   "sources": {
-    "test": {
-      "name": "Test Source",
-      "repo": "test/repo",
+    "jackbo-awesome-remote-sensing-foundation-models": {
+      "name": "Awesome Remote Sensing Foundation Models",
+      "repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+      "url": "https://raw.githubusercontent.com/Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models/main/README.md",
+      "file": "README.md",
       "priority": "high",
+      "sha256": "b888c59624ecbd04ddc6768063c0314703555d8680092447c33b78fd2e407a4a",
+      "line_count": 464,
+      "status": "ok"
+    },
+    "xiaoaoran-awesome-rsfms": {
+      "name": "awesome-RSFMs",
+      "repo": "xiaoaoran/awesome-RSFMs",
+      "url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md",
+      "priority": "high",
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md"
+    },
+    "licongren-awesome-remote-sensing-foundation-models": {
+      "name": "Awesome Remote Sensing Foundation Models mirror",
+      "repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+      "url": "https://raw.githubusercontent.com/licongren/Awesome-Remote-Sensing-Foundation-Models/main/README.md",
+      "file": "README.md",
+      "priority": "medium",
+      "sha256": "86771251440b259af80e87797adb0d631aec27e614977e93d5f3f07e5dc16abd",
+      "line_count": 143,
+      "status": "ok"
+    },
+    "memoryecho-geospatial-foundation-models": {
+      "name": "Awesome Geospatial Foundation Models",
+      "repo": "MemoryEchoTech/awesome-geospatial-foundation-models",
+      "url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md",
+      "priority": "medium",
+      "status": "failed",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md"
+    },
+    "homayounrezaie-awesome-geoai": {
+      "name": "awesome-geoai",
+      "repo": "homayounrezaie/awesome-geoai",
+      "url": "https://raw.githubusercontent.com/homayounrezaie/awesome-geoai/main/README.md",
+      "file": "README.md",
+      "priority": "low",
+      "sha256": "35aa3d22b473fa5847886095f7229be57daafd6a32cf71a3ea8c1bfc47c948c7",
+      "line_count": 35,
       "status": "ok"
     }
   }

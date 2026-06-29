@@ -1,0 +1,27 @@
+{
+  "candidate_count": 319,
+  "duplicate_ids": [
+    "entry",
+    "satmae",
+    "cross-scale-mae",
+    "ringmo-lite",
+    "spectralgpt",
+    "bfm",
+    "skysense",
+    "mmearth",
+    "ctxmim",
+    "graft",
+    "fmow-s2",
+    "vision-foundation-models-in-remote-sensing"
+  ],
+  "error_count": 1,
+  "errors": [
+    {
+      "path": [
+        "id"
+      ],
+      "message": "Duplicate candidate ids: ['entry', 'satmae', 'cross-scale-mae', 'ringmo-lite', 'spectralgpt', 'bfm', 'skysense', 'mmearth', 'ctxmim', 'graft', 'fmow-s2', 'vision-foundation-models-in-remote-sensing']"
+    }
+  ],
+  "note": "Candidate entries may still need scientific review even when schema validation passes."
+}

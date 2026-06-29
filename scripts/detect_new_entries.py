@@ -65,12 +65,39 @@ def cluster_records(records: list[dict]) -> list[list[dict]]:
     return list(groups.values())
 
 
+BAD_MODEL_NAMES = {"", "-", "—", "–", "n/a", "na", "none", "unknown", "entry", "unnamed candidate"}
+
+
+def clean_name_value(value: str) -> str:
+    value = strip_md(value or "").strip()
+    if value.lower() in BAD_MODEL_NAMES:
+        return ""
+    return value
+
+
+def name_from_url(url: str) -> str:
+    url = (url or "").split("?")[0].rstrip("/")
+    if not url:
+        return ""
+    parts = [p for p in url.split("/") if p]
+    lower = url.lower()
+
+    if "github.com" in lower and len(parts) >= 2:
+        return clean_name_value(parts[-1])
+    if "huggingface.co" in lower and len(parts) >= 2:
+        return clean_name_value(parts[-1])
+
+    return ""
+
+
 def choose_first(values: list[str]) -> str:
-    vals = [strip_md(v) for v in values if strip_md(v)]
+    vals = [clean_name_value(v) for v in values]
+    vals = [v for v in vals if v]
     if not vals:
         return ""
-    # Prefer shorter names, but avoid single-letter junk.
-    vals = sorted(vals, key=lambda x: (len(x) < 2, len(x)))
+
+    # Prefer compact repo/model names over long paper titles.
+    vals = sorted(vals, key=lambda x: (len(x) > 60, len(x)))
     return vals[0]
 
 
@@ -92,7 +119,8 @@ def make_candidate(group: list[dict], sync_date: str) -> dict:
     project_urls = unique([r.get("project_url", "") for r in group])
     all_urls = unique([u for r in group for u in r.get("all_urls", [])])
 
-    name = choose_first(names) or choose_first(titles) or "Unnamed candidate"
+    url_names = [name_from_url(u) for u in (code_urls + weights_urls + project_urls)]
+    name = choose_first(names) or choose_first(url_names) or choose_first(titles) or "Unnamed candidate"
     title = choose_first(titles) or name
     text_blob = "\n".join([name, title] + [r.get("raw_row", "") for r in group])
     modality_tags = infer_modality_tags(text_blob)
@@ -190,13 +218,15 @@ def main() -> int:
         cand = make_candidate(group, sync_date)
         group_keys = set(cand.get("deduplication_keys", []))
         weak_name = normalize_name(cand.get("name", ""))
+        # Full automated rebuild mode:
+        # keep every upstream-derived cluster in latest-candidates.json.
+        # Do not suppress entries just because they match the previous public catalogue.
         if group_keys & verified_keys or (weak_name and f"verified_name:{weak_name}" in verified_keys):
             matched_existing.append({
                 "matched_candidate_name": cand.get("name"),
                 "deduplication_keys": sorted(group_keys & verified_keys),
                 "source_evidence": cand.get("source_evidence", []),
             })
-            continue
         candidates.append(cand)
         if weak_name:
             weak_name_groups[weak_name].append(cand)

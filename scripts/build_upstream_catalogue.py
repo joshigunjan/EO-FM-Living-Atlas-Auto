@@ -268,47 +268,38 @@ def merge_public_entries(seed_entries: list[dict], auto_entries: list[dict]) -> 
 
 def main() -> int:
     path = candidate_input_path()
-
-    seed_entries = load_json(SEED_PATH, []) if SEED_PATH.exists() else []
     candidates = load_json(path, []) if path else []
 
     used_ids: Counter = Counter()
-    for entry in seed_entries:
-        if entry.get("id"):
-            used_ids[str(entry["id"])] += 1
 
+    # Fully automated public catalogue:
+    # publish all upstream-derived model candidates.
+    # Benchmark/dataset-like records are excluded here and written to data/benchmarks.json.
     model_candidates = [c for c in candidates if not is_benchmark_like(c)]
-    publishable_candidates = [c for c in model_candidates if is_high_quality_auto_candidate(c)]
 
-    auto_entries = [to_catalogue_entry(c, used_ids) for c in publishable_candidates]
-    auto_entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
-
-    entries = merge_public_entries(seed_entries, auto_entries)
+    entries = [to_catalogue_entry(c, used_ids) for c in model_candidates]
+    entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
 
     dump_json(OUT_PATH, entries)
     write_csv(entries)
 
     metadata = load_json(META_PATH, {}) or {}
     metadata.update({
-        "catalogue_mode": "curated_seed_plus_reviewed_auto",
+        "catalogue_mode": "fully_automated_upstream_catalogue",
         "entry_count": len(entries),
-        "curated_seed_count": len(seed_entries),
-        "auto_candidates_detected": len(model_candidates),
-        "auto_candidates_published": len(auto_entries),
-        "auto_candidates_held_for_review": len(model_candidates) - len(publishable_candidates),
+        "auto_candidates_detected": len(candidates),
+        "auto_model_entries_published": len(entries),
         "benchmark_dataset_count_excluded_from_model_catalogue": len(candidates) - len(model_candidates),
-        "source": "Public catalogue uses curated seed entries plus only high-confidence LLM-enriched upstream additions. Low-confidence upstream candidates remain in data/candidates/ for curator review.",
+        "source": "Public catalogue is generated automatically from configured upstream awesome-list sources, then deduplicated, metadata-enriched, and LLM-normalized.",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "review_note": "Raw upstream candidates are not published unless they have a real model name and non-low-confidence structured extraction.",
+        "review_note": "Entries are automatically generated and should be treated as upstream-derived candidates unless manually verified.",
         "manual_seed_catalogue": str(SEED_PATH.relative_to(DATA.parent)) if SEED_PATH.exists() else "",
     })
     dump_json(META_PATH, metadata)
 
-    print(f"Wrote public catalogue with {len(entries)} entries.")
-    print(f"Curated seed entries: {len(seed_entries)}")
-    print(f"Auto candidates detected: {len(model_candidates)}")
-    print(f"Auto candidates published: {len(auto_entries)}")
-    print(f"Auto candidates held for review: {len(model_candidates) - len(publishable_candidates)}")
+    print(f"Wrote fully automated public catalogue with {len(entries)} model entries.")
+    print(f"Total auto candidates detected: {len(candidates)}")
+    print(f"Benchmark/dataset entries excluded from model catalogue: {len(candidates) - len(model_candidates)}")
     return 0
 
 

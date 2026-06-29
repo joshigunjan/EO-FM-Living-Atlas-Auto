@@ -18,6 +18,42 @@
     "note": "Same normalized name but not merged by strong key. Review manually; this may be different versions/releases."
   },
   {
+    "normalized_name": "unnamedcandidate",
+    "entries": [
+      {
+        "id": "unnamed-candidate",
+        "name": "Unnamed candidate",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+        "code_url": ""
+      },
+      {
+        "id": "unnamed-candidate",
+        "name": "Unnamed candidate",
+        "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
+        "code_url": ""
+      },
+      {
+        "id": "unnamed-candidate",
+        "name": "Unnamed candidate",
+        "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
+        "code_url": ""
+      },
+      {
+        "id": "unnamed-candidate",
+        "name": "Unnamed candidate",
+        "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
+        "code_url": ""
+      },
+      {
+        "id": "unnamed-candidate",
+        "name": "Unnamed candidate",
+        "paper_url": "https://arxiv.org/abs/2503.00743",
+        "code_url": ""
+      }
+    ],
+    "note": "Same normalized name but not merged by strong key. Review manually; this may be different versions/releases."
+  },
+  {
     "normalized_name": "crossscalemae",
     "entries": [
       {

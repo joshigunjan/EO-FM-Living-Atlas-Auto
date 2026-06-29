@@ -2725,8 +2725,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "a-self-supervised-cross-modal-remote-sensing-foundation-model-with-multi-domain-representation-and-cross-domain-fusion",
-    "name": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
     "title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -4766,8 +4766,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "masked-feature-modeling-for-generative-self-supervised-representation-learning-of-high-resolution-remote-sensing-images",
-    "name": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
     "title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -5680,8 +5680,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "lightweight-and-efficient-a-family-of-multimodal-earth-observation-foundation-models",
-    "name": "Lightweight and Efficient: A Family of Multimodal Earth Observation Foundation Models",
+    "id": "lightweight-and-efficient",
+    "name": "Lightweight and Efficient",
     "title": "Lightweight and Efficient: A Family of Multimodal Earth Observation Foundation Models",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -6765,8 +6765,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "a-multimodal-unified-representation-learning-framework-with-masked-image-modeling-for-remote-sensing-images",
-    "name": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
     "title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -10729,8 +10729,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "a-complex-valued-sar-foundation-model-based-on-physically-inspired-representation-learning",
-    "name": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
     "title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -14081,8 +14081,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "quality-driven-curation-of-remote-sensing-vision-language-data-via-learned-scoring-models",
-    "name": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
     "title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
@@ -16263,8 +16263,8 @@
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
-    "id": "remote-sensing-large-vision-language-model-semantic-augmented-multi-level-alignment-and-semantic-aware-expert-modeling",
-    "name": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
+    "id": "remote-sensing-large-vision-language-model",
+    "name": "Remote Sensing Large Vision-Language Model",
     "title": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
     "resource_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",

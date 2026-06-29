@@ -1225,47 +1225,6 @@
     "needs_review": true
   },
   {
-    "id": "a-complex-valued-sar-foundation-model-based-on-physically-inspired-representation-learning",
-    "name": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
-    "title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
-    "resource_type": "model",
-    "benchmark_type": "Benchmark / dataset",
-    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
-    "tasks": "To be verified from the primary paper or benchmark description.",
-    "modalities": "SAR",
-    "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://doi.org/10.1109/tip.2026.3652417",
-      "doi:10.1109/tip.2026.3652417"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
     "id": "a-genealogy-of-foundation-models-in-remote-sensing",
     "name": "A Genealogy of Foundation Models in Remote Sensing",
     "title": "A Genealogy of Foundation Models in Remote Sensing",
@@ -1307,47 +1266,6 @@
     "needs_review": true
   },
   {
-    "id": "a-multimodal-unified-representation-learning-framework-with-masked-image-modeling-for-remote-sensing-images",
-    "name": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
-    "title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
-    "resource_type": "model",
-    "benchmark_type": "Benchmark / dataset",
-    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
-    "tasks": "To be verified from the primary paper or benchmark description.",
-    "modalities": "Needs review",
-    "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://doi.org/10.1109/tgrs.2024.3494244",
-      "doi:10.1109/tgrs.2024.3494244"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
     "id": "a-review-of-challenges-and-applications-in-remote-sensing-foundation-models",
     "name": "A Review of Challenges and Applications in Remote Sensing Foundation Models",
     "title": "A Review of Challenges and Applications in Remote Sensing Foundation Models",
@@ -1382,60 +1300,6 @@
     "deduplication_keys": [
       "paper_url:https://doi.org/10.1109/igarss55030.2025.11242732",
       "doi:10.1109/igarss55030.2025.11242732"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "a-self-supervised-cross-modal-remote-sensing-foundation-model-with-multi-domain-representation-and-cross-domain-fusion",
-    "name": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
-    "title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
-    "resource_type": "model",
-    "benchmark_type": "Benchmark / dataset",
-    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
-    "tasks": "To be verified from the primary paper or benchmark description.",
-    "modalities": "Needs review",
-    "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10282433"
     ],
     "conflicts": [],
     "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
@@ -5748,8 +5612,8 @@
     "needs_review": true
   },
   {
-    "id": "lightweight-and-efficient-a-family-of-multimodal-earth-observation-foundation-models",
-    "name": "Lightweight and Efficient: A Family of Multimodal Earth Observation Foundation Models",
+    "id": "lightweight-and-efficient",
+    "name": "Lightweight and Efficient",
     "title": "Lightweight and Efficient: A Family of Multimodal Earth Observation Foundation Models",
     "resource_type": "model",
     "benchmark_type": "Benchmark / dataset",
@@ -6046,47 +5910,6 @@
       "paper_url:https://doi.org/10.1109/tgrs.2026.3652100",
       "github:hsg-aiml/mapex",
       "doi:10.1109/tgrs.2026.3652100"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "masked-feature-modeling-for-generative-self-supervised-representation-learning-of-high-resolution-remote-sensing-images",
-    "name": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
-    "title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
-    "resource_type": "model",
-    "benchmark_type": "Benchmark / dataset",
-    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
-    "tasks": "To be verified from the primary paper or benchmark description.",
-    "modalities": "Needs review",
-    "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://doi.org/10.1109/jstars.2024.3385420",
-      "doi:10.1109/jstars.2024.3385420"
     ],
     "conflicts": [],
     "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
@@ -7429,47 +7252,6 @@
     "needs_review": true
   },
   {
-    "id": "quality-driven-curation-of-remote-sensing-vision-language-data-via-learned-scoring-models",
-    "name": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
-    "title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
-    "resource_type": "model",
-    "benchmark_type": "Benchmark / dataset",
-    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
-    "tasks": "To be verified from the primary paper or benchmark description.",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2503.00743",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "-",
-        "detected_title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2503.00743",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2503.00743",
-      "paper_url:https://arxiv.org/abs/2503.00743"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
     "id": "ramen",
     "name": "RAMEN",
     "title": "RAMEN: Resolution-Adjustable Multimodal Encoder for Earth Observation",
@@ -7553,8 +7335,8 @@
     "needs_review": true
   },
   {
-    "id": "remote-sensing-large-vision-language-model-semantic-augmented-multi-level-alignment-and-semantic-aware-expert-modeling",
-    "name": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
+    "id": "remote-sensing-large-vision-language-model",
+    "name": "Remote Sensing Large Vision-Language Model",
     "title": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
     "resource_type": "model",
     "benchmark_type": "Benchmark / dataset",
@@ -11353,6 +11135,224 @@
       }
     ],
     "deduplication_keys": [],
+    "conflicts": [],
+    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "unnamed-candidate",
+    "name": "Unnamed candidate",
+    "title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+    "resource_type": "model",
+    "benchmark_type": "Benchmark / dataset",
+    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
+    "tasks": "To be verified from the primary paper or benchmark description.",
+    "modalities": "Needs review",
+    "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models",
+      "Awesome Remote Sensing Foundation Models mirror"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://ieeexplore.ieee.org/abstract/document/10282433"
+    ],
+    "conflicts": [],
+    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "unnamed-candidate-2",
+    "name": "Unnamed candidate",
+    "title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
+    "resource_type": "model",
+    "benchmark_type": "Benchmark / dataset",
+    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
+    "tasks": "To be verified from the primary paper or benchmark description.",
+    "modalities": "Needs review",
+    "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://doi.org/10.1109/jstars.2024.3385420",
+      "doi:10.1109/jstars.2024.3385420"
+    ],
+    "conflicts": [],
+    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "unnamed-candidate-3",
+    "name": "Unnamed candidate",
+    "title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
+    "resource_type": "model",
+    "benchmark_type": "Benchmark / dataset",
+    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
+    "tasks": "To be verified from the primary paper or benchmark description.",
+    "modalities": "Needs review",
+    "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://doi.org/10.1109/tgrs.2024.3494244",
+      "doi:10.1109/tgrs.2024.3494244"
+    ],
+    "conflicts": [],
+    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "unnamed-candidate-4",
+    "name": "Unnamed candidate",
+    "title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
+    "resource_type": "model",
+    "benchmark_type": "Benchmark / dataset",
+    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
+    "tasks": "To be verified from the primary paper or benchmark description.",
+    "modalities": "SAR",
+    "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://doi.org/10.1109/tip.2026.3652417",
+      "doi:10.1109/tip.2026.3652417"
+    ],
+    "conflicts": [],
+    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "unnamed-candidate-5",
+    "name": "Unnamed candidate",
+    "title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
+    "resource_type": "model",
+    "benchmark_type": "Benchmark / dataset",
+    "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
+    "tasks": "To be verified from the primary paper or benchmark description.",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2503.00743",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "-",
+        "detected_title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2503.00743",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2503.00743",
+      "paper_url:https://arxiv.org/abs/2503.00743"
+    ],
     "conflicts": [],
     "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
     "review_status": "candidate",

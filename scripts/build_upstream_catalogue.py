@@ -154,47 +154,90 @@ def _title_prefix_name(title: str) -> str:
 def _looks_like_paper_title(name: str) -> bool:
     n = str(name or "").strip()
     low = n.lower()
-    words = low.replace("-", " ").replace("_", " ").split()
+    normalized = low.replace("-", " ").replace("_", " ")
+    words = normalized.split()
 
-    # Obvious non-model resources / paper-title patterns.
     bad_phrases = [
         "agentic ai in remote sensing",
-        "genealogy of foundation models",
-        "review of",
-        "a review",
-        "survey of",
-        "a survey",
-        "open problems",
-        "challenges and applications",
+        "brain inspired remote sensing foundation models",
         "foundation models and open problems",
+        "open problems",
+        "genealogy of foundation models",
         "charting new territories",
         "awesome geospatial",
         "awesome remote sensing",
-        "remote sensing foundation models and",
+        "survey of",
+        "a survey",
+        "review of",
+        "a review",
+        "taxonomy",
+        "foundations taxonomy",
+        "challenges and applications",
     ]
 
-    if any(p in low.replace("-", " ") for p in bad_phrases):
+    if any(phrase in normalized for phrase in bad_phrases):
         return True
 
     if low.startswith(PAPER_TITLE_STARTS):
         return True
 
-    if low.startswith("awesome-") or low.startswith("awesome_") or low.startswith("awesome "):
+    if low.startswith(("awesome-", "awesome_", "awesome ")):
         return True
 
-    # Long prose-like names are usually paper titles, not model names.
-    if len(words) >= 6 and ":" not in n:
-        return True
-
-    # Lowercase slug-like article titles are not model names.
-    # Example: charting-new-territories
-    if "-" in n and n == low and not any(ch.isdigit() for ch in n):
+    # Model names are usually compact labels: SatMAE, TerraMind, Clay, AnySat, etc.
+    # Long phrase-like names are usually papers or surveys.
+    if len(words) >= 5 and not any(ch.isdigit() for ch in n):
         return True
 
     return False
 
 
+def is_paper_only_candidate(c: dict) -> bool:
+    name = str(c.get("name") or "")
+    title = str(c.get("title") or "")
+    category = str(c.get("category") or "")
+    scope = str(c.get("scope") or "")
+
+    text = " ".join([name, title, category, scope]).lower()
+    normalized = text.replace("-", " ").replace("_", " ")
+
+    sections = []
+    for ev in c.get("source_evidence", []) or []:
+        if isinstance(ev, dict):
+            sections.append(str(ev.get("section") or "").lower())
+
+    section_text = " ".join(sections)
+
+    # Entire sections that are not model catalogues.
+    if any(x in section_text for x in ["survey", "commentary", "review"]):
+        return True
+
+    bad_text = [
+        "survey",
+        "review",
+        "commentary",
+        "taxonomy",
+        "open problems",
+        "genealogy",
+        "charting new territories",
+        "awesome geospatial",
+        "awesome remote sensing",
+        "foundations taxonomy",
+    ]
+
+    if any(x in normalized for x in bad_text):
+        return True
+
+    # No code/weights/project + long prose-like name = likely paper-only row.
+    has_model_link = bool(c.get("code_url") or c.get("weights_url") or c.get("project_url"))
+    if not has_model_link and len(name.replace("-", " ").split()) >= 5:
+        return True
+
+    return False
+
 def choose_public_model_name(c: dict) -> str:
+    if is_paper_only_candidate(c):
+        return ""
     candidates = []
 
     candidates.append(c.get("name", ""))
@@ -391,7 +434,7 @@ def main() -> int:
     # publish every upstream-derived candidate that has an actual model/framework/repository name.
     # Do not publish paper-only rows, reviews, surveys, or long paper titles as model names.
     model_candidates = [c for c in candidates if not is_benchmark_like(c)]
-    publishable_candidates = [c for c in model_candidates if choose_public_model_name(c)]
+    publishable_candidates = [c for c in model_candidates if choose_public_model_name(c) and not is_paper_only_candidate(c)]
 
     entries = [to_catalogue_entry(c, used_ids) for c in publishable_candidates]
     entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))

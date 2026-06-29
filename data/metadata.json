@@ -35,7 +35,7 @@
   "description": "An upstream-derived living catalogue of Earth observation foundation models, benchmarks, datasets, and related resources.",
   "positioning": "Curated living companion resource for EO foundation model surveys.",
   "catalogue_mode": "fully_automated_named_model_catalogue",
-  "entry_count": 230,
+  "entry_count": 0,
   "source": "Public catalogue is generated automatically from upstream awesome-list sources, but only actual named model/framework/repository entries are published as model entries. Paper-only rows remain in data/candidates for review.",
   "review_note": "Long paper titles, surveys, reviews, and unnamed paper-only rows are not treated as model names.",
   "manual_seed_catalogue": "data/manual_seed_catalogue.json",
@@ -43,13 +43,13 @@
   "benchmark_dataset_source": "Generated from upstream benchmark, dataset, pre-training dataset, and embedding-data sections.",
   "benchmarks_generated_at": "2026-06-29T13:22:15+00:00",
   "benchmark_dataset_count_excluded_from_model_catalogue": 72,
-  "generated_at": "2026-06-29T13:22:15+00:00",
+  "generated_at": "2026-06-29T13:30:38+00:00",
   "benchmark_dataset_tab": "data/benchmarks.json is generated from upstream benchmark, dataset, pre-training-dataset, and embedding-data sections.",
   "curated_seed_count": 74,
   "auto_candidates_detected": 319,
   "auto_candidates_published": 0,
   "auto_candidates_held_for_review": 5,
-  "auto_model_entries_published": 230,
+  "auto_model_entries_published": 0,
   "auto_model_candidates_detected": 247,
-  "paper_or_unnamed_candidates_held_for_review": 17
+  "paper_or_unnamed_candidates_held_for_review": 247
 }

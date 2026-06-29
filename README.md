@@ -91,3 +91,5 @@ Weak name-only matches are not merged automatically. They are written to possibl
 ## Scientific status
 
 Generated entries are marked as auto-derived/candidate-style records. They are useful for discovery and landscape generation, but should still be reviewed before being cited as verified curated data.
+
+Triggered first LLM catalogue build on Mon Jun 29 03:45:23 CEST 2026

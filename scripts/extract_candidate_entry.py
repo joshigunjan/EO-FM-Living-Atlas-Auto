@@ -63,7 +63,7 @@ SYSTEM_PROMPT = """You curate a structured catalogue of Earth observation founda
 Extract only information supported by the provided upstream row, paper metadata, abstract, README excerpt, and links.
 Do not invent exact downstream task counts or access status. Use null and needs_review when uncertain.
 Access labels mean: Open source = paper plus usable code and/or weights are available; Partial access = some links exist but not full code/weights; Closed source = explicitly unavailable; Unknown = not enough evidence.
-Keep wording compact and scientific.
+Keep wording compact and scientific. If the upstream name is only '-' or another placeholder, infer a compact model/repository name only when it is clearly supported by the paper title, code repository, or project link; otherwise mark the entry as low confidence and needs_review.
 """
 
 
@@ -75,10 +75,13 @@ def call_openai(candidate: dict) -> dict | None:
         from openai import OpenAI
     except Exception:
         return None
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    model = (os.getenv("OPENAI_MODEL") or "gpt-4o-mini").strip()
     client = OpenAI(api_key=api_key)
     user_payload = {
-        "candidate": {k: candidate.get(k) for k in ["name", "title", "paper_url", "code_url", "weights_url", "project_url", "source_evidence", "conflicts"]},
+        "candidate": {
+            k: candidate.get(k)
+            for k in ["name", "title", "paper_url", "code_url", "weights_url", "project_url", "source_evidence", "source_records", "conflicts"]
+        },
         "metadata": candidate.get("metadata", {}),
         "allowed_modelling_paradigms": PARADIGMS,
     }
@@ -142,7 +145,7 @@ def main() -> int:
             cand.update(protected)
             cand["review_status"] = "candidate"
             cand["needs_review"] = True
-            cand["extraction_method"] = f"openai:{os.getenv('OPENAI_MODEL', 'gpt-5.5')}"
+            cand["extraction_method"] = f"openai:{(os.getenv('OPENAI_MODEL') or 'gpt-4o-mini').strip()}"
         else:
             cand = heuristic_enrichment(cand)
         enriched.append(cand)

@@ -201,30 +201,114 @@ def write_csv(entries: list[dict]) -> None:
             writer.writerow(row)
 
 
+BAD_PUBLIC_NAMES = {"", "-", "—", "–", "n/a", "na", "none", "unknown", "unnamed candidate", "entry"}
+
+
+def has_real_public_name(entry: dict) -> bool:
+    name = str(entry.get("name") or "").strip()
+    if name.lower() in BAD_PUBLIC_NAMES:
+        return False
+    if len(name) < 2:
+        return False
+    return True
+
+
+def is_high_quality_auto_candidate(c: dict) -> bool:
+    if not has_real_public_name(c):
+        return False
+
+    method = str(c.get("extraction_method") or "").lower()
+    confidence = str(c.get("extraction_confidence") or "").lower()
+    scope = str(c.get("scope") or "").strip()
+    category = str(c.get("category") or "").strip()
+
+    # Do not publish raw heuristic rows. Keep them only in data/candidates/.
+    if method == "heuristic" or method.startswith("heuristic"):
+        return False
+
+    # Do not publish low-confidence LLM outputs.
+    if confidence == "low":
+        return False
+
+    # Do not publish generic placeholder candidate text.
+    if scope.startswith("Candidate Earth observation foundation model"):
+        return False
+    if category == "Candidate model entry":
+        return False
+
+    return True
+
+
+def entry_keys(entry: dict) -> set[str]:
+    keys = set()
+    if entry.get("id"):
+        keys.add("id:" + str(entry["id"]).lower())
+    if entry.get("name"):
+        keys.add("name:" + slugify(str(entry["name"])))
+    for field in ["paper_url", "code_url", "weights_url", "project_url", "primary_source_url"]:
+        value = str(entry.get(field) or "").strip().lower()
+        if value:
+            keys.add(field + ":" + value)
+    return keys
+
+
+def merge_public_entries(seed_entries: list[dict], auto_entries: list[dict]) -> list[dict]:
+    out = []
+    seen = set()
+
+    for entry in seed_entries + auto_entries:
+        keys = entry_keys(entry)
+        if keys and keys & seen:
+            continue
+        out.append(entry)
+        seen |= keys
+
+    return out
+
+
 def main() -> int:
     path = candidate_input_path()
-    if not path:
-        print("No candidate file found; leaving catalogue unchanged.")
-        return 0
-    candidates = load_json(path, [])
+
+    seed_entries = load_json(SEED_PATH, []) if SEED_PATH.exists() else []
+    candidates = load_json(path, []) if path else []
+
     used_ids: Counter = Counter()
+    for entry in seed_entries:
+        if entry.get("id"):
+            used_ids[str(entry["id"])] += 1
+
     model_candidates = [c for c in candidates if not is_benchmark_like(c)]
-    entries = [to_catalogue_entry(c, used_ids) for c in model_candidates]
-    entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
+    publishable_candidates = [c for c in model_candidates if is_high_quality_auto_candidate(c)]
+
+    auto_entries = [to_catalogue_entry(c, used_ids) for c in publishable_candidates]
+    auto_entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
+
+    entries = merge_public_entries(seed_entries, auto_entries)
+
     dump_json(OUT_PATH, entries)
     write_csv(entries)
+
     metadata = load_json(META_PATH, {}) or {}
     metadata.update({
-        "catalogue_mode": "upstream_auto",
+        "catalogue_mode": "curated_seed_plus_reviewed_auto",
         "entry_count": len(entries),
-        "benchmark_dataset_count_excluded_from_model_catalogue": len(candidates) - len(entries),
-        "source": "Generated from configured upstream awesome-list sources, then deduplicated and normalized. Benchmark/dataset entries are written separately to data/benchmarks.json.",
+        "curated_seed_count": len(seed_entries),
+        "auto_candidates_detected": len(model_candidates),
+        "auto_candidates_published": len(auto_entries),
+        "auto_candidates_held_for_review": len(model_candidates) - len(publishable_candidates),
+        "benchmark_dataset_count_excluded_from_model_catalogue": len(candidates) - len(model_candidates),
+        "source": "Public catalogue uses curated seed entries plus only high-confidence LLM-enriched upstream additions. Low-confidence upstream candidates remain in data/candidates/ for curator review.",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "review_note": "Entries are auto-detected from upstream lists and should be reviewed before being cited as verified catalogue data.",
+        "review_note": "Raw upstream candidates are not published unless they have a real model name and non-low-confidence structured extraction.",
         "manual_seed_catalogue": str(SEED_PATH.relative_to(DATA.parent)) if SEED_PATH.exists() else "",
     })
     dump_json(META_PATH, metadata)
-    print(f"Wrote upstream-derived catalogue with {len(entries)} entries to {OUT_PATH}.")
+
+    print(f"Wrote public catalogue with {len(entries)} entries.")
+    print(f"Curated seed entries: {len(seed_entries)}")
+    print(f"Auto candidates detected: {len(model_candidates)}")
+    print(f"Auto candidates published: {len(auto_entries)}")
+    print(f"Auto candidates held for review: {len(model_candidates) - len(publishable_candidates)}")
     return 0
 
 

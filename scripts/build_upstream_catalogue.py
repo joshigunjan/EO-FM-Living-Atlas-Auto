@@ -178,19 +178,84 @@ def _looks_like_paper_title(name: str) -> bool:
     if any(phrase in normalized for phrase in bad_phrases):
         return True
 
-    if low.startswith(PAPER_TITLE_STARTS):
+    if low.startswith(("a review", "review ", "survey ", "a survey", "towards ", "toward ")):
         return True
 
     if low.startswith(("awesome-", "awesome_", "awesome ")):
         return True
 
-    # Model names are usually compact labels: SatMAE, TerraMind, Clay, AnySat, etc.
-    # Long phrase-like names are usually papers or surveys.
-    if len(words) >= 5 and not any(ch.isdigit() for ch in n):
+    # Long sentence-like names are usually paper titles.
+    # Do not reject compact model names like A2-MAE, Prithvi-EO, SatMAE, Clay, AnySat.
+    if len(words) >= 6:
         return True
 
     return False
 
+
+def _has_model_like_name(name: str) -> bool:
+    n = _clean_public_name(name)
+    if not n:
+        return False
+    if _looks_like_paper_title(n):
+        return False
+
+    # Compact names are usually real model/framework names.
+    # Examples: A2-MAE, AgriFM, AnySat, Clay, SatMAE, Prithvi-EO.
+    if " " not in n and 2 <= len(n) <= 60:
+        return True
+
+    # Allow very short phrase names such as "Change-Agent" after normalization.
+    if len(n.replace("-", " ").replace("_", " ").split()) <= 3:
+        return True
+
+    return False
+
+
+def is_paper_only_candidate(c: dict) -> bool:
+    name = str(c.get("name") or "")
+    title = str(c.get("title") or "")
+    category = str(c.get("category") or "")
+    scope = str(c.get("scope") or "")
+
+    text = " ".join([name, title, category, scope]).lower()
+    normalized = text.replace("-", " ").replace("_", " ")
+
+    sections = []
+    for ev in c.get("source_evidence", []) or []:
+        if isinstance(ev, dict):
+            sections.append(str(ev.get("section") or "").lower())
+    section_text = " ".join(sections)
+
+    # These sections are not model catalogues.
+    if any(x in section_text for x in ["survey", "commentary", "review"]):
+        return True
+
+    bad_text = [
+        "survey",
+        "review",
+        "commentary",
+        "taxonomy",
+        "open problems",
+        "genealogy",
+        "charting new territories",
+        "awesome geospatial",
+        "awesome remote sensing",
+        "foundations taxonomy",
+    ]
+
+    if any(x in normalized for x in bad_text):
+        return True
+
+    if _looks_like_paper_title(name):
+        return True
+
+    has_model_link = bool(c.get("code_url") or c.get("weights_url") or c.get("project_url"))
+
+    # If there is no model/code/project link, require a compact model-like name.
+    if not has_model_link and not _has_model_like_name(name):
+        return True
+
+    return False
 
 def is_paper_only_candidate(c: dict) -> bool:
     name = str(c.get("name") or "")

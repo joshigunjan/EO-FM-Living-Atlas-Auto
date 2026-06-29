@@ -37,11 +37,27 @@ def _clean_surrogates(obj):
         return {str(_clean_surrogates(k)): _clean_surrogates(v) for k, v in obj.items()}
     return obj
 
+def _strip_surrogates(obj):
+    """Recursively remove invalid Unicode surrogate characters."""
+    if isinstance(obj, str):
+        return obj.encode("utf-8", "replace").decode("utf-8")
+    if isinstance(obj, list):
+        return [_strip_surrogates(x) for x in obj]
+    if isinstance(obj, dict):
+        return {
+            str(_strip_surrogates(k)): _strip_surrogates(v)
+            for k, v in obj.items()
+        }
+    return obj
+
+
 def dump_json(path: str | Path, obj) -> None:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
+    obj = _strip_surrogates(obj)
+    text = json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
+    text = text.encode("utf-8", "replace").decode("utf-8")
+    p.write_text(text, encoding="utf-8", errors="replace")
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()

@@ -26,6 +26,17 @@ def load_json(path: str | Path, default=None):
     return json.loads(p.read_text(encoding="utf-8"))
 
 
+
+def _clean_surrogates(obj):
+    """Remove invalid Unicode surrogate characters before writing JSON."""
+    if isinstance(obj, str):
+        return obj.encode("utf-8", "replace").decode("utf-8")
+    if isinstance(obj, list):
+        return [_clean_surrogates(x) for x in obj]
+    if isinstance(obj, dict):
+        return {str(_clean_surrogates(k)): _clean_surrogates(v) for k, v in obj.items()}
+    return obj
+
 def dump_json(path: str | Path, obj) -> None:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)

@@ -154,11 +154,43 @@ def _title_prefix_name(title: str) -> str:
 def _looks_like_paper_title(name: str) -> bool:
     n = str(name or "").strip()
     low = n.lower()
+    words = low.replace("-", " ").replace("_", " ").split()
+
+    # Obvious non-model resources / paper-title patterns.
+    bad_phrases = [
+        "agentic ai in remote sensing",
+        "genealogy of foundation models",
+        "review of",
+        "a review",
+        "survey of",
+        "a survey",
+        "open problems",
+        "challenges and applications",
+        "foundation models and open problems",
+        "charting new territories",
+        "awesome geospatial",
+        "awesome remote sensing",
+        "remote sensing foundation models and",
+    ]
+
+    if any(p in low.replace("-", " ") for p in bad_phrases):
+        return True
+
     if low.startswith(PAPER_TITLE_STARTS):
         return True
-    # Long prose-like names are usually paper titles, not model names.
-    if len(n.split()) > 8 and ":" not in n:
+
+    if low.startswith("awesome-") or low.startswith("awesome_") or low.startswith("awesome "):
         return True
+
+    # Long prose-like names are usually paper titles, not model names.
+    if len(words) >= 6 and ":" not in n:
+        return True
+
+    # Lowercase slug-like article titles are not model names.
+    # Example: charting-new-territories
+    if "-" in n and n == low and not any(ch.isdigit() for ch in n):
+        return True
+
     return False
 
 

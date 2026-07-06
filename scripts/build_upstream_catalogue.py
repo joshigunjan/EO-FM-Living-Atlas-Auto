@@ -332,7 +332,7 @@ def choose_public_model_name(c: dict) -> str:
 
 def to_catalogue_entry(c: dict, used_ids: Counter) -> dict:
     title = (c.get("title") or c.get("name") or "").strip()
-    name = choose_public_model_name(c) or "Unnamed entry"
+    name = (c.get("name") or title.split(":", 1)[0] or "Unnamed entry").strip()
     category = (c.get("category") or "Upstream-listed EO-FM entry").strip()
     source_evidence = c.get("source_evidence") or []
     if category == "Upstream candidate" and source_evidence:
@@ -491,17 +491,19 @@ def merge_public_entries(seed_entries: list[dict], auto_entries: list[dict]) -> 
 
 def main() -> int:
     path = candidate_input_path()
-    candidates = load_json(path, []) if path else []
+    if not path:
+        print("No candidate file found; leaving catalogue unchanged.")
+        return 0
 
+    candidates = load_json(path, [])
     used_ids: Counter = Counter()
 
-    # Fully automated model catalogue:
-    # publish every upstream-derived candidate that has an actual model/framework/repository name.
-    # Do not publish paper-only rows, reviews, surveys, or long paper titles as model names.
+    # Automated catalogue mode:
+    # publish all upstream-derived model candidates.
+    # Benchmark/dataset-like records are excluded here and written separately to data/benchmarks.json.
     model_candidates = [c for c in candidates if not is_benchmark_like(c)]
-    publishable_candidates = [c for c in model_candidates if choose_public_model_name(c) and not is_paper_only_candidate(c)]
 
-    entries = [to_catalogue_entry(c, used_ids) for c in publishable_candidates]
+    entries = [to_catalogue_entry(c, used_ids) for c in model_candidates]
     entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
 
     dump_json(OUT_PATH, entries)
@@ -509,25 +511,21 @@ def main() -> int:
 
     metadata = load_json(META_PATH, {}) or {}
     metadata.update({
-        "catalogue_mode": "fully_automated_named_model_catalogue",
+        "catalogue_mode": "fully_automated_upstream_catalogue_no_public_filter",
         "entry_count": len(entries),
         "auto_candidates_detected": len(candidates),
-        "auto_model_candidates_detected": len(model_candidates),
         "auto_model_entries_published": len(entries),
-        "paper_or_unnamed_candidates_held_for_review": len(model_candidates) - len(publishable_candidates),
         "benchmark_dataset_count_excluded_from_model_catalogue": len(candidates) - len(model_candidates),
-        "source": "Public catalogue is generated automatically from upstream awesome-list sources, but only actual named model/framework/repository entries are published as model entries. Paper-only rows remain in data/candidates for review.",
+        "source": "Public catalogue is generated automatically from configured upstream awesome-list sources, then deduplicated and normalized. No public model-name filtering is applied.",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "review_note": "Long paper titles, surveys, reviews, and unnamed paper-only rows are not treated as model names.",
+        "review_note": "Entries are automatically generated from upstream lists and may include paper-title rows that require later curation.",
         "manual_seed_catalogue": str(SEED_PATH.relative_to(DATA.parent)) if SEED_PATH.exists() else "",
     })
     dump_json(META_PATH, metadata)
 
-    print(f"Wrote fully automated named-model catalogue with {len(entries)} entries.")
+    print(f"Wrote automated public catalogue with {len(entries)} model entries.")
     print(f"Total auto candidates detected: {len(candidates)}")
-    print(f"Auto model candidates detected: {len(model_candidates)}")
-    print(f"Published named model entries: {len(entries)}")
-    print(f"Paper/unnamed candidates held for review: {len(model_candidates) - len(publishable_candidates)}")
+    print(f"Benchmark/dataset entries excluded from model catalogue: {len(candidates) - len(model_candidates)}")
     return 0
 
 

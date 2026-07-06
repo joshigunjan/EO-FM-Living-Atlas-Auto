@@ -105,6 +105,67 @@
     ]
   },
   {
+    "matched_candidate_name": "SeCo",
+    "deduplication_keys": [
+      "github:servicenow/seasonal-contrast",
+      "paper_url:https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SeCo",
+        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
+        "code_url": "https://github.com/ServiceNow/seasonal-contrast",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SeCo",
+        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/ServiceNow/seasonal-contrast"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SeCo",
+        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
+        "code_url": "https://github.com/ServiceNow/seasonal-contrast",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SeCo",
+        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/ServiceNow/seasonal-contrast"
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "RSP",
     "deduplication_keys": [
       "github:vitae-transformer/remote-sensing-rvsa",
@@ -255,6 +316,93 @@
         "code_url": "https://github.com/zhu-xlab/DINO-MM",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "TOV",
+    "deduplication_keys": [
+      "github:geox-lab/g-rsim",
+      "paper_url:https://ieeexplore.ieee.org/abstract/document/9869651"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeCo",
+        "detected_title": "Geographical Supervision Correction for Remote Sensing Representation Learning",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9869651",
+        "code_url": "https://github.com/GeoX-Lab/G-RSIM",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "TOV",
+        "detected_title": "TOV: The original vision model for optical remote sensing image understanding via self-supervised learning",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10110958",
+        "code_url": "https://github.com/GeoX-Lab/G-RSIM/tree/main/TOV_v1",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "TOV-RS-Balanced",
+        "detected_title": "TOV: The original vision model for optical remote sensing image understanding via self-supervised learning",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10110958",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/GeoX-Lab/G-RSIM/tree/main/TOV_v1"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeCo",
+        "detected_title": "Geographical Supervision Correction for Remote Sensing Representation Learning",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9869651",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "TOV",
+        "detected_title": "TOV: The original vision model for optical remote sensing image understanding via self-supervised learning",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10110958",
+        "code_url": "https://github.com/GeoX-Lab/G-RSIM/tree/main/TOV_v1",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "TOV-RS-Balanced",
+        "detected_title": "TOV: The original vision model for optical remote sensing image understanding via self-supervised learning",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10110958",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/GeoX-Lab/G-RSIM/tree/main/TOV_v1"
       }
     ]
   },
@@ -525,6 +673,67 @@
     ]
   },
   {
+    "matched_candidate_name": "CACo",
+    "deduplication_keys": [
+      "github:utkarshmall13/caco",
+      "paper_url:https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "CACo",
+        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
+        "code_url": "https://github.com/utkarshmall13/CACo",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "CACo",
+        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/utkarshmall13/CACo"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "CACo",
+        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
+        "code_url": "https://github.com/utkarshmall13/CACo",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "CACo",
+        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/utkarshmall13/CACo"
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "IaI-SimCLR",
     "deduplication_keys": [
       "paper_url:https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/html/Prexl_Multi-Modal_Multi-Objective_Contrastive_Learning_for_Sentinel-12_Imagery_CVPRW_2023_paper.html"
@@ -559,21 +768,49 @@
     ]
   },
   {
-    "matched_candidate_name": "Unnamed candidate",
+    "matched_candidate_name": "SatLas",
     "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10282433"
+      "doi:10.1109/iccv51070.2023.01538",
+      "github:allenai/satlas",
+      "paper_url:https://doi.org/10.1109/iccv51070.2023.01538"
     ],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
         "source_name": "Awesome Remote Sensing Foundation Models",
         "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+        "detected_name": "SatLas",
+        "detected_title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
         "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://doi.org/10.1109/iccv51070.2023.01538",
+        "code_url": "https://github.com/allenai/satlas",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SatlasPretrain",
+        "detected_title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2211.15660",
         "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SatLas",
+        "detected_title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2211.15660",
+        "code_url": "https://github.com/allenai/satlas",
         "weights_url": "",
         "project_url": ""
       },
@@ -581,14 +818,14 @@
         "source_id": "licongren-awesome-remote-sensing-foundation-models",
         "source_name": "Awesome Remote Sensing Foundation Models mirror",
         "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+        "detected_name": "SatlasPretrain",
+        "detected_title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2211.15660",
         "code_url": "",
         "weights_url": "",
-        "project_url": ""
+        "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
       }
     ]
   },
@@ -1054,28 +1291,6 @@
     ]
   },
   {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1109/jstars.2024.3385420",
-      "paper_url:https://doi.org/10.1109/jstars.2024.3385420"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
     "matched_candidate_name": "BFM",
     "deduplication_keys": [
       "doi:10.1109/jstars.2024.3401772",
@@ -1160,11 +1375,7 @@
   },
   {
     "matched_candidate_name": "SatMAE++",
-    "deduplication_keys": [
-      "doi:10.1109/cvpr52733.2024.02627",
-      "github:techmn/satmae_pp",
-      "paper_url:https://doi.org/10.1109/cvpr52733.2024.02627"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
@@ -1574,28 +1785,6 @@
         "resource_type": "model",
         "paper_url": "https://arxiv.org/abs/2310.18653",
         "code_url": "https://github.com/zhu-xlab/FGMAE",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1109/tgrs.2024.3494244",
-      "paper_url:https://doi.org/10.1109/tgrs.2024.3494244"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
-        "code_url": "",
         "weights_url": "",
         "project_url": ""
       }
@@ -2186,10 +2375,7 @@
   },
   {
     "matched_candidate_name": "SkySense++",
-    "deduplication_keys": [
-      "github:kang-wu/skysenseplusplus",
-      "paper_url:https://nature.com/articles/s42256-025-01078-8"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
@@ -2316,6 +2502,42 @@
         "code_url": "https://github.com/IBM/terramind",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "RS-4M",
+    "deduplication_keys": [
+      "arxiv:2406.11933",
+      "github:fengxiang23/selectivemae",
+      "paper_url:https://arxiv.org/abs/2406.11933"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SelectiveMAE",
+        "detected_title": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2406.11933",
+        "code_url": "https://github.com/Fengxiang23/SelectiveMAE",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RS-4M",
+        "detected_title": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2406.11933",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/Fengxiang23/SelectiveMAE"
       }
     ]
   },
@@ -2513,28 +2735,6 @@
         "resource_type": "model",
         "paper_url": "https://doi.org/10.1109/tgrs.2026.3652100",
         "code_url": "https://github.com/HSG-AIML/MAPEX",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1109/tip.2026.3652417",
-      "paper_url:https://doi.org/10.1109/tip.2026.3652417"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
-        "code_url": "",
         "weights_url": "",
         "project_url": ""
       }
@@ -2836,42 +3036,6 @@
     ]
   },
   {
-    "matched_candidate_name": "charting-new-territories",
-    "deduplication_keys": [
-      "arxiv:2311.14656",
-      "github:jonathan-roberts1/charting-new-territories",
-      "paper_url:https://arxiv.org/abs/2311.14656"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Charting New Territories: Exploring the Geographic and Geospatial Capabilities of Multimodal LLMs",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2311.14656",
-        "code_url": "https://github.com/jonathan-roberts1/charting-new-territories",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Charting New Territories: Exploring the Geographic and Geospatial Capabilities of Multimodal LLMs",
-        "section": "Remote Sensing Vision-Language Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2311.14656",
-        "code_url": "https://github.com/jonathan-roberts1/charting-new-territories",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
     "matched_candidate_name": "Remote-Sensing-ChatGPT",
     "deduplication_keys": [
       "arxiv:2401.09083",
@@ -2891,6 +3055,118 @@
         "code_url": "https://github.com/HaonanGuo/Remote-Sensing-ChatGPT",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "SkyCLIP",
+    "deduplication_keys": [
+      "arxiv:2312.12856",
+      "github:wangzhecheng/skyscript",
+      "paper_url:https://arxiv.org/abs/2312.12856"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SkyCLIP",
+        "detected_title": "SkyScript: A Large and Semantically Diverse Vision-Language Dataset for Remote Sensing",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2312.12856",
+        "code_url": "https://github.com/wangzhecheng/SkyScript",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SkyScript",
+        "detected_title": "SkyScript: A Large and Semantically Diverse Vision-Language Dataset for Remote Sensing",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2312.12856",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/wangzhecheng/SkyScript"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SkyScript",
+        "detected_title": "SkyScript: A Large and Semantically Diverse Vision-Language Dataset for Remote Sensing",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2312.12856",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/wangzhecheng/SkyScript"
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "RS5M",
+    "deduplication_keys": [
+      "arxiv:2306.11300",
+      "github:om-ai-lab/rs5m",
+      "hf:zilun/georssd",
+      "paper_url:https://arxiv.org/abs/2306.11300"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoRSCLIP",
+        "detected_title": "RS5M and GeoRSCLIP: A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2306.11300",
+        "code_url": "https://github.com/om-ai-lab/RS5M",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoRSSD",
+        "detected_title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2306.11300",
+        "code_url": "",
+        "weights_url": "https://huggingface.co/Zilun/GeoRSSD",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RS5M",
+        "detected_title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2306.11300",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/om-ai-lab/RS5M"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RS5M",
+        "detected_title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2306.11300",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/om-ai-lab/RS5M"
       }
     ]
   },
@@ -3073,6 +3349,42 @@
     ]
   },
   {
+    "matched_candidate_name": "FIT-RS",
+    "deduplication_keys": [
+      "arxiv:2406.10100",
+      "github:luo-z13/skysensegpt",
+      "paper_url:https://arxiv.org/abs/2406.10100"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SkySenseGPT",
+        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2406.10100",
+        "code_url": "https://github.com/Luo-Z13/SkySenseGPT",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "FIT-RS",
+        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2406.10100",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/Luo-Z13/SkySenseGPT"
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "RSCLIP",
     "deduplication_keys": [
       "arxiv:2409.07048",
@@ -3241,24 +3553,74 @@
     ]
   },
   {
-    "matched_candidate_name": "Unnamed candidate",
+    "matched_candidate_name": "DOFA-CLIP",
     "deduplication_keys": [
-      "arxiv:2503.00743",
-      "paper_url:https://arxiv.org/abs/2503.00743"
+      "arxiv:2503.06312",
+      "github:xiong-zhitong/geolb-siglip",
+      "paper_url:https://arxiv.org/abs/2503.06312"
     ],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
         "source_name": "Awesome Remote Sensing Foundation Models",
         "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
+        "detected_name": "DOFA-CLIP",
+        "detected_title": "DOFA-CLIP: Multimodal Vision-Language Foundation Models for Earth Observation",
         "section": "Remote Sensing Vision Foundation Models",
         "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2503.00743",
-        "code_url": "",
+        "paper_url": "https://arxiv.org/abs/2503.06312",
+        "code_url": "https://github.com/xiong-zhitong/GeoLB-SigLIP",
         "weights_url": "",
         "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoLangBind-2M",
+        "detected_title": "Rethinking Remote Sensing CLIP: Leveraging Multimodal Large Language Models for High-Quality Vision-Language Dataset",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://doi.org/10.1007/978-981-96-6972-1_29",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/xiong-zhitong/GeoLB-SigLIP"
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "Falcon",
+    "deduplication_keys": [
+      "arxiv:2503.11070",
+      "github:tianhuilab/falcon",
+      "paper_url:https://arxiv.org/abs/2503.11070"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Falcon",
+        "detected_title": "Falcon: A Remote Sensing Vision-Language Foundation Model",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2503.11070",
+        "code_url": "https://github.com/TianHuiLab/Falcon",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Falcon_SFT",
+        "detected_title": "Falcon: A Remote Sensing Vision-Language Foundation Model",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2503.11070",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/TianHuiLab/Falcon"
       }
     ]
   },
@@ -3303,6 +3665,42 @@
         "code_url": "",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "DGTRSD",
+    "deduplication_keys": [
+      "arxiv:2503.19311",
+      "github:mitsuichen14/dgtrs",
+      "paper_url:https://arxiv.org/abs/2503.19311"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "DGTRS-CLIP",
+        "detected_title": "DGTRSD & DGTRS-CLIP: A Dual-Granularity Remote Sensing Image-Text Dataset and Vision Language Foundation Model for Alignment",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2503.19311",
+        "code_url": "https://github.com/MitsuiChen14/DGTRS",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "DGTRSD",
+        "detected_title": "DGTRSD & DGTRS-CLIP: A Dual-Granularity Remote Sensing Image-Text Dataset and Vision Language Foundation Model for Alignment",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2503.19311",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/MitsuiChen14/DGTRS"
       }
     ]
   },
@@ -3444,6 +3842,41 @@
     ]
   },
   {
+    "matched_candidate_name": "EarthDial",
+    "deduplication_keys": [
+      "github:hiyamdebary/earthdial",
+      "paper_url:https://openaccess.thecvf.com/content/CVPR2025/html/Soni_EarthDial_Turning_Multi-sensory_Earth_Observations_to_Interactive_Dialogues_CVPR_2025_paper.html"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "EarthDial",
+        "detected_title": "EarthDial: Turning Multi-sensory Earth Observations to Interactive Dialogues",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Soni_EarthDial_Turning_Multi-sensory_Earth_Observations_to_Interactive_Dialogues_CVPR_2025_paper.html",
+        "code_url": "https://github.com/hiyamdebary/EarthDial",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "EarthDial-Instruct",
+        "detected_title": "EarthDial: Turning Multi-sensory Earth Observations to Interactive Dialogues",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2412.15190",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/hiyamdebary/EarthDial"
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "SkySense-O",
     "deduplication_keys": [
       "github:zqcrafts/skysense-o",
@@ -3462,6 +3895,42 @@
         "code_url": "https://github.com/zqcrafts/SkySense-O",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "GeoPix",
+    "deduplication_keys": [
+      "arxiv:2501.06828",
+      "github:norman-ou/geopix",
+      "paper_url:https://arxiv.org/abs/2501.06828"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoPix",
+        "detected_title": "GeoPix: Multi-Modal Large Language Model for Pixel-level Image Understanding in Remote Sensing",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2501.06828",
+        "code_url": "https://github.com/Norman-Ou/GeoPix",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoPixInstruct",
+        "detected_title": "GeoPix: Multi-Modal Large Language Model for Pixel-level Image Understanding in Remote Sensing",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2501.06828",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/Norman-Ou/GeoPix"
       }
     ]
   },
@@ -3533,24 +4002,38 @@
     ]
   },
   {
-    "matched_candidate_name": "Remote Sensing Large Vision-Language Model",
+    "matched_candidate_name": "GeoPixel",
     "deduplication_keys": [
-      "arxiv:2506.21863",
-      "paper_url:https://arxiv.org/abs/2506.21863"
+      "arxiv:2501.13925",
+      "github:mbzuai-oryx/geopixel",
+      "paper_url:https://arxiv.org/abs/2501.13925"
     ],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
         "source_name": "Awesome Remote Sensing Foundation Models",
         "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
+        "detected_name": "GeoPixel",
+        "detected_title": "GeoPixel: Pixel Grounding Large Multimodal Model in Remote Sensing",
         "section": "Remote Sensing Vision Foundation Models",
         "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2506.21863",
-        "code_url": "",
+        "paper_url": "https://arxiv.org/abs/2501.13925",
+        "code_url": "https://github.com/mbzuai-oryx/GeoPixel",
         "weights_url": "",
         "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoPixelD",
+        "detected_title": "GeoPixel: Pixel Grounding Large Multimodal Model in Remote Sensing",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2501.13925",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/mbzuai-oryx/GeoPixel"
       }
     ]
   },
@@ -3662,6 +4145,42 @@
         "code_url": "",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "RemoteSAM",
+    "deduplication_keys": [
+      "arxiv:2505.18022",
+      "github:1e12leon/remotesam",
+      "paper_url:https://arxiv.org/abs/2505.18022"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RemoteSAM",
+        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2505.18022",
+        "code_url": "https://github.com/1e12Leon/RemoteSAM",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RemoteSAM-270K",
+        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2505.18022",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/1e12Leon/RemoteSAM"
       }
     ]
   },
@@ -3843,6 +4362,42 @@
         "code_url": "",
         "weights_url": "",
         "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "GeoEyes",
+    "deduplication_keys": [
+      "arxiv:2602.14201",
+      "github:nanocm/geoeyes",
+      "paper_url:https://arxiv.org/abs/2602.14201"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoEyes",
+        "detected_title": "GeoEyes: On-Demand Visual Focusing for Evidence-Grounded Understanding of Ultra-High-Resolution Remote Sensing Imagery",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2602.14201",
+        "code_url": "https://github.com/nanocm/GeoEyes",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "UHR-CoZ",
+        "detected_title": "GeoEyes: On-Demand Visual Focusing for Evidence-Grounded Understanding of Ultra-High-Resolution Remote Sensing Imagery",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2602.14201",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/nanocm/GeoEyes"
       }
     ]
   },
@@ -4227,6 +4782,28 @@
         "resource_type": "model",
         "paper_url": "https://arxiv.org/abs/2409.12470",
         "code_url": "https://github.com/LiPang/HSIGene",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "Text2Earth",
+    "deduplication_keys": [
+      "arxiv:2501.00895",
+      "paper_url:https://arxiv.org/abs/2501.00895"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Text2Earth",
+        "detected_title": "Text2Earth: Unlocking Text-driven Remote Sensing Image Generation with a Global-Scale Dataset and a Foundation Model",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2501.00895",
+        "code_url": "",
         "weights_url": "",
         "project_url": ""
       }
@@ -4771,6 +5348,41 @@
     ]
   },
   {
+    "matched_candidate_name": "UnivEARTH",
+    "deduplication_keys": [
+      "arxiv:2504.12110",
+      "paper_url:https://arxiv.org/abs/2504.12110"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "",
+        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2504.12110",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "UnivEARTH",
+        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2504.12110",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "AirSpatialBot",
     "deduplication_keys": [
       "doi:10.1109/tgrs.2025.3570895",
@@ -4886,6 +5498,74 @@
     ]
   },
   {
+    "matched_candidate_name": "OpenEarthAgent",
+    "deduplication_keys": [
+      "arxiv:2602.17665",
+      "github:mbzuai-oryx/openearthagent",
+      "paper_url:https://arxiv.org/abs/2602.17665"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarthAgent",
+        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2602.17665",
+        "code_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarthAgent Dataset",
+        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2602.17665",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/mbzuai-oryx/OpenEarthAgent"
+      }
+    ]
+  },
+  {
+    "matched_candidate_name": "OpenEarth-Agent",
+    "deduplication_keys": [],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarth-Agent",
+        "detected_title": "OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2603.22148",
+        "code_url": "https://github.com/walking-shadow/OpenEarth-Agent",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarth-Bench",
+        "detected_title": "OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation (OpenEarth-Bench is the benchmark introduced in this paper)",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2603.22148",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/walking-shadow/OpenEarth-Agent"
+      }
+    ]
+  },
+  {
     "matched_candidate_name": "GeoMMAgent",
     "deduplication_keys": [
       "arxiv:2604.08896",
@@ -4944,10 +5624,7 @@
   },
   {
     "matched_candidate_name": "SkySense",
-    "deduplication_keys": [
-      "arxiv:2312.10115",
-      "paper_url:https://arxiv.org/abs/2312.10115"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "jackbo-awesome-remote-sensing-foundation-models",
@@ -5041,707 +5718,8 @@
     ]
   },
   {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2304.13009",
-      "paper_url:https://arxiv.org/abs/2304.13009"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "The Potential of Visual ChatGPT For Remote Sensing",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2304.13009",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "The Potential of Visual ChatGPT For Remote Sensing",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2304.13009",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10126079"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Self-Supervised Remote Sensing Feature Learning: Learning Paradigms, Challenges, and Future Works",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10126079",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Self-Supervised Remote Sensing Feature Learning: Learning Paradigms, Challenges, and Future Works",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10126079",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10282966"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "An Agenda for Multimodal Foundation Models for Earth Observation",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282966",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "An Agenda for Multimodal Foundation Models for Earth Observation",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282966",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10254282"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Brain-Inspired Remote Sensing Foundation Models and Open Problems: A Comprehensive Survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10254282",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Brain-Inspired Remote Sensing Foundation Models and Open Problems: A Comprehensive Survey",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10254282",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2312.17016",
-      "paper_url:https://arxiv.org/abs/2312.17016"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "On the Promises and Challenges of Multimodal Foundation Models for Geographical, Environmental, Agricultural, and Urban Planning Applications",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2312.17016",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "On the Promises and Challenges of Multimodal Foundation Models for Geographical, Environmental, Agricultural, and Urban Planning Applications",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2312.17016",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://sciencedirect.com/science/article/pii/S0034425723004765"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Transfer learning in environmental remote sensing",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://sciencedirect.com/science/article/pii/S0034425723004765",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Transfer learning in environmental remote sensing",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://sciencedirect.com/science/article/pii/S0034425723004765",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Vision-Language Models in Remote Sensing",
-    "deduplication_keys": [
-      "arxiv:2305.05726",
-      "paper_url:https://arxiv.org/abs/2305.05726"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Vision-Language Models in Remote Sensing: Current Progress and Future Trends",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2305.05726",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Vision-Language Models in Remote Sensing: Current Progress and Future Trends",
-        "section": "Survey Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2305.05726",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2405.04285",
-      "paper_url:https://arxiv.org/abs/2405.04285"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "On the Foundations of Earth and Climate Foundation Models",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2405.04285",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2406.09385",
-      "paper_url:https://arxiv.org/abs/2406.09385"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Towards Vision-Language Geo-Foundation Model: A Survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2406.09385",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2408.03464",
-      "paper_url:https://arxiv.org/abs/2408.03464"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Vision Foundation Models in Remote Sensing: A Survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2408.03464",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://sciencedirect.com/science/article/pii/S2095927324006510"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Foundation model for generalist remote sensing intelligence: Potentials and prospects",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://sciencedirect.com/science/article/pii/S2095927324006510",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Advancements in Visual Language Models for Remote Sensing: Datasets, Capabilities, and Enhancement Techniques",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2410.17283",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "When Geoscience Meets Foundation Models",
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10770814"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "When Geoscience Meets Foundation Models: Toward a general geoscience artificial intelligence system",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10770814",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://sciencedirect.com/science/article/pii/S1569843225000159"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Towards the next generation of Geospatial Artificial Intelligence",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://sciencedirect.com/science/article/pii/S1569843225000159",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.3390/rs17020179",
-      "paper_url:https://doi.org/10.3390/rs17020179"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "When Remote Sensing Meets Foundation Model: A Survey and Beyond",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.3390/rs17020179",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/10916803"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Vision Foundation Models in Remote Sensing: A survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/10916803",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Remote Sensing Tuning",
-    "deduplication_keys": [
-      "doi:10.26599/cvm.2025.9450490",
-      "paper_url:https://doi.org/10.26599/cvm.2025.9450490"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Remote Sensing Tuning: A Survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.26599/cvm.2025.9450490",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2503.22081",
-      "paper_url:https://arxiv.org/abs/2503.22081"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Survey on Remote Sensing Foundation Models: From Vision to Multimodality",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2503.22081",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1109/mgrs.2025.3576766",
-      "paper_url:https://doi.org/10.1109/mgrs.2025.3576766"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Foundation Models for Remote Sensing and Earth Observation: A survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.1109/mgrs.2025.3576766",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "MIMRS",
-    "deduplication_keys": [
-      "doi:10.1109/igarss55030.2025.11243448",
-      "paper_url:https://doi.org/10.1109/igarss55030.2025.11243448"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "MIMRS: A Survey on Masked Image Modeling in Remote Sensing",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.1109/igarss55030.2025.11243448",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1109/igarss55030.2025.11242732",
-      "paper_url:https://doi.org/10.1109/igarss55030.2025.11242732"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Review of Challenges and Applications in Remote Sensing Foundation Models",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.1109/igarss55030.2025.11242732",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "arxiv:2509.21722",
-      "paper_url:https://arxiv.org/abs/2509.21722"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "On the Status of Foundation Models for SAR Imagery",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2509.21722",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.3390/rs17213532",
-      "paper_url:https://doi.org/10.3390/rs17213532"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Advances on Multimodal Remote Sensing Foundation Models for Earth Observation Downstream Tasks: A Survey",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.3390/rs17213532",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Agentic AI in Remote Sensing",
-    "deduplication_keys": [
-      "arxiv:2601.01891",
-      "paper_url:https://arxiv.org/abs/2601.01891"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Agentic AI in Remote Sensing: Foundations, Taxonomy, and Emerging Systems",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2601.01891",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.3390/rs18020298",
-      "paper_url:https://doi.org/10.3390/rs18020298"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Onboard Deployment of Remote Sensing Foundation Models: A Comprehensive Review of Architecture, Optimization, and Hardware",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.3390/rs18020298",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1038/s43247-025-03127-x",
-      "paper_url:https://doi.org/10.1038/s43247-025-03127-x"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "On the foundations of Earth foundation models",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.1038/s43247-025-03127-x",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Unnamed candidate",
-    "deduplication_keys": [
-      "doi:10.1145/3789505",
-      "paper_url:https://doi.org/10.1145/3789505"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "A Genealogy of Foundation Models in Remote Sensing",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://doi.org/10.1145/3789505",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
-    "matched_candidate_name": "Foundation Models in Remote Sensing",
-    "deduplication_keys": [
-      "arxiv:2603.00988",
-      "paper_url:https://arxiv.org/abs/2603.00988"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Foundation Models in Remote Sensing: Evolving from Unimodality to Multimodality",
-        "section": "Survey/Commentary Papers",
-        "resource_type": "survey_review",
-        "paper_url": "https://arxiv.org/abs/2603.00988",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ]
-  },
-  {
     "matched_candidate_name": "BFM",
-    "deduplication_keys": [
-      "arxiv:2304.05215",
-      "paper_url:https://arxiv.org/abs/2304.05215"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "licongren-awesome-remote-sensing-foundation-models",
@@ -5760,10 +5738,7 @@
   },
   {
     "matched_candidate_name": "SpectralGPT",
-    "deduplication_keys": [
-      "arxiv:2311.07113",
-      "paper_url:https://arxiv.org/abs/2311.07113"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "licongren-awesome-remote-sensing-foundation-models",
@@ -5801,10 +5776,7 @@
   },
   {
     "matched_candidate_name": "CtxMIM",
-    "deduplication_keys": [
-      "arxiv:2310.00022",
-      "paper_url:https://arxiv.org/abs/2310.00022"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "licongren-awesome-remote-sensing-foundation-models",
@@ -5842,10 +5814,7 @@
   },
   {
     "matched_candidate_name": "RingMo-lite",
-    "deduplication_keys": [
-      "arxiv:2309.09003",
-      "paper_url:https://arxiv.org/abs/2309.09003"
-    ],
+    "deduplication_keys": [],
     "source_evidence": [
       {
         "source_id": "licongren-awesome-remote-sensing-foundation-models",

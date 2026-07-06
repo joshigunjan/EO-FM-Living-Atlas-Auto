@@ -12,7 +12,7 @@ def run(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess:
 def main() -> int:
     run(["git", "config", "user.name", "github-actions[bot]"])
     run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"])
-    run(["git", "add", "data/catalogue.json", "data/catalogue.csv", "data/benchmarks.json", "data/benchmarks.csv", "data/metadata.json", "data/candidates", "data/parsed", "data/upstream_raw", "data/upstream_snapshot.json"], check=False)
+    run(["git", "add", "data/catalogue.json", "data/catalogue.csv", "data/benchmarks.json", "data/benchmarks.csv", "data/metadata.json", "data/validation-summary.json", "data/candidates", "data/parsed", "data/upstream_raw", "data/upstream_snapshot.json"], check=False)
     status = subprocess.run(["git", "status", "--porcelain"], text=True, capture_output=True, check=True).stdout.strip()
     if not status:
         print("No generated catalogue changes to commit.")

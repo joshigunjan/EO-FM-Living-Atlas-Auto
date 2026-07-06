@@ -21,6 +21,19 @@
       "title": {
         "type": "string"
       },
+      "entry_type": {
+        "type": "string",
+        "enum": [
+          "model",
+          "benchmark_dataset",
+          "survey_review",
+          "paper_method",
+          "unknown"
+        ]
+      },
+      "entry_type_reason": {
+        "type": "string"
+      },
       "scope": {
         "type": "string"
       },
@@ -143,6 +156,12 @@
       },
       "conflicts": {
         "type": "array"
+      },
+      "source_resource_types": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
       "notes_for_reviewer": {
         "type": "string"

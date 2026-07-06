@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 
 from lib_utils import (
@@ -149,6 +149,47 @@ def name_from_title(title: str) -> str:
     return prefix
 
 
+# Section keywords used to pre-classify entries before LLM processing.
+_SURVEY_SECTION_KEYWORDS = frozenset(["survey", "commentary", "review", "position paper", "meta-analysis"])
+_BENCHMARK_SECTION_KEYWORDS = frozenset(["benchmark", "dataset", "pre-training data", "pretraining data", "embeddings data", "evaluation"])
+_MODEL_SECTION_KEYWORDS = frozenset([
+    "vision foundation model", "generative foundation model", "language foundation model",
+    "vision-language foundation model", "vision-location foundation model",
+    "vision-audio foundation model", "remote sensing vision", "remote sensing generative",
+])
+
+
+def _pre_classify_by_section(source_evidence: list[dict], primary_resource_type: str) -> str:
+    """Return a pre-classification hint based on upstream section names.
+
+    The LLM will still make the final decision, but this hint improves accuracy
+    for entries from clearly labelled sections (Survey Papers, Pre-training Datasets, etc.).
+    """
+    if primary_resource_type in {"benchmark_dataset", "survey_review"}:
+        return primary_resource_type
+
+    resource_types = {
+        str(ev.get("resource_type") or "").strip()
+        for ev in source_evidence
+        if isinstance(ev, dict) and ev.get("resource_type")
+    }
+    if resource_types and resource_types <= {"survey_review"}:
+        return "survey_review"
+    if resource_types and resource_types <= {"benchmark", "dataset", "benchmark_dataset"}:
+        return "benchmark_dataset"
+
+    sections = [str(ev.get("section") or "").lower() for ev in source_evidence if isinstance(ev, dict)]
+    combined = " ".join(sections)
+
+    if any(kw in combined for kw in _SURVEY_SECTION_KEYWORDS):
+        return "survey_review"
+    if any(kw in combined for kw in _BENCHMARK_SECTION_KEYWORDS):
+        return "benchmark_dataset"
+    if any(kw in combined for kw in _MODEL_SECTION_KEYWORDS):
+        return "model"
+    return "unknown"
+
+
 def make_candidate(group: list[dict], sync_date: str) -> dict:
     names = unique([r.get("name", "") for r in group])
     titles = unique([r.get("title", "") for r in group])
@@ -197,15 +238,32 @@ def make_candidate(group: list[dict], sync_date: str) -> dict:
         })
 
     resource_types = unique([r.get("resource_type", "") for r in group])
-    is_benchmark_or_dataset = any(rt in {"benchmark", "dataset", "benchmark_dataset"} for rt in resource_types)
-    default_scope = "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review." if is_benchmark_or_dataset else "Candidate Earth observation foundation model or related resource. Needs curator review."
-    default_category = "Benchmark / dataset candidate" if is_benchmark_or_dataset else "Candidate model entry"
+    resource_type_set = {rt for rt in resource_types if rt}
+    is_survey_only = bool(resource_type_set) and resource_type_set <= {"survey_review"}
+    is_benchmark_only = bool(resource_type_set) and resource_type_set <= {"benchmark", "dataset", "benchmark_dataset"}
+    if is_survey_only:
+        primary_resource_type = "survey_review"
+        default_scope = "Survey, review, or commentary resource related to Earth observation foundation models. Kept out of the public model catalogue until reviewed."
+        default_category = "Survey / review candidate"
+    elif is_benchmark_only:
+        primary_resource_type = "benchmark_dataset"
+        default_scope = "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review."
+        default_category = "Benchmark / dataset candidate"
+    else:
+        primary_resource_type = "model"
+        default_scope = "Candidate Earth observation foundation model or related resource. Needs curator review."
+        default_category = "Candidate model entry"
+
+    # Pre-classify by section name so the LLM has a strong prior signal.
+    pre_classified_type = _pre_classify_by_section(source_evidence, primary_resource_type)
 
     return {
         "id": slugify(name),
         "name": name,
         "title": title,
-        "resource_type": "benchmark_dataset" if is_benchmark_or_dataset else "model",
+        "resource_type": primary_resource_type,
+        "source_resource_types": resource_types,
+        "pre_classified_type": pre_classified_type,
         "scope": default_scope,
         "category": default_category,
         "input_modality": ", ".join(modality_tags),
@@ -253,9 +311,13 @@ def main() -> int:
     candidates = []
     matched_existing = []
     weak_name_groups = defaultdict(list)
+    used_ids: Counter = Counter()
 
     for group in groups:
         cand = make_candidate(group, sync_date)
+        base_id = slugify(cand.get("id") or cand.get("name") or "candidate", fallback="candidate")
+        used_ids[base_id] += 1
+        cand["id"] = base_id if used_ids[base_id] == 1 else f"{base_id}-{used_ids[base_id]}"
         group_keys = set(cand.get("deduplication_keys", []))
         weak_name = normalize_name(cand.get("name", ""))
         # Full automated rebuild mode:

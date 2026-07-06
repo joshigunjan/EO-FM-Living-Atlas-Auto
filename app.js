@@ -128,7 +128,7 @@ function renderTable() {
     const taskChips = (d.task_tags || []).slice(0, 5).map(x => tag(x, "task")).join("");
     const moreTasks = (d.task_tags || []).length > 5 ? `<span class="more">+${(d.task_tags || []).length - 5}</span>` : "";
     tr.innerHTML = `
-      <td class="name"><span>${escapeHtml(d.name)}</span><small>${escapeHtml(d.category || "")}</small></td>
+      <td class="name"><span>${escapeHtml(d.name)}</span></td>
       <td>${escapeHtml(d.scope)}</td>
       <td>${tag(d.modelling_paradigm || "Unknown", "paradigm")}</td>
       <td>${(d.modality_tags || []).map(x => tag(x)).join("") || escapeHtml(truncate(d.input_modality, 80))}</td>

@@ -49,9 +49,18 @@ LLM extracts structured fields with a fixed JSON schema:
     - landscape tier and scores
     - confidence and reviewer notes
   ↓
-Build data/catalogue.json
+Classify entry type:
+    - model
+    - benchmark_dataset
+    - survey_review
+    - paper_method
+    - unknown
+  ↓
+Build data/catalogue.json from model entries only
   ↓
 Build data/benchmarks.json
+  ↓
+Validate public outputs and write generated reports
   ↓
 Commit generated data to main
 ```
@@ -99,3 +108,5 @@ The public page is:
 ```text
 benchmarks.html
 ```
+
+Survey/review and paper-method rows remain in `data/candidates/` and are summarized in `data/candidates/publication-report.json`.

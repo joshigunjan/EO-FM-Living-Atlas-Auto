@@ -2,13 +2,12 @@ from __future__ import annotations
 
 import json
 import os
-from pathlib import Path
 
+from entry_classification import ENTRY_TYPES, classify_entry
 from lib_utils import DATA, dump_json, infer_access, load_json
 
-IN_PATH = DATA / "candidates" / "latest-candidates.with-metadata.json"
-if not IN_PATH.exists():
-    IN_PATH = DATA / "candidates" / "latest-candidates.json"
+BASE_CANDIDATES_PATH = DATA / "candidates" / "latest-candidates.json"
+METADATA_CANDIDATES_PATH = DATA / "candidates" / "latest-candidates.with-metadata.json"
 OUT_PATH = DATA / "candidates" / "latest-candidates.extracted.json"
 
 PARADIGMS = {
@@ -25,6 +24,7 @@ SCHEMA = {
     "type": "object",
     "additionalProperties": False,
     "required": [
+        "entry_type", "entry_type_reason",
         "name", "title", "scope", "category", "input_modality", "modality_tags",
         "architecture", "architecture_tags", "modelling_paradigm_key", "modelling_paradigm",
         "downstream_tasks", "task_tags", "training_scale", "access", "access_label",
@@ -33,6 +33,8 @@ SCHEMA = {
         "extraction_confidence", "needs_review", "notes_for_reviewer"
     ],
     "properties": {
+        "entry_type": {"enum": list(ENTRY_TYPES.keys())},
+        "entry_type_reason": {"type": "string"},
         "name": {"type": "string"},
         "title": {"type": "string"},
         "scope": {"type": "string"},
@@ -60,11 +62,70 @@ SCHEMA = {
 }
 
 SYSTEM_PROMPT = """You curate a structured catalogue of Earth observation foundation models.
-Extract only information supported by the provided upstream row, paper metadata, abstract, README excerpt, and links.
+
+Your FIRST task is to classify the entry_type:
+- "model": An actual EO foundation model or framework with a model name that researchers can use or fine-tune. Must have a distinct model identity (name, code repo, weights, or project page). Examples: SatMAE, Prithvi-EO, GeoKR, Clay, AnySat.
+- "benchmark_dataset": A benchmark evaluation suite, evaluation dataset, or pre-training dataset. Not a model itself. Examples: GeoAI-Bench, SpaceNet, BigEarthNet, RSVQA.
+- "survey_review": A survey paper, review article, commentary, position paper, meta-analysis, or taxonomy paper. No reusable model artifact. If the title/name contains "survey", "review", "commentary", "taxonomy", "open problems", "challenges", "agenda", "genealogy", "towards", "charting", or "awesome-list", classify as survey_review.
+- "paper_method": A paper describing a downstream task application, fine-tuning recipe, or system built using existing foundation models — not a new foundation model itself.
+- "unknown": Cannot be reliably classified from available evidence.
+
+Also provide a concise entry_type_reason (1 sentence).
+
+Then extract only information supported by the provided upstream row, paper metadata, abstract, README excerpt, and links.
 Do not invent exact downstream task counts or access status. Use null and needs_review when uncertain.
 Access labels mean: Open source = paper plus usable code and/or weights are available; Partial access = some links exist but not full code/weights; Closed source = explicitly unavailable; Unknown = not enough evidence.
 Keep wording compact and scientific. If the upstream name is only '-' or another placeholder, infer a compact model/repository name only when it is clearly supported by the paper title, code repository, or project link; otherwise mark the entry as low confidence and needs_review.
+For non-model entries (survey_review, benchmark_dataset, paper_method), set modelling_paradigm_key to "needs_review" and modality_complexity_tier_key to "needs_review".
 """
+
+
+def identity_tokens(candidate: dict) -> list[str]:
+    tokens = []
+    for key in candidate.get("deduplication_keys", []) or []:
+        if key:
+            tokens.append(f"dedup:{key}")
+    for field in ["id", "paper_url", "code_url", "weights_url", "project_url"]:
+        value = str(candidate.get(field) or "").strip().lower()
+        if value:
+            tokens.append(f"{field}:{value}")
+    return tokens
+
+
+def load_candidates_for_extraction() -> list[dict]:
+    """Load fresh candidates and merge metadata from the optional metadata stage.
+
+    The metadata file can be stale after local partial runs, so fresh candidate
+    identities from latest-candidates.json remain authoritative.
+    """
+    candidates = load_json(BASE_CANDIDATES_PATH, [])
+    if not candidates:
+        candidates = load_json(METADATA_CANDIDATES_PATH, [])
+    metadata_candidates = load_json(METADATA_CANDIDATES_PATH, [])
+    if not candidates or not metadata_candidates:
+        return candidates
+
+    token_to_meta: dict[str, dict] = {}
+    for meta_candidate in metadata_candidates:
+        if not isinstance(meta_candidate, dict):
+            continue
+        for token in identity_tokens(meta_candidate):
+            token_to_meta.setdefault(token, meta_candidate)
+
+    merged = []
+    for candidate in candidates:
+        if not isinstance(candidate, dict):
+            continue
+        candidate = dict(candidate)
+        match = None
+        for token in identity_tokens(candidate):
+            match = token_to_meta.get(token)
+            if match:
+                break
+        if match and match.get("metadata"):
+            candidate["metadata"] = match.get("metadata")
+        merged.append(candidate)
+    return merged
 
 
 def call_openai(candidate: dict) -> dict | None:
@@ -82,7 +143,9 @@ def call_openai(candidate: dict) -> dict | None:
             k: candidate.get(k)
             for k in ["name", "title", "paper_url", "code_url", "weights_url", "project_url", "source_evidence", "source_records", "conflicts"]
         },
+        "pre_classified_type": candidate.get("pre_classified_type", "unknown"),
         "metadata": candidate.get("metadata", {}),
+        "allowed_entry_types": ENTRY_TYPES,
         "allowed_modelling_paradigms": PARADIGMS,
     }
     try:
@@ -119,6 +182,7 @@ def call_openai(candidate: dict) -> dict | None:
 
 
 def heuristic_enrichment(candidate: dict) -> dict:
+    entry_type, entry_type_reason = classify_entry(candidate)
     urls = []
     for field in ["paper_url", "code_url", "weights_url", "project_url"]:
         if candidate.get(field):
@@ -126,21 +190,29 @@ def heuristic_enrichment(candidate: dict) -> dict:
     access, access_label = infer_access(urls)
     candidate["access"] = candidate.get("access") or access
     candidate["access_label"] = candidate.get("access_label") or access_label
+    candidate["entry_type"] = entry_type
+    candidate["entry_type_reason"] = entry_type_reason
+    if entry_type != "model":
+        candidate["modelling_paradigm_key"] = "needs_review"
+        candidate["modelling_paradigm"] = "Needs review"
+        candidate["modality_complexity_tier_key"] = "needs_review"
+        candidate["modality_complexity_tier"] = "Needs review"
+        candidate["modality_complexity_score"] = None
     candidate["extraction_confidence"] = candidate.get("extraction_confidence") or "low"
     candidate["needs_review"] = True
     candidate["review_status"] = "candidate"
     candidate.setdefault("notes_for_reviewer", "Heuristic candidate. Run LLM extraction or review manually before verification.")
-    candidate["extraction_method"] = "heuristic"
+    candidate["extraction_method"] = "heuristic:rules"
     return candidate
 
 
 def main() -> int:
-    candidates = load_json(IN_PATH, [])
+    candidates = load_candidates_for_extraction()
     enriched = []
     for cand in candidates:
         llm = call_openai(cand)
         if llm:
-            protected = {k: cand.get(k) for k in ["id", "paper_url", "code_url", "weights_url", "project_url", "source_records", "source_evidence", "deduplication_keys", "aliases", "conflicts", "metadata", "sync_detected_at"]}
+            protected = {k: cand.get(k) for k in ["id", "paper_url", "code_url", "weights_url", "project_url", "source_records", "source_evidence", "deduplication_keys", "aliases", "conflicts", "metadata", "sync_detected_at", "pre_classified_type", "resource_type"]}
             cand.update(llm)
             cand.update(protected)
             cand["review_status"] = "candidate"

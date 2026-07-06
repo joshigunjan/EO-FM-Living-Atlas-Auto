@@ -1,0 +1,46 @@
+{
+  "purpose": "Source configuration for finding new EO foundation-model releases beyond curated awesome lists.",
+  "policy": "Discovery sources create candidates only. Public publication still requires primary-source evidence and output validation.",
+  "sources": [
+    {
+      "id": "arxiv-eo-foundation-models",
+      "type": "arxiv_query",
+      "cadence": "daily",
+      "query": "(\"Earth observation\" OR \"remote sensing\" OR geospatial) AND (\"foundation model\" OR \"foundation models\" OR \"vision-language\" OR \"multimodal\")",
+      "promotion_rule": "Create a candidate when the title/abstract names a model, benchmark, dataset, or model version and includes a paper URL."
+    },
+    {
+      "id": "github-eo-model-releases",
+      "type": "github_search",
+      "cadence": "weekly",
+      "query": "remote sensing foundation model OR earth observation foundation model OR geospatial foundation model",
+      "promotion_rule": "Create a candidate only for official organization/user repositories with a paper, model card, or release tag."
+    },
+    {
+      "id": "huggingface-eo-models",
+      "type": "huggingface_search",
+      "cadence": "weekly",
+      "query": "earth-observation remote-sensing geospatial foundation-model",
+      "promotion_rule": "Create a candidate when the model card links to a paper/project and describes modalities, license, and intended tasks."
+    },
+    {
+      "id": "upstream-awesome-lists",
+      "type": "configured_markdown_sources",
+      "cadence": "twice_monthly",
+      "path": "data/upstream_sources.json",
+      "promotion_rule": "Parse tables and bullets, deduplicate by strong source keys, then classify before publication."
+    },
+    {
+      "id": "manual-public-signals",
+      "type": "manual_intake",
+      "cadence": "continuous",
+      "examples": [
+        "LinkedIn announcement",
+        "conference talk",
+        "lab blog",
+        "project website"
+      ],
+      "promotion_rule": "Never publish from social/news text alone. Require a primary paper, code repository, model card, project page, or official release note."
+    }
+  ]
+}

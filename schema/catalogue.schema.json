@@ -93,8 +93,9 @@
           "joint_embedding",
           "vision_language",
           "state_space",
-          "embedding_field",
-          "generative_hybrid"
+          "embedding_product",
+          "generative_hybrid",
+          "needs_review"
         ]
       },
       "modelling_paradigm": {
@@ -106,20 +107,31 @@
           "single_modality",
           "multi_modality",
           "vision_language",
-          "generalist"
+          "generalist",
+          "needs_review"
         ]
       },
       "modality_complexity_tier": {
         "type": "string"
       },
       "modality_complexity_score": {
-        "type": "number"
+        "type": [
+          "number",
+          "null"
+        ]
       },
       "reported_downstream_task_count": {
-        "type": "integer"
+        "type": [
+          "integer",
+          "number",
+          "null"
+        ]
       },
       "reported_downstream_task_count_basis": {
         "type": "string"
+      },
+      "landscape_score": {
+        "type": "number"
       },
       "primary_source_url": {
         "type": "string"
@@ -129,6 +141,39 @@
       },
       "last_updated": {
         "type": "string"
+      },
+      "entry_type": {
+        "type": "string",
+        "enum": [
+          "model"
+        ]
+      },
+      "entry_type_reason": {
+        "type": "string"
+      },
+      "needs_review": {
+        "type": "boolean"
+      },
+      "extraction_confidence": {
+        "type": "string"
+      },
+      "extraction_method": {
+        "type": "string"
+      },
+      "source_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_evidence": {
+        "type": "array"
+      },
+      "deduplication_keys": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     }
   }

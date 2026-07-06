@@ -1,0 +1,874 @@
+{
+  "candidate_count": 308,
+  "published_model_count": 214,
+  "excluded_count": 86,
+  "entry_type_distribution": {
+    "model": 227,
+    "benchmark_dataset": 50,
+    "survey_review": 30,
+    "paper_method": 1
+  },
+  "excluded": [
+    {
+      "id": "unnamed-candidate",
+      "name": "Unnamed candidate",
+      "title": "A Self-Supervised Cross-Modal Remote Sensing Foundation Model with Multi-Domain Representation and Cross-Domain Fusion",
+      "entry_type": "model",
+      "entry_type_reason": "Upstream section/resource evidence identifies this as a model candidate.",
+      "publication_exclusion_reason": "missing_public_model_name",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-2",
+      "name": "Unnamed candidate",
+      "title": "Masked Feature Modeling for Generative Self-Supervised Representation Learning of High-Resolution Remote Sensing Images",
+      "entry_type": "model",
+      "entry_type_reason": "Upstream section/resource evidence identifies this as a model candidate.",
+      "publication_exclusion_reason": "missing_public_model_name",
+      "paper_url": "https://doi.org/10.1109/jstars.2024.3385420",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-3",
+      "name": "Unnamed candidate",
+      "title": "A Multimodal Unified Representation Learning Framework With Masked Image Modeling for Remote Sensing Images",
+      "entry_type": "model",
+      "entry_type_reason": "Upstream section/resource evidence identifies this as a model candidate.",
+      "publication_exclusion_reason": "missing_public_model_name",
+      "paper_url": "https://doi.org/10.1109/tgrs.2024.3494244",
+      "code_url": ""
+    },
+    {
+      "id": "fomo",
+      "name": "FoMo",
+      "title": "FoMo: Multi-Modal, Multi-Scale and Multi-Task Remote Sensing Foundation Models for Forest Monitoring",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1609/aaai.v39i27.35002",
+      "code_url": "https://github.com/RolnickLab/FoMo-Bench"
+    },
+    {
+      "id": "copernicus-fm",
+      "name": "Copernicus-FM",
+      "title": "Towards a Unified Copernicus Foundation Model for Earth Vision",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2503.11849",
+      "code_url": "https://github.com/zhu-xlab/Copernicus-FM"
+    },
+    {
+      "id": "unnamed-candidate-4",
+      "name": "Unnamed candidate",
+      "title": "A Complex-Valued SAR Foundation Model Based on Physically Inspired Representation Learning",
+      "entry_type": "model",
+      "entry_type_reason": "Upstream section/resource evidence identifies this as a model candidate.",
+      "publication_exclusion_reason": "missing_public_model_name",
+      "paper_url": "https://doi.org/10.1109/tip.2026.3652417",
+      "code_url": ""
+    },
+    {
+      "id": "charting-new-territories",
+      "name": "charting-new-territories",
+      "title": "Charting New Territories: Exploring the Geographic and Geospatial Capabilities of Multimodal LLMs",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2311.14656",
+      "code_url": "https://github.com/jonathan-roberts1/charting-new-territories"
+    },
+    {
+      "id": "geotext",
+      "name": "GeoText",
+      "title": "Towards Natural Language-Guided Drones: GeoText-1652 Benchmark with Spatial Relation Matching",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2311.12751",
+      "code_url": "https://github.com/MultimodalGeo/GeoText-1652"
+    },
+    {
+      "id": "unnamed-candidate-5",
+      "name": "Unnamed candidate",
+      "title": "Quality-Driven Curation of Remote Sensing Vision-Language Data via Learned Scoring Models",
+      "entry_type": "model",
+      "entry_type_reason": "Upstream section/resource evidence identifies this as a model candidate.",
+      "publication_exclusion_reason": "missing_public_model_name",
+      "paper_url": "https://arxiv.org/abs/2503.00743",
+      "code_url": ""
+    },
+    {
+      "id": "dynamicvl",
+      "name": "DynamicVL",
+      "title": "DynamicVL: Benchmarking Multimodal Large Language Models for Dynamic City Understanding",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2505.21076",
+      "code_url": ""
+    },
+    {
+      "id": "rsgpt",
+      "name": "RSGPT",
+      "title": "RSGPT: A Remote Sensing Vision Language Model and Benchmark",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.04.001",
+      "code_url": "https://github.com/Lavender105/RSGPT"
+    },
+    {
+      "id": "xlrs-bench",
+      "name": "XLRS-Bench",
+      "title": "XLRS-Bench: Could Your Multimodal LLMs Understand Extremely Large Ultra-High-Resolution Remote Sensing Imagery?",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2503.23771",
+      "code_url": ""
+    },
+    {
+      "id": "remote-sensing-large-vision-language-model",
+      "name": "Remote Sensing Large Vision-Language Model",
+      "title": "Remote Sensing Large Vision-Language Model: Semantic-augmented Multi-level Alignment and Semantic-aware Expert Modeling",
+      "entry_type": "paper_method",
+      "entry_type_reason": "The evidence looks like a downstream method or paper-only resource, not a reusable model.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2506.21863",
+      "code_url": ""
+    },
+    {
+      "id": "georeason",
+      "name": "GeoReason",
+      "title": "GeoReason: Aligning Thinking And Answering In Remote Sensing Vision-Language Models Via Logical Consistency Reinforcement Learning",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2601.04118",
+      "code_url": "https://github.com/canlanqianyan/GeoReason"
+    },
+    {
+      "id": "openearth-agent",
+      "name": "OpenEarth-Agent",
+      "title": "OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2603.22148",
+      "code_url": "https://github.com/walking-shadow/OpenEarth-Agent"
+    },
+    {
+      "id": "earth-agent",
+      "name": "Earth-Agent",
+      "title": "Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2509.23141",
+      "code_url": "https://github.com/opendatalab/Earth-Agent"
+    },
+    {
+      "id": "resize-is-all-you-need",
+      "name": "resize-is-all-you-need",
+      "title": "Revisiting pre-trained remote sensing model benchmarks: resizing and normalization matters",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2305.13456",
+      "code_url": ""
+    },
+    {
+      "id": "geo-bench",
+      "name": "GEO-Bench",
+      "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2306.03831",
+      "code_url": ""
+    },
+    {
+      "id": "fomo-bench",
+      "name": "FoMo-Bench",
+      "title": "FoMo: Multi-Modal, Multi-Scale and Multi-Task Remote Sensing Foundation Models for Forest Monitoring",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2312.10114",
+      "code_url": ""
+    },
+    {
+      "id": "phileo",
+      "name": "PhilEO",
+      "title": "PhilEO Bench: Evaluating Geo-Spatial Foundation Models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2401.04464",
+      "code_url": ""
+    },
+    {
+      "id": "vleo-bench",
+      "name": "VLEO-Bench",
+      "title": "Good at captioning, bad at counting: Benchmarking GPT-4V on Earth observation data",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2401.17600",
+      "code_url": ""
+    },
+    {
+      "id": "vrsbench",
+      "name": "VRSBench",
+      "title": "VRSBench: A Versatile Vision-Language Benchmark Dataset for Remote Sensing Image Understanding",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2406.12384",
+      "code_url": ""
+    },
+    {
+      "id": "urbench",
+      "name": "UrBench",
+      "title": "UrBench: A Comprehensive Benchmark for Evaluating Large Multimodal Models in Multi-View Urban Scenarios",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1609/aaai.v39i10.33163",
+      "code_url": ""
+    },
+    {
+      "id": "pangaea",
+      "name": "PANGAEA",
+      "title": "PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2412.04204",
+      "code_url": ""
+    },
+    {
+      "id": "geo-bench-vlm",
+      "name": "GEO-Bench-VLM",
+      "title": "GEO-Bench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2411.19325",
+      "code_url": ""
+    },
+    {
+      "id": "reobench",
+      "name": "REOBench",
+      "title": "REOBench: Benchmarking Robustness of Earth Observation Foundation Models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2505.16793",
+      "code_url": ""
+    },
+    {
+      "id": "plantation-bench",
+      "name": "Plantation Bench",
+      "title": "Plantation Bench: A Multiscale, Multimodal Remote Sensing Benchmark for Plantation Mapping Under Distribution Shift",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/iccvw69036.2025.00310",
+      "code_url": ""
+    },
+    {
+      "id": "chatearthbench",
+      "name": "ChatEarthBench",
+      "title": "ChatEarthBench: Benchmarking multimodal large language models for Earth observation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/mgrs.2026.3650840",
+      "code_url": ""
+    },
+    {
+      "id": "omniearth",
+      "name": "OmniEarth",
+      "title": "OmniEarth: A Benchmark for Evaluating Vision-Language Models in Geospatial Tasks",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2603.09471",
+      "code_url": ""
+    },
+    {
+      "id": "spatialsky-bench",
+      "name": "SpatialSky-Bench",
+      "title": "Is your VLM Sky-Ready? A Comprehensive Spatial Intelligence Benchmark for UAV Navigation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2511.13269",
+      "code_url": ""
+    },
+    {
+      "id": "rsvlm-qa",
+      "name": "RSVLM-QA",
+      "title": "RSVLM-QA: A Benchmark Dataset for Remote Sensing Vision Language Model-based Question Answering",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2508.07918",
+      "code_url": ""
+    },
+    {
+      "id": "geoagentbench",
+      "name": "GeoAgentBench",
+      "title": "GeoAgentBench: A Dynamic Execution Benchmark for Tool-Augmented Agents in Spatial Analysis",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2604.13888",
+      "code_url": ""
+    },
+    {
+      "id": "fmow",
+      "name": "fMoW",
+      "title": "Functional Map of the World",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
+      "code_url": ""
+    },
+    {
+      "id": "sen12ms",
+      "name": "SEN12MS",
+      "title": "SEN12MS -- A Curated Dataset of Georeferenced Multi-Spectral Sentinel-1/2 Imagery for Deep Learning and Data Fusion",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/1906.07789",
+      "code_url": ""
+    },
+    {
+      "id": "ben-mm",
+      "name": "BEN-MM",
+      "title": "BigEarthNet-MM: A Large Scale Multi-Modal Multi-Label Benchmark Archive for Remote Sensing Image Classification and Retrieval",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/9552024",
+      "code_url": ""
+    },
+    {
+      "id": "millionaid",
+      "name": "MillionAID",
+      "title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
+      "code_url": ""
+    },
+    {
+      "id": "fmow-s2",
+      "name": "fMoW-S2",
+      "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": ""
+    },
+    {
+      "id": "ssl4eo-s12",
+      "name": "SSL4EO-S12",
+      "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2211.07044",
+      "code_url": ""
+    },
+    {
+      "id": "ssl4eo-l",
+      "name": "SSL4EO-L",
+      "title": "SSL4EO-L: Datasets and Foundation Models for Landsat Imagery",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2306.09424",
+      "code_url": ""
+    },
+    {
+      "id": "samrs",
+      "name": "SAMRS",
+      "title": "SAMRS: Scaling-up Remote Sensing Segmentation Dataset with Segment Anything Model",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2305.02034",
+      "code_url": ""
+    },
+    {
+      "id": "rsvg",
+      "name": "RSVG",
+      "title": "RSVG: Exploring Data and Models for Visual Grounding on Remote Sensing Data",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/document/10056343",
+      "code_url": ""
+    },
+    {
+      "id": "satin",
+      "name": "SATIN",
+      "title": "SATIN: A Multi-Task Metadataset for Classifying Satellite Imagery using Vision-Language Models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2304.11619",
+      "code_url": ""
+    },
+    {
+      "id": "chatearthnet",
+      "name": "ChatEarthNet",
+      "title": "ChatEarthNet: a global-scale image-text dataset empowering vision-language geo-foundation models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.5194/essd-17-1245-2025",
+      "code_url": ""
+    },
+    {
+      "id": "luojiahog",
+      "name": "LuoJiaHOG",
+      "title": "LuoJiaHOG: A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.02.009",
+      "code_url": ""
+    },
+    {
+      "id": "mmearth-2",
+      "name": "MMEarth",
+      "title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2405.02771",
+      "code_url": ""
+    },
+    {
+      "id": "seefar",
+      "name": "SeeFar",
+      "title": "SeeFar: Satellite Agnostic Multi-Resolution Dataset for Geospatial Foundation Models",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2406.06776",
+      "code_url": ""
+    },
+    {
+      "id": "rs-gpt4v",
+      "name": "RS-GPT4V",
+      "title": "RS-GPT4V: A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2406.12479",
+      "code_url": ""
+    },
+    {
+      "id": "major-tom",
+      "name": "Major TOM",
+      "title": "Major TOM: Expandable Datasets for Earth Observation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2402.12095",
+      "code_url": ""
+    },
+    {
+      "id": "mmm-rs",
+      "name": "MMM-RS",
+      "title": "MMM-RS: A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2410.22362",
+      "code_url": ""
+    },
+    {
+      "id": "ddfav",
+      "name": "DDFAV",
+      "title": "DDFAV: Remote Sensing Large Vision Language Models Dataset and Evaluation Benchmark",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.3390/rs17040719",
+      "code_url": ""
+    },
+    {
+      "id": "m3leo",
+      "name": "M3LEO",
+      "title": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": ""
+    },
+    {
+      "id": "soma-1m",
+      "name": "SOMA-1M",
+      "title": "SOMA-1M: A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2602.05480",
+      "code_url": ""
+    },
+    {
+      "id": "clay-embeddings",
+      "name": "CLAY Embeddings",
+      "title": "Clay Model v0 Embeddings",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": "https://github.com/Clay-foundation"
+    },
+    {
+      "id": "major-tom-embeddings",
+      "name": "Major TOM Embeddings",
+      "title": "Global and Dense Embeddings of Earth: Major TOM Floating in the Latent Space",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2412.05600",
+      "code_url": "https://github.com/ESA-PhiLab/Major-TOM"
+    },
+    {
+      "id": "earth-genome-embeddings",
+      "name": "Earth Genome Embeddings",
+      "title": "Embeddings for all",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": ""
+    },
+    {
+      "id": "esd",
+      "name": "ESD",
+      "title": "Democratizing planetary-scale analysis: An ultra-lightweight Earth embedding database for accurate and flexible global land monitoring",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2601.11183",
+      "code_url": "https://github.com/shuangchencc/ESD"
+    },
+    {
+      "id": "unnamed-candidate-6",
+      "name": "Unnamed candidate",
+      "title": "The Potential of Visual ChatGPT For Remote Sensing",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2304.13009",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-7",
+      "name": "Unnamed candidate",
+      "title": "Self-Supervised Remote Sensing Feature Learning: Learning Paradigms, Challenges, and Future Works",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10126079",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-8",
+      "name": "Unnamed candidate",
+      "title": "An Agenda for Multimodal Foundation Models for Earth Observation",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282966",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-9",
+      "name": "Unnamed candidate",
+      "title": "Brain-Inspired Remote Sensing Foundation Models and Open Problems: A Comprehensive Survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10254282",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-10",
+      "name": "Unnamed candidate",
+      "title": "On the Promises and Challenges of Multimodal Foundation Models for Geographical, Environmental, Agricultural, and Urban Planning Applications",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2312.17016",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-11",
+      "name": "Unnamed candidate",
+      "title": "Transfer learning in environmental remote sensing",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://sciencedirect.com/science/article/pii/S0034425723004765",
+      "code_url": ""
+    },
+    {
+      "id": "vision-language-models-in-remote-sensing",
+      "name": "Vision-Language Models in Remote Sensing",
+      "title": "Vision-Language Models in Remote Sensing: Current Progress and Future Trends",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2305.05726",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-12",
+      "name": "Unnamed candidate",
+      "title": "On the Foundations of Earth and Climate Foundation Models",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2405.04285",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-13",
+      "name": "Unnamed candidate",
+      "title": "Towards Vision-Language Geo-Foundation Model: A Survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2406.09385",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-14",
+      "name": "Unnamed candidate",
+      "title": "Vision Foundation Models in Remote Sensing: A Survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2408.03464",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-15",
+      "name": "Unnamed candidate",
+      "title": "Foundation model for generalist remote sensing intelligence: Potentials and prospects",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://sciencedirect.com/science/article/pii/S2095927324006510",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-16",
+      "name": "Unnamed candidate",
+      "title": "Advancements in Visual Language Models for Remote Sensing: Datasets, Capabilities, and Enhancement Techniques",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2410.17283",
+      "code_url": ""
+    },
+    {
+      "id": "when-geoscience-meets-foundation-models",
+      "name": "When Geoscience Meets Foundation Models",
+      "title": "When Geoscience Meets Foundation Models: Toward a general geoscience artificial intelligence system",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10770814",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-17",
+      "name": "Unnamed candidate",
+      "title": "Towards the next generation of Geospatial Artificial Intelligence",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://sciencedirect.com/science/article/pii/S1569843225000159",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-18",
+      "name": "Unnamed candidate",
+      "title": "When Remote Sensing Meets Foundation Model: A Survey and Beyond",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.3390/rs17020179",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-19",
+      "name": "Unnamed candidate",
+      "title": "Vision Foundation Models in Remote Sensing: A survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/10916803",
+      "code_url": ""
+    },
+    {
+      "id": "remote-sensing-tuning",
+      "name": "Remote Sensing Tuning",
+      "title": "Remote Sensing Tuning: A Survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.26599/cvm.2025.9450490",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-20",
+      "name": "Unnamed candidate",
+      "title": "A Survey on Remote Sensing Foundation Models: From Vision to Multimodality",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2503.22081",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-21",
+      "name": "Unnamed candidate",
+      "title": "Foundation Models for Remote Sensing and Earth Observation: A survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/mgrs.2025.3576766",
+      "code_url": ""
+    },
+    {
+      "id": "vision-language-modeling-meets-remote-sensing",
+      "name": "Vision-Language Modeling Meets Remote Sensing",
+      "title": "Vision-Language Modeling Meets Remote Sensing: Models, datasets, and perspectives",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/mgrs.2025.3572702",
+      "code_url": ""
+    },
+    {
+      "id": "mimrs",
+      "name": "MIMRS",
+      "title": "MIMRS: A Survey on Masked Image Modeling in Remote Sensing",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/igarss55030.2025.11243448",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-22",
+      "name": "Unnamed candidate",
+      "title": "A Review of Challenges and Applications in Remote Sensing Foundation Models",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/igarss55030.2025.11242732",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-23",
+      "name": "Unnamed candidate",
+      "title": "On the Status of Foundation Models for SAR Imagery",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2509.21722",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-24",
+      "name": "Unnamed candidate",
+      "title": "Advances on Multimodal Remote Sensing Foundation Models for Earth Observation Downstream Tasks: A Survey",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.3390/rs17213532",
+      "code_url": ""
+    },
+    {
+      "id": "agentic-ai-in-remote-sensing",
+      "name": "Agentic AI in Remote Sensing",
+      "title": "Agentic AI in Remote Sensing: Foundations, Taxonomy, and Emerging Systems",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2601.01891",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-25",
+      "name": "Unnamed candidate",
+      "title": "Onboard Deployment of Remote Sensing Foundation Models: A Comprehensive Review of Architecture, Optimization, and Hardware",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.3390/rs18020298",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-26",
+      "name": "Unnamed candidate",
+      "title": "On the foundations of Earth foundation models",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1038/s43247-025-03127-x",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-27",
+      "name": "Unnamed candidate",
+      "title": "A Genealogy of Foundation Models in Remote Sensing",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1145/3789505",
+      "code_url": ""
+    },
+    {
+      "id": "foundation-models-in-remote-sensing",
+      "name": "Foundation Models in Remote Sensing",
+      "title": "Foundation Models in Remote Sensing: Evolving from Unimodality to Multimodality",
+      "entry_type": "survey_review",
+      "entry_type_reason": "Survey/review/commentary wording or section evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2603.00988",
+      "code_url": ""
+    },
+    {
+      "id": "fmow-s2-2",
+      "name": "fMoW-S2",
+      "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": ""
+    }
+  ],
+  "note": "Only entry_type=model is published to data/catalogue.json. Benchmarks/datasets are written by build_benchmarks_catalogue.py; surveys and paper-only methods stay in data/candidates/."
+}

@@ -62,7 +62,6 @@ function buildFilters() {
 function rowText(d) {
   return [
     d.name, d.title, d.scope, d.benchmark_type, d.tasks, d.modalities, d.access, d.paper_url, d.code_url, d.dataset_url, d.project_url,
-    ...(d.source_names || [])
   ].join(" ").toLowerCase();
 }
 
@@ -84,10 +83,9 @@ function renderTable() {
   els.resultCount.textContent = `${state.filtered.length} of ${state.data.length} entries shown`;
   for (const d of state.filtered) {
     const tr = document.createElement("tr");
-    const sourceNames = (d.source_names || []).slice(0, 2).join(", ");
     const datasetUrl = d.dataset_url || d.project_url;
     tr.innerHTML = `
-      <td class="name"><span>${escapeHtml(d.name)}</span><small>${escapeHtml(sourceNames || "upstream source")}</small></td>
+      <td class="name"><span>${escapeHtml(d.name)}</span></td>
       <td>${tag(d.benchmark_type || "Needs review", "paradigm")}</td>
       <td><strong>${escapeHtml(truncate(d.title, 120))}</strong><div class="task-preview">${escapeHtml(truncate(d.scope, 150))}</div></td>
       <td class="tasks-cell"><div class="task-preview">${escapeHtml(truncate(d.tasks, 180))}</div></td>

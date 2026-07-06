@@ -1,0 +1,119 @@
+[
+  {
+    "id": "olmoearth",
+    "name": "OlmoEarth",
+    "title": "OlmoEarth: Stable Latent Image Modeling for Multimodal Earth Observation",
+    "scope": "Multimodal spatio-temporal Earth observation foundation model using stable latent image modeling.",
+    "category": "Generative / multimodal EO foundation model",
+    "input_modality": "multimodal Earth observation imagery; spatio-temporal inputs; Sentinel-2 tasks reported",
+    "modality_tags": [
+      "multispectral",
+      "temporal"
+    ],
+    "architecture": "Self-supervised stable latent image modeling for multimodal spatio-temporal Earth observation representations.",
+    "architecture_tags": [
+      "Generative",
+      "Transformer"
+    ],
+    "modelling_paradigm_key": "generative_hybrid",
+    "modelling_paradigm": "Any-to-any generative / hybrid multimodal system",
+    "downstream_tasks": "embedding evaluation across 24 tasks; full fine-tuning across 29 tasks; real-world partner tasks; data collection, labeling, training, and inference workflows",
+    "task_tags": [
+      "representation learning",
+      "fine-tuning",
+      "embedding evaluation",
+      "land-cover mapping",
+      "segmentation",
+      "classification"
+    ],
+    "training_scale": "Large multimodal Earth observation pretraining; see primary paper for dataset and training details.",
+    "openness": "open",
+    "openness_label": "Open source",
+    "openness_text": "Open source code, training data, and pre-trained weights are reported in the primary paper.",
+    "paper_url": "https://arxiv.org/abs/2511.13655",
+    "code_url": "https://github.com/allenai/olmoearth_pretrain",
+    "weights_url": "",
+    "project_url": "",
+    "modality_complexity_tier_key": "generalist",
+    "modality_complexity_tier": "Generalist models",
+    "modality_complexity_score": 4,
+    "reported_downstream_task_count": 29,
+    "reported_downstream_task_count_basis": "primary_paper_reports_24_embedding_tasks_and_29_full_finetuning_tasks",
+    "landscape_score": 7.25,
+    "fm_strength": "Primary-source curated EO foundation model",
+    "notes": "Curated supplemental entry added because upstream awesome-list metadata was too sparse for a public row.",
+    "review_status": "curated_supplement",
+    "needs_review": false,
+    "entry_type": "model",
+    "entry_type_reason": "Primary paper describes a reusable multimodal Earth observation foundation model with public code and reported weights.",
+    "extraction_confidence": "high",
+    "extraction_method": "curated_supplement",
+    "source_names": [
+      "arXiv primary paper",
+      "AllenAI GitHub"
+    ],
+    "deduplication_keys": [
+      "arxiv:2511.13655",
+      "github:allenai/olmoearth_pretrain"
+    ]
+  },
+  {
+    "id": "olmoearth-v1-1",
+    "name": "OlmoEarth v1.1",
+    "title": "OlmoEarth v1.1: A more efficient family of OlmoEarth models",
+    "scope": "More efficient OlmoEarth model family with reduced training and Sentinel-2 inference compute while maintaining overall performance.",
+    "category": "Generative / multimodal EO foundation model",
+    "input_modality": "multimodal Earth observation imagery; Sentinel-2 tasks reported",
+    "modality_tags": [
+      "multispectral",
+      "temporal"
+    ],
+    "architecture": "Efficiency-improved OlmoEarth family derived from stable latent image modeling.",
+    "architecture_tags": [
+      "Generative",
+      "Transformer"
+    ],
+    "modelling_paradigm_key": "generative_hybrid",
+    "modelling_paradigm": "Any-to-any generative / hybrid multimodal system",
+    "downstream_tasks": "Sentinel-2 downstream tasks; efficiency-preserving evaluation relative to the OlmoEarth family",
+    "task_tags": [
+      "representation learning",
+      "fine-tuning",
+      "classification",
+      "segmentation"
+    ],
+    "training_scale": "Reports 1.7x reduction in GPU hours for Base model training and 2.9x reduction in MACs on Sentinel-2 tasks.",
+    "openness": "open",
+    "openness_label": "Open source",
+    "openness_text": "Training code is reported as available through the AllenAI OlmoEarth pretraining repository.",
+    "paper_url": "https://arxiv.org/abs/2605.20804",
+    "code_url": "https://github.com/allenai/olmoearth_pretrain",
+    "weights_url": "",
+    "project_url": "",
+    "modality_complexity_tier_key": "generalist",
+    "modality_complexity_tier": "Generalist models",
+    "modality_complexity_score": 4,
+    "reported_downstream_task_count": 4,
+    "reported_downstream_task_count_basis": "curated_summary_from_public_v1_1_paper",
+    "landscape_score": 6.2,
+    "fm_strength": "Versioned primary-source curated EO foundation model",
+    "notes": "Curated supplemental version entry. No public source for an OlmoEarth 1.5 release was found during implementation.",
+    "review_status": "curated_supplement",
+    "needs_review": false,
+    "entry_type": "model",
+    "entry_type_reason": "Primary paper describes an improved versioned family of the reusable OlmoEarth model.",
+    "extraction_confidence": "high",
+    "extraction_method": "curated_supplement",
+    "source_names": [
+      "arXiv primary paper",
+      "AllenAI GitHub"
+    ],
+    "deduplication_keys": [
+      "arxiv:2605.20804",
+      "github:allenai/olmoearth_pretrain"
+    ],
+    "model_family": "OlmoEarth",
+    "model_version": "v1.1",
+    "allow_shared_code_repo": true
+  }
+]

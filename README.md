@@ -17,6 +17,8 @@ Fetch paper metadata, arXiv abstracts/PDF excerpts, Crossref metadata, GitHub RE
   ↓
 Use an LLM to extract structured fields
   ↓
+Classify entry type: model, benchmark/dataset, survey/review, or paper-method
+  ↓
 Generate data/catalogue.json and data/benchmarks.json
   ↓
 Website + landscape update automatically
@@ -87,6 +89,11 @@ same Hugging Face repository
 ```
 
 Weak name-only matches are not merged automatically. They are written to possible-duplicate reports for review, so different releases such as `Prithvi-EO-1.0` and `Prithvi-EO-2.0` are not accidentally collapsed.
+
+## Publication gate
+
+The public model catalogue only publishes entries classified as `model`.
+Benchmarks and datasets are routed to `data/benchmarks.json`; surveys, reviews, paper-only methods, and unknown entries stay in `data/candidates/` for review. The generated `data/candidates/publication-report.json` records the inclusion/exclusion split for each run.
 
 ## Scientific status
 

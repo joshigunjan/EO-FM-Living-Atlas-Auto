@@ -55,6 +55,16 @@ def header_index(headers: list[str], candidates: list[str]) -> int | None:
     return None
 
 
+BAD_MODEL_NAMES = {"", "-", "—", "–", "n/a", "na", "none", "unknown"}
+
+
+def clean_model_name(value: str) -> str:
+    value = strip_md(value or "").strip()
+    if value.lower() in BAD_MODEL_NAMES:
+        return ""
+    return value
+
+
 def first_url(cell: str, allow_domains: tuple[str, ...] | None = None) -> str:
     urls = extract_urls(cell)
     if not allow_domains:
@@ -68,6 +78,10 @@ def first_url(cell: str, allow_domains: tuple[str, ...] | None = None) -> str:
 def infer_resource_type(section: str, name: str, title: str, raw_row: str) -> str:
     text = f"{section} {name} {title} {raw_row}".lower()
     section_l = (section or "").lower()
+    if any(w in section_l for w in ["survey", "commentary", "review", "position paper", "meta-analysis"]):
+        return "survey_review"
+    if any(w in text for w in ["a survey", "survey on", "review of", "a review", "taxonomy", "genealogy", "open problems"]):
+        return "survey_review"
     if any(w in section_l for w in ["benchmark", "dataset", "pre-training", "pretraining", "embeddings data"]):
         if "benchmark" in section_l or "bench" in text:
             return "benchmark"
@@ -103,7 +117,7 @@ def parse_tables(markdown: str, source_id: str, source_meta: dict) -> list[dict]
                 code_i = header_index(headers, ["code", "weights", "repository", "github"])
                 project_i = header_index(headers, ["project", "website", "page", "link", "url", "dataset"])
 
-                name = strip_md(row[name_i]) if name_i is not None else ""
+                name = clean_model_name(row[name_i]) if name_i is not None else ""
                 title = strip_md(row[title_i]) if title_i is not None else ""
                 raw_row = " | ".join(row)
                 urls = extract_urls(raw_row)
@@ -115,8 +129,9 @@ def parse_tables(markdown: str, source_id: str, source_meta: dict) -> list[dict]
                 project_url = first_url(row[project_i]) if project_i is not None else ""
 
                 if not name and title:
-                    # Some lists put the model name in the first linked text.
-                    name = title.split(":", 1)[0].strip()
+                    # Keep title separately. The model name will be derived later from
+                    # upstream name, repository name, project link, or LLM extraction.
+                    name = ""
                 if name or paper_url or code_url:
                     rec = {
                         "record_id": f"{source_id}:{len(records)+1}",

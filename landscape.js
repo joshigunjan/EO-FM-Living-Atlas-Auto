@@ -4,7 +4,7 @@ const landscape = {
   selectedId: null,
   labelMode: false,
   xMetric: "modality_stage",
-  yMetric: "reported_tasks"
+  yMetric: "landscape_score"
 };
 
 const L = {
@@ -103,6 +103,15 @@ function reportedTaskCount(d) {
   return Number.isFinite(n) && n > 0 ? n : taskCount(d);
 }
 
+function landscapeEvidenceScore(d) {
+  const explicit = Number(d.landscape_score);
+  if (Number.isFinite(explicit) && explicit > 0) return explicit;
+  const links = linkCount(d);
+  const sourceCount = Math.min((d.source_evidence || []).length || 1, 3);
+  const access = opennessScore(d) / 3;
+  return Number((reportedTaskCount(d) * 0.9 + modalityCount(d) * 0.8 + architectureCount(d) * 0.5 + links * 0.7 + sourceCount * 0.25 + access).toFixed(2));
+}
+
 function architectureCount(d) {
   return Math.max((d.architecture_tags || []).length, 1);
 }
@@ -153,7 +162,7 @@ const FAMILIES = {
     short: "State-space",
     shape: "diamond"
   },
-  embedding_field: {
+  embedding_product: {
     label: "Embedding product / representation field",
     short: "Embedding field",
     shape: "cross"
@@ -179,7 +188,7 @@ function modelFamilyKey(d) {
   const name = String(d.name || "").toLowerCase();
   if (text.includes("mamba") || text.includes("state space") || text.includes("state-space")) return "state_space";
   if (text.includes("any-to-any") || text.includes("thinking-in-modalities") || text.includes("modality-to-modality") || name.includes("terramind") || name.includes("dofa+")) return "generative_hybrid";
-  if (name.includes("alphaearth") || name.includes("tessera") || text.includes("embedding field") || text.includes("representation field") || text.includes("embedding product")) return "embedding_field";
+  if (name.includes("alphaearth") || name.includes("tessera") || text.includes("embedding field") || text.includes("representation field") || text.includes("embedding product")) return "embedding_product";
   if (text.includes("vision-language") || text.includes("vision language") || text.includes("large language") || text.includes("mllm") || text.includes("llm") || text.includes("caption") || text.includes("vqa") || (d.modality_tags || []).map(x => String(x).toLowerCase()).includes("text")) return "vision_language";
   if (text.includes("contrastive") || text.includes("clip") || text.includes("dino") || text.includes("byol") || text.includes("jepa") || text.includes("predictive") || text.includes("alignment") || text.includes("joint-embedding") || text.includes("joint embedding")) return "joint_embedding";
   return "transformer_masked";
@@ -237,6 +246,14 @@ const METRICS = {
     desc: "Curated count of reported downstream tasks or evaluations from the source paper.",
     value: reportedTaskCount,
     integer: true,
+    min: 1
+  },
+  landscape_score: {
+    label: "Atlas evidence score",
+    axis: "Atlas evidence score",
+    desc: "Evidence breadth from tasks/evaluations, modalities, architecture detail, source links, access, and upstream corroboration.",
+    value: landscapeEvidenceScore,
+    integer: false,
     min: 1
   },
   tasks: {
@@ -366,6 +383,13 @@ function niceTicks(min, max, integer = true, count = 6) {
     min = min - 1;
     max = max + 1;
   }
+  if (integer) {
+    const start = Math.ceil(min);
+    const end = Math.floor(max);
+    const ticks = [];
+    for (let v = start; v <= end; v += 1) ticks.push(v);
+    return ticks.length ? ticks : [Math.round(min), Math.round(max)].filter((v, i, a) => a.indexOf(v) === i);
+  }
   const span = max - min;
   const raw = span / Math.max(1, count - 1);
   const power = Math.pow(10, Math.floor(Math.log10(raw || 1)));
@@ -379,7 +403,7 @@ function niceTicks(min, max, integer = true, count = 6) {
     if (integer && Math.abs(val - Math.round(val)) < 1e-8) val = Math.round(val);
     ticks.push(val);
   }
-  return integer ? uniq(ticks.map(String)).map(Number) : ticks;
+  return ticks;
 }
 
 function formatTick(metric, value) {
@@ -601,9 +625,9 @@ async function initLandscape() {
     L.architecture.value = "";
     L.family.value = "";
     L.xMetric.value = "modality_stage";
-    L.yMetric.value = "reported_tasks";
+    L.yMetric.value = "landscape_score";
     landscape.xMetric = "modality_stage";
-    landscape.yMetric = "reported_tasks";
+    landscape.yMetric = "landscape_score";
     L.labels.checked = false;
     landscape.labelMode = false;
     landscape.selectedId = null;

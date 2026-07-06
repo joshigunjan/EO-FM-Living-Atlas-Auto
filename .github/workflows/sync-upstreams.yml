@@ -78,5 +78,8 @@ jobs:
       - name: Validate candidate records
         run: python scripts/validate_candidate.py
 
+      - name: Validate public catalogue outputs
+        run: python scripts/validate_outputs.py
+
       - name: Commit generated catalogue to main
         run: python scripts/commit_generated_catalogue.py

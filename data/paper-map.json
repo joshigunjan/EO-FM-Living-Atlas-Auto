@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-07T18:50:11Z",
+  "generated_at": "2026-07-07T19:42:25Z",
   "record_count": 254,
-  "primary_abstract_count": 199,
+  "primary_abstract_count": 203,
   "embedding": {
     "provider": "https://api.helmholtz-blablador.fz-juelich.de/v1",
     "model": "alias-qwen3-8b-embeddings",
@@ -16,119 +16,23 @@
   "clusters": [
     {
       "id": 0,
-      "label": "Masked Self-Supervised Pre-Training",
+      "label": "Self-Supervised Representation Pre-Training",
       "keywords": [
         "learning",
         "self-supervised",
         "pre-training",
-        "imagery",
         "masked",
         "self-supervised learning",
-        "hsi",
-        "existing"
+        "pretraining",
+        "representations",
+        "imagery"
       ],
-      "size": 40,
+      "size": 29,
       "representative_paper_id": "df51a301f53a215a"
     },
     {
       "id": 1,
-      "label": "Vision-Language Foundation Models",
-      "keywords": [
-        "remote-sensing",
-        "imagery",
-        "classification",
-        "remote-sensing vision-language",
-        "segmentation",
-        "remote-sensing imagery",
-        "plus",
-        "transfer remote-sensing"
-      ],
-      "size": 19,
-      "representative_paper_id": "929e7c0187389178"
-    },
-    {
-      "id": 2,
-      "label": "Geospatial Grounding and Generation",
-      "keywords": [
-        "satellite",
-        "geospatial",
-        "spatial",
-        "generation",
-        "location",
-        "soundscape",
-        "audio",
-        "osm"
-      ],
-      "size": 30,
-      "representative_paper_id": "fa7e9d80c51d868f"
-    },
-    {
-      "id": 3,
-      "label": "Unified Multi-Sensor Foundation Models",
-      "keywords": [
-        "performance",
-        "downstream",
-        "skysense",
-        "parameters",
-        "vision",
-        "sensors",
-        "pretraining",
-        "detection"
-      ],
-      "size": 29,
-      "representative_paper_id": "f83d7ba18f9d493f"
-    },
-    {
-      "id": 4,
-      "label": "Geospatial Reasoning and AI Agents",
-      "keywords": [
-        "mllms",
-        "agents",
-        "reasoning",
-        "geospatial",
-        "language",
-        "benchmark",
-        "urban",
-        "large language"
-      ],
-      "size": 25,
-      "representative_paper_id": "6b4cc99f5b75abea"
-    },
-    {
-      "id": 5,
-      "label": "Generalist Geospatial AI and Benchmarks",
-      "keywords": [
-        "olmoearth",
-        "terramind",
-        "performance",
-        "downstream",
-        "landsat",
-        "diverse",
-        "resolutions",
-        "sensors"
-      ],
-      "size": 29,
-      "representative_paper_id": "466a2e48ee7f73ec"
-    },
-    {
-      "id": 6,
-      "label": "Visual Grounding and Multimodal Understanding",
-      "keywords": [
-        "visual",
-        "vision-language",
-        "reasoning",
-        "language",
-        "mllms",
-        "vlms",
-        "understanding",
-        "existing"
-      ],
-      "size": 54,
-      "representative_paper_id": "d0e0929edc424d05"
-    },
-    {
-      "id": 7,
-      "label": "Geography-Aware Representation Learning",
+      "label": "Downstream Representation Adaptation",
       "keywords": [
         "learning",
         "self-supervised",
@@ -139,8 +43,104 @@
         "general representation",
         "self-supervised learning"
       ],
-      "size": 28,
+      "size": 30,
       "representative_paper_id": "7f2c2f893e0a9857"
+    },
+    {
+      "id": 2,
+      "label": "Generalist Geospatial Foundation Models",
+      "keywords": [
+        "olmoearth",
+        "performance",
+        "sensors",
+        "downstream",
+        "available",
+        "diverse",
+        "applications",
+        "learning"
+      ],
+      "size": 39,
+      "representative_paper_id": "466a2e48ee7f73ec"
+    },
+    {
+      "id": 3,
+      "label": "Generative Satellite Image Synthesis",
+      "keywords": [
+        "generation",
+        "satellite",
+        "spatial",
+        "diffusion",
+        "location",
+        "generative",
+        "audio",
+        "soundscape"
+      ],
+      "size": 24,
+      "representative_paper_id": "fa7e9d80c51d868f"
+    },
+    {
+      "id": 4,
+      "label": "Remote Sensing Vision-Language Models",
+      "keywords": [
+        "remote-sensing",
+        "imagery",
+        "classification",
+        "remote-sensing vision-language",
+        "land-cover",
+        "segmentation",
+        "remote-sensing imagery",
+        "plus"
+      ],
+      "size": 19,
+      "representative_paper_id": "929e7c0187389178"
+    },
+    {
+      "id": 5,
+      "label": "Vision-Language Model Reasoning",
+      "keywords": [
+        "reasoning",
+        "visual",
+        "vision-language",
+        "language",
+        "mllms",
+        "vlms",
+        "understanding",
+        "existing"
+      ],
+      "size": 50,
+      "representative_paper_id": "aab477464f09b674"
+    },
+    {
+      "id": 6,
+      "label": "Geospatial Agent Benchmarking",
+      "keywords": [
+        "reasoning",
+        "agents",
+        "mllms",
+        "geospatial",
+        "benchmark",
+        "urban",
+        "language",
+        "vlms"
+      ],
+      "size": 25,
+      "representative_paper_id": "6b4cc99f5b75abea"
+    },
+    {
+      "id": 7,
+      "label": "Unified Multi-Task Foundation Models",
+      "keywords": [
+        "performance",
+        "downstream",
+        "vision",
+        "learning",
+        "parameters",
+        "various",
+        "spectral",
+        "semantic"
+      ],
+      "size": 38,
+      "representative_paper_id": "e8a602e975abfec7"
     }
   ],
   "points": [
@@ -165,10 +165,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision",
       "modalities": "aerial / RGB imagery",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.1221489,
-      "y": 7.283494
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.7688839,
+      "y": 12.9703474
     },
     {
       "id": "e829b68b7ad804bf",
@@ -191,10 +191,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision",
       "modalities": "SAR, multispectral",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.128993,
-      "y": 5.1094141
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.3128695,
+      "y": 8.1379642
     },
     {
       "id": "0884d019451f56ce",
@@ -217,10 +217,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 0.9728585,
-      "y": 6.7047548
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 4.3057332,
+      "y": 12.5129356
     },
     {
       "id": "7a7557e44d8589f7",
@@ -243,10 +243,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.8705826,
-      "y": 5.4412093
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.4784405,
+      "y": 10.8128672
     },
     {
       "id": "acf39329ef5e1963",
@@ -269,10 +269,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision",
       "modalities": "aerial / RGB imagery",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 1.5383786,
-      "y": 6.9759727
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.9387252,
+      "y": 12.5816221
     },
     {
       "id": "15ee2243a2f4a143",
@@ -296,9 +296,9 @@
       "tasks": "Scene classification, land-cover mapping, crop classification, and transfer to downstream RS tasks.",
       "modalities": "Multispectral Sentinel-2 image time series.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.0895891,
-      "y": 5.1142879
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.1389983,
+      "y": 8.9702187
     },
     {
       "id": "e9547a94171e76a1",
@@ -321,10 +321,10 @@
       "has_primary_abstract": false,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.5518148,
-      "y": 4.9910297
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.6767907,
+      "y": 10.6675978
     },
     {
       "id": "7f2c2f893e0a9857",
@@ -354,10 +354,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision",
       "modalities": "multispectral",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.8136129,
-      "y": 5.0763483
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.1733103,
+      "y": 10.6866779
     },
     {
       "id": "929e7c0187389178",
@@ -380,10 +380,10 @@
       "has_primary_abstract": false,
       "tasks": "Scene classification, object detection, semantic segmentation, and RS transfer tasks.",
       "modalities": "Remote-sensing imagery, mainly optical/high-resolution imagery.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.8228233,
-      "y": 6.9282737
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.0458183,
+      "y": 13.2165842
     },
     {
       "id": "a4c916144086afa0",
@@ -406,10 +406,10 @@
       "has_primary_abstract": false,
       "tasks": "Scene classification, land-cover classification, semantic segmentation, and transfer to datasets such as EuroSAT, fMoW-Sentinel, BigEarthNet-style classification, and segmentation datasets.",
       "modalities": "Primarily multispectral satellite imagery, with spatial and temporal grouping variants for Sentinel/fMoW-style data.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.563082,
-      "y": 6.919704
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.3362842,
+      "y": 13.1532965
     },
     {
       "id": "cc28ae2ec7e7a958",
@@ -432,10 +432,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.60604,
-      "y": 4.9920945
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.8881202,
+      "y": 10.7247057
     },
     {
       "id": "1707225aacdf168a",
@@ -459,9 +459,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral, SAR",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.4181178,
-      "y": 4.7766509
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.9526021,
+      "y": 9.5739069
     },
     {
       "id": "74dc5e5e6e295787",
@@ -484,10 +484,10 @@
       "has_primary_abstract": false,
       "tasks": "semantic segmentation; scene classification; land-cover mapping",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.7878759,
-      "y": 4.8321943
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.0353937,
+      "y": 10.7572899
     },
     {
       "id": "7c51a69477b5727a",
@@ -511,9 +511,9 @@
       "tasks": "Vision",
       "modalities": "SAR, temporal",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.469347,
-      "y": 5.0701571
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.5124128,
+      "y": 8.9115191
     },
     {
       "id": "36022467c597509d",
@@ -536,10 +536,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 5.6029453,
-      "y": 4.890552
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.8318534,
+      "y": 8.0859785
     },
     {
       "id": "f06b5a1115cc7a53",
@@ -562,10 +562,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.794369,
-      "y": 4.6312923
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.8245711,
+      "y": 10.4091949
     },
     {
       "id": "c41d3c8544b6c944",
@@ -588,10 +588,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.5027721,
-      "y": 4.6082463
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.6277306,
+      "y": 10.430212
     },
     {
       "id": "b43af3be150184eb",
@@ -615,9 +615,9 @@
       "tasks": "Land-cover mapping/classification, crop mapping, flood mapping, burn scar/segmentation, and transfer to GEO-Bench/PANGAEA-style tasks.",
       "modalities": "Sentinel-1 SAR and Sentinel-2 multispectral optical imagery.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.3481622,
-      "y": 4.8303919
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.8326187,
+      "y": 9.7633066
     },
     {
       "id": "f73faa1ddd7ef978",
@@ -640,10 +640,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.0087523,
-      "y": 6.3910465
+      "cluster_id": 0,
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 5.7797842,
+      "y": 8.7642612
     },
     {
       "id": "f95a00a21c1d7f48",
@@ -666,10 +666,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.0760703,
-      "y": 6.1818342
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 4.9722052,
+      "y": 9.7016115
     },
     {
       "id": "e0b404344fb56cd7",
@@ -692,10 +692,10 @@
       "has_primary_abstract": true,
       "tasks": "Downstream remote-sensing tasks over Satellogic/NEON/Sentinel imagery; land-cover/segmentation-style adaptation.",
       "modalities": "Hyperspectral, multispectral, topographical, segmentation maps, and temporal structure from NEON/Sentinel/Satellogic.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.2176137,
-      "y": 4.9828429
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.8291621,
+      "y": 7.765254
     },
     {
       "id": "db2c836f8b294670",
@@ -718,10 +718,10 @@
       "has_primary_abstract": true,
       "tasks": "Dynamic land-use classification and temporally aware EO prediction/forecasting tasks.",
       "modalities": "Optical spectral surface reflectance sequences over 400–2300 nm; temporal EO forecasting data.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.6905975,
-      "y": 5.7227736
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.6083431,
+      "y": 7.1775465
     },
     {
       "id": "68fc5145b1745918",
@@ -745,9 +745,9 @@
       "tasks": "crop mapping; image-text retrieval",
       "modalities": "text",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.9832592,
-      "y": 4.7949166
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.8100069,
+      "y": 8.9906168
     },
     {
       "id": "8ea0f9f0fc07549f",
@@ -770,10 +770,10 @@
       "has_primary_abstract": true,
       "tasks": "forest monitoring",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.2670507,
-      "y": 4.3670421
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.3972754,
+      "y": 7.0525465
     },
     {
       "id": "7591cff06d808350",
@@ -796,10 +796,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification & Segmentation & Detection for forest monitoring",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.2549739,
-      "y": 4.418035
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.4207921,
+      "y": 7.0378695
     },
     {
       "id": "beb815e7f667c4f5",
@@ -822,10 +822,10 @@
       "has_primary_abstract": true,
       "tasks": "Representative tasks: flood mapping, wildfire burn scar mapping, land-cover classification, crop classification/segmentation, and other HLS-based EO downstream tasks.",
       "modalities": "NASA HLS Landsat + Sentinel-2 harmonized optical multispectral time series at 30 m.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.4203272,
-      "y": 5.5069776
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.5046959,
+      "y": 7.3832169
     },
     {
       "id": "c25537aab9425856",
@@ -848,10 +848,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.1673107,
-      "y": 6.3841457
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.1737771,
+      "y": 9.7454672
     },
     {
       "id": "f97308c10bec0e83",
@@ -874,10 +874,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification & Segmentation; Vision (Evaluation)",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.5472827,
-      "y": 5.9340787
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.9272814,
+      "y": 7.3624482
     },
     {
       "id": "b9449ad096c57e1b",
@@ -900,10 +900,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.1506524,
-      "y": 6.852674
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.0716543,
+      "y": 8.9581375
     },
     {
       "id": "20f4ff9e44fd9446",
@@ -933,10 +933,10 @@
       "has_primary_abstract": true,
       "tasks": "Zero-shot classification, image-text retrieval, cross-modal search and representation transfer.",
       "modalities": "Remote-sensing imagery plus geospatial text/captions.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.1293488,
-      "y": 8.5989208
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.9797897,
+      "y": 10.9155731
     },
     {
       "id": "9e4566f7ce648a01",
@@ -959,10 +959,10 @@
       "has_primary_abstract": true,
       "tasks": "Rotated object detection on DOTA v2.0 and DIOR-R; semantic segmentation on Potsdam and LoveDA.",
       "modalities": "High-resolution optical remote-sensing imagery.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 4.5723066,
-      "y": 4.2713079
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.0809288,
+      "y": 7.8591766
     },
     {
       "id": "759109d72544cdc5",
@@ -985,10 +985,10 @@
       "has_primary_abstract": false,
       "tasks": "image-text retrieval",
       "modalities": "SAR",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.1993134,
-      "y": 4.7430162
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.5159767,
+      "y": 10.7326231
     },
     {
       "id": "b1f9c22b85ee92ed",
@@ -1012,9 +1012,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral, aerial / RGB imagery",
       "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 6.174511,
-      "y": 6.0037308
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.9544196,
+      "y": 7.7393522
     },
     {
       "id": "13e6bb48416964e7",
@@ -1038,9 +1038,9 @@
       "tasks": "Vision (Supervised)",
       "modalities": "SAR, LiDAR, aerial / RGB imagery",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.6155257,
-      "y": 4.8758402
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.4683838,
+      "y": 8.5393314
     },
     {
       "id": "1262f65521ec6d7a",
@@ -1064,9 +1064,9 @@
       "tasks": "Segmentation, multilabel scene classification, regression, and globally distributed tasks; used for crop, land-cover, biomass/agriculture-like time-series applications.",
       "modalities": "Pixel-level remote-sensing time series; multisensor tabular/time-series EO variables.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.2846842,
-      "y": 4.8755865
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.2642016,
+      "y": 8.8247471
     },
     {
       "id": "e8a602e975abfec7",
@@ -1089,10 +1089,10 @@
       "has_primary_abstract": true,
       "tasks": "Image-text retrieval, zero-shot scene classification, caption-aligned RS search, visual-language transfer.",
       "modalities": "Image-text remote-sensing pairs; optical RS images plus captions/text.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 3.8382189,
-      "y": 8.5778627
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 6.724792,
+      "y": 10.9632168
     },
     {
       "id": "278f157ffb926d4a",
@@ -1116,9 +1116,9 @@
       "tasks": "Classification; Vision",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.2771902,
-      "y": 4.7416139
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.1479983,
+      "y": 8.6381702
     },
     {
       "id": "a2c8f41e168ac393",
@@ -1141,10 +1141,10 @@
       "has_primary_abstract": false,
       "tasks": "Classification, detection, segmentation, and change/land-cover transfer tasks.",
       "modalities": "Remote-sensing imagery, broader sensor support than original RingMo.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.8051701,
-      "y": 6.9933591
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.0266566,
+      "y": 13.2559671
     },
     {
       "id": "6a71a48d82815a36",
@@ -1167,10 +1167,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 2.142812,
-      "y": 6.9448557
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.8746686,
+      "y": 11.8156729
     },
     {
       "id": "3292e2d45ff1d416",
@@ -1194,9 +1194,9 @@
       "tasks": "Vision",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.169848,
-      "y": 10.0411873
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 8.8968592,
+      "y": 10.7482986
     },
     {
       "id": "204b24dd25026f46",
@@ -1219,10 +1219,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.29286,
-      "y": 6.6313605
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.8377318,
+      "y": 8.8280973
     },
     {
       "id": "6c35f2a893115a2d",
@@ -1245,10 +1245,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.6853204,
-      "y": 5.8649201
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 5.0426025,
+      "y": 8.8945494
     },
     {
       "id": "427fb9432816dad3",
@@ -1271,10 +1271,10 @@
       "has_primary_abstract": false,
       "tasks": "Object detection, land-cover/land-use classification, segmentation, building/road/solar/wind and other map-feature extraction tasks.",
       "modalities": "Global satellite imagery, mainly optical/multispectral, with labels from a large geospatial atlas.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.706193,
-      "y": 7.0685225
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.0221853,
+      "y": 13.0506916
     },
     {
       "id": "e8f1b863529f44f9",
@@ -1298,9 +1298,9 @@
       "tasks": "Scene classification, semantic segmentation, instance/object detection, and transfer to high-resolution RS benchmarks.",
       "modalities": "High-resolution optical remote-sensing images with scale/GSD metadata.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.9916472,
-      "y": 3.901433
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.4985502,
+      "y": 8.6212854
     },
     {
       "id": "154ca0f5d9813115",
@@ -1330,10 +1330,10 @@
       "has_primary_abstract": true,
       "tasks": "Image-text retrieval, zero-shot classification, caption search.",
       "modalities": "Remote-sensing image-text pairs.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.238483,
-      "y": 8.326437
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.5990558,
+      "y": 10.6699467
     },
     {
       "id": "b3c273cefe0edc5f",
@@ -1356,10 +1356,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision",
       "modalities": "multispectral",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 5.5022035,
-      "y": 5.3322611
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.5179062,
+      "y": 8.0453377
     },
     {
       "id": "216525f062ca2f78",
@@ -1382,10 +1382,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text, aerial / RGB imagery",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.4974704,
-      "y": 7.4652758
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.5291033,
+      "y": 9.2652235
     },
     {
       "id": "620bee9c2ea83ef8",
@@ -1409,9 +1409,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.7150197,
-      "y": 4.4184828
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.9123294,
+      "y": 9.1703539
     },
     {
       "id": "c25c9fb28058adc6",
@@ -1434,10 +1434,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 4.7389445,
-      "y": 4.1831384
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.1705523,
+      "y": 8.0320673
     },
     {
       "id": "c81f0fa68558512d",
@@ -1460,10 +1460,10 @@
       "has_primary_abstract": true,
       "tasks": "Reported/evaluated tasks include land-cover mapping, tree-species identification, crop-type classification, change detection/deforestation detection, climate-type classification, flood mapping, burn-scar mapping, and segmentation over datasets such as TreeSatAI-TS, PASTIS-HD, FLAIR, PLANTED, BraDD-S1TS, SICKLE, TimeSen2Crop, and Sen1Flood11.",
       "modalities": "11 distinct modalities/sensors: aerial RGB/NIR, aerial RGB/NIR/elevation, SPOT, NAIP, Sentinel-2, Sentinel-1 ascending, Sentinel-1, ALOS, Landsat-7, Landsat-8, MODIS.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.2517829,
-      "y": 5.1842346
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.1944652,
+      "y": 6.4903932
     },
     {
       "id": "f25bdbd7dd362c1b",
@@ -1486,10 +1486,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.9968719,
-      "y": 4.9814401
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.9537644,
+      "y": 6.5082049
     },
     {
       "id": "f35e75514423199c",
@@ -1512,10 +1512,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.1381698,
-      "y": 6.475781
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.0038652,
+      "y": 9.8726664
     },
     {
       "id": "f599a031286558b7",
@@ -1538,10 +1538,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.8530164,
-      "y": 8.5948153
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.1252446,
+      "y": 10.0972099
     },
     {
       "id": "7e18b3faf5329d56",
@@ -1570,10 +1570,10 @@
       "has_primary_abstract": true,
       "tasks": "Evaluated on remote-sensing classification, semantic segmentation, object detection, and change-detection style benchmarks. Representative datasets include GEO-Bench tasks and common RS tasks such as EuroSAT, BigEarthNet, RESISC45, DOTA/DIOR-style detection, land-cover segmentation, and change detection depending on experiment.",
       "modalities": "Spectral satellite imagery across five EO sensors/modalities; wavelength/band metadata used as conditioning signal.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.3185263,
-      "y": 5.3250089
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.3533959,
+      "y": 6.381444
     },
     {
       "id": "1d7e24400ee73411",
@@ -1596,10 +1596,10 @@
       "has_primary_abstract": true,
       "tasks": "Visual question answering, captioning, scene understanding, object/region reasoning, instruction following.",
       "modalities": "Remote-sensing images plus language prompts/instructions.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.8841968,
-      "y": 8.67766
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.8636904,
+      "y": 9.5553656
     },
     {
       "id": "cd9fc6d589df2d72",
@@ -1622,10 +1622,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.823772,
-      "y": 8.9733515
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.0528355,
+      "y": 9.6318789
     },
     {
       "id": "9f4257c154e4cf92",
@@ -1648,10 +1648,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.7213984,
-      "y": 8.3788004
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 8.027626,
+      "y": 8.5216122
     },
     {
       "id": "a46183746f5a8a05",
@@ -1675,9 +1675,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.49843,
-      "y": 4.0515051
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.3386922,
+      "y": 8.9775419
     },
     {
       "id": "dd1cea2a6be1ddd4",
@@ -1701,9 +1701,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.4556851,
-      "y": 4.7375998
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.2890172,
+      "y": 8.3734188
     },
     {
       "id": "15daecab46349190",
@@ -1726,10 +1726,10 @@
       "has_primary_abstract": true,
       "tasks": "Scene Understanding & Counting & Object Classification & Event Detection & Spatial Relations",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.1857944,
-      "y": 7.6286654
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.0029316,
+      "y": 8.2614527
     },
     {
       "id": "85fe9000b5a3294e",
@@ -1752,10 +1752,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.4200191,
-      "y": 6.7068505
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.0163903,
+      "y": 9.0296011
     },
     {
       "id": "b7cd9e457a9cafc2",
@@ -1778,10 +1778,10 @@
       "has_primary_abstract": false,
       "tasks": "VQA, captioning, region grounding, image interpretation, visual reasoning.",
       "modalities": "Remote-sensing imagery plus language dialogue.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.2286476,
-      "y": 7.3724341
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.6358535,
+      "y": 12.9808998
     },
     {
       "id": "1220733cae17b366",
@@ -1804,10 +1804,10 @@
       "has_primary_abstract": true,
       "tasks": "Referring-expression grounding, object localization, region-text alignment.",
       "modalities": "Remote-sensing imagery plus grounding expressions.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.2242656,
-      "y": 9.6500854
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.3425055,
+      "y": 10.4086351
     },
     {
       "id": "929fff4d407d47bc",
@@ -1830,10 +1830,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.7646365,
-      "y": 7.7377882
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 4.0083447,
+      "y": 10.8642836
     },
     {
       "id": "72381169b6902869",
@@ -1856,10 +1856,10 @@
       "has_primary_abstract": true,
       "tasks": "Location Recognition & Captioning & Scene Classification & Counting & Detection & Change detection",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.5073462,
-      "y": 7.1217237
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.1439881,
+      "y": 7.8004346
     },
     {
       "id": "95e565cb2fe868ef",
@@ -1883,9 +1883,9 @@
       "tasks": "Vision",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.9021757,
-      "y": 3.9674838
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.5583236,
+      "y": 8.6020041
     },
     {
       "id": "2f5967aa2f41a807",
@@ -1908,10 +1908,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "hyperspectral, multispectral",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.3978677,
-      "y": 3.6830292
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 4.2808719,
+      "y": 9.4340296
     },
     {
       "id": "179c59676fdab7cf",
@@ -1934,10 +1934,10 @@
       "has_primary_abstract": true,
       "tasks": "Hyperspectral classification, segmentation, target/anomaly detection and transfer across HSI datasets.",
       "modalities": "Hyperspectral imagery.",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.2510104,
-      "y": 3.4167502
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.9210093,
+      "y": 9.4069262
     },
     {
       "id": "148d8dfa8f86957d",
@@ -1960,10 +1960,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.6459379,
-      "y": 3.8703918
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.5835533,
+      "y": 7.3088584
     },
     {
       "id": "6d3f2be4242e4d7a",
@@ -1986,10 +1986,10 @@
       "has_primary_abstract": true,
       "tasks": "High-resolution RS VQA, captioning, scene interpretation, object reasoning.",
       "modalities": "Large-scale high-resolution RS images plus text/instructions.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.4085674,
-      "y": 8.3465528
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.3463025,
+      "y": 9.6893606
     },
     {
       "id": "49a56a67456800d8",
@@ -2012,10 +2012,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.1346874,
-      "y": 5.563498
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.5224104,
+      "y": 6.7808566
     },
     {
       "id": "ccc0dcf9c84795e4",
@@ -2038,10 +2038,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 5.7748594,
-      "y": 5.4306641
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.6151834,
+      "y": 7.9254179
     },
     {
       "id": "d0504d28bc08bff0",
@@ -2064,10 +2064,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.2542191,
-      "y": 6.4027295
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.1881199,
+      "y": 9.8719816
     },
     {
       "id": "775cfc3fb6db3b88",
@@ -2090,10 +2090,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision",
       "modalities": "SAR, DEM, text, aerial / RGB imagery",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 4.888804,
-      "y": 5.2180209
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.010325,
+      "y": 6.9639602
     },
     {
       "id": "9bf1e0a2dc66715f",
@@ -2116,10 +2116,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.8505826,
-      "y": 7.4627528
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.7430797,
+      "y": 10.1047649
     },
     {
       "id": "0532de5fb166c20e",
@@ -2143,9 +2143,9 @@
       "tasks": "Classification, segmentation, detection/change and temporal transfer tasks.",
       "modalities": "Remote-sensing imagery and temporal data.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.5624027,
-      "y": 4.3575706
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.380604,
+      "y": 8.0370426
     },
     {
       "id": "0d6c85cd329f1d32",
@@ -2168,10 +2168,10 @@
       "has_primary_abstract": false,
       "tasks": "Three named task groups: forestry, land-cover classification, and crop mapping.",
       "modalities": "Aligned EO modalities: multispectral optical, SAR, aerial/spot time-series depending on augmented datasets.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.418726,
-      "y": 6.7737207
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.3507538,
+      "y": 12.9206238
     },
     {
       "id": "199aca0586873c66",
@@ -2194,10 +2194,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 7.2383022,
-      "y": 5.2789378
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 5.2084184,
+      "y": 6.2900505
     },
     {
       "id": "d6424c82284082ef",
@@ -2220,10 +2220,10 @@
       "has_primary_abstract": true,
       "tasks": "Segmentation & Change detection & Regression",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.3782482,
-      "y": 5.9146042
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.8915982,
+      "y": 7.6199555
     },
     {
       "id": "6fd0e0a11b8a4f4a",
@@ -2246,10 +2246,10 @@
       "has_primary_abstract": true,
       "tasks": "Segmentation & Regression estimation",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.5983114,
-      "y": 5.921659
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 6.0971484,
+      "y": 7.3923755
     },
     {
       "id": "98c7db912cfe7440",
@@ -2272,10 +2272,10 @@
       "has_primary_abstract": true,
       "tasks": "Autoregressive forecasting, downscaling, gravity wave flux parameterization, and extreme-event applications.",
       "modalities": "Weather and climate variables from reanalysis/observation datasets, not primarily satellite imagery.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.4924302,
-      "y": 5.30691
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.1807423,
+      "y": 7.2696652
     },
     {
       "id": "760388b9c755972a",
@@ -2298,10 +2298,10 @@
       "has_primary_abstract": true,
       "tasks": "7 named downstream tasks/datasets: Sen1Floods11 flood detection, wildfire scar detection, burn scar intensity, Landslide4Sense landslide detection, US multi-temporal crop segmentation, European multi-temporal land-cover/crop classification, BioMassters above-ground biomass estimation.",
       "modalities": "NASA HLS Landsat + Sentinel-2 optical multispectral time series at 30 m, with geolocation and date embeddings.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.4802723,
-      "y": 5.4666824
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.4612789,
+      "y": 7.3508515
     },
     {
       "id": "d82211be6dee8605",
@@ -2324,10 +2324,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.6112289,
-      "y": 6.633008
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.8907766,
+      "y": 8.98808
     },
     {
       "id": "c2511465e916c2f3",
@@ -2350,10 +2350,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.173223,
-      "y": 8.6147881
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.781106,
+      "y": 10.7276993
     },
     {
       "id": "97401b03716310ca",
@@ -2376,10 +2376,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.3166456,
-      "y": 8.5511703
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.9257708,
+      "y": 9.2010384
     },
     {
       "id": "8c38f137658ee453",
@@ -2402,10 +2402,10 @@
       "has_primary_abstract": true,
       "tasks": "VQA, captioning, retrieval, visual reasoning.",
       "modalities": "EO imagery plus language.",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.4354272,
-      "y": 7.1455355
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 6.9019051,
+      "y": 7.5783944
     },
     {
       "id": "d73ddb1e7083b8db",
@@ -2428,10 +2428,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.0456057,
-      "y": 3.6739881
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.8017199,
+      "y": 6.8669171
     },
     {
       "id": "c2386dce1038dde1",
@@ -2454,10 +2454,10 @@
       "has_primary_abstract": false,
       "tasks": "Captioning, VQA, scene interpretation and RS dialogue.",
       "modalities": "Remote-sensing images plus language prompts.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.2159574,
-      "y": 7.2584314
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.6717925,
+      "y": 12.9881535
     },
     {
       "id": "57db09ec9e64539a",
@@ -2480,10 +2480,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.5002193,
-      "y": 8.4108782
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.9737387,
+      "y": 8.7690039
     },
     {
       "id": "4e031045fdc1c312",
@@ -2506,10 +2506,10 @@
       "has_primary_abstract": true,
       "tasks": "AirCo-MultiTasks: 3D object detection, instance segmentation, and trajectory prediction.",
       "modalities": "Remote-sensing collaborative perception data; aerial/drone-style multimodal scenes.",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 5.7856603,
-      "y": 4.5905514
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 4.1192079,
+      "y": 7.7816715
     },
     {
       "id": "06ced38cbdd2667c",
@@ -2532,10 +2532,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.9827056,
-      "y": 8.3150988
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.9229741,
+      "y": 10.0987434
     },
     {
       "id": "4a84a8fe2f517f94",
@@ -2558,10 +2558,10 @@
       "has_primary_abstract": false,
       "tasks": "Captioning, VQA, scene/object reasoning, instruction following.",
       "modalities": "Remote-sensing images plus instruction data.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.2867111,
-      "y": 7.2000442
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.6079049,
+      "y": 12.8444443
     },
     {
       "id": "69c9c12f40a29c88",
@@ -2584,10 +2584,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.2395825,
-      "y": 4.0431142
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.4684303,
+      "y": 7.5675354
     },
     {
       "id": "d0e0929edc424d05",
@@ -2610,10 +2610,10 @@
       "has_primary_abstract": true,
       "tasks": "VQA, captioning, retrieval, grounding/segmentation-style language tasks.",
       "modalities": "Remote-sensing images plus language.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.7361479,
-      "y": 9.0416679
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.6641665,
+      "y": 10.7224941
     },
     {
       "id": "6a90063895656dd5",
@@ -2636,10 +2636,10 @@
       "has_primary_abstract": false,
       "tasks": "Land-cover classification, scene classification, semantic segmentation and Sentinel-2 transfer tasks.",
       "modalities": "Sentinel-2 multispectral imagery.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.572309,
-      "y": 6.8347807
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.2646775,
+      "y": 12.9964132
     },
     {
       "id": "df51a301f53a215a",
@@ -2663,9 +2663,9 @@
       "tasks": "Scene classification, multi-label classification, segmentation, and temporal/multispectral EO transfer tasks.",
       "modalities": "Multispectral and temporal satellite image streams; focuses on spectral-temporal adaptation.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.8689826,
-      "y": 4.1632738
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.7373207,
+      "y": 8.8902998
     },
     {
       "id": "2570a323c1194ac0",
@@ -2688,10 +2688,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification, segmentation and transfer tasks for raw/TOA-like satellite data.",
       "modalities": "Top-of-atmosphere satellite imagery.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.1293759,
-      "y": 4.3885403
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.8011396,
+      "y": 8.3359318
     },
     {
       "id": "ae2217f4aecd610c",
@@ -2715,9 +2715,9 @@
       "tasks": "Vision",
       "modalities": "—",
       "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.3787088,
-      "y": 5.3220124
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.4830155,
+      "y": 8.1885557
     },
     {
       "id": "1c133ae3ab2dab0d",
@@ -2740,10 +2740,10 @@
       "has_primary_abstract": false,
       "tasks": "16 datasets over 7 tasks; representative tasks include scene classification, land-use/land-cover classification, semantic segmentation, object detection, change detection, crop/agricultural mapping, and disaster/environmental monitoring.",
       "modalities": "Multimodal remote-sensing imagery including optical, SAR, multispectral/time-series and high-resolution imagery.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 2.7993596,
-      "y": 7.4905739
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.9405298,
+      "y": 12.1994534
     },
     {
       "id": "4332ca50c7a55303",
@@ -2773,10 +2773,10 @@
       "has_primary_abstract": true,
       "tasks": "VQA, captioning, image interpretation and dialogue.",
       "modalities": "SkySense visual representations plus LLM/instruction data.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.4186645,
-      "y": 8.2368488
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.7430224,
+      "y": 10.355092
     },
     {
       "id": "be1289c29dd7d807",
@@ -2799,10 +2799,10 @@
       "has_primary_abstract": true,
       "tasks": "Four downstream tasks: single-label scene classification, multi-label scene classification, semantic segmentation, and change detection.",
       "modalities": "Spectral / multispectral / hyperspectral remote-sensing images; supports varying image size, resolution, time series, and regions.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.3022742,
-      "y": 3.3303418
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.0835485,
+      "y": 9.2472372
     },
     {
       "id": "90de6bcf1e849a47",
@@ -2826,9 +2826,9 @@
       "tasks": "image-text retrieval; generation",
       "modalities": "text",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.7831063,
-      "y": 5.0003171
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.0077214,
+      "y": 9.1482449
     },
     {
       "id": "f09d4e163cf64a01",
@@ -2851,10 +2851,10 @@
       "has_primary_abstract": true,
       "tasks": "VQA, captioning, dialogue, scene interpretation.",
       "modalities": "EO imagery plus language.",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.6650615,
-      "y": 7.1592326
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.1906199,
+      "y": 7.8214025
     },
     {
       "id": "f60eb55c37baa490",
@@ -2878,9 +2878,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.2817535,
-      "y": 4.4663815
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.2200747,
+      "y": 8.2784605
     },
     {
       "id": "6376b12a281ec7af",
@@ -2903,10 +2903,10 @@
       "has_primary_abstract": true,
       "tasks": "time-series forecasting",
       "modalities": "text, temporal",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.8497643,
-      "y": 9.0081291
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.6385913,
+      "y": 10.6617651
     },
     {
       "id": "493863bc103f8a63",
@@ -2929,10 +2929,10 @@
       "has_primary_abstract": true,
       "tasks": "Object Referring & Visual Question Answering & Counting & Scene Classification & Location Recognition & Geolocalization",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 5.7084999,
-      "y": 7.7973104
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.1270976,
+      "y": 8.9285631
     },
     {
       "id": "37c65a8bc3c3496c",
@@ -2955,10 +2955,10 @@
       "has_primary_abstract": true,
       "tasks": "Image Captioning & Object Referring & Visual Question Answering",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.8139453,
-      "y": 8.3900652
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.945848,
+      "y": 10.1474524
     },
     {
       "id": "a6368f8517b72e17",
@@ -2981,10 +2981,10 @@
       "has_primary_abstract": true,
       "tasks": "Object detection, segmentation, scene classification and high-resolution mapping.",
       "modalities": "WorldView/high-resolution commercial satellite imagery.",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 2.8268173,
-      "y": 3.9845941
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 2.0515888,
+      "y": 9.7340202
     },
     {
       "id": "4dd253bb12a1b56c",
@@ -3007,10 +3007,10 @@
       "has_primary_abstract": false,
       "tasks": "time-series forecasting",
       "modalities": "multispectral, temporal",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 3.3908737,
-      "y": 4.1484747
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.4439914,
+      "y": 9.6412067
     },
     {
       "id": "c7bd800e83ff6bb2",
@@ -3033,10 +3033,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval; agentic reasoning",
       "modalities": "aerial / RGB imagery",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.716485,
-      "y": 8.0262165
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.7897239,
+      "y": 9.6966143
     },
     {
       "id": "c8682591a469e41b",
@@ -3059,10 +3059,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "hyperspectral, multispectral",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.3909535,
-      "y": 3.3340642
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.9272308,
+      "y": 9.2583733
     },
     {
       "id": "cdec177c949a4870",
@@ -3085,10 +3085,10 @@
       "has_primary_abstract": true,
       "tasks": "Evaluated/advertised for classification, regression, change detection, similarity search, land-use/land-cover mapping, ecosystem/habitat mapping, agriculture/crop mapping, and surface property estimation.",
       "modalities": "Multisource EO and geospatial observations: optical, radar, 3D laser/LiDAR-like information, climate, Landsat/Sentinel and other public sources integrated into embedding fields.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.2448649,
-      "y": 5.664371
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.5473552,
+      "y": 7.6705151
     },
     {
       "id": "baff2aa12b1f335e",
@@ -3111,10 +3111,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.9711924,
-      "y": 6.0859208
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 4.8092446,
+      "y": 9.6236982
     },
     {
       "id": "51286596ec8b3645",
@@ -3137,10 +3137,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.2592206,
-      "y": 4.3179092
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.8944356,
+      "y": 8.0185061
     },
     {
       "id": "bcacc04815c5bf0a",
@@ -3163,10 +3163,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.2888966,
-      "y": 5.7518945
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 4.9000969,
+      "y": 8.6921988
     },
     {
       "id": "1d14ba2293c3597a",
@@ -3189,10 +3189,10 @@
       "has_primary_abstract": false,
       "tasks": "Embeddings/fine-tuning for classification, regression, generative tasks, crop and land-cover mapping, above-ground biomass/productivity, change detection, deforestation, wildfire, flood, destruction/urban development monitoring.",
       "modalities": "Multi-sensor imagery and metadata: Sentinel-1, Sentinel-2, Landsat, NAIP, LINZ, MODIS and other satellite/aerial data; includes location, time, GSD, and band metadata.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.5984104,
-      "y": 6.9953027
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.3210597,
+      "y": 12.9939556
     },
     {
       "id": "981c7ab1c6180bbe",
@@ -3222,10 +3222,10 @@
       "has_primary_abstract": true,
       "tasks": "15 Copernicus-Bench hierarchical tasks: Cloud-S2 segmentation, Cloud-S3 segmentation, EuroSAT-S1 classification, EuroSAT-S2 classification, BigEarthNet-S1 classification, BigEarthNet-S2 classification, LC100Cls-S3 classification, DFC2020-S1 segmentation, DFC2020-S2 segmentation, LC100Seg-S3 segmentation, Flood-S1 change detection, LCZ-S2 classification, Biomass-S3 regression, AQ-NO2-S5P regression, AQ-O3-S5P regression.",
       "modalities": "5 major Copernicus/Sentinel streams plus DEM: Sentinel-1 SAR, Sentinel-2 MSI, Sentinel-3 OLCI, Sentinel-5P atmospheric products, DEM/non-spectral metadata.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.9399276,
-      "y": 5.7111497
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.6166253,
+      "y": 7.0306039
     },
     {
       "id": "f3f5636c394a6a7f",
@@ -3248,10 +3248,10 @@
       "has_primary_abstract": true,
       "tasks": "semantic segmentation",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.1389084,
-      "y": 6.9992647
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 8.6486788,
+      "y": 10.65516
     },
     {
       "id": "8e613ca71cb04cb8",
@@ -3274,10 +3274,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.3077655,
-      "y": 3.596036
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.0063148,
+      "y": 8.9280758
     },
     {
       "id": "8131387823d1ee90",
@@ -3307,10 +3307,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 3.794189,
-      "y": 8.5443115
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.7556486,
+      "y": 11.0491743
     },
     {
       "id": "180841ab1b18856b",
@@ -3340,10 +3340,10 @@
       "has_primary_abstract": true,
       "tasks": "Zero-shot classification, image-text retrieval, spectral-language transfer.",
       "modalities": "Spectral/EO imagery plus language alignment.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.3562279,
-      "y": 5.5568962
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.6084127,
+      "y": 6.3481574
     },
     {
       "id": "0986951573a9c28c",
@@ -3366,10 +3366,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.4525156,
-      "y": 4.0862689
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.6018043,
+      "y": 7.4235063
     },
     {
       "id": "a59a2b2926dcaeae",
@@ -3392,10 +3392,10 @@
       "has_primary_abstract": true,
       "tasks": "Benchmarking and evaluation for Earth observation models.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 5.7150021,
-      "y": 7.9512982
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.083075,
+      "y": 9.0539608
     },
     {
       "id": "1a657fb2f34ef925",
@@ -3418,10 +3418,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.4308848,
-      "y": 8.4486256
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.1721306,
+      "y": 10.4430141
     },
     {
       "id": "6b4cc99f5b75abea",
@@ -3444,10 +3444,10 @@
       "has_primary_abstract": true,
       "tasks": "Tool-augmented EO reasoning & multi-step planning & quantitative spatiotemporal analysis",
       "modalities": "temporal",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 7.0330553,
-      "y": 7.379889
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.7643099,
+      "y": 7.90165
     },
     {
       "id": "27e5b32881429961",
@@ -3477,10 +3477,10 @@
       "has_primary_abstract": false,
       "tasks": "Remote-sensing dialogue, VQA, captioning, interpretation.",
       "modalities": "EO imagery plus dialogue/instruction data.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.2773149,
-      "y": 7.4504757
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.6789291,
+      "y": 12.9260635
     },
     {
       "id": "826e10fad159dbf1",
@@ -3503,10 +3503,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.7353506,
-      "y": 8.9955015
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.1703806,
+      "y": 9.795455
     },
     {
       "id": "026b58179618224d",
@@ -3529,10 +3529,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 7.0056362,
-      "y": 6.8426342
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.2581248,
+      "y": 7.403399
     },
     {
       "id": "b937e4e370011dd8",
@@ -3562,10 +3562,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.2970562,
-      "y": 8.6242294
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 7.0522003,
+      "y": 10.637723
     },
     {
       "id": "b8e71cec325bc48e",
@@ -3588,10 +3588,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "SAR",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 2.8218637,
-      "y": 3.4142597
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 1.3896353,
+      "y": 9.421176
     },
     {
       "id": "ced66f26cb4effa0",
@@ -3614,10 +3614,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.4467649,
-      "y": 8.9938135
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.3672657,
+      "y": 10.7731276
     },
     {
       "id": "941d6d2f58a4c166",
@@ -3640,10 +3640,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 3.9762049,
-      "y": 6.5578465
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.7418175,
+      "y": 8.8331146
     },
     {
       "id": "ade04256cd558ca3",
@@ -3667,9 +3667,9 @@
       "tasks": "11 benchmarks across multiple tasks; representative tasks include crop mapping, flood detection, land-cover/land-use classification, segmentation, and multimodal transfer under missing-modality settings.",
       "modalities": "Many EO modalities over space and time, including multispectral optical, SAR, elevation, weather, and pseudo-label/auxiliary layers.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.4352016,
-      "y": 4.819427
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.0197368,
+      "y": 9.4614697
     },
     {
       "id": "4e195d9ef2fedacf",
@@ -3692,10 +3692,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.8232908,
-      "y": 7.6914663
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.5487585,
+      "y": 8.129117
     },
     {
       "id": "3fc5963944890c72",
@@ -3718,10 +3718,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.9578476,
-      "y": 9.7104864
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.5843143,
+      "y": 9.9392948
     },
     {
       "id": "1f009d76b1cdc144",
@@ -3744,10 +3744,10 @@
       "has_primary_abstract": true,
       "tasks": "3D geospatial reasoning & height-aware spatial analysis",
       "modalities": "text, aerial / RGB imagery",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.5924821,
-      "y": 7.6834717
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 6.9550133,
+      "y": 8.6793709
     },
     {
       "id": "9be5f4d5a1c8dfdc",
@@ -3770,10 +3770,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.436399,
-      "y": 7.1123834
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.174336,
+      "y": 8.9721432
     },
     {
       "id": "643fe67057b9cf1e",
@@ -3796,10 +3796,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.8347712,
-      "y": 7.2344704
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.5512629,
+      "y": 8.4973526
     },
     {
       "id": "d713ef3aa98fafdd",
@@ -3829,10 +3829,10 @@
       "has_primary_abstract": true,
       "tasks": "Grounded captioning, VQA, segmentation/pixel reasoning depending on version.",
       "modalities": "Geospatial imagery plus language/pixel tasks.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.5266018,
-      "y": 9.5275946
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.4176254,
+      "y": 10.3801184
     },
     {
       "id": "133643df827d0854",
@@ -3862,10 +3862,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.5029001,
-      "y": 9.4795895
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.4809752,
+      "y": 10.2429543
     },
     {
       "id": "aab477464f09b674",
@@ -3888,10 +3888,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.9609976,
-      "y": 9.2504845
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.9205513,
+      "y": 10.4956856
     },
     {
       "id": "934b4c7da2afaf3a",
@@ -3914,10 +3914,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 6.7494555,
-      "y": 7.8397102
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.6144867,
+      "y": 8.6195202
     },
     {
       "id": "23c3c720d909690d",
@@ -3940,10 +3940,10 @@
       "has_primary_abstract": true,
       "tasks": "UAV spatial intelligence evaluation for Vision-Language Models",
       "modalities": "text, aerial / RGB imagery",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.8672457,
-      "y": 7.7867293
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.693923,
+      "y": 9.40201
     },
     {
       "id": "1abb919120c3e522",
@@ -3966,10 +3966,10 @@
       "has_primary_abstract": true,
       "tasks": "Referring segmentation, semantic segmentation with text prompts, region grounding.",
       "modalities": "Remote-sensing imagery plus language/segmentation prompts.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.5050015,
-      "y": 9.9312534
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.6847601,
+      "y": 10.3522739
     },
     {
       "id": "8722dbd637ccaa4d",
@@ -3992,10 +3992,10 @@
       "has_primary_abstract": false,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 1.9132309,
-      "y": 7.0026507
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 4.0514865,
+      "y": 12.1519423
     },
     {
       "id": "5b0de31a5b51ec82",
@@ -4019,9 +4019,9 @@
       "tasks": "image-text retrieval",
       "modalities": "text",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.6815274,
-      "y": 5.0987091
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.9192297,
+      "y": 9.4132795
     },
     {
       "id": "26671b40a5c670a8",
@@ -4044,10 +4044,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.9225488,
-      "y": 8.2546253
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.9340014,
+      "y": 8.3237743
     },
     {
       "id": "466a2e48ee7f73ec",
@@ -4070,10 +4070,10 @@
       "has_primary_abstract": true,
       "tasks": "Embeddings evaluated on 24 tasks; full fine-tuning reported on 29 tasks across classification, segmentation, regression, and mapping applications.",
       "modalities": "Sentinel-2, Sentinel-1, and Landsat observations; six derived maps are used as pretraining targets.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.0372233,
-      "y": 5.9024081
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.6788855,
+      "y": 6.956007
     },
     {
       "id": "a833ac16af2cee63",
@@ -4096,10 +4096,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.3780489,
-      "y": 7.9343543
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.3782635,
+      "y": 8.4940958
     },
     {
       "id": "031b9b26ab0a4c66",
@@ -4122,10 +4122,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.4446001,
-      "y": 6.5766983
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.2722197,
+      "y": 9.7982397
     },
     {
       "id": "1f6bd8656d015cf9",
@@ -4148,10 +4148,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification, segmentation, detection and panoptic-style RS tasks.",
       "modalities": "Remote-sensing imagery; likely high-resolution optical with dense labels.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.1500435,
-      "y": 5.3542128
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.4563384,
+      "y": 6.5254779
     },
     {
       "id": "fb9922f22384b405",
@@ -4175,9 +4175,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.8561559,
-      "y": 4.7770143
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.7678845,
+      "y": 8.9772215
     },
     {
       "id": "4430f46b2bd7ab05",
@@ -4200,10 +4200,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 7.0179939,
-      "y": 8.1596308
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.7396898,
+      "y": 8.4732046
     },
     {
       "id": "9853726e555cf0c4",
@@ -4226,10 +4226,10 @@
       "has_primary_abstract": true,
       "tasks": "Plantation Mapping under Distribution Shift",
       "modalities": "—",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 6.1447053,
-      "y": 4.5047417
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.3681459,
+      "y": 7.263948
     },
     {
       "id": "456d467584e0c8e6",
@@ -4252,10 +4252,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 7.1182518,
-      "y": 5.4809217
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.4140553,
+      "y": 6.4821043
     },
     {
       "id": "6f6180e4bba46989",
@@ -4278,10 +4278,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.1958504,
-      "y": 6.7883687
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.9972706,
+      "y": 8.8817625
     },
     {
       "id": "f245740393d22888",
@@ -4304,10 +4304,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.005815,
-      "y": 9.7372236
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.5939636,
+      "y": 9.7529011
     },
     {
       "id": "80787aab050d6e4c",
@@ -4337,10 +4337,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.2843866,
-      "y": 9.9729862
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 8.9197989,
+      "y": 10.6684628
     },
     {
       "id": "de37f7b113838d30",
@@ -4363,10 +4363,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 5.0234566,
-      "y": 4.188035
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.2160907,
+      "y": 7.5501385
     },
     {
       "id": "4a998bb9eaeb3391",
@@ -4389,10 +4389,10 @@
       "has_primary_abstract": true,
       "tasks": "Robustness across 6 Earth observation tasks",
       "modalities": "—",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.613215,
-      "y": 6.4321442
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 6.5741363,
+      "y": 7.4535394
     },
     {
       "id": "e605209c53b9a662",
@@ -4415,10 +4415,10 @@
       "has_primary_abstract": false,
       "tasks": "Classification, segmentation, detection and transfer tasks.",
       "modalities": "Remote-sensing imagery.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.7970245,
-      "y": 7.138247
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.9595084,
+      "y": 13.3855343
     },
     {
       "id": "d8b3abe554c41a06",
@@ -4441,10 +4441,10 @@
       "has_primary_abstract": true,
       "tasks": "Aerial scene classification, object detection, segmentation and mapping tasks.",
       "modalities": "Aerial/high-resolution optical imagery.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.2348595,
-      "y": 3.6598969
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.8899443,
+      "y": 6.7791348
     },
     {
       "id": "48a442b07e88fe92",
@@ -4467,10 +4467,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.3192534,
-      "y": 3.6992829
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 3.9550111,
+      "y": 6.673892
     },
     {
       "id": "187a993c564254f3",
@@ -4493,10 +4493,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification, detection, segmentation and RS transfer tasks.",
       "modalities": "Remote-sensing imagery, multimodal/mixture expert variants.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.3107352,
-      "y": 3.8893263
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.0863171,
+      "y": 6.7196622
     },
     {
       "id": "2a4aa8903b961b82",
@@ -4520,9 +4520,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 4.525805,
-      "y": 4.0042415
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.9033313,
+      "y": 8.1448212
     },
     {
       "id": "1e22f06a1606110e",
@@ -4552,10 +4552,10 @@
       "has_primary_abstract": false,
       "tasks": "Captioning, VQA, scene interpretation, visual reasoning.",
       "modalities": "Remote-sensing imagery plus text/instructions.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 1.209357,
-      "y": 7.2303429
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 3.6393495,
+      "y": 12.9149446
     },
     {
       "id": "ba053c5f2a50625b",
@@ -4578,10 +4578,10 @@
       "has_primary_abstract": true,
       "tasks": "Visual Question Answering & Image Captioning & Counting",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.7285242,
-      "y": 8.4949741
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.0924468,
+      "y": 10.2174644
     },
     {
       "id": "d5b58d101688149e",
@@ -4604,10 +4604,10 @@
       "has_primary_abstract": true,
       "tasks": "SAR image-text retrieval, zero-shot SAR classification, semantic SAR search.",
       "modalities": "SAR imagery plus text.",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.4480925,
-      "y": 7.3762698
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.6769953,
+      "y": 8.8892889
     },
     {
       "id": "624d2825929a107c",
@@ -4631,9 +4631,9 @@
       "tasks": "SAR image classification, target recognition, segmentation/change tasks.",
       "modalities": "Synthetic Aperture Radar imagery.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 2.9094412,
-      "y": 3.7948186
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 1.7506595,
+      "y": 9.2091455
     },
     {
       "id": "38c67819d3ae8686",
@@ -4656,10 +4656,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.5369811,
-      "y": 6.5074296
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.7933016,
+      "y": 9.1415262
     },
     {
       "id": "ac3da881d919331b",
@@ -4683,9 +4683,9 @@
       "tasks": "High-resolution imagery tasks: classification, segmentation, object detection/change style transfer tasks, depending on benchmark.",
       "modalities": "High-resolution remote-sensing imagery, including long multiband/multitemporal sequences.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.0763164,
-      "y": 4.5368123
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 3.893259,
+      "y": 8.4678135
     },
     {
       "id": "3fe8f82f3ddde058",
@@ -4708,10 +4708,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.5375428,
-      "y": 9.8396091
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.6936035,
+      "y": 10.1551304
     },
     {
       "id": "1f2b9ebc87271a2c",
@@ -4734,10 +4734,10 @@
       "has_primary_abstract": true,
       "tasks": "semantic segmentation",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.3437734,
-      "y": 9.8176546
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.8482609,
+      "y": 10.5728807
     },
     {
       "id": "03d326cf77a825b2",
@@ -4760,10 +4760,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.2759347,
-      "y": 8.2033863
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.6119118,
+      "y": 10.2495852
     },
     {
       "id": "076a098cc05a287d",
@@ -4786,10 +4786,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.4172759,
-      "y": 8.0769196
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.4364452,
+      "y": 10.3610296
     },
     {
       "id": "7d84427e8b3034ca",
@@ -4812,10 +4812,10 @@
       "has_primary_abstract": true,
       "tasks": "16 datasets over 7 tasks; task families include scene classification, land-cover/land-use classification, semantic segmentation, object detection, change detection, crop/agricultural mapping, and disaster/environmental applications.",
       "modalities": "Unified multimodal remote-sensing inputs with varying resolutions and modality prompts.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 3.2165926,
-      "y": 7.5709891
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 5.1955361,
+      "y": 11.6884804
     },
     {
       "id": "13982c2dd79fa7c3",
@@ -4838,10 +4838,10 @@
       "has_primary_abstract": false,
       "tasks": "Reported to improve across 12 EO tasks. Representative task families: classification, segmentation, object detection, change detection, crop/agriculture, disaster/environment monitoring.",
       "modalities": "Multimodal remote-sensing images; expanded multimodal corpus relative to SkySense.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 2.9645379,
-      "y": 7.5048079
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.0494127,
+      "y": 11.9334049
     },
     {
       "id": "3facd2c726367a56",
@@ -4864,10 +4864,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.5761373,
-      "y": 5.4918346
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.2279074,
+      "y": 11.048665
     },
     {
       "id": "299f4965fb4014ee",
@@ -4890,10 +4890,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 3.8320811,
-      "y": 4.7061081
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 2.7484736,
+      "y": 9.5293732
     },
     {
       "id": "7047373c21c771fe",
@@ -4916,10 +4916,10 @@
       "has_primary_abstract": true,
       "tasks": "Four downstream datasets for land-cover and crop-type mapping; cross-sensor generalization and HSI classification/segmentation tasks.",
       "modalities": "Hyperspectral EnMAP imagery, multi-temporal patches.",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.3186927,
-      "y": 3.6216667
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.0741925,
+      "y": 9.0140457
     },
     {
       "id": "0e1c3087c18bb690",
@@ -4943,9 +4943,9 @@
       "tasks": "Classification, segmentation, detection/change transfer tasks.",
       "modalities": "Remote-sensing imagery; likely multimodal or multiscale visual inputs.",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 2.8470957,
-      "y": 3.4799407
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 1.6274834,
+      "y": 9.1717081
     },
     {
       "id": "dc1d6a01a4a777d0",
@@ -4968,10 +4968,10 @@
       "has_primary_abstract": true,
       "tasks": "Scene classification, semantic segmentation, and transfer to land-cover/environmental tasks reported in paper.",
       "modalities": "Globally distributed Sentinel-1 SAR and Sentinel-2 optical imagery, with land-cover-aware sampling.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.9447412,
-      "y": 6.0026379
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.7401376,
+      "y": 7.0128088
     },
     {
       "id": "5ac5f39655c0a598",
@@ -4994,10 +4994,10 @@
       "has_primary_abstract": true,
       "tasks": "9 PANGAEA benchmark tasks plus 7 zero-shot/generative capabilities: land-use segmentation, water-body mapping, vegetation mapping, geolocation, captioning, text-to-image generation, and modality-to-modality generation.",
       "modalities": "Nine geospatial modalities including Sentinel-1 SAR, Sentinel-2 optical imagery, LULC, NDVI, DEM/elevation, geographic coordinates, and text/captions.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.9439182,
-      "y": 6.1901126
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.9780936,
+      "y": 6.8470407
     },
     {
       "id": "f6d9c012f99c92dd",
@@ -5020,10 +5020,10 @@
       "has_primary_abstract": true,
       "tasks": "Six representative benchmarks: TreeSatAI-TS tree species classification, PASTIS-R parcel segmentation, Austrian Crop classification, BioMassters above-ground biomass regression, Borneo canopy-height regression, Austrian Crop semantic segmentation. General use includes land-cover, crop, biomass, canopy, and environmental monitoring.",
       "modalities": "Sentinel-1 SAR plus Sentinel-2 optical time series; pixel-wise multimodal annual surface representations.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.0429773,
-      "y": 5.3714161
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.099194,
+      "y": 7.9437447
     },
     {
       "id": "fa7e9d80c51d868f",
@@ -5046,10 +5046,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.2302361,
-      "y": 6.2613926
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.3355832,
+      "y": 9.899724
     },
     {
       "id": "23d0d43b396ea493",
@@ -5072,10 +5072,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.915401,
-      "y": 8.3155107
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 8.1166553,
+      "y": 8.3729668
     },
     {
       "id": "a1e5390a5f6ad32d",
@@ -5098,10 +5098,10 @@
       "has_primary_abstract": true,
       "tasks": "time-series forecasting",
       "modalities": "temporal",
-      "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 5.8751631,
-      "y": 5.211988
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.6751394,
+      "y": 8.5523605
     },
     {
       "id": "254e40e68650f92a",
@@ -5124,10 +5124,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.024457,
-      "y": 9.5998535
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.6045361,
+      "y": 9.8421316
     },
     {
       "id": "9e0c84f319ba1a72",
@@ -5150,10 +5150,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language & Agents",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.9928904,
-      "y": 7.1410213
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.5982037,
+      "y": 7.757154
     },
     {
       "id": "4ae52d5c9bb3138a",
@@ -5176,10 +5176,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 4.4137616,
-      "y": 4.4074688
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.0779924,
+      "y": 7.9211383
     },
     {
       "id": "d636656239513881",
@@ -5202,10 +5202,10 @@
       "has_primary_abstract": true,
       "tasks": "object detection; change detection",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.3090506,
-      "y": 8.7481194
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.6263647,
+      "y": 10.2705822
     },
     {
       "id": "62bf25126aa19bdf",
@@ -5228,10 +5228,10 @@
       "has_primary_abstract": true,
       "tasks": "semantic segmentation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.3256259,
-      "y": 9.8180141
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.7156439,
+      "y": 10.5934963
     },
     {
       "id": "0e2959cb346ef700",
@@ -5254,10 +5254,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 5.7270842,
-      "y": 7.7716875
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.0552707,
+      "y": 8.9279156
     },
     {
       "id": "f5f3ce631af39fc7",
@@ -5280,10 +5280,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.3959718,
-      "y": 4.2552934
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 3.3705411,
+      "y": 7.9593639
     },
     {
       "id": "d403676df1f85b3e",
@@ -5306,10 +5306,10 @@
       "has_primary_abstract": true,
       "tasks": "visual question answering",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.1974168,
-      "y": 9.0000315
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.4229469,
+      "y": 10.9290953
     },
     {
       "id": "d80a5806f4c5cf5d",
@@ -5332,10 +5332,10 @@
       "has_primary_abstract": true,
       "tasks": "Benchmarking and evaluation for Earth observation models.",
       "modalities": "aerial / RGB imagery",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.5603027,
-      "y": 8.1522093
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.3227525,
+      "y": 9.454771
     },
     {
       "id": "7d05f3395cbbd35b",
@@ -5358,10 +5358,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 6.0890341,
-      "y": 9.099802
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.4754658,
+      "y": 9.5198002
     },
     {
       "id": "885d8734ff784cfa",
@@ -5384,10 +5384,10 @@
       "has_primary_abstract": false,
       "tasks": "Crop mapping, crop-type classification, field/agricultural segmentation and agriculture monitoring.",
       "modalities": "Multi-source temporal remote-sensing data for agriculture, likely optical/SAR/time-series depending on dataset.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.4810977,
-      "y": 6.7862978
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.2251191,
+      "y": 12.9301176
     },
     {
       "id": "b02ef8cacc6f6e1b",
@@ -5410,10 +5410,10 @@
       "has_primary_abstract": true,
       "tasks": "Benchmarking EO multimodal large language models",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.7865691,
-      "y": 6.9567604
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.3206825,
+      "y": 7.7134643
     },
     {
       "id": "aa42df95885cacc1",
@@ -5436,10 +5436,10 @@
       "has_primary_abstract": true,
       "tasks": "SAR classification, segmentation and target/land-cover analysis.",
       "modalities": "Complex-valued SAR / PolSAR-like data.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 2.9920177,
-      "y": 3.3564243
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 1.4421006,
+      "y": 9.3197002
     },
     {
       "id": "96b7c9c965e48b1e",
@@ -5462,10 +5462,10 @@
       "has_primary_abstract": true,
       "tasks": "SAR classification, segmentation, detection and cross-modal transfer tasks.",
       "modalities": "SAR plus cross-modal/cross-domain EO data.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 2.9140553,
-      "y": 3.4970474
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 1.5444056,
+      "y": 9.2418003
     },
     {
       "id": "edb7485d7898888d",
@@ -5488,10 +5488,10 @@
       "has_primary_abstract": true,
       "tasks": "object detection; change detection",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.3953862,
-      "y": 8.661253
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.6820211,
+      "y": 10.1720934
     },
     {
       "id": "07173aff5d613d94",
@@ -5514,10 +5514,10 @@
       "has_primary_abstract": true,
       "tasks": "Benchmarking and evaluation for Earth observation models.",
       "modalities": "DEM",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.0061636,
-      "y": 5.5165544
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.1874652,
+      "y": 7.9412236
     },
     {
       "id": "456cb76caadfaff5",
@@ -5540,10 +5540,10 @@
       "has_primary_abstract": true,
       "tasks": "Forecasting, climate/weather downstream applications, downscaling/assimilation-style tasks and heterogeneous Earth-system modeling.",
       "modalities": "Earth-system heterogeneous data: climate/weather grids, satellite data with missing values, station data and other spatio-temporal variables.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.6913853,
-      "y": 5.4807191
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.2707996,
+      "y": 7.2767653
     },
     {
       "id": "f83d7ba18f9d493f",
@@ -5566,10 +5566,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.2501936,
-      "y": 4.0623541
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 4.0649896,
+      "y": 6.8002167
     },
     {
       "id": "6ac1919ae5722eee",
@@ -5592,10 +5592,10 @@
       "has_primary_abstract": true,
       "tasks": "SAR interpretation, captioning, VQA, target/scene reasoning.",
       "modalities": "SAR imagery plus language.",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 2.7436988,
-      "y": 3.3388324
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 1.3996553,
+      "y": 9.3874254
     },
     {
       "id": "283874153373df20",
@@ -5618,10 +5618,10 @@
       "has_primary_abstract": true,
       "tasks": "Dynamic execution evaluation for tool-augmented GIS agents",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.8573117,
-      "y": 8.0600443
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.8223677,
+      "y": 8.3263397
     },
     {
       "id": "4ee73be962fec6a6",
@@ -5644,10 +5644,10 @@
       "has_primary_abstract": true,
       "tasks": "image-text retrieval",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 3.8773489,
-      "y": 8.8211946
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 6.8099594,
+      "y": 11.0676088
     },
     {
       "id": "22bfd985fe5e609a",
@@ -5670,10 +5670,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.103138,
-      "y": 6.2998042
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.0918045,
+      "y": 9.7855206
     },
     {
       "id": "eccbebba63ce578a",
@@ -5703,10 +5703,10 @@
       "has_primary_abstract": true,
       "tasks": "Vision-Language",
       "modalities": "DEM, text, aerial / RGB imagery",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.2180624,
-      "y": 9.2475624
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.6110058,
+      "y": 9.6052017
     },
     {
       "id": "f6a3fc2190aa1718",
@@ -5729,10 +5729,10 @@
       "has_primary_abstract": true,
       "tasks": "Expert-level multimodal QA across RS disciplines, sensors & tasks",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.8397141,
-      "y": 8.2782364
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.7906985,
+      "y": 8.3935184
     },
     {
       "id": "3516fb334ae68dae",
@@ -5755,10 +5755,10 @@
       "has_primary_abstract": true,
       "tasks": "Logical consistency & multi-step reasoning",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.0640702,
-      "y": 9.6663313
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.6721449,
+      "y": 9.7745743
     },
     {
       "id": "9b4cbe1837aae308",
@@ -5781,10 +5781,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.0114474,
-      "y": 9.6624289
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 8.7693853,
+      "y": 9.8292894
     },
     {
       "id": "c280bb06ff5b1003",
@@ -5807,10 +5807,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 4.3839669,
-      "y": 7.0316205
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 6.2369337,
+      "y": 8.8136806
     },
     {
       "id": "3d52539b6a891356",
@@ -5833,10 +5833,10 @@
       "has_primary_abstract": false,
       "tasks": "Classification, segmentation and transfer tasks.",
       "modalities": "Remote-sensing imagery and/or time-series depending on version.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.5925789,
-      "y": 6.9525499
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.3660154,
+      "y": 13.1273603
     },
     {
       "id": "405f06e8db04d029",
@@ -5859,10 +5859,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 4.1444416,
-      "y": 3.7446468
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 2.5604863,
+      "y": 8.4583139
     },
     {
       "id": "15e51c5512622026",
@@ -5885,10 +5885,10 @@
       "has_primary_abstract": true,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 2,
-      "cluster_label": "Geospatial Grounding and Generation",
-      "x": 5.4447784,
-      "y": 6.2357531
+      "cluster_id": 3,
+      "cluster_label": "Generative Satellite Image Synthesis",
+      "x": 5.2643018,
+      "y": 9.6137037
     },
     {
       "id": "eb4bfceebd81d02c",
@@ -5911,10 +5911,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 6.5251904,
-      "y": 4.4573956
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 4.6980414,
+      "y": 6.810503
     },
     {
       "id": "096036a313324178",
@@ -5938,9 +5938,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.7490673,
-      "y": 3.9891527
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.3738592,
+      "y": 8.8514881
     },
     {
       "id": "6158fb69478ac8d0",
@@ -5963,10 +5963,10 @@
       "has_primary_abstract": false,
       "tasks": "Average-rank comparison across 13 embedding tasks; the report also provides a broader table of modality/task evaluation configurations.",
       "modalities": "Sentinel-2, Sentinel-1, and Landsat observations; multimodal and multitemporal inputs.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.8780217,
-      "y": 5.930933
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.9271612,
+      "y": 7.2232246
     },
     {
       "id": "6f9a8e660b751ade",
@@ -5984,15 +5984,15 @@
           "year": 2026
         }
       ],
-      "abstract": "OmniEarth: A Benchmark for Evaluating Vision-Language Models in Geospatial Tasks A Benchmark for Evaluating Vision-Language Models in Geospatial Tasks Perception & Reasoning & Robustness across geospatial tasks text",
-      "abstract_source": "catalogue summary",
-      "has_primary_abstract": false,
+      "abstract": "Vision-Language Models (VLMs) have demonstrated effective perception and reasoning capabilities on general-domain tasks, leading to growing interest in their application to Earth observation. However, a systematic benchmark for comprehensively evaluating remote sensing vision-language models (RSVLMs) remains lacking. To address this gap, we introduce OmniEarth, a benchmark for evaluating RSVLMs under realistic Earth observation scenarios. OmniEarth organizes tasks along three capability dimensions: perception, reasoning, and robustness. It defines 28 fine-grained tasks covering multi-source sensing data and diverse geospatial contexts. The benchmark supports two task formulations: multiple-choice VQA and open-ended VQA. The latter includes pure text outputs for captioning tasks, bounding box outputs for visual grounding tasks, and mask outputs for segmentation tasks. To reduce linguistic bias and examine whether model predictions rely on visual evidence, OmniEarth adopts a blind test protocol and a quintuple semantic consistency requirement. OmniEarth includes 9,275 carefully quality-controlled images, including proprietary satellite imagery from Jilin-1 (JL-1), along with 44,210 manually verified instructions. We conduct a systematic evaluation of contrastive learning-based models, general closed-source and open-source VLMs, as well as RSVLMs. Results show that existing VLMs still struggle with geospatially complex tasks, revealing clear gaps that need to be addressed for remote sensing applications. OmniEarth is publicly available at https://huggingface.co/datasets/sjeeudd/OmniEarth.",
+      "abstract_source": "arXiv",
+      "has_primary_abstract": true,
       "tasks": "Perception & Reasoning & Robustness across geospatial tasks",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.4429302,
-      "y": 7.6183157
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.0931101,
+      "y": 7.7781687
     },
     {
       "id": "db852743cc6b07df",
@@ -6010,15 +6010,15 @@
           "year": 2026
         }
       ],
-      "abstract": "OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation (OpenEarth-Bench is the benchmark introduced in this paper) From Tool Calling to Tool Creation for Open-Environment Earth Observation Full-pipeline EO across 7 application domains —",
-      "abstract_source": "catalogue summary",
-      "has_primary_abstract": false,
+      "abstract": "Earth Observation (EO) is essential for perceiving dynamic land surface changes, yet deploying autonomous EO in open environments is hindered by the immense diversity of multi-source data and heterogeneous tasks. While remote sensing agents have emerged to streamline EO workflows, existing tool-calling agents are confined to closed environments. They rely on pre-defined tools and are restricted to narrow scope, limiting their generalization to the diverse data and tasks. To overcome these limitations, we introduce OpenEarth-Agent, the first tool-creation agent framework tailored for open-environment EO. Rather than calling predefined tools, OpenEarth-Agent employs adaptive workflow planning and tool creation to generalize to unseen data and tasks. This adaptability is bolstered by an open-ended integration of multi-stage tools and cross-domain knowledge bases, enabling robust execution in the entire EO pipeline across multiple application domains. To comprehensively evaluate EO agents in open environments, we propose OpenEarth-Bench, a novel benchmark comprising 596 real-world, full-pipeline cases across seven application domains, explicitly designed to assess agents' adaptive planning and tool creation capabilities. Only essential pre-trained model tools are provided in this benchmark, devoid of any other predefined task-specific tools. Extensive experiments demonstrate that OpenEarth-Agent successfully masters full-pipeline EO across multiple domains in the open environment. Notably, on the cross-benchmark Earth-Bench, our tool-creating agent equipped with 6 essential pre-trained models achieves performance comparable to tool-calling agents relying on 104 specialized tools, and significantly outperforms them when provided with the complete toolset. In several cases, the created tools exhibit superior robustness to data anomalies compared to human-engineered counterparts.",
+      "abstract_source": "arXiv",
+      "has_primary_abstract": true,
       "tasks": "Full-pipeline EO across 7 application domains",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.9480004,
-      "y": 7.5435524
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.9169235,
+      "y": 7.9478359
     },
     {
       "id": "d40e6fd0a6d67c66",
@@ -6043,15 +6043,15 @@
           "year": 2026
         }
       ],
-      "abstract": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents A Unified Framework for Tool-Augmented Geospatial Agents Vision-Language & Agents text",
-      "abstract_source": "catalogue summary",
-      "has_primary_abstract": false,
+      "abstract": "Recent progress in multimodal reasoning has enabled agents that interpret imagery, connect it with language, and execute structured analytical tasks. Extending these capabilities to remote sensing remains challenging, as models must reason over spatial scale, geographic structures, and multispectral indices while maintaining coherent multi-step logic. To address this gap, we introduce \\textit{OpenEarthAgent}, a unified framework for tool-augmented geospatial reasoning trained on satellite imagery, natural-language queries, and structured reasoning traces. Beyond serving as a benchmark, OpenEarthAgent establishes a cohesive agentic architecture built around a unified executable tool registry and trajectory-based policy learning. The framework standardizes heterogeneous visual, spectral, GIS, and georeferenced raster operations under a consistent callable schema, enabling modular orchestration and deterministic execution. Training is performed via supervised fine-tuning on structured reasoning trajectories with deterministic replay validation to ensure executability and spatial correctness. The accompanying corpus comprises 14,538 training and 1,169 evaluation instances with over 107K reasoning steps, spanning urban, environmental, disaster, and infrastructure domains and incorporating GIS operations alongside index analyses such as NDVI, NBR, and NDBI. Grounded in explicit reasoning traces, the learned agent demonstrates structured reasoning, stable spatial understanding, and interpretable tool-driven behaviour across diverse EO scenarios. We report consistent improvements over a strong baseline and competitive performance against recent open and closed-source models. Our code and trained models will be publicly available.",
+      "abstract_source": "arXiv",
+      "has_primary_abstract": true,
       "tasks": "Vision-Language & Agents",
       "modalities": "text",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.7883344,
-      "y": 7.8044405
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.9406562,
+      "y": 8.1733427
     },
     {
       "id": "e414bc1498198af7",
@@ -6074,10 +6074,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 6.0082431,
-      "y": 8.7786112
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.9036598,
+      "y": 9.4451447
     },
     {
       "id": "489f4df1bdc377c2",
@@ -6100,10 +6100,10 @@
       "has_primary_abstract": true,
       "tasks": "regression",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.0174775,
-      "y": 8.9876051
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.8297391,
+      "y": 10.4682913
     },
     {
       "id": "5ceda860d06af78c",
@@ -6127,9 +6127,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.9313102,
-      "y": 3.6961486
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.3769526,
+      "y": 8.8272057
     },
     {
       "id": "6cebf1a61aa56cd1",
@@ -6147,15 +6147,15 @@
           "year": 2026
         }
       ],
-      "abstract": "SOMA-1M: A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing Vision (SAR-Optical) multispectral, SAR",
-      "abstract_source": "catalogue summary",
-      "has_primary_abstract": false,
+      "abstract": "Synthetic Aperture Radar (SAR) and optical imagery provide complementary strengths that constitute the critical foundation for transcending single-modality constraints and facilitating cross-modal collaborative processing and intelligent interpretation. However, existing benchmark datasets often suffer from limitations such as single spatial resolution, insufficient data scale, and low alignment accuracy, making them inadequate for supporting the training and generalization of multi-scale foundation models. To address these challenges, we introduce SOMA-1M (SAR-Optical Multi-resolution Alignment), a pixel-level precisely aligned dataset containing over 1.3 million pairs of georeferenced images with a specification of 512 x 512 pixels. This dataset integrates imagery from Sentinel-1, PIESAT-1, Capella Space, and Google Earth, achieving global multi-scale coverage from 0.5 m to 10 m. It encompasses 12 typical land cover categories, effectively ensuring scene diversity and complexity. To address multimodal projection deformation and massive data registration, we designed a rigorous coarse-to-fine image matching framework ensuring pixel-level alignment. Based on this dataset, we established comprehensive evaluation benchmarks for four hierarchical vision tasks, including image matching, image fusion, SAR-assisted cloud removal, and cross-modal translation, involving over 30 mainstream algorithms. Experimental results demonstrate that supervised training on SOMA-1M significantly enhances performance across all tasks. Notably, multimodal remote sensing image (MRSI) matching performance achieves current state-of-the-art (SOTA) levels. SOMA-1M serves as a foundational resource for robust multimodal algorithms and remote sensing foundation models. The dataset will be released publicly at: https://github.com/PeihaoWu/SOMA-1M.",
+      "abstract_source": "arXiv",
+      "has_primary_abstract": true,
       "tasks": "Vision (SAR-Optical)",
       "modalities": "multispectral, SAR",
       "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.2255325,
-      "y": 4.5861692
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 1.6798049,
+      "y": 9.1114893
     },
     {
       "id": "c45dd90f658e5d5f",
@@ -6178,10 +6178,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "multispectral",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.7165809,
-      "y": 6.0032158
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 5.0283127,
+      "y": 9.1202927
     },
     {
       "id": "a364bee390639c70",
@@ -6204,10 +6204,10 @@
       "has_primary_abstract": true,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 4,
-      "cluster_label": "Geospatial Reasoning and AI Agents",
-      "x": 6.5079789,
-      "y": 7.2070737
+      "cluster_id": 6,
+      "cluster_label": "Geospatial Agent Benchmarking",
+      "x": 7.1674385,
+      "y": 7.6904216
     },
     {
       "id": "d754b0c10dae2c6e",
@@ -6230,10 +6230,10 @@
       "has_primary_abstract": true,
       "tasks": "PANGAEA-style downstream climate and society applications; strong in data-limited 10% split. Task families include land-cover, crop, flood, burn scar, marine/debris, and environmental monitoring.",
       "modalities": "Copernicus Sentinel-1, Sentinel-2, Sentinel-3 OLCI, and Sentinel-3 SLSTR at native 10 m to 1000 m resolutions.",
-      "cluster_id": 5,
-      "cluster_label": "Generalist Geospatial AI and Benchmarks",
-      "x": 6.8123775,
-      "y": 5.3720837
+      "cluster_id": 2,
+      "cluster_label": "Generalist Geospatial Foundation Models",
+      "x": 5.3164043,
+      "y": 6.7692838
     },
     {
       "id": "108ff162c5c469e7",
@@ -6256,10 +6256,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.3401275,
-      "y": 8.9612064
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.1605115,
+      "y": 10.7002916
     },
     {
       "id": "afd60ce673c3cb5b",
@@ -6282,10 +6282,10 @@
       "has_primary_abstract": false,
       "tasks": "agentic reasoning",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 6.5010672,
-      "y": 8.2248802
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 7.9189134,
+      "y": 8.8743687
     },
     {
       "id": "abcd40fa7d203bd6",
@@ -6308,10 +6308,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.8432779,
-      "y": 4.8865137
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.8375013,
+      "y": 10.6750851
     },
     {
       "id": "b96d5502d54c391b",
@@ -6334,10 +6334,10 @@
       "has_primary_abstract": true,
       "tasks": "visual question answering",
       "modalities": "—",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 5.0524397,
-      "y": 8.8277884
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.5745511,
+      "y": 9.899518
     },
     {
       "id": "10675fd930482a16",
@@ -6360,10 +6360,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.6330366,
-      "y": 9.0653524
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.5743909,
+      "y": 10.7351179
     },
     {
       "id": "2f5dd84a7add166a",
@@ -6387,9 +6387,9 @@
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
       "cluster_id": 0,
-      "cluster_label": "Masked Self-Supervised Pre-Training",
-      "x": 3.6577399,
-      "y": 4.2744284
+      "cluster_label": "Self-Supervised Representation Pre-Training",
+      "x": 2.6039708,
+      "y": 8.9460497
     },
     {
       "id": "a5f4d767f05cee0e",
@@ -6412,10 +6412,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.5332122,
-      "y": 5.0983338
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.7479689,
+      "y": 10.5723495
     },
     {
       "id": "a7a92ab88c125cac",
@@ -6438,10 +6438,10 @@
       "has_primary_abstract": false,
       "tasks": "generation",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 5.0098324,
-      "y": 3.3602734
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.7073641,
+      "y": 9.7477274
     },
     {
       "id": "ec250f56dc76568e",
@@ -6464,10 +6464,10 @@
       "has_primary_abstract": false,
       "tasks": "geolocation",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.8108838,
-      "y": 6.0977292
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.7376151,
+      "y": 11.0733099
     },
     {
       "id": "8e7d4f91701c6849",
@@ -6490,10 +6490,10 @@
       "has_primary_abstract": true,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 4.8728714,
-      "y": 9.3921661
+      "cluster_id": 5,
+      "cluster_label": "Vision-Language Model Reasoning",
+      "x": 7.9885473,
+      "y": 10.6118431
     },
     {
       "id": "90577bfd470477e4",
@@ -6516,10 +6516,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "hyperspectral, multispectral",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 5.1443701,
-      "y": 3.3212957
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.8612547,
+      "y": 9.5472288
     },
     {
       "id": "2563689dc7907c16",
@@ -6542,10 +6542,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.9201379,
-      "y": 4.5113492
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.6639235,
+      "y": 10.212327
     },
     {
       "id": "ba7f2138d7ea4e49",
@@ -6568,10 +6568,10 @@
       "has_primary_abstract": false,
       "tasks": "Image classification and semantic segmentation; also used/extended in MMEarth-Bench for five multimodal environmental tasks.",
       "modalities": "12+ multimodal EO/geospatial modalities depending on dataset version; optical imagery with auxiliary geospatial modalities.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.634782,
-      "y": 6.8933768
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.4374475,
+      "y": 12.8666296
     },
     {
       "id": "773460690d899ac5",
@@ -6594,10 +6594,10 @@
       "has_primary_abstract": true,
       "tasks": "Classification, detection, segmentation and transfer tasks.",
       "modalities": "Remote-sensing imagery, likely optical multispectral/high-resolution.",
-      "cluster_id": 3,
-      "cluster_label": "Unified Multi-Sensor Foundation Models",
-      "x": 4.6943183,
-      "y": 4.2506385
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 2.989033,
+      "y": 7.8891454
     },
     {
       "id": "fb6e5f0058ffbd76",
@@ -6620,10 +6620,10 @@
       "has_primary_abstract": false,
       "tasks": "land-cover mapping",
       "modalities": "multispectral, aerial / RGB imagery",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.9671808,
-      "y": 6.8188014
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.1047149,
+      "y": 12.8866014
     },
     {
       "id": "d7c1048f852325b2",
@@ -6646,10 +6646,10 @@
       "has_primary_abstract": false,
       "tasks": "regression",
       "modalities": "SAR",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.7354693,
-      "y": 4.3804035
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.3780301,
+      "y": 10.3146667
     },
     {
       "id": "c62beb680e8d5a6a",
@@ -6672,10 +6672,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 3.0982082,
-      "y": 4.5602942
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.2033198,
+      "y": 10.1154652
     },
     {
       "id": "b79dc7600c2dfdc1",
@@ -6698,10 +6698,10 @@
       "has_primary_abstract": true,
       "tasks": "captioning; image-text retrieval",
       "modalities": "text",
-      "cluster_id": 6,
-      "cluster_label": "Visual Grounding and Multimodal Understanding",
-      "x": 3.6992719,
-      "y": 8.7193718
+      "cluster_id": 7,
+      "cluster_label": "Unified Multi-Task Foundation Models",
+      "x": 6.5472503,
+      "y": 11.1499815
     },
     {
       "id": "296bebe05577adb0",
@@ -6724,10 +6724,10 @@
       "has_primary_abstract": false,
       "tasks": "SAR classification, detection, segmentation and transfer tasks.",
       "modalities": "Synthetic Aperture Radar imagery.",
-      "cluster_id": 1,
-      "cluster_label": "Vision-Language Foundation Models",
-      "x": 0.6795709,
-      "y": 7.1648917
+      "cluster_id": 4,
+      "cluster_label": "Remote Sensing Vision-Language Models",
+      "x": 4.2751126,
+      "y": 13.4101076
     },
     {
       "id": "a665d2e294f639f9",
@@ -6750,10 +6750,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.542784,
-      "y": 4.7433033
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 3.1856849,
+      "y": 10.4130316
     },
     {
       "id": "377c1455f257f87c",
@@ -6776,10 +6776,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.6511707,
-      "y": 5.1397586
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.8755336,
+      "y": 10.7664127
     },
     {
       "id": "f8701041e29b01f2",
@@ -6802,10 +6802,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "SAR, multispectral",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.6996572,
-      "y": 4.7137589
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.6212752,
+      "y": 10.5935335
     },
     {
       "id": "ee4aa2bb597c8447",
@@ -6828,10 +6828,10 @@
       "has_primary_abstract": false,
       "tasks": "time-series forecasting",
       "modalities": "temporal",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 2.8708808,
-      "y": 4.4648829
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.7625239,
+      "y": 10.226922
     },
     {
       "id": "1fbff91810dfcb02",
@@ -6854,10 +6854,10 @@
       "has_primary_abstract": false,
       "tasks": "General remote sensing representation learning and downstream adaptation.",
       "modalities": "—",
-      "cluster_id": 7,
-      "cluster_label": "Geography-Aware Representation Learning",
-      "x": 3.2812774,
-      "y": 4.1928968
+      "cluster_id": 1,
+      "cluster_label": "Downstream Representation Adaptation",
+      "x": 2.4704216,
+      "y": 9.7358494
     }
   ]
 }

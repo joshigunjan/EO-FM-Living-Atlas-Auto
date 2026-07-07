@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmarks · EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">About</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Benchmark datasets</p>
+      <h1>Explore EO benchmarks and datasets</h1>
+      <p class="subtitle">
+        Evaluation benchmarks, pre-training datasets, and embedding resources
+        for Earth observation foundation models.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="benchmarkStats"></section>
+
+    <section class="panel controls-panel">
+      <div class="toolbar">
+        <input
+          id="benchmarkSearch"
+          type="search"
+          placeholder="Search benchmark, dataset, task, modality, paper..."
+        >
+        <select id="typeFilter">
+          <option value="">All benchmark/dataset types</option>
+        </select>
+        <select id="accessFilter">
+          <option value="">All access types</option>
+        </select>
+        <select id="benchmarkYearFilter">
+          <option value="">All years</option>
+        </select>
+        <button id="benchmarkResetBtn">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel timeline-panel">
+      <div class="table-headline">
+        <div>
+          <h2>Benchmark and dataset growth over time</h2>
+          <p class="muted">
+            Recorded benchmark and dataset releases by publication year.
+          </p>
+        </div>
+      </div>
+      <div id="benchmarkTimeline" class="timeline-bars"></div>
+    </section>
+
+    <section class="panel table-panel full-width-panel">
+      <div class="table-headline">
+        <div>
+          <h2>Benchmark and dataset catalogue</h2>
+          <p id="benchmarkResultCount" class="muted"></p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="benchmarksTable" class="benchmarks-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Year</th>
+              <th>Type</th>
+              <th>Title / scope</th>
+              <th>Tasks / attributes</th>
+              <th>Modalities</th>
+              <th>Access</th>
+              <th>Paper</th>
+              <th>Code</th>
+              <th>Dataset / project</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      EO-FM Living Atlas · A curated living catalogue for Earth observation
+      foundation models and benchmark datasets.
+    </p>
+  </footer>
+
+  <script src="benchmarks.js?v=20260707-4"></script>
+
+  <script>
+    (() => {
+      const uniqueSorted = values =>
+        [...new Set(values.filter(Boolean))]
+          .sort((a, b) => String(a).localeCompare(String(b)));
+
+      const normalizedAccess = entry => {
+        const value = String(entry?.access || "").toLowerCase();
+
+        if (value.includes("partial")) return "partial";
+        if (value.includes("closed")) return "closed";
+        if (value.includes("open")) return "open";
+        return "unknown";
+      };
+
+      const accessNames = {
+        open: "Open source",
+        partial: "Partial access",
+        closed: "Closed source",
+        unknown: "Unknown"
+      };
+
+      buildFilters = function () {
+        els.typeFilter.innerHTML =
+          '<option value="">All benchmark/dataset types</option>';
+
+        els.accessFilter.innerHTML =
+          '<option value="">All access types</option>';
+
+        els.yearFilter.innerHTML =
+          '<option value="">All years</option>';
+
+        const types = uniqueSorted(
+          state.data.map(entry => entry.benchmark_type)
+        );
+
+        const accessTypes = uniqueSorted(
+          state.data.map(normalizedAccess)
+        );
+
+        const years = [...new Set(
+          state.data
+            .map(entry => entry.publication_year)
+            .filter(Boolean)
+        )].sort((a, b) => b - a);
+
+        for (const type of types) {
+          els.typeFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`
+          );
+        }
+
+        for (const access of accessTypes) {
+          els.accessFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${access}">${accessNames[access]}</option>`
+          );
+        }
+
+        for (const year of years) {
+          els.yearFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${year}">${year}</option>`
+          );
+        }
+      };
+
+      applyFilters = function () {
+        const query = els.search.value.trim().toLowerCase();
+        const type = els.typeFilter.value;
+        const access = els.accessFilter.value;
+        const year = els.yearFilter.value;
+
+        state.filtered = state.data.filter(entry => {
+          if (query && !rowText(entry).includes(query)) return false;
+          if (type && entry.benchmark_type !== type) return false;
+          if (access && normalizedAccess(entry) !== access) return false;
+          if (year && String(entry.publication_year || "") !== year) return false;
+          return true;
+        });
+
+        renderTable();
+      };
+
+      renderTable = function () {
+        els.tbody.innerHTML = "";
+        els.resultCount.textContent =
+          `${state.filtered.length} of ${state.data.length} entries shown`;
+
+        for (const entry of state.filtered) {
+          const row = document.createElement("tr");
+          const datasetUrl = entry.dataset_url || entry.project_url;
+
+          row.innerHTML = `
+            <td class="name">
+              <span>${escapeHtml(entry.name)}</span>
+            </td>
+
+            <td>${escapeHtml(entry.publication_year || "—")}</td>
+
+            <td>
+              ${tag(entry.benchmark_type || "Unknown", "paradigm")}
+            </td>
+
+            <td>
+              <strong>${escapeHtml(truncate(entry.title, 120))}</strong>
+              <div class="task-preview">
+                ${escapeHtml(truncate(entry.scope, 150))}
+              </div>
+            </td>
+
+            <td class="tasks-cell">
+              <div class="task-preview">
+                ${escapeHtml(truncate(entry.tasks, 180))}
+              </div>
+            </td>
+
+            <td>
+              ${escapeHtml(truncate(entry.modalities, 90))}
+            </td>
+
+            <td>
+              ${tag(accessNames[normalizedAccess(entry)], normalizedAccess(entry))}
+            </td>
+
+            <td class="single-link">
+              ${linkButton("Link", entry.paper_url)}
+            </td>
+
+            <td class="single-link">
+              ${linkButton("Link", entry.code_url)}
+            </td>
+
+            <td class="single-link">
+              ${linkButton("Link", datasetUrl)}
+            </td>
+          `;
+
+          els.tbody.appendChild(row);
+        }
+      };
+    })();
+  </script>
+</body>
+</html>

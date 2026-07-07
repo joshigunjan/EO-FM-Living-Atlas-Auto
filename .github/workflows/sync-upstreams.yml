@@ -9,6 +9,8 @@ on:
       - "data/metadata.json"
       - "data/benchmarks.json"
       - "data/benchmarks.csv"
+      - "data/paper-map.json"
+      - "data/paper-map-cache/**"
       - "data/candidates/**"
       - "data/parsed/**"
       - "data/upstream_raw/**"

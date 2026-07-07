@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Map · EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .map-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.75fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .map-panel {
+      min-width: 0;
+    }
+
+    #paperMap {
+      width: 100%;
+      min-height: 680px;
+    }
+
+    .map-toolbar {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.6fr) repeat(4, minmax(150px, 0.75fr)) auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .map-toolbar input,
+    .map-toolbar select {
+      width: 100%;
+    }
+
+    .cluster-summary {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .cluster-item {
+      width: 100%;
+      text-align: left;
+      border: 1px solid var(--line, #dbe3ef);
+      border-radius: 14px;
+      background: #fff;
+      padding: 12px 14px;
+      cursor: pointer;
+    }
+
+    .cluster-item:hover {
+      border-color: #2463eb;
+    }
+
+    .cluster-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .paper-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+
+    .paper-abstract {
+      line-height: 1.7;
+      white-space: normal;
+    }
+
+    .map-note {
+      margin-top: 12px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1100px) {
+      .map-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .map-toolbar {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      #paperMap {
+        min-height: 560px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .map-toolbar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero compact-hero">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="paper-map.html">Paper map</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">Method</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Semantic literature landscape</p>
+      <h1>Explore the papers behind the atlas</h1>
+      <p class="subtitle">
+        Papers are positioned by semantic similarity between their abstracts.
+        Nearby points discuss related methods, data, tasks, or scientific themes.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="paperMapStats"></section>
+
+    <section class="panel controls-panel">
+      <div class="map-toolbar">
+        <input
+          id="paperSearch"
+          type="search"
+          placeholder="Search title, abstract, model, benchmark, or cluster..."
+        >
+
+        <select id="paperTypeFilter">
+          <option value="">All paper types</option>
+          <option value="model">Model papers</option>
+          <option value="benchmark">Benchmark / dataset papers</option>
+        </select>
+
+        <select id="paperClusterFilter">
+          <option value="">All semantic clusters</option>
+        </select>
+
+        <select id="paperYearFilter">
+          <option value="">All years</option>
+        </select>
+
+        <select id="paperAbstractFilter">
+          <option value="">All records</option>
+          <option value="primary">Primary abstracts only</option>
+          <option value="fallback">Catalogue-summary fallback only</option>
+        </select>
+
+        <button id="paperResetBtn">Reset</button>
+      </div>
+
+      <p class="hint map-note">
+        The two-dimensional position is a visualization of high-dimensional
+        abstract embeddings. Distance is approximate and should not be treated
+        as a performance ranking.
+      </p>
+    </section>
+
+    <section class="map-layout">
+      <div class="panel map-panel">
+        <div class="table-headline">
+          <div>
+            <h2>Semantic paper map</h2>
+            <p id="paperMapCount" class="muted"></p>
+          </div>
+        </div>
+        <div id="paperMap"></div>
+      </div>
+
+      <aside class="panel detail-panel">
+        <p class="eyebrow dark">Paper details</p>
+        <h2 id="paperDetailTitle">Select a point</h2>
+        <div id="paperDetails" class="details empty">
+          Click a point to view its abstract, semantic cluster, associated atlas
+          entries, and source link.
+        </div>
+
+        <div class="cluster-summary" id="clusterSummary"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      EO-FM Living Atlas · Semantic map of model, benchmark, and dataset papers.
+    </p>
+  </footer>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="paper-map.js?v=1"></script>
+</body>
+</html>

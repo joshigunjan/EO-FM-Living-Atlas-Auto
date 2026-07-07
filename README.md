@@ -139,6 +139,13 @@ The catalogue is rebuilt through GitHub Actions:
 
 The workflow updates the model catalogue, benchmark catalogue, metadata, and website data.
 
+
+## Semantic paper map
+
+The **Paper map** tab visualizes the literature behind the atlas. Abstracts are embedded, clustered in the original embedding space, and projected to two dimensions with UMAP. Nearby points represent semantically related papers. The map is regenerated automatically after successful catalogue updates.
+
+The visualization is exploratory: two-dimensional distances are approximate and do not represent model performance.
+
 ## Contributing
 
 Contributions are welcome.

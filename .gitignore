@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
+
+# Semantic paper-map build cache
+data/paper-map-cache/

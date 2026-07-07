@@ -170,7 +170,7 @@ function makeClusterTrace(cluster, points) {
       escapePaperHtml(cluster.label) +
       "<br><extra></extra>",
     mode: "markers",
-    type: "scattergl",
+    type: "scatter",
     name: `${cluster.label} (${points.length})`,
     marker: {
   color,
@@ -195,7 +195,10 @@ function renderPaperMap() {
   const grouped = new Map();
 
   for (const point of paperState.filtered) {
-    if (!grouped.has(point.cluster_id)) grouped.set(point.cluster_id, []);
+    if (!grouped.has(point.cluster_id)) {
+      grouped.set(point.cluster_id, []);
+    }
+
     grouped.get(point.cluster_id).push(point);
   }
 
@@ -209,21 +212,57 @@ function renderPaperMap() {
       makeClusterTrace(clusterById.get(clusterId), points)
     );
 
+  const annotations = [...grouped.entries()].map(([clusterId, points]) => {
+    const cluster = clusterById.get(clusterId);
+
+    const x =
+      points.reduce((sum, point) => sum + point.x, 0) / points.length;
+
+    const y =
+      points.reduce((sum, point) => sum + point.y, 0) / points.length;
+
+    return {
+      x,
+      y,
+      xref: "x",
+      yref: "y",
+      text:
+        `<b>${escapePaperHtml(cluster.label)}</b>` +
+        `<br>${points.length} papers`,
+      showarrow: false,
+      bgcolor: "rgba(255,255,255,0.88)",
+      bordercolor: "rgba(15,23,42,0.20)",
+      borderwidth: 1,
+      borderpad: 5,
+      font: {
+        size: 11,
+        color: "#0f172a"
+      },
+      opacity: 0.95
+    };
+  });
+
   const layout = {
     showlegend: false,
     annotations,
-    margin: { l: 24, r: 24, t: 28, b: 20 },
+    margin: {
+      l: 24,
+      r: 24,
+      t: 28,
+      b: 20
+    },
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     hovermode: "closest",
-    },
     xaxis: {
       visible: false,
-      zeroline: false
+      zeroline: false,
+      automargin: true
     },
     yaxis: {
       visible: false,
       zeroline: false,
+      automargin: true,
       scaleanchor: "x",
       scaleratio: 1
     },
@@ -243,43 +282,27 @@ function renderPaperMap() {
     ]
   };
 
-  const annotations = [...grouped.entries()].map(([clusterId, points]) => {
-  const cluster = clusterById.get(clusterId);
-
-  const x = points.reduce((sum, point) => sum + point.x, 0) / points.length;
-  const y = points.reduce((sum, point) => sum + point.y, 0) / points.length;
-
-  return {
-    x,
-    y,
-    xref: "x",
-    yref: "y",
-    text:
-      `<b>${escapePaperHtml(cluster.label)}</b>` +
-      `<br><span style="font-size:10px">${points.length} papers</span>`,
-    showarrow: false,
-    bgcolor: "rgba(255,255,255,0.88)",
-    bordercolor: "rgba(15,23,42,0.18)",
-    borderwidth: 1,
-    borderpad: 5,
-    font: {
-      size: 12,
-      color: "#0f172a"
-    },
-    opacity: 0.96
-  };
-});
-  
-  Plotly.react(paperEls.plot, traces, layout, config);
+  Plotly.react(
+    paperEls.plot,
+    traces,
+    layout,
+    config
+  );
 
   paperEls.plot.removeAllListeners?.("plotly_click");
+
   paperEls.plot.on("plotly_click", event => {
     const id = event?.points?.[0]?.customdata;
-    const point = paperState.points.find(candidate => candidate.id === id);
-    if (point) renderPaperDetails(point);
+
+    const point = paperState.points.find(
+      candidate => candidate.id === id
+    );
+
+    if (point) {
+      renderPaperDetails(point);
+    }
   });
 }
-
 function renderPaperDetails(point) {
   paperState.selectedId = point.id;
   paperEls.detailTitle.textContent = point.title;

@@ -50,7 +50,7 @@
     "title": "CHOICE: Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Benchmark",
     "scope": "Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
     "tasks": "Perception & Reasoning",
@@ -344,7 +344,7 @@
     "title": "Geo3DVQA: Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Benchmark",
     "scope": "Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
     "tasks": "3D geospatial reasoning & height-aware spatial analysis",
@@ -433,7 +433,7 @@
     "title": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Benchmark",
     "scope": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
     "tasks": "agentic reasoning",
@@ -1325,7 +1325,8 @@
     "access": "Unknown",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
+      "Awesome Remote Sensing Foundation Models mirror",
+      "awesome-RSFMs"
     ],
     "source_evidence": [
       {
@@ -1353,6 +1354,19 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://ieeexplore.ieee.org/abstract/document/9552024"
+      },
+      {
+        "source_id": "xiaoaoran-awesome-rsfms",
+        "source_name": "awesome-RSFMs",
+        "source_repo": "xiaoaoran/awesome-RSFMs",
+        "detected_name": "",
+        "detected_title": "paper",
+        "section": "VFM Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/8900532",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://bigearth.net"
       }
     ],
     "deduplication_keys": [
@@ -1747,7 +1761,7 @@
     "title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Pre-training dataset",
     "scope": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
     "tasks": "Vision-Language",
@@ -1807,17 +1821,18 @@
     "entry_type": "benchmark_dataset",
     "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
     "benchmark_type": "Pre-training dataset",
-    "scope": "Functional Map of the World",
+    "scope": "paper",
     "tasks": "Vision",
-    "modalities": "—",
+    "modalities": "aerial / RGB imagery",
     "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
     "code_url": "",
     "dataset_url": "https://github.com/fMoW",
     "project_url": "https://github.com/fMoW",
-    "access": "Unknown",
+    "access": "Partial access",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
+      "Awesome Remote Sensing Foundation Models mirror",
+      "awesome-RSFMs"
     ],
     "source_evidence": [
       {
@@ -1845,12 +1860,35 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/fMoW"
+      },
+      {
+        "source_id": "xiaoaoran-awesome-rsfms",
+        "source_name": "awesome-RSFMs",
+        "source_repo": "xiaoaoran/awesome-RSFMs",
+        "detected_name": "",
+        "detected_title": "paper",
+        "section": "VFM Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/fMoW/dataset"
       }
     ],
     "deduplication_keys": [
-      "paper_url:https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html"
+      "paper_url:https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
+      "github:fmow/dataset"
     ],
-    "conflicts": [],
+    "conflicts": [
+      {
+        "field": "project_url",
+        "values": [
+          "https://github.com/fMoW",
+          "https://github.com/fMoW/dataset"
+        ],
+        "note": "Multiple upstream values detected; reviewer should choose canonical link."
+      }
+    ],
     "notes": "",
     "review_status": "candidate",
     "needs_review": true
@@ -2364,16 +2402,17 @@
     "entry_type": "benchmark_dataset",
     "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
     "benchmark_type": "Pre-training dataset",
-    "scope": "Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+    "scope": "paper",
     "tasks": "Vision",
-    "modalities": "text",
+    "modalities": "SAR, DEM, text, aerial / RGB imagery",
     "paper_url": "https://arxiv.org/abs/2405.02771",
     "code_url": "",
     "dataset_url": "https://vishalned.github.io/mmearth",
     "project_url": "https://vishalned.github.io/mmearth",
-    "access": "Unknown",
+    "access": "Partial access",
     "source_names": [
-      "Awesome Remote Sensing Foundation Models"
+      "Awesome Remote Sensing Foundation Models",
+      "awesome-RSFMs"
     ],
     "source_evidence": [
       {
@@ -2388,13 +2427,45 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://vishalned.github.io/mmearth"
+      },
+      {
+        "source_id": "xiaoaoran-awesome-rsfms",
+        "source_name": "awesome-RSFMs",
+        "source_repo": "xiaoaoran/awesome-RSFMs",
+        "detected_name": "",
+        "detected_title": "paper",
+        "section": "VFM Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/pdf/2405.02771",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/vishalned/MMEarth-data"
       }
     ],
     "deduplication_keys": [
       "arxiv:2405.02771",
-      "paper_url:https://arxiv.org/abs/2405.02771"
+      "paper_url:https://arxiv.org/abs/2405.02771",
+      "paper_url:https://arxiv.org/pdf/2405.02771",
+      "github:vishalned/mmearth-data"
     ],
-    "conflicts": [],
+    "conflicts": [
+      {
+        "field": "paper_url",
+        "values": [
+          "https://arxiv.org/abs/2405.02771",
+          "https://arxiv.org/pdf/2405.02771"
+        ],
+        "note": "Multiple upstream values detected; reviewer should choose canonical link."
+      },
+      {
+        "field": "project_url",
+        "values": [
+          "https://vishalned.github.io/mmearth",
+          "https://github.com/vishalned/MMEarth-data"
+        ],
+        "note": "Multiple upstream values detected; reviewer should choose canonical link."
+      }
+    ],
     "notes": "",
     "review_status": "candidate",
     "needs_review": true
@@ -2612,7 +2683,7 @@
     "title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Pre-training dataset",
     "scope": "A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
     "tasks": "Vision-Language",
@@ -2938,14 +3009,14 @@
     "id": "satlaspretrain",
     "name": "SatlasPretrain",
     "publication_year": 2023,
-    "title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+    "title": "paper",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Pre-training dataset",
-    "scope": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+    "scope": "paper",
     "tasks": "Vision (Supervised)",
-    "modalities": "—",
+    "modalities": "SAR, LiDAR, aerial / RGB imagery",
     "paper_url": "https://doi.org/10.1109/iccv51070.2023.01538",
     "code_url": "https://github.com/allenai/satlas",
     "dataset_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md",
@@ -2953,7 +3024,8 @@
     "access": "Partial access",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
+      "Awesome Remote Sensing Foundation Models mirror",
+      "awesome-RSFMs"
     ],
     "source_evidence": [
       {
@@ -3007,6 +3079,19 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
+      },
+      {
+        "source_id": "xiaoaoran-awesome-rsfms",
+        "source_name": "awesome-RSFMs",
+        "source_repo": "xiaoaoran/awesome-RSFMs",
+        "detected_name": "",
+        "detected_title": "paper",
+        "section": "VFM Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
       }
     ],
     "deduplication_keys": [
@@ -3014,14 +3099,16 @@
       "github:allenai/satlas",
       "doi:10.1109/iccv51070.2023.01538",
       "arxiv:2211.15660",
-      "paper_url:https://arxiv.org/abs/2211.15660"
+      "paper_url:https://arxiv.org/abs/2211.15660",
+      "paper_url:https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html"
     ],
     "conflicts": [
       {
         "field": "paper_url",
         "values": [
           "https://doi.org/10.1109/iccv51070.2023.01538",
-          "https://arxiv.org/abs/2211.15660"
+          "https://arxiv.org/abs/2211.15660",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html"
         ],
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
@@ -3326,9 +3413,9 @@
     "entry_type": "benchmark_dataset",
     "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
     "benchmark_type": "Pre-training dataset",
-    "scope": "A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+    "scope": "paper",
     "tasks": "Vision",
-    "modalities": "temporal",
+    "modalities": "SAR, temporal",
     "paper_url": "https://arxiv.org/abs/2211.07044",
     "code_url": "",
     "dataset_url": "https://github.com/zhu-xlab/SSL4EO-S12",
@@ -3336,7 +3423,8 @@
     "access": "Partial access",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
+      "Awesome Remote Sensing Foundation Models mirror",
+      "awesome-RSFMs"
     ],
     "source_evidence": [
       {
@@ -3364,14 +3452,37 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/zhu-xlab/SSL4EO-S12"
+      },
+      {
+        "source_id": "xiaoaoran-awesome-rsfms",
+        "source_name": "awesome-RSFMs",
+        "source_repo": "xiaoaoran/awesome-RSFMs",
+        "detected_name": "",
+        "detected_title": "paper",
+        "section": "VFM Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/pdf/2211.07044",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/zhu-xlab/SSL4EO-S12"
       }
     ],
     "deduplication_keys": [
       "arxiv:2211.07044",
       "paper_url:https://arxiv.org/abs/2211.07044",
-      "github:zhu-xlab/ssl4eo-s12"
+      "github:zhu-xlab/ssl4eo-s12",
+      "paper_url:https://arxiv.org/pdf/2211.07044"
     ],
-    "conflicts": [],
+    "conflicts": [
+      {
+        "field": "paper_url",
+        "values": [
+          "https://arxiv.org/abs/2211.07044",
+          "https://arxiv.org/pdf/2211.07044"
+        ],
+        "note": "Multiple upstream values detected; reviewer should choose canonical link."
+      }
+    ],
     "notes": "",
     "review_status": "candidate",
     "needs_review": true
@@ -3569,7 +3680,7 @@
     "title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
     "benchmark_type": "Pre-training dataset",
     "scope": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
     "tasks": "Vision-Language & Agents",

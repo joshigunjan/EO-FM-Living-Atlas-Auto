@@ -1,10 +1,10 @@
 {
-  "candidate_count": 308,
+  "candidate_count": 309,
   "published_model_count": 221,
-  "excluded_count": 93,
+  "excluded_count": 94,
   "entry_type_distribution": {
     "model": 220,
-    "benchmark_dataset": 57,
+    "benchmark_dataset": 58,
     "survey_review": 30,
     "paper_method": 1
   },
@@ -22,9 +22,9 @@
     {
       "id": "satlas",
       "name": "SatLas",
-      "title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+      "title": "paper",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://doi.org/10.1109/iccv51070.2023.01538",
       "code_url": "https://github.com/allenai/satlas"
@@ -94,7 +94,7 @@
       "name": "RS5M",
       "title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2306.11300",
       "code_url": "https://github.com/om-ai-lab/RS5M"
@@ -104,7 +104,7 @@
       "name": "FIT-RS",
       "title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2406.10100",
       "code_url": "https://github.com/Luo-Z13/SkySenseGPT"
@@ -184,7 +184,7 @@
       "name": "GeoLLM-QA",
       "title": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2405.00709",
       "code_url": ""
@@ -194,7 +194,7 @@
       "name": "UnivEARTH",
       "title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2504.12110",
       "code_url": ""
@@ -304,7 +304,7 @@
       "name": "CHOICE",
       "title": "CHOICE: Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "",
       "code_url": ""
@@ -384,7 +384,7 @@
       "name": "Geo3DVQA",
       "title": "Geo3DVQA: Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
       "entry_type": "benchmark_dataset",
-      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "entry_type_reason": "Known benchmark, evaluation resource, or dataset.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2512.07276",
       "code_url": ""
@@ -402,7 +402,7 @@
     {
       "id": "fmow",
       "name": "fMoW",
-      "title": "Functional Map of the World",
+      "title": "paper",
       "entry_type": "benchmark_dataset",
       "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
       "publication_exclusion_reason": "non_model_entry_type",
@@ -452,7 +452,7 @@
     {
       "id": "ssl4eo-s12",
       "name": "SSL4EO-S12",
-      "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
+      "title": "paper",
       "entry_type": "benchmark_dataset",
       "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
       "publication_exclusion_reason": "non_model_entry_type",
@@ -522,7 +522,7 @@
     {
       "id": "mmearth-2",
       "name": "MMEarth",
-      "title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+      "title": "paper",
       "entry_type": "benchmark_dataset",
       "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
       "publication_exclusion_reason": "non_model_entry_type",
@@ -937,6 +937,16 @@
       "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "",
+      "code_url": ""
+    },
+    {
+      "id": "unnamed-candidate-28",
+      "name": "Unnamed candidate",
+      "title": "paper",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://ieeexplore.ieee.org/abstract/document/8900532",
       "code_url": ""
     }
   ],

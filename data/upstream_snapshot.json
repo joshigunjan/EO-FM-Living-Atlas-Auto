@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T20:17:23+00:00",
+  "fetched_at": "2026-07-07T13:29:18+00:00",
   "sources": {
     "jackbo-awesome-remote-sensing-foundation-models": {
       "name": "Awesome Remote Sensing Foundation Models",
@@ -14,10 +14,12 @@
     "xiaoaoran-awesome-rsfms": {
       "name": "awesome-RSFMs",
       "repo": "xiaoaoran/awesome-RSFMs",
-      "url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md",
+      "url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/readme.md",
+      "file": "readme.md",
       "priority": "high",
-      "status": "failed",
-      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md"
+      "sha256": "42bbe1c35bdf20af3bc8026ebcb4ea9c4327a5a9036fa5816c8ca9875e0997b2",
+      "line_count": 139,
+      "status": "ok"
     },
     "licongren-awesome-remote-sensing-foundation-models": {
       "name": "Awesome Remote Sensing Foundation Models mirror",
@@ -32,10 +34,9 @@
     "memoryecho-geospatial-foundation-models": {
       "name": "Awesome Geospatial Foundation Models",
       "repo": "MemoryEchoTech/awesome-geospatial-foundation-models",
-      "url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md",
       "priority": "medium",
-      "status": "failed",
-      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md"
+      "status": "disabled",
+      "note": "Repository currently contains no catalogue README; excluded until a usable list is published."
     },
     "homayounrezaie-awesome-geoai": {
       "name": "awesome-geoai",

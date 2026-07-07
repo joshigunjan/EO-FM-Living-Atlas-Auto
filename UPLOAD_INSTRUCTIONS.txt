@@ -1,0 +1,27 @@
+FINAL DIRECT-UPLOAD PACKAGE
+
+Upload these six files to the ROOT of:
+joshigunjan/EO-FM-Living-Atlas-Auto
+
+Choose "Commit changes" to main.
+
+Files replaced:
+- index.html
+- app.js
+- method.html
+- landscape.html
+- benchmarks.html
+- submit.html
+
+Changes included:
+1. Catalogue chart now renders because renderTimeline() is called during initialization.
+2. Heading changed to "Foundation model progression".
+3. Subtitle changed to "Number of foundation model releases by publication year."
+4. Method navigation renamed to "About" across all pages.
+5. About page rebuilt as a short three-step workflow with professional line icons.
+6. Cache version for app.js increased to force the updated catalogue code to load.
+
+After upload:
+- Open Actions > Pages build and deployment.
+- Wait for the green check.
+- Hard refresh the site with Cmd + Shift + R.

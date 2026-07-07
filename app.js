@@ -81,17 +81,25 @@ function buildFilters() {
 
 function renderTimeline() {
   const counts = {};
-  state.data.forEach(d => { if (d.publication_year) counts[d.publication_year] = (counts[d.publication_year] || 0) + 1; });
+  state.data.forEach(d => {
+    if (d.publication_year) {
+      counts[d.publication_year] = (counts[d.publication_year] || 0) + 1;
+    }
+  });
+
   const years = Object.keys(counts).map(Number).sort((a,b) => a-b);
   const max = Math.max(1, ...years.map(y => counts[y]));
+
   els.timeline.innerHTML = years.map(y => `
-    <button class="timeline-item" data-year="${y}" title="${counts[y]} model releases in ${y}">
+    <button class="timeline-item" data-year="${y}" title="${counts[y]} foundation model releases in ${y}">
       <span class="timeline-count">${counts[y]}</span>
       <span class="timeline-bar" style="height:${Math.max(12, Math.round(counts[y]/max*100))}%"></span>
       <span class="timeline-year">${y}</span>
     </button>`).join("") || '<span class="muted">No publication years recorded.</span>';
+
   els.timeline.querySelectorAll(".timeline-item").forEach(btn => btn.addEventListener("click", () => {
-    els.yearFilter.value = btn.dataset.year; applyFilters();
+    els.yearFilter.value = btn.dataset.year;
+    applyFilters();
   }));
 }
 
@@ -214,6 +222,7 @@ async function init() {
   state.filtered = state.data.slice();
   buildFilters();
   renderStats();
+  renderTimeline();
   renderTable();
 
   [els.search, els.categoryFilter, els.opennessFilter, els.modalityFilter, els.taskFilter, els.paradigmFilter, els.yearFilter].forEach(el => {

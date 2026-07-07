@@ -1,18 +1,168 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Method · EO-FM Living Atlas</title><link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .method-intro {
+      max-width: 860px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .method-intro p {
+      margin: 0;
+      color: #475569;
+      font-size: 1rem;
+    }
+
+    .method-process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .process-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      margin-bottom: 0;
+    }
+
+    .method-icon {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--soft);
+      color: var(--accent);
+    }
+
+    .method-icon svg {
+      width: 25px;
+      height: 25px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .method-step {
+      margin: 0 0 3px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .process-card h2 {
+      margin-bottom: 8px;
+    }
+
+    .process-card p:last-child {
+      margin: 0;
+      color: #475569;
+    }
+
+    .method-note {
+      margin-top: 20px;
+      text-align: center;
+      color: #475569;
+    }
+
+    @media (max-width: 900px) {
+      .method-process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
-<header class="hero small"><nav class="nav"><div class="brand">EO-FM Living Atlas</div><div class="links"><a href="index.html">Catalogue</a><a href="landscape.html">Landscape</a><a href="benchmarks.html">Benchmarks</a><a href="submit.html">Add entry</a><a href="method.html">Method</a></div></nav><div class="hero-content"><p class="eyebrow">Method</p><h1>How the atlas is organized</h1><p class="subtitle">A compact guide to the fields used in the catalogue.</p></div></header>
-<main class="container method-container">
-<section class="method-info-grid simple-method-grid">
-<article class="panel method-card"><h2>Models</h2><p>The catalogue contains reusable EO foundation models and versioned releases. Benchmarks, datasets, surveys, and application-only papers are kept outside the model table.</p></article>
-<article class="panel method-card"><h2>Benchmarks and datasets</h2><p>The benchmark tab contains evaluation suites, pre-training datasets, embedding resources, and named datasets. Duplicate links and model-only rows are removed.</p></article>
-<article class="panel method-card"><h2>Architecture</h2><p>The concrete network design, such as a Vision Transformer, masked autoencoder, Mamba/state-space model, encoder–decoder, or mixture of experts.</p></article>
-<article class="panel method-card"><h2>Modelling paradigm</h2><p>The learning strategy or functional family, such as masked reconstruction, joint embedding/contrastive learning, vision–language learning, state-space modelling, or generative multimodality.</p></article>
-<article class="panel method-card"><h2>Publication year</h2><p>The year of the first public paper or model release. It supports year filters and progression views; unknown years are shown as a dash.</p></article>
-<article class="panel method-card"><h2>Review status</h2><p><b>Reviewed</b> entries come from curated records. <b>Auto-inferred</b> entries are included from source-backed automation but may have less complete metadata.</p></article>
-</section>
-<section class="panel compact-note"><b>Architecture vs paradigm:</b> architecture describes what the model is built from; paradigm describes how it learns or what kind of representation system it is.</section>
-</main>
-<footer><p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p></footer>
-</body></html>
+  <header class="hero small">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">About</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">About the atlas</p>
+      <h1>How this atlas is created</h1>
+      <p class="subtitle">A transparent workflow for discovering, verifying, and maintaining EO foundation-model resources.</p>
+    </div>
+  </header>
+
+  <main class="container method-container">
+    <section class="panel method-intro">
+      <p>The EO-FM Living Atlas combines curated records with automated discovery to track Earth observation foundation models, benchmarks, datasets, and versioned releases.</p>
+    </section>
+
+    <section class="method-process-grid">
+      <article class="panel method-card process-card">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="method-step">Step 1</p>
+          <h2>Discover</h2>
+          <p>Candidate entries are identified from research papers, official repositories, model hubs, project pages, community-maintained lists, and user submissions.</p>
+        </div>
+      </article>
+
+      <article class="panel method-card process-card">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3 20 7v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V7l8-4Z"></path>
+            <path d="m8.5 12 2.2 2.2 4.8-5"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="method-step">Step 2</p>
+          <h2>Verify and classify</h2>
+          <p>Entries are checked against primary sources and classified as foundation models, benchmarks or datasets, surveys, or other research resources. Only named foundation models and distinct releases appear in the main catalogue.</p>
+        </div>
+      </article>
+
+      <article class="panel method-card process-card">
+        <div class="method-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 7v5h-5"></path>
+            <path d="M4 17v-5h5"></path>
+            <path d="M6.1 9a7 7 0 0 1 11.7-2L20 9"></path>
+            <path d="M17.9 15a7 7 0 0 1-11.7 2L4 15"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="method-step">Step 3</p>
+          <h2>Enrich and update</h2>
+          <p>Available sources are used to record publication year, modalities, architecture, modelling paradigm, downstream tasks, and access links. Stronger evidence replaces incomplete or automatically inferred fields.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel compact-note method-note">
+      <strong>A living, non-exhaustive resource.</strong>
+      Missing releases and corrections can be submitted through the
+      <a href="submit.html">Add entry</a> page.
+    </section>
+  </main>
+
+  <footer>
+    <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
+  </footer>
+</body>
+</html>

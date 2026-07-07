@@ -2895,14 +2895,11 @@
     "id": "gfm",
     "name": "GFM",
     "publication_year": 2023,
-    "title": "paper",
-    "scope": "paper",
+    "title": "Towards Geospatial Foundation Models via Continual Pretraining",
+    "scope": "Towards Geospatial Foundation Models via Continual Pretraining",
     "category": "Earth observation foundation model",
-    "input_modality": "multispectral, aerial / RGB imagery",
-    "modality_tags": [
-      "multispectral",
-      "aerial / RGB imagery"
-    ],
+    "input_modality": "—",
+    "modality_tags": [],
     "architecture": "—",
     "architecture_tags": [],
     "modelling_paradigm_key": "transformer_masked",
@@ -2916,13 +2913,13 @@
     "paper_url": "https://doi.org/10.1109/iccv51070.2023.01541",
     "code_url": "https://github.com/mmendiet/GFM",
     "weights_url": "",
-    "project_url": "https://github.com/mmendiet/GFM",
-    "modality_complexity_tier_key": "multi_modality",
-    "modality_complexity_tier": "Multi-modality encoders",
-    "modality_complexity_score": 2,
+    "project_url": "",
+    "modality_complexity_tier_key": "needs_review",
+    "modality_complexity_tier": "Needs review",
+    "modality_complexity_score": null,
     "reported_downstream_task_count": null,
     "reported_downstream_task_count_basis": "not_reported_by_upstream_source",
-    "landscape_score": 6.45,
+    "landscape_score": 4.7,
     "fm_strength": "Upstream-listed model",
     "notes": "Auto-derived from upstream source evidence; primary links are retained for traceability.",
     "review_status": "upstream_auto",
@@ -2933,8 +2930,7 @@
     "extraction_method": "heuristic:rules",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror",
-      "awesome-RSFMs"
+      "Awesome Remote Sensing Foundation Models mirror"
     ],
     "source_evidence": [
       {
@@ -2962,19 +2958,6 @@
         "code_url": "https://github.com/mmendiet/GFM",
         "weights_url": "",
         "project_url": ""
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/mmendiet/GFM"
       }
     ],
     "deduplication_keys": [
@@ -2982,8 +2965,7 @@
       "github:mmendiet/gfm",
       "doi:10.1109/iccv51070.2023.01541",
       "arxiv:2302.04476",
-      "paper_url:https://arxiv.org/abs/2302.04476",
-      "paper_url:https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html"
+      "paper_url:https://arxiv.org/abs/2302.04476"
     ],
     "aliases": [],
     "conflicts": [
@@ -2991,8 +2973,7 @@
         "field": "paper_url",
         "values": [
           "https://doi.org/10.1109/iccv51070.2023.01541",
-          "https://arxiv.org/abs/2302.04476",
-          "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html"
+          "https://arxiv.org/abs/2302.04476"
         ],
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
@@ -5145,24 +5126,19 @@
     "id": "rsp",
     "name": "RSP",
     "publication_year": null,
-    "title": "paper",
-    "scope": "paper",
+    "title": "An Empirical Study of Remote Sensing Pretraining",
+    "scope": "An Empirical Study of Remote Sensing Pretraining",
     "category": "Earth observation foundation model",
-    "input_modality": "multispectral, aerial / RGB imagery",
-    "modality_tags": [
-      "multispectral",
-      "aerial / RGB imagery"
-    ],
+    "input_modality": "—",
+    "modality_tags": [],
     "architecture": "Transformer",
     "architecture_tags": [
       "Transformer"
     ],
     "modelling_paradigm_key": "transformer_masked",
     "modelling_paradigm": "Transformer / masked-reconstruction encoder",
-    "downstream_tasks": "land-cover mapping",
-    "task_tags": [
-      "land-cover mapping"
-    ],
+    "downstream_tasks": "General remote sensing representation learning and downstream adaptation.",
+    "task_tags": [],
     "training_scale": "—",
     "openness": "partial",
     "openness_label": "Partial access",
@@ -5170,13 +5146,13 @@
     "paper_url": "https://ieeexplore.ieee.org/abstract/document/9782149",
     "code_url": "https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA",
     "weights_url": "",
-    "project_url": "https://captain-whu.github.io/DiRS",
-    "modality_complexity_tier_key": "multi_modality",
-    "modality_complexity_tier": "Multi-modality encoders",
-    "modality_complexity_score": 2,
-    "reported_downstream_task_count": 1,
-    "reported_downstream_task_count_basis": "reported_or_inferred_from_upstream_evidence",
-    "landscape_score": 6.45,
+    "project_url": "",
+    "modality_complexity_tier_key": "needs_review",
+    "modality_complexity_tier": "Needs review",
+    "modality_complexity_score": null,
+    "reported_downstream_task_count": null,
+    "reported_downstream_task_count_basis": "not_reported_by_upstream_source",
+    "landscape_score": 4.95,
     "fm_strength": "Upstream-listed model",
     "notes": "Auto-derived from upstream source evidence; primary links are retained for traceability.",
     "review_status": "upstream_auto",
@@ -5187,8 +5163,7 @@
     "extraction_method": "heuristic:rules",
     "source_names": [
       "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror",
-      "awesome-RSFMs"
+      "Awesome Remote Sensing Foundation Models mirror"
     ],
     "source_evidence": [
       {
@@ -5242,19 +5217,6 @@
         "code_url": "https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA",
         "weights_url": "",
         "project_url": ""
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9782149",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://captain-whu.github.io/DiRS"
       }
     ],
     "deduplication_keys": [

@@ -1,102 +1,168 @@
-# EO-FM Living Atlas Auto
+# EO-FM Living Atlas
 
-Automation-first version of the EO-FM Living Atlas.
+The **EO-FM Living Atlas** is an interactive, continuously updated catalogue of foundation models, benchmarks, and datasets for Earth observation and remote sensing.
 
-The website frontend is the same as the polished atlas: catalogue table, filters, access labels, model details, interactive landscape, method page, add-entry page, and a benchmark/dataset tab. The difference is the backend: the live data is generated from upstream RSFM lists and enriched with an LLM.
+It brings together information that is otherwise scattered across papers, project pages, model repositories, and community-maintained lists, and presents it through a searchable catalogue, interactive landscape, benchmark timeline, and model-detail views.
 
-## What this repo does
+## Explore the atlas
+
+The website includes:
+
+- A searchable catalogue of Earth observation foundation models
+- Filters for year, modality, architecture, modelling paradigm, access, and downstream tasks
+- An interactive landscape showing the progression of the field
+- A benchmark and dataset catalogue with publication years
+- Model-detail pages with paper, code, weights, and project links
+- A concise methodology page explaining how entries are collected and structured
+- An add-entry page for community contributions
+
+## Why this project exists
+
+The Earth observation foundation-model landscape is growing quickly, but information about new models is often fragmented across papers, GitHub repositories, Hugging Face pages, technical reports, and survey lists.
+
+The EO-FM Living Atlas aims to make this information easier to:
+
+- discover
+- compare
+- explore over time
+- trace back to primary sources
+- maintain as the field evolves
+
+The atlas is intended as a living research resource rather than a static survey table.
+
+## How the catalogue is updated
+
+The repository combines automated discovery with curated reference records.
 
 ```text
-Upstream awesome lists
-  ↓
-Parse model / benchmark / dataset rows
-  ↓
-Deduplicate by paper, DOI, arXiv, GitHub, Hugging Face
-  ↓
-Fetch paper metadata, arXiv abstracts/PDF excerpts, Crossref metadata, GitHub README excerpts
-  ↓
-Use an LLM to extract structured fields
-  ↓
-Classify entry type: model, benchmark/dataset, survey/review, or paper-method
-  ↓
-Generate data/catalogue.json and data/benchmarks.json
-  ↓
-Website + landscape update automatically
+Public EO and remote-sensing model lists
+        ↓
+Model, benchmark, and dataset extraction
+        ↓
+Deduplication using DOI, arXiv, paper, GitHub, and Hugging Face links
+        ↓
+Metadata collection from primary sources
+        ↓
+Structured enrichment of modalities, architecture, tasks, access, and training details
+        ↓
+Classification into models, benchmarks, datasets, and related resources
+        ↓
+Automatic update of the website and interactive landscape
 ```
 
-## Required secret
+Reviewed entries take precedence over weaker automatically inferred records. Distinct model releases are kept separate when they represent meaningful new versions, such as `Prithvi-EO-1.0` and `Prithvi-EO-2.0`.
 
-This final version requires an OpenAI API key because the atlas needs paper-reading enrichment for modalities, architecture, tasks, access, modelling paradigm, and landscape fields.
+## Catalogue structure
 
-Add it here:
+### Models
 
-```text
-Settings → Secrets and variables → Actions → Secrets → New repository secret
+`data/catalogue.json`
 
-Name: OPENAI_API_KEY
-Value: your key
-```
+Contains the model catalogue used by the Catalogue and Landscape pages.
 
-Optional repository variable:
+Each entry may include:
 
-```text
-Settings → Secrets and variables → Actions → Variables → New repository variable
+- model name and release year
+- scientific scope
+- input modalities and sensors
+- architecture
+- modelling paradigm
+- downstream tasks
+- training scale
+- access status
+- paper, code, weights, and project links
 
-Name: OPENAI_MODEL
-Value: gpt-4o-mini
-```
+### Benchmarks and datasets
 
-Do not commit API keys to this repo.
+`data/benchmarks.json`
 
-## Automation schedule
+Contains benchmark, evaluation, pretraining, and dataset records shown in the Benchmarks tab.
 
-The workflow runs automatically:
+The benchmark timeline makes it possible to see how evaluation resources have evolved alongside the model landscape.
 
-```text
-On push to main
-1st and 15th of every month at 04:17 UTC
-```
-
-So the first upload/push to `main` bootstraps the catalogue immediately.
-
-## Public data files
+### Supporting data
 
 ```text
-data/catalogue.json      # model catalogue used by Catalogue and Landscape
-data/benchmarks.json     # benchmark/dataset catalogue used by Benchmarks tab
-data/metadata.json       # generation metadata
-data/candidates/         # raw/enriched candidate records and duplicate reports
-```
-
-The previous manually curated 74-entry catalogue is preserved only as backup:
-
-```text
+data/metadata.json
+data/candidates/
 data/manual_seed_catalogue.json
 ```
 
-It is not used as the live catalogue in this upstream-first version.
+These files contain generation metadata, automatically collected candidate records, duplicate reports, and curated reference entries.
 
-## Duplicate handling
+## Architecture and modelling paradigm
 
-The sync merges records when they share strong evidence:
+The atlas distinguishes between:
 
-```text
-same arXiv ID
-same DOI
-same normalized paper URL
-same GitHub repository
-same Hugging Face repository
-```
+- **Architecture**: the structural design of the model, such as a Vision Transformer, CNN, state-space model, multimodal transformer, or encoder-decoder.
+- **Modelling paradigm**: the learning strategy or functional role of the model, such as masked reconstruction, contrastive learning, vision-language alignment, autoregressive modelling, or generative multimodal learning.
 
-Weak name-only matches are not merged automatically. They are written to possible-duplicate reports for review, so different releases such as `Prithvi-EO-1.0` and `Prithvi-EO-2.0` are not accidentally collapsed.
+A model may share the same architecture with another model while using a different modelling paradigm.
 
-## Publication gate
+## Deduplication
 
-The public model catalogue only publishes entries classified as `model`.
-Benchmarks and datasets are routed to `data/benchmarks.json`; surveys, reviews, paper-only methods, and unknown entries stay in `data/candidates/` for review. The generated `data/candidates/publication-report.json` records the inclusion/exclusion split for each run.
+Entries are merged only when strong evidence indicates that they refer to the same resource.
 
-## Scientific status
+Strong matching evidence includes:
 
-Generated entries are marked as auto-derived/candidate-style records. They are useful for discovery and landscape generation, but should still be reviewed before being cited as verified curated data.
+- identical DOI
+- identical arXiv identifier
+- identical paper URL
+- identical GitHub repository
+- identical Hugging Face repository
+- identical project page
 
-Triggered first LLM catalogue build on Mon Jun 29 03:45:23 CEST 2026
+Name-only matches are not merged automatically, helping prevent separate releases from being collapsed into one entry.
+
+## Publication rules
+
+The public model catalogue is reserved for actual model or model-family entries.
+
+Benchmarks and datasets are routed to the benchmark catalogue. Surveys, reviews, commentary papers, paper-only methods, and uncertain records remain in the candidate data for further inspection.
+
+This separation helps keep the public atlas focused while preserving broader upstream coverage.
+
+## Data quality
+
+The atlas combines reviewed records with automatically structured entries.
+
+Automated records are useful for discovery, but some fields may remain incomplete when primary sources do not clearly report modalities, architecture, tasks, training scale, or access conditions.
+
+The atlas should therefore be used as a navigation and comparison resource. Important scientific claims should always be verified against the linked paper, model card, repository, or project page.
+
+## Automation
+
+The catalogue is rebuilt through GitHub Actions:
+
+- whenever relevant changes are pushed to `main`
+- automatically on the 1st and 15th of each month
+
+The workflow updates the model catalogue, benchmark catalogue, metadata, and website data.
+
+## Contributing
+
+Contributions are welcome.
+
+You can suggest:
+
+- a new model
+- a missing model release
+- a benchmark or dataset
+- a correction to an existing entry
+- a paper, code, weights, or project link
+- an update to modality, architecture, task, or access information
+
+Please use the website's add-entry page or open an issue in this repository.
+
+## Scope
+
+The EO-FM Living Atlas focuses on foundation models and broadly reusable pretrained systems for:
+
+- Earth observation
+- remote sensing
+- geospatial AI
+- multimodal geospatial learning
+- vision-language and agentic EO systems
+- large-scale representation learning for geospatial data
+
+The project does not rank models by performance. Its purpose is to document and organize the field.

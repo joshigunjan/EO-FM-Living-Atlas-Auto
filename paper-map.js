@@ -62,6 +62,20 @@ function resourceLabel(point) {
   return "Model";
 }
 
+function paperSymbol(point) {
+  const types = point.resource_types || [];
+
+  if (types.includes("model") && types.includes("benchmark")) {
+    return "star";
+  }
+
+  if (types.includes("benchmark")) {
+    return "diamond";
+  }
+
+  return "circle";
+}
+
 function badge(text, className = "") {
   return `<span class="badge ${className}">${escapePaperHtml(text)}</span>`;
 }
@@ -159,16 +173,18 @@ function makeClusterTrace(cluster, points) {
     type: "scattergl",
     name: `${cluster.label} (${points.length})`,
     marker: {
-      color,
-      size: points.map(point =>
-        (point.resource_types || []).includes("benchmark") ? 11 : 9
-      ),
-      opacity: 0.82,
-      line: {
-        color: "#ffffff",
-        width: 0.7
-      }
-    }
+  color,
+  symbol: points.map(point => paperSymbol(point)),
+  size: points.map(point =>
+    (point.resource_types || []).includes("benchmark") ? 12 : 10
+  ),
+  opacity: 0.86,
+  line: {
+    color: "#ffffff",
+    width: 0.8
+  }
+},
+showlegend: false
   };
 }
 
@@ -194,15 +210,12 @@ function renderPaperMap() {
     );
 
   const layout = {
-    margin: { l: 24, r: 24, t: 20, b: 28 },
+    showlegend: false,
+    annotations,
+    margin: { l: 24, r: 24, t: 28, b: 20 },
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     hovermode: "closest",
-    legend: {
-      orientation: "h",
-      y: -0.08,
-      x: 0,
-      font: { size: 11 }
     },
     xaxis: {
       visible: false,
@@ -230,6 +243,33 @@ function renderPaperMap() {
     ]
   };
 
+  const annotations = [...grouped.entries()].map(([clusterId, points]) => {
+  const cluster = clusterById.get(clusterId);
+
+  const x = points.reduce((sum, point) => sum + point.x, 0) / points.length;
+  const y = points.reduce((sum, point) => sum + point.y, 0) / points.length;
+
+  return {
+    x,
+    y,
+    xref: "x",
+    yref: "y",
+    text:
+      `<b>${escapePaperHtml(cluster.label)}</b>` +
+      `<br><span style="font-size:10px">${points.length} papers</span>`,
+    showarrow: false,
+    bgcolor: "rgba(255,255,255,0.88)",
+    bordercolor: "rgba(15,23,42,0.18)",
+    borderwidth: 1,
+    borderpad: 5,
+    font: {
+      size: 12,
+      color: "#0f172a"
+    },
+    opacity: 0.96
+  };
+});
+  
   Plotly.react(paperEls.plot, traces, layout, config);
 
   paperEls.plot.removeAllListeners?.("plotly_click");

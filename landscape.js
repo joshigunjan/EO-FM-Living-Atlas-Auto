@@ -254,7 +254,7 @@ const METRICS = {
     desc: "Curated count of reported downstream tasks or evaluations from the source paper.",
     value: reportedTaskCount,
     integer: true,
-    min: 1
+    min: 0
   },
   tasks: {
     label: "Task-label coverage",
@@ -414,17 +414,38 @@ function formatTick(metric, value) {
 
 function axisDomain(values, metric) {
   const finite = values.filter(Number.isFinite);
-  if (!finite.length) return [0, 1];
+
+  if (!finite.length) {
+    return [
+      metric.min !== undefined ? metric.min : 0,
+      metric.max !== undefined ? metric.max : 1
+    ];
+  }
+
   let min = Math.min(...finite);
   let max = Math.max(...finite);
-  if (metric.min !== undefined) min = Math.min(metric.min, min);
-  if (metric.max !== undefined) max = Math.max(metric.max, max);
+
+  if (metric.min !== undefined) {
+    min = Math.min(metric.min, min);
+  }
+
+  if (metric.max !== undefined) {
+    max = Math.max(metric.max, max);
+  }
+
   if (min === max) {
-    min -= 1;
     max += 1;
   }
+
   const pad = (max - min) * 0.08 || 1;
-  return [min - pad, max + pad];
+
+  const lower = metric.min !== undefined
+    ? metric.min
+    : min - pad;
+
+  const upper = max + pad;
+
+  return [lower, upper];
 }
 
 

@@ -33,7 +33,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:1",
@@ -162,7 +162,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:2",
@@ -289,7 +289,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:3",
@@ -385,7 +385,7 @@
   {
     "id": "seco",
     "name": "SeCo",
-    "title": "paper",
+    "title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
     "resource_type": "model",
     "source_resource_types": [
       "model",
@@ -394,10 +394,8 @@
     "pre_classified_type": "benchmark_dataset",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
     "category": "Candidate model entry",
-    "input_modality": "multispectral",
-    "modality_tags": [
-      "multispectral"
-    ],
+    "input_modality": "",
+    "modality_tags": [],
     "architecture": "To be verified from the primary paper or project page.",
     "architecture_tags": [],
     "modelling_paradigm_key": "needs_review",
@@ -419,7 +417,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:4",
@@ -530,37 +528,6 @@
           "attribute": "**Vision**",
           "link": "[link](https://github.com/ServiceNow/seasonal-contrast)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:3",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/ServiceNow/seasonal-contrast",
-        "all_urls": [
-          "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-          "https://github.com/ServiceNow/seasonal-contrast"
-        ],
-        "raw_row": "SeCo | 2021 | 1 million | MSI | None | Sentinel-2; NAIP | 10,20,60m | [paper](https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html) | [download](https://github.com/ServiceNow/seasonal-contrast?tab=readme-ov-file)",
-        "raw_columns": {
-          "datasets": "SeCo",
-          "date": "2021",
-          "#samples": "1 million",
-          "modal": "MSI",
-          "annotations": "None",
-          "data sources": "Sentinel-2; NAIP",
-          "gsd": "10,20,60m",
-          "paper": "[paper](https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html)",
-          "link": "[download](https://github.com/ServiceNow/seasonal-contrast?tab=readme-ov-file)"
-        }
       }
     ],
     "source_evidence": [
@@ -615,19 +582,6 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/ServiceNow/seasonal-contrast"
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/ServiceNow/seasonal-contrast"
       }
     ],
     "deduplication_keys": [
@@ -641,19 +595,16 @@
   {
     "id": "rsp",
     "name": "RSP",
-    "title": "paper",
+    "title": "An Empirical Study of Remote Sensing Pretraining",
     "resource_type": "model",
     "source_resource_types": [
-      "model",
-      "dataset"
+      "model"
     ],
-    "pre_classified_type": "benchmark_dataset",
+    "pre_classified_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
     "category": "Candidate model entry",
-    "input_modality": "multispectral",
-    "modality_tags": [
-      "multispectral"
-    ],
+    "input_modality": "",
+    "modality_tags": [],
     "architecture": "To be verified from the primary paper or project page.",
     "architecture_tags": [
       "Transformer"
@@ -668,7 +619,7 @@
     "paper_url": "https://ieeexplore.ieee.org/abstract/document/9782149",
     "code_url": "https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA",
     "weights_url": "",
-    "project_url": "https://captain-whu.github.io/DiRS",
+    "project_url": "",
     "modality_complexity_tier_key": "needs_review",
     "modality_complexity_tier": "Needs review",
     "modality_complexity_score": null,
@@ -677,7 +628,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:5",
@@ -786,37 +737,6 @@
           "paper": "[RSP](https://ieeexplore.ieee.org/abstract/document/9782149)",
           "code & weights": "[link](https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:4",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9782149",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://captain-whu.github.io/DiRS",
-        "all_urls": [
-          "https://ieeexplore.ieee.org/abstract/document/9782149",
-          "https://captain-whu.github.io/DiRS"
-        ],
-        "raw_row": "MillionAID | 2022 | 1 million | RGB | 51 LULC classes | SPOT, IKONOS,WorldView, Landsat, etc. | 0.5m-153m | [paper](https://ieeexplore.ieee.org/abstract/document/9782149) | [download](https://captain-whu.github.io/DiRS/)",
-        "raw_columns": {
-          "datasets": "MillionAID",
-          "date": "2022",
-          "#samples": "1 million",
-          "modal": "RGB",
-          "annotations": "51 LULC classes",
-          "data sources": "SPOT, IKONOS,WorldView, Landsat, etc.",
-          "gsd": "0.5m-153m",
-          "paper": "[paper](https://ieeexplore.ieee.org/abstract/document/9782149)",
-          "link": "[download](https://captain-whu.github.io/DiRS/)"
-        }
       }
     ],
     "source_evidence": [
@@ -871,19 +791,6 @@
         "code_url": "https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA",
         "weights_url": "",
         "project_url": ""
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9782149",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://captain-whu.github.io/DiRS"
       }
     ],
     "deduplication_keys": [
@@ -942,7 +849,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:6",
@@ -1070,7 +977,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:7",
@@ -1202,7 +1109,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:8",
@@ -1293,7 +1200,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:9",
@@ -1602,7 +1509,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:10",
@@ -1731,7 +1638,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:11",
@@ -1855,7 +1762,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:12",
@@ -1983,7 +1890,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:14",
@@ -2111,7 +2018,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:15",
@@ -2239,7 +2146,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:16",
@@ -2368,7 +2275,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:17",
@@ -2500,7 +2407,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:18",
@@ -2589,7 +2496,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:20",
@@ -2802,7 +2709,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:21",
@@ -2926,7 +2833,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:22",
@@ -3019,7 +2926,7 @@
   {
     "id": "satlas",
     "name": "SatLas",
-    "title": "paper",
+    "title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
     "resource_type": "benchmark_dataset",
     "source_resource_types": [
       "benchmark_dataset",
@@ -3028,11 +2935,8 @@
     "pre_classified_type": "benchmark_dataset",
     "scope": "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review.",
     "category": "Benchmark / dataset candidate",
-    "input_modality": "SAR, LiDAR",
-    "modality_tags": [
-      "SAR",
-      "LiDAR"
-    ],
+    "input_modality": "",
+    "modality_tags": [],
     "architecture": "To be verified from the primary paper or project page.",
     "architecture_tags": [],
     "modelling_paradigm_key": "needs_review",
@@ -3054,7 +2958,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:23",
@@ -3165,37 +3069,6 @@
           "attribute": "**Vision (Supervised)**",
           "link": "[link](https://github.com/allenai/satlas/blob/main/SatlasPretrain.md)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:7",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md",
-        "all_urls": [
-          "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html",
-          "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
-        ],
-        "raw_row": "SatlasPretrain | 2023 | 856K tiles | RGB,MSI,SAR | 137 classes of 7 types | Sentinel-1/2, NAIP, NOAA Lidar Scans | 0.5–2m,10m | [paper](https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html) | [download](https://github.com/allenai/satlas/blob/main/SatlasPretrain.md)",
-        "raw_columns": {
-          "datasets": "SatlasPretrain",
-          "date": "2023",
-          "#samples": "856K tiles",
-          "modal": "RGB,MSI,SAR",
-          "annotations": "137 classes of 7 types",
-          "data sources": "Sentinel-1/2, NAIP, NOAA Lidar Scans",
-          "gsd": "0.5–2m,10m",
-          "paper": "[paper](https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html)",
-          "link": "[download](https://github.com/allenai/satlas/blob/main/SatlasPretrain.md)"
-        }
       }
     ],
     "source_evidence": [
@@ -3250,19 +3123,6 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/allenai/satlas/blob/main/SatlasPretrain.md"
       }
     ],
     "deduplication_keys": [
@@ -3270,8 +3130,7 @@
       "github:allenai/satlas",
       "doi:10.1109/iccv51070.2023.01538",
       "arxiv:2211.15660",
-      "paper_url:https://arxiv.org/abs/2211.15660",
-      "paper_url:https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html"
+      "paper_url:https://arxiv.org/abs/2211.15660"
     ],
     "aliases": [
       "SatlasPretrain"
@@ -3281,8 +3140,7 @@
         "field": "paper_url",
         "values": [
           "https://doi.org/10.1109/iccv51070.2023.01538",
-          "https://arxiv.org/abs/2211.15660",
-          "https://openaccess.thecvf.com/content/ICCV2023/html/Bastani_SatlasPretrain_A_Large-Scale_Dataset_for_Remote_Sensing_Image_Understanding_ICCV_2023_paper.html"
+          "https://arxiv.org/abs/2211.15660"
         ],
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
@@ -3292,19 +3150,16 @@
   {
     "id": "gfm",
     "name": "GFM",
-    "title": "paper",
+    "title": "Towards Geospatial Foundation Models via Continual Pretraining",
     "resource_type": "model",
     "source_resource_types": [
-      "model",
-      "dataset"
+      "model"
     ],
-    "pre_classified_type": "benchmark_dataset",
+    "pre_classified_type": "model",
     "scope": "Candidate Earth observation foundation model or related resource. Needs curator review.",
     "category": "Candidate model entry",
-    "input_modality": "multispectral",
-    "modality_tags": [
-      "multispectral"
-    ],
+    "input_modality": "",
+    "modality_tags": [],
     "architecture": "To be verified from the primary paper or project page.",
     "architecture_tags": [],
     "modelling_paradigm_key": "needs_review",
@@ -3317,7 +3172,7 @@
     "paper_url": "https://doi.org/10.1109/iccv51070.2023.01541",
     "code_url": "https://github.com/mmendiet/GFM",
     "weights_url": "",
-    "project_url": "https://github.com/mmendiet/GFM",
+    "project_url": "",
     "modality_complexity_tier_key": "needs_review",
     "modality_complexity_tier": "Needs review",
     "modality_complexity_score": null,
@@ -3326,7 +3181,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:24",
@@ -3381,37 +3236,6 @@
           "paper": "[GFM](https://arxiv.org/abs/2302.04476)",
           "code & weights": "[link](https://github.com/mmendiet/GFM)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:5",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/mmendiet/GFM",
-        "all_urls": [
-          "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html",
-          "https://github.com/mmendiet/GFM"
-        ],
-        "raw_row": "GeoPile | 2023 | 600K | RGB | None | Sentinel-2, NAIP, etc. | 0.1m-30m | [paper](https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html) | [download](https://github.com/mmendiet/GFM)",
-        "raw_columns": {
-          "datasets": "GeoPile",
-          "date": "2023",
-          "#samples": "600K",
-          "modal": "RGB",
-          "annotations": "None",
-          "data sources": "Sentinel-2, NAIP, etc.",
-          "gsd": "0.1m-30m",
-          "paper": "[paper](https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html)",
-          "link": "[download](https://github.com/mmendiet/GFM)"
-        }
       }
     ],
     "source_evidence": [
@@ -3440,19 +3264,6 @@
         "code_url": "https://github.com/mmendiet/GFM",
         "weights_url": "",
         "project_url": ""
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/mmendiet/GFM"
       }
     ],
     "deduplication_keys": [
@@ -3460,8 +3271,7 @@
       "github:mmendiet/gfm",
       "doi:10.1109/iccv51070.2023.01541",
       "arxiv:2302.04476",
-      "paper_url:https://arxiv.org/abs/2302.04476",
-      "paper_url:https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html"
+      "paper_url:https://arxiv.org/abs/2302.04476"
     ],
     "aliases": [],
     "conflicts": [
@@ -3469,8 +3279,7 @@
         "field": "paper_url",
         "values": [
           "https://doi.org/10.1109/iccv51070.2023.01541",
-          "https://arxiv.org/abs/2302.04476",
-          "https://openaccess.thecvf.com/content/ICCV2023/html/Mendieta_Towards_Geospatial_Foundation_Models_via_Continual_Pretraining_ICCV_2023_paper.html"
+          "https://arxiv.org/abs/2302.04476"
         ],
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
@@ -3515,7 +3324,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:25",
@@ -3654,7 +3463,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:26",
@@ -3783,7 +3592,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:27",
@@ -3907,7 +3716,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:28",
@@ -4039,7 +3848,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:29",
@@ -4179,7 +3988,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:30",
@@ -4265,7 +4074,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:31",
@@ -4393,7 +4202,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:32",
@@ -4520,7 +4329,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:33",
@@ -4610,7 +4419,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:34",
@@ -4699,7 +4508,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:35",
@@ -4785,7 +4594,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:36",
@@ -4871,7 +4680,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:37",
@@ -4962,7 +4771,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:38",
@@ -5048,7 +4857,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:39",
@@ -5138,7 +4947,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:40",
@@ -5224,7 +5033,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:41",
@@ -5310,7 +5119,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:42",
@@ -5393,7 +5202,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:43",
@@ -5480,7 +5289,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:44",
@@ -5567,7 +5376,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:45",
@@ -5655,7 +5464,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:46",
@@ -5743,7 +5552,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:47",
@@ -5832,7 +5641,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:48",
@@ -5920,7 +5729,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:49",
@@ -6006,7 +5815,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:50",
@@ -6092,7 +5901,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:51",
@@ -6178,7 +5987,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:52",
@@ -6266,7 +6075,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:53",
@@ -6356,7 +6165,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:54",
@@ -6443,7 +6252,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:55",
@@ -6584,7 +6393,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:56",
@@ -6671,7 +6480,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:57",
@@ -6759,7 +6568,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:58",
@@ -6851,7 +6660,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:59",
@@ -6991,7 +6800,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:60",
@@ -7080,7 +6889,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:61",
@@ -7219,7 +7028,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:62",
@@ -7305,7 +7114,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:63",
@@ -7391,7 +7200,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:64",
@@ -7479,7 +7288,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:65",
@@ -7569,7 +7378,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:66",
@@ -7655,7 +7464,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:67",
@@ -7745,7 +7554,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:68",
@@ -7833,7 +7642,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:69",
@@ -7922,7 +7731,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:70",
@@ -8010,7 +7819,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:71",
@@ -8100,7 +7909,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:72",
@@ -8188,7 +7997,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:73",
@@ -8278,7 +8087,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:74",
@@ -8368,7 +8177,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:75",
@@ -8455,7 +8264,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:76",
@@ -8543,7 +8352,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:77",
@@ -8633,7 +8442,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:78",
@@ -8723,7 +8532,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:80",
@@ -8809,7 +8618,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:81",
@@ -8897,7 +8706,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:82",
@@ -8985,7 +8794,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:83",
@@ -9075,7 +8884,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:84",
@@ -9165,7 +8974,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:85",
@@ -9255,7 +9064,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:86",
@@ -9341,7 +9150,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:87",
@@ -9428,7 +9237,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:88",
@@ -9514,7 +9323,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:89",
@@ -9600,7 +9409,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:90",
@@ -9687,7 +9496,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:91",
@@ -9776,7 +9585,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:92",
@@ -9864,7 +9673,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:93",
@@ -9954,7 +9763,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:94",
@@ -10042,7 +9851,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:95",
@@ -10130,7 +9939,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:96",
@@ -10358,7 +10167,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:97",
@@ -10449,7 +10258,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:98",
@@ -10580,7 +10389,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:99",
@@ -10667,7 +10476,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:100",
@@ -10753,7 +10562,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:101",
@@ -10841,7 +10650,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:102",
@@ -10929,7 +10738,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:103",
@@ -11017,7 +10826,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:104",
@@ -11107,7 +10916,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:105",
@@ -11190,7 +10999,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:106",
@@ -11276,7 +11085,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:107",
@@ -11366,7 +11175,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:108",
@@ -11456,7 +11265,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:109",
@@ -11543,7 +11352,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:110",
@@ -11629,7 +11438,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:111",
@@ -11717,7 +11526,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:112",
@@ -11805,7 +11614,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:113",
@@ -11897,7 +11706,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:114",
@@ -11987,7 +11796,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:115",
@@ -12077,7 +11886,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:116",
@@ -12163,7 +11972,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:117",
@@ -12251,7 +12060,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:118",
@@ -12341,7 +12150,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:119",
@@ -12429,7 +12238,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:120",
@@ -12521,7 +12330,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:121",
@@ -12611,7 +12420,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:122",
@@ -12739,7 +12548,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:123",
@@ -12833,7 +12642,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:124",
@@ -13011,7 +12820,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:125",
@@ -13229,7 +13038,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:126",
@@ -13359,7 +13168,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:127",
@@ -13451,7 +13260,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:128",
@@ -13536,7 +13345,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:129",
@@ -13626,7 +13435,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:130",
@@ -13713,7 +13522,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:131",
@@ -13803,7 +13612,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:132",
@@ -13946,7 +13755,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:133",
@@ -14082,7 +13891,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:134",
@@ -14170,7 +13979,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:135",
@@ -14262,7 +14071,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:136",
@@ -14407,7 +14216,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:137",
@@ -14499,7 +14308,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:138",
@@ -14587,7 +14396,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:139",
@@ -14675,7 +14484,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:140",
@@ -14763,7 +14572,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:141",
@@ -14853,7 +14662,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:142",
@@ -14945,7 +14754,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:143",
@@ -15092,7 +14901,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:144",
@@ -15227,7 +15036,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:145",
@@ -15315,7 +15124,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:146",
@@ -15407,7 +15216,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:147",
@@ -15540,7 +15349,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:148",
@@ -15632,7 +15441,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:149",
@@ -15722,7 +15531,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:150",
@@ -15812,7 +15621,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:151",
@@ -15904,7 +15713,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:152",
@@ -15994,7 +15803,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:153",
@@ -16082,7 +15891,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:154",
@@ -16173,7 +15982,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:155",
@@ -16401,7 +16210,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:157",
@@ -16544,7 +16353,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:158",
@@ -16633,7 +16442,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:159",
@@ -16724,7 +16533,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:160",
@@ -16855,7 +16664,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:161",
@@ -16943,7 +16752,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:162",
@@ -17031,7 +16840,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:163",
@@ -17123,7 +16932,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:164",
@@ -17214,7 +17023,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:165",
@@ -17345,7 +17154,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:166",
@@ -17431,7 +17240,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:167",
@@ -17521,7 +17330,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:168",
@@ -17609,7 +17418,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:169",
@@ -17701,7 +17510,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:170",
@@ -17792,7 +17601,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:171",
@@ -17927,7 +17736,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:172",
@@ -18017,7 +17826,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:173",
@@ -18111,7 +17920,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:174",
@@ -18203,7 +18012,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:175",
@@ -18295,7 +18104,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:176",
@@ -18385,7 +18194,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:177",
@@ -18478,7 +18287,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:178",
@@ -18609,7 +18418,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:179",
@@ -18699,7 +18508,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:180",
@@ -18791,7 +18600,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:181",
@@ -18922,7 +18731,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:182",
@@ -19013,7 +18822,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:183",
@@ -19099,7 +18908,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:184",
@@ -19187,7 +18996,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:185",
@@ -19275,7 +19084,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:186",
@@ -19363,7 +19172,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:187",
@@ -19455,7 +19264,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:188",
@@ -19541,7 +19350,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:189",
@@ -19631,7 +19440,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:190",
@@ -19722,7 +19531,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:191",
@@ -19810,7 +19619,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:192",
@@ -19898,7 +19707,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:193",
@@ -19984,7 +19793,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:195",
@@ -20114,7 +19923,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:196",
@@ -20204,7 +20013,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:197",
@@ -20333,7 +20142,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:198",
@@ -20423,7 +20232,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:199",
@@ -20512,7 +20321,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:200",
@@ -20603,7 +20412,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:201",
@@ -20689,7 +20498,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:202",
@@ -20779,7 +20588,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:203",
@@ -20868,7 +20677,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:204",
@@ -20956,7 +20765,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:205",
@@ -21044,7 +20853,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:206",
@@ -21173,7 +20982,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:207",
@@ -21302,7 +21111,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:208",
@@ -21432,7 +21241,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:209",
@@ -21520,7 +21329,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:210",
@@ -21606,7 +21415,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:211",
@@ -21694,7 +21503,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:212",
@@ -21782,7 +21591,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:213",
@@ -21911,7 +21720,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:214",
@@ -21997,7 +21806,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:215",
@@ -22085,7 +21894,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:216",
@@ -22173,7 +21982,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:217",
@@ -22261,7 +22070,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:218",
@@ -22346,7 +22155,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:219",
@@ -22432,7 +22241,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:220",
@@ -22521,7 +22330,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:221",
@@ -22612,7 +22421,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:222",
@@ -22738,7 +22547,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:223",
@@ -22826,7 +22635,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:224",
@@ -22916,7 +22725,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:225",
@@ -23006,7 +22815,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:226",
@@ -23094,7 +22903,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:227",
@@ -23187,7 +22996,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:228",
@@ -23319,7 +23128,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:229",
@@ -23451,7 +23260,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:230",
@@ -23583,7 +23392,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:231",
@@ -23711,7 +23520,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:232",
@@ -23798,7 +23607,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:233",
@@ -23926,7 +23735,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:234",
@@ -24056,7 +23865,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:235",
@@ -24182,7 +23991,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:236",
@@ -24271,7 +24080,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:237",
@@ -24399,7 +24208,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:238",
@@ -24491,7 +24300,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:239",
@@ -24579,7 +24388,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:240",
@@ -24667,7 +24476,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:241",
@@ -24760,7 +24569,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:242",
@@ -24851,7 +24660,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:243",
@@ -24940,7 +24749,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:245",
@@ -25029,7 +24838,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:246",
@@ -25118,7 +24927,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:247",
@@ -25209,7 +25018,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:250",
@@ -25302,7 +25111,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:251",
@@ -25393,7 +25202,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:253",
@@ -25486,7 +25295,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:254",
@@ -25575,7 +25384,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:256",
@@ -25631,7 +25440,7 @@
   {
     "id": "fmow",
     "name": "fMoW",
-    "title": "paper",
+    "title": "Functional Map of the World",
     "resource_type": "benchmark_dataset",
     "source_resource_types": [
       "dataset"
@@ -25648,8 +25457,8 @@
     "downstream_tasks": "To be verified from the primary paper or benchmark description.",
     "task_tags": [],
     "training_scale": "To be verified.",
-    "access": "partial",
-    "access_label": "Partial access",
+    "access": "unknown",
+    "access_label": "Unknown",
     "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
     "code_url": "",
     "weights_url": "",
@@ -25662,7 +25471,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:257",
@@ -25719,37 +25528,6 @@
           "attribute": "**Vision**",
           "link": "[link](https://github.com/fMoW)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:1",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/fMoW/dataset",
-        "all_urls": [
-          "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
-          "https://github.com/fMoW/dataset"
-        ],
-        "raw_row": "FMoW-RGB | 2018 | 363.6k | RGB | 62 classes | QuickBird-2, GeoEye-1, WorldView-2/3 | varying | [paper](https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html) | [download](https://github.com/fMoW/dataset)",
-        "raw_columns": {
-          "datasets": "FMoW-RGB",
-          "date": "2018",
-          "#samples": "363.6k",
-          "modal": "RGB",
-          "annotations": "62 classes",
-          "data sources": "QuickBird-2, GeoEye-1, WorldView-2/3",
-          "gsd": "varying",
-          "paper": "[paper](https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html)",
-          "link": "[download](https://github.com/fMoW/dataset)"
-        }
       }
     ],
     "source_evidence": [
@@ -25778,36 +25556,13 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/fMoW"
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/fMoW/dataset"
       }
     ],
     "deduplication_keys": [
-      "paper_url:https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html",
-      "github:fmow/dataset"
+      "paper_url:https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html"
     ],
     "aliases": [],
-    "conflicts": [
-      {
-        "field": "project_url",
-        "values": [
-          "https://github.com/fMoW",
-          "https://github.com/fMoW/dataset"
-        ],
-        "note": "Multiple upstream values detected; reviewer should choose canonical link."
-      }
-    ],
+    "conflicts": [],
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
@@ -25846,7 +25601,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:258",
@@ -25983,7 +25738,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:259",
@@ -26119,7 +25874,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:260",
@@ -26249,7 +26004,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:262",
@@ -26303,7 +26058,7 @@
   {
     "id": "ssl4eo-s12",
     "name": "SSL4EO-S12",
-    "title": "paper",
+    "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
     "resource_type": "benchmark_dataset",
     "source_resource_types": [
       "dataset"
@@ -26311,10 +26066,8 @@
     "pre_classified_type": "benchmark_dataset",
     "scope": "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review.",
     "category": "Benchmark / dataset candidate",
-    "input_modality": "SAR",
-    "modality_tags": [
-      "SAR"
-    ],
+    "input_modality": "",
+    "modality_tags": [],
     "architecture": "To be verified from the primary paper or project page.",
     "architecture_tags": [],
     "modelling_paradigm_key": "needs_review",
@@ -26336,7 +26089,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:264",
@@ -26393,37 +26146,6 @@
           "attribute": "**Vision**",
           "link": "[link](https://github.com/zhu-xlab/SSL4EO-S12)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:6",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://arxiv.org/pdf/2211.07044",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/zhu-xlab/SSL4EO-S12",
-        "all_urls": [
-          "https://arxiv.org/pdf/2211.07044",
-          "https://github.com/zhu-xlab/SSL4EO-S12"
-        ],
-        "raw_row": "SSL4EO-S12 | 2023 | 3 million | MSI, SAR | None | Sentinel-1/2 | 10m | [paper](https://arxiv.org/pdf/2211.07044) | [download](https://github.com/zhu-xlab/SSL4EO-S12)",
-        "raw_columns": {
-          "datasets": "SSL4EO-S12",
-          "date": "2023",
-          "#samples": "3 million",
-          "modal": "MSI, SAR",
-          "annotations": "None",
-          "data sources": "Sentinel-1/2",
-          "gsd": "10m",
-          "paper": "[paper](https://arxiv.org/pdf/2211.07044)",
-          "link": "[download](https://github.com/zhu-xlab/SSL4EO-S12)"
-        }
       }
     ],
     "source_evidence": [
@@ -26452,38 +26174,15 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://github.com/zhu-xlab/SSL4EO-S12"
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/pdf/2211.07044",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/zhu-xlab/SSL4EO-S12"
       }
     ],
     "deduplication_keys": [
       "arxiv:2211.07044",
       "paper_url:https://arxiv.org/abs/2211.07044",
-      "github:zhu-xlab/ssl4eo-s12",
-      "paper_url:https://arxiv.org/pdf/2211.07044"
+      "github:zhu-xlab/ssl4eo-s12"
     ],
     "aliases": [],
-    "conflicts": [
-      {
-        "field": "paper_url",
-        "values": [
-          "https://arxiv.org/abs/2211.07044",
-          "https://arxiv.org/pdf/2211.07044"
-        ],
-        "note": "Multiple upstream values detected; reviewer should choose canonical link."
-      }
-    ],
+    "conflicts": [],
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
@@ -26522,7 +26221,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:265",
@@ -26654,7 +26353,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:268",
@@ -26747,7 +26446,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:269",
@@ -26880,7 +26579,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:274",
@@ -26972,7 +26671,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:276",
@@ -27065,7 +26764,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:277",
@@ -27121,7 +26820,7 @@
   {
     "id": "mmearth-2",
     "name": "MMEarth",
-    "title": "paper",
+    "title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
     "resource_type": "benchmark_dataset",
     "source_resource_types": [
       "dataset"
@@ -27129,10 +26828,8 @@
     "pre_classified_type": "benchmark_dataset",
     "scope": "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review.",
     "category": "Benchmark / dataset candidate",
-    "input_modality": "SAR, DEM, text",
+    "input_modality": "text",
     "modality_tags": [
-      "SAR",
-      "DEM",
       "text"
     ],
     "architecture": "To be verified from the primary paper or project page.",
@@ -27142,8 +26839,8 @@
     "downstream_tasks": "To be verified from the primary paper or benchmark description.",
     "task_tags": [],
     "training_scale": "To be verified.",
-    "access": "partial",
-    "access_label": "Partial access",
+    "access": "unknown",
+    "access_label": "Unknown",
     "paper_url": "https://arxiv.org/abs/2405.02771",
     "code_url": "",
     "weights_url": "",
@@ -27156,7 +26853,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:278",
@@ -27185,37 +26882,6 @@
           "attribute": "**Vision**",
           "link": "[link](https://vishalned.github.io/mmearth/)"
         }
-      },
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:8",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://arxiv.org/pdf/2405.02771",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/vishalned/MMEarth-data",
-        "all_urls": [
-          "https://arxiv.org/pdf/2405.02771",
-          "https://github.com/vishalned/MMEarth-data"
-        ],
-        "raw_row": "MMEarth | 2024 | 1.2 million | RGB,MSI,SAR,DSM | None | Sentinel-1/2, Aster DEM, etc. | 10,20,60m | [paper](https://arxiv.org/pdf/2405.02771) | [download](https://github.com/vishalned/MMEarth-data)",
-        "raw_columns": {
-          "datasets": "MMEarth",
-          "date": "2024",
-          "#samples": "1.2 million",
-          "modal": "RGB,MSI,SAR,DSM",
-          "annotations": "None",
-          "data sources": "Sentinel-1/2, Aster DEM, etc.",
-          "gsd": "10,20,60m",
-          "paper": "[paper](https://arxiv.org/pdf/2405.02771)",
-          "link": "[download](https://github.com/vishalned/MMEarth-data)"
-        }
       }
     ],
     "source_evidence": [
@@ -27231,46 +26897,14 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://vishalned.github.io/mmearth"
-      },
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/pdf/2405.02771",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/vishalned/MMEarth-data"
       }
     ],
     "deduplication_keys": [
       "arxiv:2405.02771",
-      "paper_url:https://arxiv.org/abs/2405.02771",
-      "paper_url:https://arxiv.org/pdf/2405.02771",
-      "github:vishalned/mmearth-data"
+      "paper_url:https://arxiv.org/abs/2405.02771"
     ],
     "aliases": [],
-    "conflicts": [
-      {
-        "field": "paper_url",
-        "values": [
-          "https://arxiv.org/abs/2405.02771",
-          "https://arxiv.org/pdf/2405.02771"
-        ],
-        "note": "Multiple upstream values detected; reviewer should choose canonical link."
-      },
-      {
-        "field": "project_url",
-        "values": [
-          "https://vishalned.github.io/mmearth",
-          "https://github.com/vishalned/MMEarth-data"
-        ],
-        "note": "Multiple upstream values detected; reviewer should choose canonical link."
-      }
-    ],
+    "conflicts": [],
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
   },
   {
@@ -27307,7 +26941,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:279",
@@ -27399,7 +27033,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:281",
@@ -27488,7 +27122,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:283",
@@ -27580,7 +27214,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:285",
@@ -27673,7 +27307,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:286",
@@ -27765,7 +27399,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:287",
@@ -27855,7 +27489,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:299",
@@ -27944,7 +27578,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:300",
@@ -28031,7 +27665,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:301",
@@ -28121,7 +27755,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:302",
@@ -28208,7 +27842,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:305",
@@ -28302,7 +27936,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:307",
@@ -28429,7 +28063,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:308",
@@ -28551,7 +28185,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:310",
@@ -28677,7 +28311,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:311",
@@ -28803,7 +28437,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:312",
@@ -28926,7 +28560,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:313",
@@ -29052,7 +28686,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:314",
@@ -29180,7 +28814,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:315",
@@ -29269,7 +28903,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:316",
@@ -29354,7 +28988,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:317",
@@ -29439,7 +29073,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:318",
@@ -29527,7 +29161,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:319",
@@ -29616,7 +29250,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:320",
@@ -29700,7 +29334,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:321",
@@ -29789,7 +29423,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:322",
@@ -29874,7 +29508,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:323",
@@ -29962,7 +29596,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:324",
@@ -30047,7 +29681,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:325",
@@ -30136,7 +29770,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:326",
@@ -30225,7 +29859,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:327",
@@ -30310,7 +29944,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:328",
@@ -30399,7 +30033,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:329",
@@ -30486,7 +30120,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:330",
@@ -30575,7 +30209,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:331",
@@ -30660,7 +30294,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:332",
@@ -30749,7 +30383,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:333",
@@ -30838,7 +30472,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:334",
@@ -30927,7 +30561,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:335",
@@ -31016,7 +30650,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "jackbo-awesome-remote-sensing-foundation-models:336",
@@ -31101,7 +30735,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:14",
@@ -31187,7 +30821,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:23",
@@ -31275,7 +30909,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:26",
@@ -31360,7 +30994,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:29",
@@ -31446,7 +31080,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:30",
@@ -31531,7 +31165,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:33",
@@ -31621,7 +31255,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:43",
@@ -31704,7 +31338,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:46",
@@ -31791,7 +31425,7 @@
     "extraction_confidence": "low",
     "needs_review": true,
     "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
+    "sync_detected_at": "2026-07-06",
     "source_records": [
       {
         "record_id": "licongren-awesome-remote-sensing-foundation-models:57",
@@ -31838,98 +31472,6 @@
       }
     ],
     "deduplication_keys": [],
-    "aliases": [],
-    "conflicts": [],
-    "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."
-  },
-  {
-    "id": "unnamed-candidate-28",
-    "name": "Unnamed candidate",
-    "title": "paper",
-    "resource_type": "benchmark_dataset",
-    "source_resource_types": [
-      "dataset"
-    ],
-    "pre_classified_type": "benchmark_dataset",
-    "scope": "Candidate benchmark dataset or evaluation resource for Earth observation foundation models. Needs curator review.",
-    "category": "Benchmark / dataset candidate",
-    "input_modality": "SAR",
-    "modality_tags": [
-      "SAR"
-    ],
-    "architecture": "To be verified from the primary paper or project page.",
-    "architecture_tags": [],
-    "modelling_paradigm_key": "needs_review",
-    "modelling_paradigm": "Needs review",
-    "downstream_tasks": "To be verified from the primary paper or benchmark description.",
-    "task_tags": [],
-    "training_scale": "To be verified.",
-    "access": "unknown",
-    "access_label": "Unknown",
-    "paper_url": "https://ieeexplore.ieee.org/abstract/document/8900532",
-    "code_url": "",
-    "weights_url": "",
-    "project_url": "https://bigearth.net",
-    "modality_complexity_tier_key": "needs_review",
-    "modality_complexity_tier": "Needs review",
-    "modality_complexity_score": null,
-    "reported_downstream_task_count": null,
-    "reported_downstream_task_count_basis": "candidate_not_verified",
-    "extraction_confidence": "low",
-    "needs_review": true,
-    "review_status": "candidate",
-    "sync_detected_at": "2026-07-07",
-    "source_records": [
-      {
-        "record_id": "xiaoaoran-awesome-rsfms:2",
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "source_priority": "high",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "name": "",
-        "title": "paper",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/8900532",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://bigearth.net",
-        "all_urls": [
-          "https://ieeexplore.ieee.org/abstract/document/8900532",
-          "https://bigearth.net"
-        ],
-        "raw_row": "BigEarthNet | 2019 | 1.2 million | MSI,SAR | 19 LULC classes | Sentinel-1/2 | 10,20,60m | [paper](https://ieeexplore.ieee.org/abstract/document/8900532) | [download](https://bigearth.net)",
-        "raw_columns": {
-          "datasets": "BigEarthNet",
-          "date": "2019",
-          "#samples": "1.2 million",
-          "modal": "MSI,SAR",
-          "annotations": "19 LULC classes",
-          "data sources": "Sentinel-1/2",
-          "gsd": "10,20,60m",
-          "paper": "[paper](https://ieeexplore.ieee.org/abstract/document/8900532)",
-          "link": "[download](https://bigearth.net)"
-        }
-      }
-    ],
-    "source_evidence": [
-      {
-        "source_id": "xiaoaoran-awesome-rsfms",
-        "source_name": "awesome-RSFMs",
-        "source_repo": "xiaoaoran/awesome-RSFMs",
-        "detected_name": "",
-        "detected_title": "paper",
-        "section": "VFM Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/8900532",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://bigearth.net"
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/8900532"
-    ],
     "aliases": [],
     "conflicts": [],
     "notes_for_reviewer": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json."

@@ -39,10 +39,6 @@ function linkButton(label, url) {
   return `<a class="link-pill" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
 }
 
-function reviewLabel(d) {
-  return String(d.review_status || "").startsWith("curated") ? "Reviewed" : "Auto-inferred";
-}
-
 function renderTimeline() {
   const counts = {};
   state.data.forEach(d => { if (d.publication_year) counts[d.publication_year] = (counts[d.publication_year] || 0) + 1; });
@@ -112,7 +108,6 @@ function renderTable() {
     tr.innerHTML = `
       <td class="name"><span>${escapeHtml(d.name)}</span></td>
       <td>${escapeHtml(d.publication_year || "—")}</td>
-      <td>${tag(reviewLabel(d), reviewLabel(d) === "Reviewed" ? "reviewed" : "inferred")}</td>
       <td>${tag(d.benchmark_type || "Needs review", "paradigm")}</td>
       <td><strong>${escapeHtml(truncate(d.title, 120))}</strong><div class="task-preview">${escapeHtml(truncate(d.scope, 150))}</div></td>
       <td class="tasks-cell"><div class="task-preview">${escapeHtml(truncate(d.tasks, 180))}</div></td>

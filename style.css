@@ -880,3 +880,66 @@ body::before {
     background-size: 100% 100%, auto 360px;
   }
 }
+
+/* v16: keep header navigation and hero copy on one line on desktop */
+.nav {
+  flex-wrap: nowrap;
+}
+
+.links {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 22px;
+}
+
+.hero-content,
+.hero.small .hero-content,
+.compact-hero .hero-content,
+.method-hero .hero-content,
+.method-hero-workflow .hero-content {
+  max-width: 1320px;
+  padding-right: 0;
+}
+
+.hero h1,
+.hero.small h1,
+.compact-hero h1,
+.method-hero h1,
+.method-hero-workflow h1 {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(2.6rem, 4.2vw, 4.35rem);
+}
+
+.hero .subtitle,
+.hero.small .subtitle,
+.compact-hero .subtitle,
+.method-hero .subtitle,
+.method-hero-workflow .subtitle {
+  max-width: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .hero h1,
+  .hero.small h1,
+  .compact-hero h1,
+  .method-hero h1,
+  .method-hero-workflow h1,
+  .hero .subtitle,
+  .hero.small .subtitle,
+  .compact-hero .subtitle,
+  .method-hero .subtitle,
+  .method-hero-workflow .subtitle {
+    white-space: normal;
+  }
+}

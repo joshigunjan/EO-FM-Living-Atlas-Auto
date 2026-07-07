@@ -54,7 +54,7 @@ import numpy as np
 import requests
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.preprocessing import normalize
 
 
@@ -66,6 +66,29 @@ OUTPUT_PATH = DATA / "paper-map.json"
 CACHE_DIR = DATA / "paper-map-cache"
 ABSTRACT_CACHE_PATH = CACHE_DIR / "abstracts.json"
 EMBEDDING_CACHE_PATH = CACHE_DIR / "embeddings.json"
+
+GENERIC_CLUSTER_TERMS = {
+    "remote",
+    "sensing",
+    "earth",
+    "observation",
+    "model",
+    "models",
+    "foundation",
+    "image",
+    "images",
+    "data",
+    "dataset",
+    "datasets",
+    "task",
+    "tasks",
+    "paper",
+    "papers",
+    "approach",
+    "approaches",
+    "method",
+    "methods",
+}
 
 USER_AGENT = (
     "EO-FM-Living-Atlas/1.0 "
@@ -525,9 +548,21 @@ def create_embeddings(
 
 
 def choose_cluster_count(n_records: int) -> int:
+    configured = os.getenv("PAPER_MAP_CLUSTER_COUNT", "").strip()
+
+    if configured:
+        try:
+            return max(2, min(int(configured), n_records))
+        except ValueError:
+            print(
+                f"[clusters] Invalid PAPER_MAP_CLUSTER_COUNT={configured!r}; "
+                "using automatic selection."
+            )
+
     if n_records < 8:
         return max(2, n_records // 2)
-    return max(4, min(14, round(math.sqrt(n_records / 2))))
+
+    return max(4, min(8, round(math.sqrt(n_records / 4))))
 
 
 def reduce_embeddings(embeddings: np.ndarray) -> tuple[np.ndarray, str]:
@@ -575,7 +610,7 @@ def cluster_label_texts(
 
     cluster_ids = list(cluster_documents)
     vectorizer = TfidfVectorizer(
-        stop_words="english",
+        stop_words=sorted(set(ENGLISH_STOP_WORDS) | GENERIC_CLUSTER_TERMS),
         ngram_range=(1, 2),
         max_features=5000,
         token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z0-9\-]{2,}\b",
@@ -594,7 +629,137 @@ def cluster_label_texts(
         names[cluster_id] = " · ".join(top_terms[:3]) or f"Cluster {cluster_id + 1}"
 
     return names, keywords
+def improve_cluster_names_with_llm(
+    records: list[dict[str, Any]],
+    labels: np.ndarray,
+    fallback_names: dict[int, str],
+    keywords: dict[int, list[str]],
+) -> dict[int, str]:
+    model = os.getenv("CLUSTER_LABEL_MODEL", "").strip()
 
+    if not model:
+        print("[clusters] CLUSTER_LABEL_MODEL not configured; using TF-IDF labels.")
+        return fallback_names
+
+    api_key = (
+        os.getenv("EMBEDDING_API_KEY")
+        or os.getenv("OPENAI_API_KEY")
+        or os.getenv("LLM_BACKEND_AUTH_TOKEN")
+        or ""
+    ).strip()
+
+    if not api_key:
+        print("[clusters] No API key available; using TF-IDF labels.")
+        return fallback_names
+
+    base_url = os.getenv("EMBEDDING_BASE_URL", "").strip()
+
+    cluster_descriptions: list[dict[str, Any]] = []
+
+    for cluster_id in sorted(fallback_names):
+        member_titles = [
+            records[index]["title"]
+            for index, value in enumerate(labels)
+            if int(value) == cluster_id
+        ][:12]
+
+        cluster_descriptions.append(
+            {
+                "cluster_id": cluster_id,
+                "keywords": keywords.get(cluster_id, []),
+                "paper_titles": member_titles,
+            }
+        )
+
+    prompt = f"""
+You are naming semantic clusters in a research landscape of Earth-observation,
+remote-sensing, geospatial-AI, foundation-model, benchmark, and dataset papers.
+
+Create one concise and distinctive research-theme label for every cluster.
+
+Rules:
+- Use 2 to 5 words.
+- Use Title Case.
+- Make every label unique.
+- Describe the scientific or methodological theme.
+- Avoid generic labels such as Remote Sensing, Earth Observation,
+  Foundation Models, Models, Papers, Data, or Methods by themselves.
+- Prefer labels such as:
+  Self-Supervised Representation Learning
+  Vision-Language Reasoning
+  Generative Satellite Imagery
+  Multisensor Fusion
+  Geospatial Agents
+  Benchmarks and Training Datasets
+  Urban Mapping and Geolocation
+
+Return only one JSON object mapping cluster IDs to labels.
+Example:
+{{"0": "Vision-Language Reasoning", "1": "Multisensor Fusion"}}
+
+Clusters:
+{json.dumps(cluster_descriptions, ensure_ascii=False, indent=2)}
+""".strip()
+
+    try:
+        from openai import OpenAI
+
+        client_args: dict[str, Any] = {"api_key": api_key}
+
+        if base_url:
+            client_args["base_url"] = base_url.rstrip("/")
+
+        client = OpenAI(**client_args)
+
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You create concise, accurate labels for clusters of "
+                        "scientific publications."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0,
+        )
+
+        content = response.choices[0].message.content or ""
+        match = re.search(r"\{.*\}", content, flags=re.S)
+
+        if not match:
+            raise ValueError("The cluster-label model did not return a JSON object.")
+
+        generated = json.loads(match.group(0))
+        improved: dict[int, str] = {}
+        used_labels: set[str] = set()
+
+        for cluster_id in sorted(fallback_names):
+            candidate = clean_text(generated.get(str(cluster_id), ""))
+            candidate = candidate.strip(" .:-")
+            word_count = len(candidate.split())
+
+            if (
+                not candidate
+                or word_count < 2
+                or word_count > 6
+                or len(candidate) > 70
+                or candidate.lower() in used_labels
+            ):
+                candidate = fallback_names[cluster_id]
+
+            improved[cluster_id] = candidate
+            used_labels.add(candidate.lower())
+
+        print(f"[clusters] Generated readable labels with {model}")
+        return improved
+
+    except Exception as exc:
+        print(f"[clusters] LLM cluster naming failed: {exc}")
+        print("[clusters] Continuing with TF-IDF fallback labels.")
+        return fallback_names
 
 def build_output(
     records: list[dict[str, Any]],
@@ -606,7 +771,12 @@ def build_output(
     labels = clusterer.fit_predict(embeddings)
     coordinates, reduction_method = reduce_embeddings(embeddings)
     cluster_names, cluster_keywords = cluster_label_texts(records, labels)
-
+    cluster_names = improve_cluster_names_with_llm(
+    records,
+    labels,
+    cluster_names,
+    cluster_keywords,
+)
     points = []
     for index, record in enumerate(records):
         cluster_id = int(labels[index])
@@ -657,7 +827,11 @@ def build_output(
         "clustering": {
             "method": "kmeans",
             "cluster_count": n_clusters,
-            "label_method": "tfidf",
+            "label_method": (
+    "llm-with-tfidf-fallback"
+    if os.getenv("CLUSTER_LABEL_MODEL")
+    else "tfidf"
+),
         },
         "clusters": clusters,
         "points": points,

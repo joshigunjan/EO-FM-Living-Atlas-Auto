@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EO-FM Living Atlas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">EO-FM Living Atlas</div>
+      <div class="links">
+        <a href="index.html">Catalogue</a>
+        <a href="landscape.html">Landscape</a>
+        <a href="benchmarks.html">Benchmarks</a>
+        <a href="submit.html">Add entry</a>
+        <a href="method.html">About</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Curated EO-FM living catalogue</p>
+      <h1>Explore EO foundation models</h1>
+      <p class="subtitle">A living catalogue of EO foundation models, benchmark datasets, modalities, tasks, and source links.</p>
+      <p class="hero-actions"><a class="link-pill" href="landscape.html">Open landscape</a></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="stats"></section>
+
+    <section class="panel controls-panel">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search model, modality, task, architecture, sensor, dataset, paper...">
+        <select id="categoryFilter"><option value="">All categories</option></select>
+        <select id="opennessFilter"><option value="">All access types</option></select>
+        <select id="modalityFilter"><option value="">All modalities</option></select>
+        <select id="taskFilter"><option value="">All tasks</option></select>
+        <select id="paradigmFilter"><option value="">All modelling paradigms</option></select>
+        <select id="yearFilter"><option value="">All years</option></select>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <div class="hint">Search by model, modality, task, sensor, architecture, or access. Coverage is source-backed and non-exhaustive; use Add entry for missing releases.</div>
+    </section>
+
+    <section class="panel timeline-panel">
+      <div class="table-headline">
+        <div>
+          <h2>Foundation model growth over time</h2>
+          <p class="muted">Recorded model releases by publication year.</p>
+        </div>
+      </div>
+      <div id="modelTimeline" class="timeline-bars"></div>
+    </section>
+
+    <section class="catalogue-layout">
+      <div class="panel table-panel">
+        <div class="table-headline">
+          <div>
+            <h2>Catalogue</h2>
+            <p id="resultCount" class="muted"></p>
+          </div>
+          <button id="clearSelection" class="ghost">Clear selection</button>
+        </div>
+        <div class="table-wrap">
+          <table id="catalogueTable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Scope</th>
+                <th>Paradigm</th>
+                <th>Modalities</th>
+                <th>Architecture</th>
+                <th>Downstream tasks</th>
+                <th>Access</th>
+                <th>Paper</th>
+                <th>Code</th>
+                <th>Weights</th>
+                <th>Project</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="panel detail-panel">
+        <div class="detail-title-row">
+          <div>
+            <p class="eyebrow dark">Entry details</p>
+            <h2 id="detailTitle">No entry selected</h2>
+          </div>
+        </div>
+        <div id="details" class="details empty">Click a row. Details open here next to the table.</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
+  </footer>
+
+  <script src="app.js?v=20260707-5"></script>
+  <script>
+    (() => {
+      const uniqueSorted = values =>
+        [...new Set(values.filter(Boolean))]
+          .sort((a, b) => String(a).localeCompare(String(b)));
+
+      const normalizedAccess = entry => {
+        const value = String(
+          entry?.openness || entry?.openness_label || entry?.openness_text || ""
+        ).toLowerCase();
+
+        if (value.includes("partial")) return "partial";
+        if (value.includes("closed")) return "closed";
+        if (value.includes("open")) return "open";
+        return "unknown";
+      };
+
+      const accessNames = {
+        open: "Open source",
+        partial: "Partial access",
+        closed: "Closed source",
+        unknown: "Unknown"
+      };
+
+      buildFilters = function () {
+        const resetSelect = (element, label) => {
+          element.innerHTML = `<option value="">${label}</option>`;
+        };
+
+        resetSelect(els.categoryFilter, "All categories");
+        resetSelect(els.opennessFilter, "All access types");
+        resetSelect(els.modalityFilter, "All modalities");
+        resetSelect(els.taskFilter, "All tasks");
+        resetSelect(els.paradigmFilter, "All modelling paradigms");
+        resetSelect(els.yearFilter, "All years");
+
+        const categories = uniqueSorted(state.data.map(d => d.category));
+        const accessTypes = uniqueSorted(state.data.map(normalizedAccess));
+        const modalities = uniqueSorted(state.data.flatMap(d => d.modality_tags || []));
+        const tasks = uniqueSorted(state.data.flatMap(d => d.task_tags || []));
+        const paradigms = uniqueSorted(state.data.map(d => d.modelling_paradigm));
+        const years = [...new Set(
+          state.data.map(d => d.publication_year).filter(Boolean)
+        )].sort((a, b) => b - a);
+
+        for (const value of categories) {
+          els.categoryFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`
+          );
+        }
+
+        for (const value of accessTypes) {
+          els.opennessFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${value}">${accessNames[value]}</option>`
+          );
+        }
+
+        for (const value of modalities) {
+          els.modalityFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`
+          );
+        }
+
+        for (const value of tasks) {
+          els.taskFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`
+          );
+        }
+
+        for (const value of paradigms) {
+          els.paradigmFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`
+          );
+        }
+
+        for (const value of years) {
+          els.yearFilter.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${value}">${value}</option>`
+          );
+        }
+      };
+
+      applyFilters = function () {
+        const query = els.search.value.trim().toLowerCase();
+        const category = els.categoryFilter.value;
+        const access = els.opennessFilter.value;
+        const modality = els.modalityFilter.value;
+        const task = els.taskFilter.value;
+        const paradigm = els.paradigmFilter.value;
+        const year = els.yearFilter.value;
+
+        state.filtered = state.data.filter(entry => {
+          if (query && !rowText(entry).includes(query)) return false;
+          if (category && entry.category !== category) return false;
+          if (access && normalizedAccess(entry) !== access) return false;
+          if (modality && !(entry.modality_tags || []).includes(modality)) return false;
+          if (task && !(entry.task_tags || []).includes(task)) return false;
+          if (paradigm && entry.modelling_paradigm !== paradigm) return false;
+          if (year && String(entry.publication_year || "") !== year) return false;
+          return true;
+        });
+
+        renderTable();
+      };
+
+      renderTable = function () {
+        els.tbody.innerHTML = "";
+        els.resultCount.textContent =
+          `${state.filtered.length} of ${state.data.length} entries shown`;
+
+        for (const entry of state.filtered) {
+          const row = document.createElement("tr");
+
+          if (entry.id === state.selectedId) {
+            row.classList.add("selected");
+          }
+
+          const taskChips = (entry.task_tags || [])
+            .slice(0, 5)
+            .map(value => tag(value, "task"))
+            .join("");
+
+          const remainingTasks = (entry.task_tags || []).length > 5
+            ? `<span class="more">+${entry.task_tags.length - 5}</span>`
+            : "";
+
+          row.innerHTML = `
+            <td class="name"><span>${escapeHtml(entry.name)}</span></td>
+            <td>${escapeHtml(entry.publication_year || "—")}</td>
+            <td>${escapeHtml(entry.scope || "—")}</td>
+            <td>${tag(entry.modelling_paradigm || "Unknown", "paradigm")}</td>
+            <td>${
+              (entry.modality_tags || []).map(value => tag(value)).join("") ||
+              escapeHtml(truncate(entry.input_modality, 80))
+            }</td>
+            <td>${
+              (entry.architecture_tags || []).map(value => tag(value, "arch")).join("") ||
+              escapeHtml(truncate(entry.architecture, 80))
+            }</td>
+            <td class="tasks-cell">
+              ${taskChips}${remainingTasks}
+              <div class="task-preview">
+                ${escapeHtml(truncate(entry.downstream_tasks, 125))}
+              </div>
+            </td>
+            <td>${tag(accessLabel(entry), normalizedAccess(entry))}</td>
+            <td class="single-link">${linkButton("Paper", entry.paper_url, true)}</td>
+            <td class="single-link">${linkButton("Code", entry.code_url, true)}</td>
+            <td class="single-link">${linkButton("Weights", entry.weights_url, true)}</td>
+            <td class="single-link">${linkButton("Project", entry.project_url, true)}</td>
+          `;
+
+          row.addEventListener("click", event => {
+            if (event.target.closest("a")) return;
+            renderDetails(entry);
+          });
+
+          els.tbody.appendChild(row);
+        }
+      };
+
+      renderDetails = function (entry) {
+        state.selectedId = entry.id;
+        els.detailTitle.textContent = entry.name;
+        els.details.classList.remove("empty");
+
+        const tasks = (entry.task_tags || [])
+          .map(value => tag(value, "task"))
+          .join("") || "No task tags available yet.";
+
+        els.details.innerHTML = `
+          <div class="detail-actions">
+            ${linkButton("Original paper", entry.paper_url)}
+            ${linkButton("Code", entry.code_url)}
+            ${linkButton("Weights", entry.weights_url)}
+            ${linkButton("Project page", entry.project_url)}
+          </div>
+
+          <div class="detail-section">
+            <h3>Scientific scope</h3>
+            <p>${escapeHtml(entry.scope || "Unknown")}</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Publication year</h3>
+            <p>${escapeHtml(entry.publication_year || "Unknown")}</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Modelling paradigm</h3>
+            <p>${escapeHtml(entry.modelling_paradigm || "Unknown")}</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Modalities</h3>
+            <p>${escapeHtml(entry.input_modality || "Unknown")}</p>
+            <div>${(entry.modality_tags || []).map(value => tag(value)).join("")}</div>
+          </div>
+
+          <div class="detail-section">
+            <h3>Architecture</h3>
+            <p>${escapeHtml(entry.architecture || "Unknown")}</p>
+            <div>${
+              (entry.architecture_tags || [])
+                .map(value => tag(value, "arch"))
+                .join("")
+            }</div>
+          </div>
+
+          <div class="detail-section">
+            <h3>Downstream tasks</h3>
+            <div class="task-strip">${tasks}</div>
+            <p>${escapeHtml(entry.downstream_tasks || "Unknown")}</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Training scale / representation</h3>
+            <p>${escapeHtml(entry.training_scale || "Unknown")}</p>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-key">Access</div>
+            <div>${escapeHtml(entry.openness_text || accessLabel(entry))}</div>
+
+            <div class="detail-key">Strength</div>
+            <div>${escapeHtml(entry.fm_strength || "—")}</div>
+
+            <div class="detail-key">Notes</div>
+            <div>${escapeHtml(entry.notes || "—")}</div>
+          </div>
+        `;
+
+        renderTable();
+      };
+
+      const originalRenderStats = renderStats;
+      renderStats = function () {
+        originalRenderStats();
+        renderTimeline();
+      };
+
+      window.addEventListener("load", () => {
+        if (typeof renderTimeline === "function") {
+          renderTimeline();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

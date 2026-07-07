@@ -95,6 +95,10 @@ function renderTimeline() {
   }));
 }
 
+function reviewLabel(d) {
+  return String(d.review_status || "").startsWith("curated") ? "Reviewed" : "Auto-inferred";
+}
+
 function renderStats() {
   const total = state.data.length;
   const openish = state.data.filter(d => ["open", "partial"].includes(d.openness)).length;
@@ -152,6 +156,7 @@ function renderTable() {
     tr.innerHTML = `
       <td class="name"><span>${escapeHtml(d.name)}</span></td>
       <td>${escapeHtml(d.publication_year || "—")}</td>
+      <td>${tag(reviewLabel(d), reviewLabel(d) === "Reviewed" ? "reviewed" : "inferred")}</td>
       <td>${escapeHtml(d.scope)}</td>
       <td>${tag(d.modelling_paradigm || "Unknown", "paradigm")}</td>
       <td>${(d.modality_tags || []).map(x => tag(x)).join("") || escapeHtml(truncate(d.input_modality, 80))}</td>
@@ -180,6 +185,7 @@ function renderDetails(d) {
     <div class="detail-actions">${linkButton("Original paper", d.paper_url)}${linkButton("Code", d.code_url)}${linkButton("Weights", d.weights_url)}${linkButton("Project page", d.project_url)}</div>
     <div class="detail-section"><h3>Scientific scope</h3><p>${escapeHtml(d.scope)}</p></div>
     <div class="detail-section"><h3>Publication year</h3><p>${escapeHtml(d.publication_year || "Unknown")}</p></div>
+    <div class="detail-section"><h3>Status</h3><p>${escapeHtml(reviewLabel(d))}</p></div>
     <div class="detail-section"><h3>Modelling paradigm</h3><p>${escapeHtml(d.modelling_paradigm || "Unknown")}</p></div>
     <div class="detail-section"><h3>Modalities</h3><p>${escapeHtml(d.input_modality)}</p><div>${(d.modality_tags || []).map(x => tag(x)).join("")}</div></div>
     <div class="detail-section"><h3>Architecture</h3><p>${escapeHtml(d.architecture)}</p><div>${(d.architecture_tags || []).map(x => tag(x, "arch")).join("")}</div></div>

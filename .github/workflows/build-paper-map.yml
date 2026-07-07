@@ -61,6 +61,8 @@ jobs:
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
           OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
           CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
+          CLUSTER_LABEL_MODEL: ${{ vars.CLUSTER_LABEL_MODEL || 'alias-qwen36-35b' }}
+          PAPER_MAP_CLUSTER_COUNT: ${{ vars.PAPER_MAP_CLUSTER_COUNT || '8' }}
         run: |
           python scripts/build_paper_map.py
 

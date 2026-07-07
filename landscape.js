@@ -4,7 +4,7 @@ const landscape = {
   selectedId: null,
   labelMode: false,
   xMetric: "modality_stage",
-  yMetric: "landscape_score"
+  yMetric: "reported_tasks"
 };
 
 const L = {
@@ -187,7 +187,7 @@ function modelFamilyKey(d) {
   const text = combinedText(d);
   const name = String(d.name || "").toLowerCase();
   if (text.includes("mamba") || text.includes("state space") || text.includes("state-space")) return "state_space";
-  if (text.includes("any-to-any") || text.includes("thinking-in-modalities") || text.includes("modality-to-modality") || name.includes("terramind") || name.includes("dofa+")) return "generative_hybrid";
+  if (text.includes("any-to-any") || text.includes("thinking-in-modalities") || text.includes("modality-to-modality")) return "generative_hybrid";
   if (name.includes("alphaearth") || name.includes("tessera") || text.includes("embedding field") || text.includes("representation field") || text.includes("embedding product")) return "embedding_product";
   if (text.includes("vision-language") || text.includes("vision language") || text.includes("large language") || text.includes("mllm") || text.includes("llm") || text.includes("caption") || text.includes("vqa") || (d.modality_tags || []).map(x => String(x).toLowerCase()).includes("text")) return "vision_language";
   if (text.includes("contrastive") || text.includes("clip") || text.includes("dino") || text.includes("byol") || text.includes("jepa") || text.includes("predictive") || text.includes("alignment") || text.includes("joint-embedding") || text.includes("joint embedding")) return "joint_embedding";
@@ -209,7 +209,7 @@ function modalityStage(d) {
   if (key.includes("general")) return 4;
   const text = combinedText(d);
   const name = String(d.name || "").toLowerCase();
-  if (text.includes("any-to-any") || text.includes("generalist") || text.includes("earth system") || text.includes("embedding field") || text.includes("representation field") || name.includes("terramind") || name.includes("alphaearth") || name.includes("olmoearth") || name.includes("thor")) return 4;
+  if (text.includes("any-to-any") || text.includes("generalist") || text.includes("earth system") || text.includes("embedding field") || text.includes("representation field")) return 4;
   if (text.includes("vision-language") || text.includes("vision language") || text.includes("mllm") || text.includes("llm") || (d.modality_tags || []).map(x => String(x).toLowerCase()).includes("text")) return 3;
   if (modalityCount(d) > 1) return 2;
   return 1;
@@ -232,6 +232,14 @@ const METRICS = {
       4: ["Generalist", "models"]
     }[Math.round(v)] || [String(v)])
   },
+  publication_year: {
+    label: "Publication year",
+    axis: "Publication year",
+    desc: "Year of the first public paper or release recorded for the model.",
+    value: d => d.publication_year ? Number(d.publication_year) : NaN,
+    integer: true,
+    min: 2018
+  },
   modalities: {
     label: "Modality breadth",
     axis: "Recorded modality inputs",
@@ -246,14 +254,6 @@ const METRICS = {
     desc: "Curated count of reported downstream tasks or evaluations from the source paper.",
     value: reportedTaskCount,
     integer: true,
-    min: 1
-  },
-  landscape_score: {
-    label: "Atlas evidence score",
-    axis: "Atlas evidence score",
-    desc: "Evidence breadth from tasks/evaluations, modalities, architecture detail, source links, access, and upstream corroboration.",
-    value: landscapeEvidenceScore,
-    integer: false,
     min: 1
   },
   tasks: {
@@ -487,8 +487,9 @@ function renderLandscape() {
   const visible = landscape.filtered;
   const xMetric = METRICS[landscape.xMetric] || METRICS.modalities;
   const yMetric = METRICS[landscape.yMetric] || METRICS.tasks;
-  const xValues = visible.map(d => xMetric.value(d));
-  const yValues = visible.map(d => yMetric.value(d));
+  const plotted = visible.filter(d => Number.isFinite(xMetric.value(d)) && Number.isFinite(yMetric.value(d)));
+  const xValues = plotted.map(d => xMetric.value(d));
+  const yValues = plotted.map(d => yMetric.value(d));
   const [xMin, xMax] = axisDomain(xValues, xMetric);
   const [yMin, yMax] = axisDomain(yValues, yMetric);
   const xScale = x => m.left + ((x - xMin) / Math.max(0.001, xMax - xMin)) * innerW;
@@ -496,7 +497,7 @@ function renderLandscape() {
   const ticksX = (xMetric.fixedTicks || niceTicks(xMin, xMax, xMetric.integer, 7)).filter(v => v >= xMin - 1e-6 && v <= xMax + 1e-6);
   const ticksY = (yMetric.fixedTicks || niceTicks(yMin, yMax, yMetric.integer, 7)).filter(v => v >= yMin - 1e-6 && v <= yMax + 1e-6);
 
-  L.count.textContent = `${visible.length} of ${all.length} entries shown`;
+  L.count.textContent = `${plotted.length} plotted (${visible.length} match filters) of ${all.length} entries`;
   L.axisHint.textContent = `X: ${xMetric.label}. Y: ${yMetric.label}. Click a point to inspect.`;
 
   L.plot.setAttribute("viewBox", `0 0 ${w} ${h}`);
@@ -540,11 +541,11 @@ function renderLandscape() {
   svg += `<text x="${m.left + innerW / 2}" y="${h - 32}" text-anchor="middle" class="axis-title">${escapeHtml(xMetric.axis)}</text>`;
   svg += `<text transform="translate(32 ${m.top + innerH / 2}) rotate(-90)" text-anchor="middle" class="axis-title">${escapeHtml(yMetric.axis)}</text>`;
 
-  if (!visible.length) {
+  if (!plotted.length) {
     svg += `<text x="${w / 2}" y="${h / 2}" text-anchor="middle" class="empty-plot-text">No matching models. Try clearing a filter.</text>`;
   }
 
-  visible.forEach(d => {
+  plotted.forEach(d => {
     const xVal = xMetric.value(d);
     const yVal = yMetric.value(d);
     const jitterX = (hash01(d.id + landscape.xMetric + "x") - 0.5) * 34;
@@ -592,6 +593,7 @@ function renderDetails(d) {
   L.details.innerHTML = `
     <div class="detail-actions">${linkButton("Paper", d.paper_url)}${linkButton("Code", d.code_url)}${linkButton("Weights", d.weights_url)}${linkButton("Project", d.project_url)}</div>
     <div class="detail-section"><h3>Current map position</h3><p>${escapeHtml(xMetric.label)}: <b>${escapeHtml(formatTick(xMetric, xMetric.value(d)))}</b>; ${escapeHtml(yMetric.label)}: <b>${escapeHtml(formatTick(yMetric, yMetric.value(d)))}</b>.</p></div>
+    <div class="detail-section"><h3>Publication year</h3><p>${escapeHtml(d.publication_year || "Unknown")}</p></div>
     <div class="detail-section"><h3>Modelling paradigm</h3><p>${escapeHtml(modelFamilyLabel(d))}</p></div>
     <div class="detail-section"><h3>Scope</h3><p>${escapeHtml(d.scope)}</p></div>
     <div class="detail-section"><h3>Modalities</h3><p>${escapeHtml(d.input_modality)}</p><div>${(d.modality_tags || []).map(x => tag(x)).join("")}</div></div>
@@ -625,9 +627,9 @@ async function initLandscape() {
     L.architecture.value = "";
     L.family.value = "";
     L.xMetric.value = "modality_stage";
-    L.yMetric.value = "landscape_score";
+    L.yMetric.value = "reported_tasks";
     landscape.xMetric = "modality_stage";
-    landscape.yMetric = "landscape_score";
+    landscape.yMetric = "reported_tasks";
     L.labels.checked = false;
     landscape.labelMode = false;
     landscape.selectedId = null;

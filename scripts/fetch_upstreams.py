@@ -33,6 +33,13 @@ def main() -> int:
 
     for source in sources:
         sid = source.get("id") or slugify(source.get("name") or source.get("repo"))
+        if source.get("enabled") is False:
+            snapshot["sources"][sid] = {
+                "name": source.get("name", sid), "repo": source.get("repo", ""),
+                "priority": source.get("priority", "medium"), "status": "disabled",
+                "note": source.get("status_note", "Disabled source"),
+            }
+            continue
         url = raw_url_for(source)
         print(f"Fetching {sid}: {url}")
         try:

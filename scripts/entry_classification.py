@@ -74,6 +74,11 @@ PAPER_METHOD_TERMS = (
     "fine tuning foundation",
 )
 
+KNOWN_BENCHMARK_RESOURCE_NAMES = {
+    "geo3dvqa", "geollmqa", "geollm qa", "univearth", "satlas", "choice",
+    "rs5m", "fitrs", "fit-rs",
+}
+
 BAD_PUBLIC_NAMES = {
     "",
     "-",
@@ -353,6 +358,9 @@ def classify_entry(candidate: dict) -> tuple[str, str]:
     """
     existing = str(candidate.get("entry_type") or "").strip()
     method = str(candidate.get("extraction_method") or "").lower()
+    known_name = normalize_name(_clean(candidate.get("name") or candidate.get("title")))
+    if known_name in KNOWN_BENCHMARK_RESOURCE_NAMES:
+        return "benchmark_dataset", "Known benchmark, evaluation resource, or dataset."
     if existing in ENTRY_TYPES and method.startswith("openai:"):
         return existing, candidate.get("entry_type_reason") or "Classified by LLM extraction."
 

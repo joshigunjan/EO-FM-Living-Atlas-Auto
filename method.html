@@ -1,115 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Method · EO-FM Living Atlas</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Method · EO-FM Living Atlas</title><link rel="stylesheet" href="style.css"></head>
 <body>
-  <header class="hero small method-hero method-hero-workflow">
-    <nav class="nav">
-      <div class="brand">EO-FM Living Atlas</div>
-      <div class="links">
-        <a href="index.html">Catalogue</a>
-        <a href="landscape.html">Landscape</a>
-        <a href="benchmarks.html">Benchmarks</a>
-        <a href="submit.html">Add entry</a>
-        <a href="method.html">Method</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <p class="eyebrow">Method</p>
-      <h1>Automation with publication gates</h1>
-      <p class="subtitle">How upstream model lists become a public EO foundation-model atlas without publishing unclassified rows as facts.</p>
-    </div>
-  </header>
-
-  <main class="container method-container method-workflow-container">
-    <section class="panel method-workflow-card method-flow-panel">
-      <div class="method-section-head">
-        <p class="eyebrow dark">Automated build</p>
-        <h2>From upstream signal to public row</h2>
-      </div>
-      <div class="automation-flow" aria-label="Atlas automation flow">
-        <article><span>1</span><h3>Watch sources</h3><p>Fetch configured GitHub awesome lists and preserve raw snapshots.</p></article>
-        <article><span>2</span><h3>Parse evidence</h3><p>Extract names, titles, paper URLs, code, weights, project links, table columns, and source sections.</p></article>
-        <article><span>3</span><h3>Deduplicate</h3><p>Merge only on strong keys: arXiv, DOI, canonical paper URL, GitHub repository, or Hugging Face repository.</p></article>
-        <article><span>4</span><h3>Enrich</h3><p>Attach metadata from arXiv, DOI/Crossref, PDFs, and GitHub README text when available.</p></article>
-        <article><span>5</span><h3>Classify</h3><p>Route each record as model, benchmark/dataset, survey/review, paper method, or unknown.</p></article>
-        <article><span>6</span><h3>Publish</h3><p>Only model entries appear in the catalogue; benchmarks go to the benchmark tab; non-model rows remain in candidate reports.</p></article>
-      </div>
-    </section>
-
-    <section class="method-info-grid simple-method-grid method-rules-grid">
-      <article class="panel method-card method-card-rich">
-        <h2>Model catalogue</h2>
-        <p>A public catalogue row must identify a reusable EO foundation model, model family, released framework, or model artifact. Survey papers and generic downstream methods are excluded.</p>
-      </article>
-      <article class="panel method-card method-card-rich">
-        <h2>Benchmarks</h2>
-        <p>Benchmark suites, pre-training datasets, embedding datasets, and evaluation resources are separated from models so the model landscape is not polluted by datasets.</p>
-      </article>
-      <article class="panel method-card method-card-rich">
-        <h2>Versioning</h2>
-        <p>New releases such as a 1.5 model are treated as versioned candidates. They should inherit the model-family identity but keep distinct paper, weights, date, capability, and benchmark evidence.</p>
-      </article>
-      <article class="panel method-card method-card-rich">
-        <h2>Public quality</h2>
-        <p>The site should not publish placeholders as scientific claims. Missing exact values are represented by derived public text, provenance fields, and candidate reports rather than vague table copy.</p>
-      </article>
-      <article class="panel method-card method-card-rich">
-        <h2>Landscape</h2>
-        <p>The default map uses modality complexity on the X-axis and an atlas evidence score on the Y-axis. The evidence score spreads models by task/evaluation breadth, modalities, architecture detail, access, and source links.</p>
-      </article>
-      <article class="panel method-card method-card-rich">
-        <h2>Submissions</h2>
-        <p>Public submissions enter the same candidate pipeline. They need primary-source links before they should change the public catalogue.</p>
-      </article>
-    </section>
-
-    <section class="panel method-complete-row simple-method-row method-public-row">
-      <div>
-        <p class="eyebrow dark">Public website policy</p>
-        <h2>What gets published</h2>
-      </div>
-      <ul>
-        <li>Canonical model or benchmark name</li>
-        <li>Original paper, DOI, arXiv, or project page</li>
-        <li>Official code, model card, weights, or dataset link when available</li>
-        <li>Modalities, sensors, architecture family, and modelling paradigm</li>
-        <li>Downstream tasks inferred from source evidence or recorded explicitly</li>
-        <li>Access status based on paper/code/weights availability</li>
-        <li>Publication report explaining included and excluded records</li>
-      </ul>
-    </section>
-
-    <section class="panel method-strategy">
-      <div class="method-section-head">
-        <p class="eyebrow dark">Better automation</p>
-        <h2>How new public releases should be handled</h2>
-      </div>
-      <div class="strategy-grid">
-        <article>
-          <h3>Source monitors</h3>
-          <p>Monitor configured upstream lists plus arXiv, GitHub, Hugging Face, and public submissions. The discovery-source configuration defines these channels, but every candidate still needs a primary paper, repository, model card, project page, or release note before publication.</p>
-        </article>
-        <article>
-          <h3>Version-aware matching</h3>
-          <p>Store model-family keys separately from release IDs. For a release such as OLMoEarth 1.5, the automation should link it to the OLMoEarth family while preserving the version-specific paper, weights, capabilities, and evaluation claims.</p>
-        </article>
-        <article>
-          <h3>Evidence thresholds</h3>
-          <p>Auto-publish only when strong evidence exists. Otherwise, keep the item in candidate reports. The public site can show latest stable rows while maintainers review ambiguous records.</p>
-        </article>
-        <article>
-          <h3>Audit trail</h3>
-          <p>Each build writes raw snapshots, parsed records, candidate JSON, validation reports, and a publication report. That makes every public row traceable back to upstream evidence.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer><p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p></footer>
-</body>
-</html>
+<header class="hero small"><nav class="nav"><div class="brand">EO-FM Living Atlas</div><div class="links"><a href="index.html">Catalogue</a><a href="landscape.html">Landscape</a><a href="benchmarks.html">Benchmarks</a><a href="submit.html">Add entry</a><a href="method.html">Method</a></div></nav><div class="hero-content"><p class="eyebrow">Method</p><h1>How the atlas is organized</h1><p class="subtitle">A compact guide to the fields used in the catalogue.</p></div></header>
+<main class="container method-container">
+<section class="method-info-grid simple-method-grid">
+<article class="panel method-card"><h2>Models</h2><p>The catalogue contains reusable EO foundation models and versioned releases. Benchmarks, datasets, surveys, and application-only papers are kept outside the model table.</p></article>
+<article class="panel method-card"><h2>Benchmarks and datasets</h2><p>The benchmark tab contains evaluation suites, pre-training datasets, embedding resources, and named datasets. Duplicate links and model-only rows are removed.</p></article>
+<article class="panel method-card"><h2>Architecture</h2><p>The concrete network design, such as a Vision Transformer, masked autoencoder, Mamba/state-space model, encoder–decoder, or mixture of experts.</p></article>
+<article class="panel method-card"><h2>Modelling paradigm</h2><p>The learning strategy or functional family, such as masked reconstruction, joint embedding/contrastive learning, vision–language learning, state-space modelling, or generative multimodality.</p></article>
+<article class="panel method-card"><h2>Publication year</h2><p>The year of the first public paper or model release. It supports year filters and progression views; unknown years are shown as a dash.</p></article>
+<article class="panel method-card"><h2>Review status</h2><p><b>Reviewed</b> entries come from curated records. <b>Auto-inferred</b> entries are included from source-backed automation but may have less complete metadata.</p></article>
+</section>
+<section class="panel compact-note"><b>Architecture vs paradigm:</b> architecture describes what the model is built from; paradigm describes how it learns or what kind of representation system it is.</section>
+</main>
+<footer><p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p></footer>
+</body></html>

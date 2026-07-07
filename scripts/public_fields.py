@@ -273,6 +273,86 @@ def derive_evaluation_count(candidate: dict) -> int | None:
     return None
 
 
+
+def derive_publication_year(candidate: dict) -> int | None:
+    """Return the earliest defensible publication/release year in the record."""
+    known_years = {
+        "fomo": 2023,
+        "fomo-bench": 2023,
+        "urbench": 2024,
+        "clay embeddings": 2024,
+        "earth genome embeddings": 2025,
+        "ben-mm": 2021,
+        "bigearthnet-mm": 2021,
+        "fmow-s2": 2022,
+        "m3leo": 2024,
+        "millionaid": 2021,
+        "rsvg": 2023,
+        "tov-rs-balanced": 2022,
+        "skysense++": 2025,
+    }
+    name_key = clean_text(candidate.get("name")).lower()
+    if name_key in known_years:
+        return known_years[name_key]
+    for key in ("publication_year", "year"):
+        value = candidate.get(key)
+        try:
+            year = int(value)
+            if 1990 <= year <= 2035:
+                return year
+        except Exception:
+            pass
+
+    for key in ("arxiv_published", "published", "publication_date", "release_date"):
+        match = re.search(r"(20\d{2})", str(candidate.get(key) or ""))
+        if match:
+            return int(match.group(1))
+
+    crossref = candidate.get("crossref_published") or {}
+    if isinstance(crossref, dict):
+        parts = crossref.get("date-parts") or crossref.get("date_parts") or []
+        try:
+            year = int(parts[0][0])
+            if 1990 <= year <= 2035:
+                return year
+        except Exception:
+            pass
+
+    text = " ".join(str(candidate.get(key) or "") for key in (
+        "paper_url", "primary_source_url", "title", "scope", "code_url", "project_url"
+    ))
+    arxiv = re.search(r"arxiv\.org/(?:abs|pdf)/(\d{2})(\d{2})\.", text, re.I)
+    if arxiv:
+        short = int(arxiv.group(1))
+        return 2000 + short if short < 90 else 1900 + short
+
+    patterns = (
+        r"(?:CVPR|ICCV|ECCV|NeurIPS|IGARSS|AAAI|ICLR|KDD|WACV)[_/\- ]?(20\d{2})",
+        r"content/(?:CVPR|ICCV|ECCV)(20\d{2})",
+        r"paper/(20\d{2})/",
+        r"papers/(20\d{2})",
+        r"(?<!\d)(20(?:1[8-9]|2\d))(?!\d)",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, text, re.I)
+        if match:
+            year = int(match.group(1))
+            if 1990 <= year <= 2035:
+                return year
+
+    for record in candidate.get("source_records", []) or []:
+        if not isinstance(record, dict):
+            continue
+        columns = record.get("raw_columns", {}) or {}
+        if not isinstance(columns, dict):
+            continue
+        for key, value in columns.items():
+            if "year" in str(key).lower():
+                match = re.search(r"20\d{2}", str(value))
+                if match:
+                    return int(match.group(0))
+    return None
+
 def landscape_score(candidate: dict) -> float:
     """Broad, public-facing score for the landscape Y axis.
 

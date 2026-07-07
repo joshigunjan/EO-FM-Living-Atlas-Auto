@@ -1,10 +1,10 @@
 {
   "candidate_count": 308,
-  "published_model_count": 214,
-  "excluded_count": 86,
+  "published_model_count": 221,
+  "excluded_count": 93,
   "entry_type_distribution": {
-    "model": 227,
-    "benchmark_dataset": 50,
+    "model": 220,
+    "benchmark_dataset": 57,
     "survey_review": 30,
     "paper_method": 1
   },
@@ -18,6 +18,16 @@
       "publication_exclusion_reason": "missing_public_model_name",
       "paper_url": "https://ieeexplore.ieee.org/abstract/document/10282433",
       "code_url": ""
+    },
+    {
+      "id": "satlas",
+      "name": "SatLas",
+      "title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://doi.org/10.1109/iccv51070.2023.01538",
+      "code_url": "https://github.com/allenai/satlas"
     },
     {
       "id": "unnamed-candidate-2",
@@ -78,6 +88,26 @@
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2311.14656",
       "code_url": "https://github.com/jonathan-roberts1/charting-new-territories"
+    },
+    {
+      "id": "rs5m",
+      "name": "RS5M",
+      "title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2306.11300",
+      "code_url": "https://github.com/om-ai-lab/RS5M"
+    },
+    {
+      "id": "fit-rs",
+      "name": "FIT-RS",
+      "title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2406.10100",
+      "code_url": "https://github.com/Luo-Z13/SkySenseGPT"
     },
     {
       "id": "geotext",
@@ -148,6 +178,26 @@
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2601.04118",
       "code_url": "https://github.com/canlanqianyan/GeoReason"
+    },
+    {
+      "id": "geollm-qa",
+      "name": "GeoLLM-QA",
+      "title": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2405.00709",
+      "code_url": ""
+    },
+    {
+      "id": "univearth",
+      "name": "UnivEARTH",
+      "title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2504.12110",
+      "code_url": ""
     },
     {
       "id": "openearth-agent",
@@ -250,6 +300,16 @@
       "code_url": ""
     },
     {
+      "id": "choice",
+      "name": "CHOICE",
+      "title": "CHOICE: Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "",
+      "code_url": ""
+    },
+    {
       "id": "geo-bench-vlm",
       "name": "GEO-Bench-VLM",
       "title": "GEO-Bench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
@@ -317,6 +377,16 @@
       "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
       "publication_exclusion_reason": "non_model_entry_type",
       "paper_url": "https://arxiv.org/abs/2508.07918",
+      "code_url": ""
+    },
+    {
+      "id": "geo3dvqa",
+      "name": "Geo3DVQA",
+      "title": "Geo3DVQA: Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
+      "entry_type": "benchmark_dataset",
+      "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+      "publication_exclusion_reason": "non_model_entry_type",
+      "paper_url": "https://arxiv.org/abs/2512.07276",
       "code_url": ""
     },
     {

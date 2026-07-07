@@ -2,6 +2,7 @@
   {
     "id": "chatearthbench",
     "name": "ChatEarthBench",
+    "publication_year": 2026,
     "title": "ChatEarthBench: Benchmarking multimodal large language models for Earth observation",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -38,13 +39,57 @@
       "doi:10.1109/mgrs.2026.3650840"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "choice",
+    "name": "CHOICE",
+    "publication_year": null,
+    "title": "CHOICE: Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Benchmark",
+    "scope": "Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
+    "tasks": "Perception & Reasoning",
+    "modalities": "text",
+    "paper_url": "",
+    "code_url": "",
+    "dataset_url": "https://github.com/ShawnAn-WHU/CHOICE",
+    "project_url": "https://github.com/ShawnAn-WHU/CHOICE",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "CHOICE",
+        "detected_title": "CHOICE: Evaluating and Understanding Vision-Language Model Choices in Remote Sensing",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/ShawnAn-WHU/CHOICE"
+      }
+    ],
+    "deduplication_keys": [
+      "github:shawnan-whu/choice"
+    ],
+    "conflicts": [],
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "dynamicvl",
     "name": "DynamicVL",
+    "publication_year": 2025,
     "title": "DynamicVL: Benchmarking Multimodal Large Language Models for Dynamic City Understanding",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -81,13 +126,14 @@
       "paper_url:https://arxiv.org/abs/2505.21076"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "earth-bench",
     "name": "Earth-Bench",
+    "publication_year": 2025,
     "title": "Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents (Earth-Bench is the benchmark introduced in this paper)",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -139,13 +185,14 @@
       "hf:datasets/sssunset"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "fomo",
     "name": "FoMo",
+    "publication_year": 2023,
     "title": "FoMo: Multi-Modal, Multi-Scale and Multi-Task Remote Sensing Foundation Models for Forest Monitoring",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -183,13 +230,14 @@
       "doi:10.1609/aaai.v39i27.35002"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "fomo-bench",
     "name": "FoMo-Bench",
+    "publication_year": 2023,
     "title": "FoMo: Multi-Modal, Multi-Scale and Multi-Task Remote Sensing Foundation Models for Forest Monitoring",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -240,13 +288,14 @@
       "paper_url:https://arxiv.org/abs/2312.10114"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geo-bench-vlm",
     "name": "GEO-Bench-VLM",
+    "publication_year": 2024,
     "title": "GEO-Bench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -284,13 +333,59 @@
       "github:the-ai-alliance/geo-bench-vlm"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "geo3dvqa",
+    "name": "Geo3DVQA",
+    "publication_year": 2025,
+    "title": "Geo3DVQA: Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Benchmark",
+    "scope": "Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
+    "tasks": "3D geospatial reasoning & height-aware spatial analysis",
+    "modalities": "text, aerial / RGB imagery",
+    "paper_url": "https://arxiv.org/abs/2512.07276",
+    "code_url": "",
+    "dataset_url": "https://github.com/mm1129/Geo3DVQA",
+    "project_url": "https://github.com/mm1129/Geo3DVQA",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Geo3DVQA",
+        "detected_title": "Geo3DVQA: Evaluating Vision-Language Models for 3D Geospatial Reasoning from Aerial Imagery",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2512.07276",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/mm1129/Geo3DVQA"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2512.07276",
+      "paper_url:https://arxiv.org/abs/2512.07276",
+      "github:mm1129/geo3dvqa"
+    ],
+    "conflicts": [],
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geoagentbench",
     "name": "GeoAgentBench",
+    "publication_year": 2026,
     "title": "GeoAgentBench: A Dynamic Execution Benchmark for Tool-Augmented Agents in Spatial Analysis",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -327,13 +422,58 @@
       "paper_url:https://arxiv.org/abs/2604.13888"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "geollm-qa",
+    "name": "GeoLLM-QA",
+    "publication_year": 2024,
+    "title": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Benchmark",
+    "scope": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
+    "tasks": "agentic reasoning",
+    "modalities": "—",
+    "paper_url": "https://arxiv.org/abs/2405.00709",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "GeoLLM-QA",
+        "detected_title": "Evaluating Tool-Augmented Agents in Remote Sensing Platforms",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2405.00709",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2405.00709",
+      "paper_url:https://arxiv.org/abs/2405.00709"
+    ],
+    "conflicts": [],
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "georeason-bench",
     "name": "GeoReason-Bench",
+    "publication_year": 2026,
     "title": "GeoReason: Aligning Thinking And Answering In Remote Sensing Vision-Language Models Via Logical Consistency Reinforcement Learning",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -384,13 +524,14 @@
       "github:canlanqianyan/georeason"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geotext",
     "name": "GeoText",
+    "publication_year": 2023,
     "title": "Towards Natural Language-Guided Drones: GeoText-1652 Benchmark with Spatial Relation Matching",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -428,13 +569,14 @@
       "github:multimodalgeo/geotext-1652"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "omniearth",
     "name": "OmniEarth",
+    "publication_year": 2026,
     "title": "OmniEarth: A Benchmark for Evaluating Vision-Language Models in Geospatial Tasks",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -472,13 +614,14 @@
       "hf:datasets/sjeeudd"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "openearth-bench",
     "name": "OpenEarth-Bench",
+    "publication_year": 2026,
     "title": "OpenEarth-Agent: From Tool Calling to Tool Creation for Open-Environment Earth Observation (OpenEarth-Bench is the benchmark introduced in this paper)",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -529,13 +672,14 @@
       "github:walking-shadow/openearth-agent"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "pangaea",
     "name": "PANGAEA",
+    "publication_year": 2024,
     "title": "PANGAEA: A Global and Inclusive Benchmark for Geospatial Foundation Models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -573,13 +717,14 @@
       "github:yurujaja/pangaea-bench"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "phileo",
     "name": "PhilEO",
+    "publication_year": 2024,
     "title": "PhilEO Bench: Evaluating Geo-Spatial Foundation Models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -617,13 +762,14 @@
       "github:91097luke/phileo-bench"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "plantation-bench",
     "name": "Plantation Bench",
+    "publication_year": 2025,
     "title": "Plantation Bench: A Multiscale, Multimodal Remote Sensing Benchmark for Plantation Mapping Under Distribution Shift",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -660,13 +806,14 @@
       "doi:10.1109/iccvw69036.2025.00310"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "reobench",
     "name": "REOBench",
+    "publication_year": 2025,
     "title": "REOBench: Benchmarking Robustness of Earth Observation Foundation Models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -704,13 +851,14 @@
       "github:lx709/reobench"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
-    "id": "revisiting-pre-trained-remote-sensing-model-benchmarks-resizing-and-normalization-matters",
-    "name": "Revisiting pre-trained remote sensing model benchmarks: resizing and normalization matters",
+    "id": "resize-is-all-you-need",
+    "name": "resize-is-all-you-need",
+    "publication_year": 2023,
     "title": "Revisiting pre-trained remote sensing model benchmarks: resizing and normalization matters",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -762,13 +910,14 @@
       "github:isaaccorley/resize-is-all-you-need"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "rsvlm-qa",
     "name": "RSVLM-QA",
+    "publication_year": 2025,
     "title": "RSVLM-QA: A Benchmark Dataset for Remote Sensing Vision Language Model-based Question Answering",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -806,13 +955,14 @@
       "github:starzi0213/rsvlm-qa"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "spatialsky-bench",
     "name": "SpatialSky-Bench",
+    "publication_year": 2025,
     "title": "Is your VLM Sky-Ready? A Comprehensive Spatial Intelligence Benchmark for UAV Navigation",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -849,56 +999,14 @@
       "paper_url:https://arxiv.org/abs/2511.13269"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "text2earth",
-    "name": "Text2Earth",
-    "title": "Text2Earth: Unlocking Text-driven Remote Sensing Image Generation with a Global-Scale Dataset and a Foundation Model",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Benchmark",
-    "scope": "Unlocking Text-driven Remote Sensing Image Generation with a Global-Scale Dataset and a Foundation Model",
-    "tasks": "generation",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2501.00895",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "Text2Earth",
-        "detected_title": "Text2Earth: Unlocking Text-driven Remote Sensing Image Generation with a Global-Scale Dataset and a Foundation Model",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "benchmark_dataset",
-        "paper_url": "https://arxiv.org/abs/2501.00895",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2501.00895",
-      "paper_url:https://arxiv.org/abs/2501.00895"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "urbench",
     "name": "UrBench",
+    "publication_year": 2024,
     "title": "UrBench: A Comprehensive Benchmark for Evaluating Large Multimodal Models in Multi-View Urban Scenarios",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -935,13 +1043,14 @@
       "doi:10.1609/aaai.v39i10.33163"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "vleo-bench",
     "name": "VLEO-Bench",
+    "publication_year": 2024,
     "title": "Good at captioning, bad at counting: Benchmarking GPT-4V on Earth observation data",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -978,13 +1087,14 @@
       "paper_url:https://arxiv.org/abs/2401.17600"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "vrsbench",
     "name": "VRSBench",
+    "publication_year": 2024,
     "title": "VRSBench: A Versatile Vision-Language Benchmark Dataset for Remote Sensing Image Understanding",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1021,13 +1131,14 @@
       "paper_url:https://arxiv.org/abs/2406.12384"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "xlrs-bench",
     "name": "XLRS-Bench",
+    "publication_year": 2025,
     "title": "XLRS-Bench: Could Your Multimodal LLMs Understand Extremely Large Ultra-High-Resolution Remote Sensing Imagery?",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1064,13 +1175,14 @@
       "paper_url:https://arxiv.org/abs/2503.23771"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "clay-embeddings",
     "name": "CLAY Embeddings",
+    "publication_year": 2024,
     "title": "Clay Model v0 Embeddings",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1104,13 +1216,14 @@
     ],
     "deduplication_keys": [],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "earth-genome-embeddings",
     "name": "Earth Genome Embeddings",
+    "publication_year": 2025,
     "title": "Embeddings for all",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1144,13 +1257,14 @@
     ],
     "deduplication_keys": [],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "esd",
     "name": "ESD",
+    "publication_year": 2026,
     "title": "Democratizing planetary-scale analysis: An ultra-lightweight Earth embedding database for accurate and flexible global land monitoring",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1188,57 +1302,14 @@
       "github:shuangchencc/esd"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "major-tom-embeddings",
-    "name": "Major TOM Embeddings",
-    "title": "Global and Dense Embeddings of Earth: Major TOM Floating in the Latent Space",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Embedding dataset",
-    "scope": "Global and Dense Embeddings of Earth: Major TOM Floating in the Latent Space",
-    "tasks": "Benchmarking and evaluation for Earth observation models.",
-    "modalities": "—",
-    "paper_url": "https://arxiv.org/abs/2412.05600",
-    "code_url": "https://github.com/ESA-PhiLab/Major-TOM",
-    "dataset_url": "https://huggingface.co/Major-TOM",
-    "project_url": "https://huggingface.co/Major-TOM",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "Major TOM Embeddings",
-        "detected_title": "Global and Dense Embeddings of Earth: Major TOM Floating in the Latent Space",
-        "section": "Embeddings data",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2412.05600",
-        "code_url": "https://github.com/ESA-PhiLab/Major-TOM",
-        "weights_url": "",
-        "project_url": "https://huggingface.co/Major-TOM"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2412.05600",
-      "paper_url:https://arxiv.org/abs/2412.05600",
-      "github:esa-philab/major-tom"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "ben-mm",
     "name": "BEN-MM",
+    "publication_year": 2021,
     "title": "BigEarthNet-MM: A Large Scale Multi-Modal Multi-Label Benchmark Archive for Remote Sensing Image Classification and Retrieval",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1297,96 +1368,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "caco",
-    "name": "CACo",
-    "title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-    "tasks": "Vision",
-    "modalities": "—",
-    "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-    "code_url": "https://github.com/utkarshmall13/CACo",
-    "dataset_url": "https://github.com/utkarshmall13/CACo",
-    "project_url": "https://github.com/utkarshmall13/CACo",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "CACo",
-        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-        "code_url": "https://github.com/utkarshmall13/CACo",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "CACo",
-        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/utkarshmall13/CACo"
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "CACo",
-        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-        "code_url": "https://github.com/utkarshmall13/CACo",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "CACo",
-        "detected_title": "Change-Aware Sampling and Contrastive Learning for Satellite Images",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/utkarshmall13/CACo"
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://openaccess.thecvf.com/content/CVPR2023/html/Mall_Change-Aware_Sampling_and_Contrastive_Learning_for_Satellite_Images_CVPR_2023_paper.html",
-      "github:utkarshmall13/caco"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "chatearthnet",
     "name": "ChatEarthNet",
+    "publication_year": 2025,
     "title": "ChatEarthNet: a global-scale image-text dataset empowering vision-language geo-foundation models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1424,13 +1413,14 @@
       "doi:10.5194/essd-17-1245-2025"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "copernicus-bench",
     "name": "Copernicus-Bench",
+    "publication_year": 2025,
     "title": "Towards a Unified Copernicus Foundation Model for Earth Vision",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1517,13 +1507,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "ddfav",
     "name": "DDFAV",
+    "publication_year": 2024,
     "title": "DDFAV: Remote Sensing Large Vision Language Models Dataset and Evaluation Benchmark",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1561,13 +1552,14 @@
       "doi:10.3390/rs17040719"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "dgtrs-clip",
     "name": "DGTRS-CLIP",
+    "publication_year": 2025,
     "title": "DGTRSD & DGTRS-CLIP: A Dual-Granularity Remote Sensing Image-Text Dataset and Vision Language Foundation Model for Alignment",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1618,13 +1610,14 @@
       "github:mitsuichen14/dgtrs"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "earthdial-instruct",
     "name": "EarthDial-Instruct",
+    "publication_year": 2025,
     "title": "EarthDial: Turning Multi-sensory Earth Observations to Interactive Dialogues",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1685,13 +1678,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "falcon-sft",
     "name": "Falcon_SFT",
+    "publication_year": 2025,
     "title": "Falcon: A Remote Sensing Vision-Language Foundation Model",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1742,13 +1736,72 @@
       "github:tianhuilab/falcon"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "fit-rs",
+    "name": "FIT-RS",
+    "publication_year": 2024,
+    "title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+    "tasks": "Vision-Language",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2406.10100",
+    "code_url": "https://github.com/Luo-Z13/SkySenseGPT",
+    "dataset_url": "https://github.com/Luo-Z13/SkySenseGPT",
+    "project_url": "https://github.com/Luo-Z13/SkySenseGPT",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "SkySenseGPT",
+        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2406.10100",
+        "code_url": "https://github.com/Luo-Z13/SkySenseGPT",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "FIT-RS",
+        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2406.10100",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/Luo-Z13/SkySenseGPT"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2406.10100",
+      "paper_url:https://arxiv.org/abs/2406.10100",
+      "github:luo-z13/skysensegpt"
+    ],
+    "conflicts": [],
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "fmow",
     "name": "fMoW",
+    "publication_year": 2018,
     "title": "Functional Map of the World",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1798,13 +1851,14 @@
       "paper_url:https://openaccess.thecvf.com/content_cvpr_2018/html/Christie_Functional_Map_of_CVPR_2018_paper.html"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "fmow-s2",
     "name": "fMoW-S2",
+    "publication_year": 2022,
     "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1819,7 +1873,8 @@
     "project_url": "https://purl.stanford.edu/vg497cb6002",
     "access": "Unknown",
     "source_names": [
-      "Awesome Remote Sensing Foundation Models"
+      "Awesome Remote Sensing Foundation Models",
+      "Awesome Remote Sensing Foundation Models mirror"
     ],
     "source_evidence": [
       {
@@ -1834,34 +1889,7 @@
         "code_url": "",
         "weights_url": "",
         "project_url": "https://purl.stanford.edu/vg497cb6002"
-      }
-    ],
-    "deduplication_keys": [],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "fmow-s2-2",
-    "name": "fMoW-S2",
-    "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
-    "tasks": "Vision",
-    "modalities": "multispectral, temporal",
-    "paper_url": "",
-    "code_url": "",
-    "dataset_url": "https://purl.stanford.edu/vg497cb6002",
-    "project_url": "https://purl.stanford.edu/vg497cb6002",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models mirror"
-    ],
-    "source_evidence": [
+      },
       {
         "source_id": "licongren-awesome-remote-sensing-foundation-models",
         "source_name": "Awesome Remote Sensing Foundation Models mirror",
@@ -1878,13 +1906,14 @@
     ],
     "deduplication_keys": [],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geo-bench",
     "name": "GEO-Bench",
+    "publication_year": 2023,
     "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -1936,13 +1965,14 @@
       "github:servicenow/geo-bench"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geolangbind-2m",
     "name": "GeoLangBind-2M",
+    "publication_year": 2025,
     "title": "Rethinking Remote Sensing CLIP: Leveraging Multimodal Large Language Models for High-Quality Vision-Language Dataset",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2004,13 +2034,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geopixeld",
     "name": "GeoPixelD",
+    "publication_year": 2025,
     "title": "GeoPixel: Pixel Grounding Large Multimodal Model in Remote Sensing",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2061,13 +2092,14 @@
       "github:mbzuai-oryx/geopixel"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "geopixinstruct",
     "name": "GeoPixInstruct",
+    "publication_year": 2025,
     "title": "GeoPix: Multi-Modal Large Language Model for Pixel-level Image Understanding in Remote Sensing",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2118,14 +2150,466 @@
       "github:norman-ou/geopix"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
-    "id": "georsclip",
-    "name": "GeoRSCLIP",
-    "title": "RS5M and GeoRSCLIP: A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing",
+    "id": "luojiahog",
+    "name": "LuoJiaHOG",
+    "publication_year": 2025,
+    "title": "LuoJiaHOG: A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
+    "tasks": "Vision-Language",
+    "modalities": "text",
+    "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.02.009",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "LuoJiaHOG",
+        "detected_title": "LuoJiaHOG: A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.02.009",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://doi.org/10.1016/j.isprsjprs.2025.02.009",
+      "doi:10.1016/j.isprsjprs.2025.02.009"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "m3leo",
+    "name": "M3LEO",
+    "publication_year": 2024,
+    "title": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
+    "tasks": "Vision",
+    "modalities": "multispectral, SAR",
+    "paper_url": "",
+    "code_url": "",
+    "dataset_url": "https://github.com/spaceml-org/M3LEO",
+    "project_url": "https://github.com/spaceml-org/M3LEO",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "M3LEO",
+        "detected_title": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "benchmark",
+        "paper_url": "",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/spaceml-org/M3LEO"
+      }
+    ],
+    "deduplication_keys": [
+      "github:spaceml-org/m3leo"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "major-tom",
+    "name": "Major TOM",
+    "publication_year": 2024,
+    "title": "Major TOM: Expandable Datasets for Earth Observation",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "Expandable Datasets for Earth Observation",
+    "tasks": "Vision",
+    "modalities": "—",
+    "paper_url": "https://arxiv.org/abs/2402.12095",
+    "code_url": "",
+    "dataset_url": "https://huggingface.co/Major-TOM",
+    "project_url": "https://huggingface.co/Major-TOM",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Major TOM",
+        "detected_title": "Major TOM: Expandable Datasets for Earth Observation",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2402.12095",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://huggingface.co/Major-TOM"
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "Major TOM Embeddings",
+        "detected_title": "Global and Dense Embeddings of Earth: Major TOM Floating in the Latent Space",
+        "section": "Embeddings data",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2412.05600",
+        "code_url": "https://github.com/ESA-PhiLab/Major-TOM",
+        "weights_url": "",
+        "project_url": "https://huggingface.co/Major-TOM"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2402.12095",
+      "paper_url:https://arxiv.org/abs/2402.12095"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "millionaid",
+    "name": "MillionAID",
+    "publication_year": 2021,
+    "title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
+    "tasks": "Vision",
+    "modalities": "aerial / RGB imagery",
+    "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
+    "code_url": "",
+    "dataset_url": "https://captain-whu.github.io/DiRS",
+    "project_url": "https://captain-whu.github.io/DiRS",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models",
+      "Awesome Remote Sensing Foundation Models mirror"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "MillionAID",
+        "detected_title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "benchmark",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://captain-whu.github.io/DiRS"
+      },
+      {
+        "source_id": "licongren-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models mirror",
+        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "MillionAID",
+        "detected_title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "benchmark",
+        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://captain-whu.github.io/DiRS"
+      }
+    ],
+    "deduplication_keys": [
+      "paper_url:https://ieeexplore.ieee.org/abstract/document/9393553"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "mmearth",
+    "name": "MMEarth",
+    "publication_year": 2024,
+    "title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+    "tasks": "Vision",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2405.02771",
+    "code_url": "",
+    "dataset_url": "https://vishalned.github.io/mmearth",
+    "project_url": "https://vishalned.github.io/mmearth",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "MMEarth",
+        "detected_title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2405.02771",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://vishalned.github.io/mmearth"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2405.02771",
+      "paper_url:https://arxiv.org/abs/2405.02771"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "mmm-rs",
+    "name": "MMM-RS",
+    "publication_year": 2024,
+    "title": "MMM-RS: A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
+    "tasks": "Vision-Language",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2410.22362",
+    "code_url": "",
+    "dataset_url": "https://github.com/ljl5261/MMM-RS",
+    "project_url": "https://github.com/ljl5261/MMM-RS",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "MMM-RS",
+        "detected_title": "MMM-RS: A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "benchmark",
+        "paper_url": "https://arxiv.org/abs/2410.22362",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/ljl5261/MMM-RS"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2410.22362",
+      "paper_url:https://arxiv.org/abs/2410.22362",
+      "github:ljl5261/mmm-rs"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "openearthagent-dataset",
+    "name": "OpenEarthAgent Dataset",
+    "publication_year": 2026,
+    "title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "A Unified Framework for Tool-Augmented Geospatial Agents",
+    "tasks": "Vision-Language & Agents",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2602.17665",
+    "code_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
+    "dataset_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
+    "project_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarthAgent",
+        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2602.17665",
+        "code_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "OpenEarthAgent Dataset",
+        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2602.17665",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/mbzuai-oryx/OpenEarthAgent"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2602.17665",
+      "paper_url:https://arxiv.org/abs/2602.17665",
+      "github:mbzuai-oryx/openearthagent"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "remotesam-270k",
+    "name": "RemoteSAM-270K",
+    "publication_year": 2025,
+    "title": "RemoteSAM: Towards Segment Anything for Earth Observation",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "Towards Segment Anything for Earth Observation",
+    "tasks": "Vision-Language",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2505.18022",
+    "code_url": "https://github.com/1e12Leon/RemoteSAM",
+    "dataset_url": "https://github.com/1e12Leon/RemoteSAM",
+    "project_url": "https://github.com/1e12Leon/RemoteSAM",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RemoteSAM",
+        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "model",
+        "paper_url": "https://arxiv.org/abs/2505.18022",
+        "code_url": "https://github.com/1e12Leon/RemoteSAM",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RemoteSAM-270K",
+        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2505.18022",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/1e12Leon/RemoteSAM"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2505.18022",
+      "paper_url:https://arxiv.org/abs/2505.18022",
+      "github:1e12leon/remotesam"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "rs-gpt4v",
+    "name": "RS-GPT4V",
+    "publication_year": 2024,
+    "title": "RS-GPT4V: A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
+    "tasks": "Vision-Language",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2406.12479",
+    "code_url": "",
+    "dataset_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main",
+    "project_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main",
+    "access": "Partial access",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "RS-GPT4V",
+        "detected_title": "RS-GPT4V: A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2406.12479",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main"
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2406.12479",
+      "paper_url:https://arxiv.org/abs/2406.12479",
+      "github:geox-lab/rs-gpt4v"
+    ],
+    "conflicts": [],
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "rs5m",
+    "name": "RS5M",
+    "publication_year": 2023,
+    "title": "RS5M: A Large Scale Vision-Language Dataset for Remote Sensing Vision-Language Foundation Model",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
     "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
@@ -2203,499 +2687,14 @@
       "hf:zilun/georssd"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
-    "id": "luojiahog",
-    "name": "LuoJiaHOG",
-    "title": "LuoJiaHOG: A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
-    "tasks": "Vision-Language",
-    "modalities": "text",
-    "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.02.009",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "LuoJiaHOG",
-        "detected_title": "LuoJiaHOG: A hierarchy oriented geo-aware image caption dataset for remote sensing image-text retrieval",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://doi.org/10.1016/j.isprsjprs.2025.02.009",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://doi.org/10.1016/j.isprsjprs.2025.02.009",
-      "doi:10.1016/j.isprsjprs.2025.02.009"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "m3leo",
-    "name": "M3LEO",
-    "title": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
-    "tasks": "Vision",
-    "modalities": "multispectral, SAR",
-    "paper_url": "",
-    "code_url": "",
-    "dataset_url": "https://github.com/spaceml-org/M3LEO",
-    "project_url": "https://github.com/spaceml-org/M3LEO",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "M3LEO",
-        "detected_title": "A Multi-Modal, Multi-Label Earth Observation Dataset Integrating Interferometric SAR and Multispectral Data",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "benchmark",
-        "paper_url": "",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/spaceml-org/M3LEO"
-      }
-    ],
-    "deduplication_keys": [
-      "github:spaceml-org/m3leo"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "major-tom",
-    "name": "Major TOM",
-    "title": "Major TOM: Expandable Datasets for Earth Observation",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Expandable Datasets for Earth Observation",
-    "tasks": "Vision",
-    "modalities": "—",
-    "paper_url": "https://arxiv.org/abs/2402.12095",
-    "code_url": "",
-    "dataset_url": "https://huggingface.co/Major-TOM",
-    "project_url": "https://huggingface.co/Major-TOM",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "Major TOM",
-        "detected_title": "Major TOM: Expandable Datasets for Earth Observation",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2402.12095",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://huggingface.co/Major-TOM"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2402.12095",
-      "paper_url:https://arxiv.org/abs/2402.12095"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "millionaid",
-    "name": "MillionAID",
-    "title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
-    "tasks": "Vision",
-    "modalities": "aerial / RGB imagery",
-    "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
-    "code_url": "",
-    "dataset_url": "https://captain-whu.github.io/DiRS",
-    "project_url": "https://captain-whu.github.io/DiRS",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "MillionAID",
-        "detected_title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "benchmark",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://captain-whu.github.io/DiRS"
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "MillionAID",
-        "detected_title": "On Creating Benchmark Dataset for Aerial Image Interpretation: Reviews, Guidances, and Million-AID",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "benchmark",
-        "paper_url": "https://ieeexplore.ieee.org/abstract/document/9393553",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://captain-whu.github.io/DiRS"
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://ieeexplore.ieee.org/abstract/document/9393553"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "mmearth",
-    "name": "MMEarth",
-    "title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
-    "tasks": "Vision",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2405.02771",
-    "code_url": "",
-    "dataset_url": "https://vishalned.github.io/mmearth",
-    "project_url": "https://vishalned.github.io/mmearth",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "MMEarth",
-        "detected_title": "MMEarth: Exploring Multi-Modal Pretext Tasks For Geospatial Representation Learning",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2405.02771",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://vishalned.github.io/mmearth"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2405.02771",
-      "paper_url:https://arxiv.org/abs/2405.02771"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "mmm-rs",
-    "name": "MMM-RS",
-    "title": "MMM-RS: A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark/dataset naming or title evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
-    "tasks": "Vision-Language",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2410.22362",
-    "code_url": "",
-    "dataset_url": "https://github.com/ljl5261/MMM-RS",
-    "project_url": "https://github.com/ljl5261/MMM-RS",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "MMM-RS",
-        "detected_title": "MMM-RS: A Multi-modal, Multi-GSD, Multi-scene Remote Sensing Dataset and Benchmark for Text-to-Image Generation",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "benchmark",
-        "paper_url": "https://arxiv.org/abs/2410.22362",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/ljl5261/MMM-RS"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2410.22362",
-      "paper_url:https://arxiv.org/abs/2410.22362",
-      "github:ljl5261/mmm-rs"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "openearthagent-dataset",
-    "name": "OpenEarthAgent Dataset",
-    "title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "A Unified Framework for Tool-Augmented Geospatial Agents",
-    "tasks": "Vision-Language & Agents",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2602.17665",
-    "code_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
-    "dataset_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
-    "project_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "OpenEarthAgent",
-        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2602.17665",
-        "code_url": "https://github.com/mbzuai-oryx/OpenEarthAgent",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "OpenEarthAgent Dataset",
-        "detected_title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2602.17665",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/mbzuai-oryx/OpenEarthAgent"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2602.17665",
-      "paper_url:https://arxiv.org/abs/2602.17665",
-      "github:mbzuai-oryx/openearthagent"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "remotesam-270k",
-    "name": "RemoteSAM-270K",
-    "title": "RemoteSAM: Towards Segment Anything for Earth Observation",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Towards Segment Anything for Earth Observation",
-    "tasks": "Vision-Language",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2505.18022",
-    "code_url": "https://github.com/1e12Leon/RemoteSAM",
-    "dataset_url": "https://github.com/1e12Leon/RemoteSAM",
-    "project_url": "https://github.com/1e12Leon/RemoteSAM",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "RemoteSAM",
-        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2505.18022",
-        "code_url": "https://github.com/1e12Leon/RemoteSAM",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "RemoteSAM-270K",
-        "detected_title": "RemoteSAM: Towards Segment Anything for Earth Observation",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2505.18022",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/1e12Leon/RemoteSAM"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2505.18022",
-      "paper_url:https://arxiv.org/abs/2505.18022",
-      "github:1e12leon/remotesam"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "rs-4m",
-    "name": "RS-4M",
-    "title": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
-    "tasks": "Vision",
-    "modalities": "—",
-    "paper_url": "https://arxiv.org/abs/2406.11933",
-    "code_url": "https://github.com/Fengxiang23/SelectiveMAE",
-    "dataset_url": "https://github.com/Fengxiang23/SelectiveMAE",
-    "project_url": "https://github.com/Fengxiang23/SelectiveMAE",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SelectiveMAE",
-        "detected_title": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://arxiv.org/abs/2406.11933",
-        "code_url": "https://github.com/Fengxiang23/SelectiveMAE",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "RS-4M",
-        "detected_title": "Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2406.11933",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/Fengxiang23/SelectiveMAE"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2406.11933",
-      "paper_url:https://arxiv.org/abs/2406.11933",
-      "github:fengxiang23/selectivemae"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "rs-gpt4v",
-    "name": "RS-GPT4V",
-    "title": "RS-GPT4V: A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "Benchmark or dataset evidence was detected after model checks.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
-    "tasks": "Vision-Language",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2406.12479",
-    "code_url": "",
-    "dataset_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main",
-    "project_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "RS-GPT4V",
-        "detected_title": "RS-GPT4V: A Unified Multimodal Instruction-Following Dataset for Remote Sensing Image Understanding",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2406.12479",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/GeoX-Lab/RS-GPT4V/tree/main"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2406.12479",
-      "paper_url:https://arxiv.org/abs/2406.12479",
-      "github:geox-lab/rs-gpt4v"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "rsgpt",
-    "name": "RSGPT",
+    "id": "rsicap-rsieval",
+    "name": "RSICap & RSIEval",
+    "publication_year": 2025,
     "title": "RSGPT: A Remote Sensing Vision Language Model and Benchmark",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2784,13 +2783,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "rsvg",
     "name": "RSVG",
+    "publication_year": 2023,
     "title": "RSVG: Exploring Data and Models for Visual Grounding on Remote Sensing Data",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2841,13 +2841,14 @@
       "github:zhanyang-nwpu/rsvg-pytorch"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "samrs",
     "name": "SAMRS",
+    "publication_year": 2023,
     "title": "SAMRS: Scaling-up Remote Sensing Segmentation Dataset with Segment Anything Model",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2885,13 +2886,14 @@
       "github:vitae-transformer/samrs"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "satin",
     "name": "SATIN",
+    "publication_year": 2023,
     "title": "SATIN: A Multi-Task Metadataset for Classifying Satellite Imagery using Vision-Language Models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -2928,13 +2930,14 @@
       "paper_url:https://arxiv.org/abs/2304.11619"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
-    "id": "satlas",
-    "name": "SatLas",
+    "id": "satlaspretrain",
+    "name": "SatlasPretrain",
+    "publication_year": 2023,
     "title": "SatlasPretrain: A Large-Scale Dataset for Remote Sensing Image Understanding",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3023,96 +3026,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "seco",
-    "name": "SeCo",
-    "title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-    "tasks": "Vision",
-    "modalities": "—",
-    "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-    "code_url": "https://github.com/ServiceNow/seasonal-contrast",
-    "dataset_url": "https://github.com/ServiceNow/seasonal-contrast",
-    "project_url": "https://github.com/ServiceNow/seasonal-contrast",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models",
-      "Awesome Remote Sensing Foundation Models mirror"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SeCo",
-        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "https://github.com/ServiceNow/seasonal-contrast",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SeCo",
-        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/ServiceNow/seasonal-contrast"
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SeCo",
-        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "model",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "https://github.com/ServiceNow/seasonal-contrast",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "licongren-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models mirror",
-        "source_repo": "licongren/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SeCo",
-        "detected_title": "Seasonal Contrast: Unsupervised Pre-Training From Uncurated Remote Sensing Data",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/ServiceNow/seasonal-contrast"
-      }
-    ],
-    "deduplication_keys": [
-      "paper_url:https://openaccess.thecvf.com/content/ICCV2021/html/Manas_Seasonal_Contrast_Unsupervised_Pre-Training_From_Uncurated_Remote_Sensing_Data_ICCV_2021_paper.html",
-      "github:servicenow/seasonal-contrast"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "seefar",
     "name": "SeeFar",
+    "publication_year": 2024,
     "title": "SeeFar: Satellite Agnostic Multi-Resolution Dataset for Geospatial Foundation Models",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3149,13 +3070,14 @@
       "paper_url:https://arxiv.org/abs/2406.06776"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "sen12ms",
     "name": "SEN12MS",
+    "publication_year": 2019,
     "title": "SEN12MS -- A Curated Dataset of Georeferenced Multi-Spectral Sentinel-1/2 Imagery for Deep Learning and Data Fusion",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3215,13 +3137,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
-    "id": "skyclip",
-    "name": "SkyCLIP",
+    "id": "skyscript",
+    "name": "SkyScript",
+    "publication_year": 2023,
     "title": "SkyScript: A Large and Semantically Diverse Vision-Language Dataset for Remote Sensing",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3286,70 +3209,14 @@
       "github:wangzhecheng/skyscript"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "skysensegpt",
-    "name": "SkySenseGPT",
-    "title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
-    "tasks": "Vision-Language",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2406.10100",
-    "code_url": "https://github.com/Luo-Z13/SkySenseGPT",
-    "dataset_url": "https://github.com/Luo-Z13/SkySenseGPT",
-    "project_url": "https://github.com/Luo-Z13/SkySenseGPT",
-    "access": "Partial access",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "SkySenseGPT",
-        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "benchmark_dataset",
-        "paper_url": "https://arxiv.org/abs/2406.10100",
-        "code_url": "https://github.com/Luo-Z13/SkySenseGPT",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "FIT-RS",
-        "detected_title": "SkySenseGPT: A Fine-Grained Instruction Tuning Dataset and Model for Remote Sensing Vision-Language Understanding",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2406.10100",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": "https://github.com/Luo-Z13/SkySenseGPT"
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2406.10100",
-      "paper_url:https://arxiv.org/abs/2406.10100",
-      "github:luo-z13/skysensegpt"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "soma-1m",
     "name": "SOMA-1M",
+    "publication_year": 2026,
     "title": "SOMA-1M: A Large-Scale SAR-Optical Multi-resolution Alignment Dataset for Multi-Task Remote Sensing",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3387,13 +3254,14 @@
       "github:peihaowu/soma-1m"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "ssl4eo-l",
     "name": "SSL4EO-L",
+    "publication_year": 2023,
     "title": "SSL4EO-L: Datasets and Foundation Models for Landsat Imagery",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3445,13 +3313,14 @@
       "github:microsoft/torchgeo"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "ssl4eo-s12",
     "name": "SSL4EO-S12",
+    "publication_year": 2022,
     "title": "SSL4EO-S12: A Large-Scale Multi-Modal, Multi-Temporal Dataset for Self-Supervised Learning in Earth Observation",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3503,13 +3372,14 @@
       "github:zhu-xlab/ssl4eo-s12"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "tov-rs-balanced",
     "name": "TOV-RS-Balanced",
+    "publication_year": 2022,
     "title": "TOV: The original vision model for optical remote sensing image understanding via self-supervised learning",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3630,69 +3500,14 @@
         "note": "Multiple upstream values detected; reviewer should choose canonical link."
       }
     ],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
-    "review_status": "candidate",
-    "needs_review": true
-  },
-  {
-    "id": "towards-llm-agents-for-earth-observation-the-univearth-dataset",
-    "name": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
-    "title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
-    "resource_type": "benchmark_dataset",
-    "entry_type": "benchmark_dataset",
-    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
-    "benchmark_type": "Pre-training dataset",
-    "scope": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
-    "tasks": "Vision-Language & Agents",
-    "modalities": "text",
-    "paper_url": "https://arxiv.org/abs/2504.12110",
-    "code_url": "",
-    "dataset_url": "",
-    "project_url": "",
-    "access": "Unknown",
-    "source_names": [
-      "Awesome Remote Sensing Foundation Models"
-    ],
-    "source_evidence": [
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "",
-        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
-        "section": "Remote Sensing Vision Foundation Models",
-        "resource_type": "benchmark_dataset",
-        "paper_url": "https://arxiv.org/abs/2504.12110",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      },
-      {
-        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
-        "source_name": "Awesome Remote Sensing Foundation Models",
-        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
-        "detected_name": "UnivEARTH",
-        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
-        "section": "(Large-scale) Pre-training Datasets",
-        "resource_type": "dataset",
-        "paper_url": "https://arxiv.org/abs/2504.12110",
-        "code_url": "",
-        "weights_url": "",
-        "project_url": ""
-      }
-    ],
-    "deduplication_keys": [
-      "arxiv:2504.12110",
-      "paper_url:https://arxiv.org/abs/2504.12110"
-    ],
-    "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   },
   {
     "id": "uhr-coz",
     "name": "UHR-CoZ",
+    "publication_year": 2026,
     "title": "GeoEyes: On-Demand Visual Focusing for Evidence-Grounded Understanding of Ultra-High-Resolution Remote Sensing Imagery",
     "resource_type": "benchmark_dataset",
     "entry_type": "benchmark_dataset",
@@ -3743,7 +3558,64 @@
       "github:nanocm/geoeyes"
     ],
     "conflicts": [],
-    "notes": "Auto-detected from upstream lists. Verify against original paper/code/weights before moving to data/catalogue.json.",
+    "notes": "",
+    "review_status": "candidate",
+    "needs_review": true
+  },
+  {
+    "id": "univearth",
+    "name": "UnivEARTH",
+    "publication_year": 2025,
+    "title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+    "resource_type": "benchmark_dataset",
+    "entry_type": "benchmark_dataset",
+    "entry_type_reason": "A compact model identity, model artifact, or model-section source evidence was detected.",
+    "benchmark_type": "Pre-training dataset",
+    "scope": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+    "tasks": "Vision-Language & Agents",
+    "modalities": "text",
+    "paper_url": "https://arxiv.org/abs/2504.12110",
+    "code_url": "",
+    "dataset_url": "",
+    "project_url": "",
+    "access": "Unknown",
+    "source_names": [
+      "Awesome Remote Sensing Foundation Models"
+    ],
+    "source_evidence": [
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "",
+        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+        "section": "Remote Sensing Vision Foundation Models",
+        "resource_type": "benchmark_dataset",
+        "paper_url": "https://arxiv.org/abs/2504.12110",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      },
+      {
+        "source_id": "jackbo-awesome-remote-sensing-foundation-models",
+        "source_name": "Awesome Remote Sensing Foundation Models",
+        "source_repo": "Jack-bo1220/Awesome-Remote-Sensing-Foundation-Models",
+        "detected_name": "UnivEARTH",
+        "detected_title": "Towards LLM Agents for Earth Observation: The UnivEARTH Dataset",
+        "section": "(Large-scale) Pre-training Datasets",
+        "resource_type": "dataset",
+        "paper_url": "https://arxiv.org/abs/2504.12110",
+        "code_url": "",
+        "weights_url": "",
+        "project_url": ""
+      }
+    ],
+    "deduplication_keys": [
+      "arxiv:2504.12110",
+      "paper_url:https://arxiv.org/abs/2504.12110"
+    ],
+    "conflicts": [],
+    "notes": "",
     "review_status": "candidate",
     "needs_review": true
   }

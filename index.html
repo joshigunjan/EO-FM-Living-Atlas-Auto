@@ -37,9 +37,15 @@
         <select id="modalityFilter"><option value="">All modalities</option></select>
         <select id="taskFilter"><option value="">All tasks</option></select>
         <select id="paradigmFilter"><option value="">All modelling paradigms</option></select>
+        <select id="yearFilter"><option value="">All years</option></select>
         <button id="resetBtn">Reset</button>
       </div>
       <div class="hint">Search by model, modality, task, sensor, architecture, or access. Coverage is source-backed and non-exhaustive; use Add entry for missing releases.</div>
+    </section>
+
+    <section class="panel timeline-panel">
+      <div class="table-headline"><div><h2>Model progression</h2><p class="muted">Number of catalogue releases by publication year.</p></div></div>
+      <div id="modelTimeline" class="timeline-bars"></div>
     </section>
 
     <section class="catalogue-layout">
@@ -56,6 +62,8 @@
             <thead>
               <tr>
                 <th>Model</th>
+                <th>Year</th>
+                <th>Status</th>
                 <th>Scope</th>
                 <th>Paradigm</th>
                 <th>Modalities</th>
@@ -89,6 +97,6 @@
     <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
   </footer>
 
-  <script src="app.js?v=20260706-3"></script>
+  <script src="app.js?v=20260707-4"></script>
 </body>
 </html>

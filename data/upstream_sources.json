@@ -13,9 +13,9 @@
     "name": "awesome-RSFMs",
     "repo": "xiaoaoran/awesome-RSFMs",
     "branch": "master",
-    "file": "README.md",
+    "file": "readme.md",
     "priority": "high",
-    "raw_url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md"
+    "raw_url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/readme.md"
   },
   {
     "id": "licongren-awesome-remote-sensing-foundation-models",
@@ -33,7 +33,9 @@
     "branch": "main",
     "file": "README.md",
     "priority": "medium",
-    "raw_url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md"
+    "raw_url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md",
+    "enabled": false,
+    "status_note": "Repository currently contains no catalogue README; excluded until a usable list is published."
   },
   {
     "id": "homayounrezaie-awesome-geoai",

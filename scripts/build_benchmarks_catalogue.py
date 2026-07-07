@@ -7,7 +7,7 @@ from pathlib import Path
 
 from entry_classification import classify_entry, has_benchmark_evidence, has_survey_evidence, source_evidence
 from lib_utils import DATA, dump_json, load_json, slugify, strip_md
-from public_fields import derive_category, derive_downstream_tasks, derive_modalities, derive_scope
+from public_fields import derive_category, derive_downstream_tasks, derive_modalities, derive_scope, derive_publication_year
 
 CANDIDATE_PATHS = [
     DATA / "candidates" / "latest-candidates.extracted.json",
@@ -19,7 +19,7 @@ CSV_PATH = DATA / "benchmarks.csv"
 META_PATH = DATA / "metadata.json"
 
 FIELDNAMES = [
-    "id", "name", "title", "resource_type", "benchmark_type", "scope", "tasks", "modalities", "paper_url", "code_url", "dataset_url", "project_url", "access", "source_names", "notes", "review_status",
+    "id", "name", "publication_year", "title", "resource_type", "benchmark_type", "scope", "tasks", "modalities", "paper_url", "code_url", "dataset_url", "project_url", "access", "source_names", "notes", "review_status",
 ]
 
 
@@ -106,17 +106,47 @@ def url_from_candidate(c: dict) -> str:
 
 
 def benchmark_identity(c: dict) -> tuple[str, str]:
-    for ev in source_evidence(c):
+    evidences = source_evidence(c)
+    dataset_evidence = []
+    for ev in evidences:
         section = str(ev.get("section") or "").lower()
         rt = str(ev.get("resource_type") or "").lower()
         if rt in {"benchmark", "dataset", "benchmark_dataset"} or any(w in section for w in ["benchmark", "dataset", "pre-training", "pretraining", "embeddings data"]):
-            name = strip_md(str(ev.get("detected_name") or "")).strip()
-            title = strip_md(str(ev.get("detected_title") or "")).strip()
-            if name or title:
-                return name or title, title or name
-    name = (c.get("name") or c.get("title") or "Unnamed benchmark").strip()
-    title = (c.get("title") or name).strip()
-    return name, title
+            dataset_evidence.append(ev)
+
+    title = strip_md(str(c.get("title") or "")).strip()
+    name = strip_md(str(c.get("name") or "")).strip()
+    lower_title = title.lower()
+    explicit = {
+        "georsclip": "RS5M",
+        "rs5m": "RS5M",
+        "skyclip": "SkyScript",
+        "skysensegpt": "FIT-RS",
+        "fit-rs": "FIT-RS",
+        "satlas": "SatlasPretrain",
+    }
+    mapped = explicit.get(name.lower())
+    if mapped:
+        return mapped, title or mapped
+
+    for ev in dataset_evidence:
+        ev_name = strip_md(str(ev.get("detected_name") or "")).strip()
+        ev_title = strip_md(str(ev.get("detected_title") or "")).strip()
+        if ev_name and ev_name.lower() != name.lower():
+            return ev_name, ev_title or title or ev_name
+
+    if dataset_evidence:
+        ev = dataset_evidence[0]
+        ev_name = strip_md(str(ev.get("detected_name") or "")).strip()
+        ev_title = strip_md(str(ev.get("detected_title") or "")).strip()
+        return ev_name or name or ev_title or "Unnamed benchmark", ev_title or title or ev_name or name
+
+    return name or title or "Unnamed benchmark", title or name or "Unnamed benchmark"
+
+def has_distinct_benchmark_identity(c: dict) -> bool:
+    model_name = strip_md(str(c.get("name") or "")).strip().lower()
+    bench_name, _ = benchmark_identity(c)
+    return bool(bench_name and bench_name.lower() != model_name)
 
 
 def to_benchmark(c: dict, used_ids: Counter) -> dict:
@@ -129,6 +159,7 @@ def to_benchmark(c: dict, used_ids: Counter) -> dict:
     return {
         "id": entry_id,
         "name": name,
+        "publication_year": derive_publication_year({**c, "name": name, "title": title}),
         "title": title,
         "resource_type": "benchmark_dataset",
         "entry_type": "benchmark_dataset",
@@ -146,7 +177,7 @@ def to_benchmark(c: dict, used_ids: Counter) -> dict:
         "source_evidence": c.get("source_evidence") or [],
         "deduplication_keys": c.get("deduplication_keys") or [],
         "conflicts": c.get("conflicts") or [],
-        "notes": c.get("notes_for_reviewer") or "Auto-generated from upstream benchmark/dataset sections; review before treating as verified.",
+        "notes": "",
         "review_status": c.get("review_status") or "upstream_auto",
         "needs_review": True,
     }
@@ -187,7 +218,7 @@ def is_benchmark_candidate(c: dict) -> bool:
     # Some papers introduce both a model and a named benchmark/dataset. Keep the
     # model in catalogue.json and expose the benchmark evidence here too.
     if et == "model" and has_benchmark_evidence(c) and not has_survey_evidence(c):
-        return True
+        return has_distinct_benchmark_identity(c)
 
     # resource_type fallback (set by detect_new_entries.py before LLM step).
     rt = str(c.get("resource_type") or "").strip()
@@ -199,6 +230,31 @@ def is_benchmark_candidate(c: dict) -> bool:
     return is_benchmark_like(c)
 
 
+
+def benchmark_keys(entry: dict) -> set[str]:
+    keys = {"name:" + slugify(entry.get("name") or "")}
+    for field in ("dataset_url", "project_url", "paper_url", "code_url"):
+        value = str(entry.get(field) or "").strip().lower().rstrip("/")
+        if value:
+            keys.add(field + ":" + value)
+    return keys
+
+def deduplicate_benchmarks(entries: list[dict]) -> list[dict]:
+    merged = []
+    seen = set()
+    for entry in entries:
+        keys = benchmark_keys(entry)
+        overlap = keys & seen
+        if overlap:
+            existing = next((x for x in merged if benchmark_keys(x) & keys), None)
+            if existing:
+                existing["source_names"] = unique([existing.get("source_names", []), entry.get("source_names", [])])
+                existing["source_evidence"] = unique([existing.get("source_evidence", []), entry.get("source_evidence", [])])
+            continue
+        merged.append(entry)
+        seen |= keys
+    return merged
+
 def main() -> int:
     path = candidate_input_path()
     if not path:
@@ -207,14 +263,16 @@ def main() -> int:
     candidates = load_json(path, [])
     bench_candidates = [c for c in candidates if is_benchmark_candidate(c)]
     used_ids: Counter = Counter()
-    entries = [to_benchmark(c, used_ids) for c in bench_candidates]
+    entries = deduplicate_benchmarks([to_benchmark(c, used_ids) for c in bench_candidates])
     entries.sort(key=lambda e: (e.get("benchmark_type", ""), e.get("name", "").lower()))
     dump_json(OUT_PATH, entries)
     write_csv(entries)
     metadata = load_json(META_PATH, {}) or {}
     metadata.update({
         "benchmark_dataset_count": len(entries),
-        "benchmark_dataset_source": "Generated from upstream benchmark/dataset sections and LLM entry_type=benchmark_dataset classifications.",
+        "benchmark_year_count": sum(1 for entry in entries if entry.get("publication_year")),
+        "benchmark_year_unknown_count": sum(1 for entry in entries if not entry.get("publication_year")),
+        "benchmark_dataset_source": "Benchmarks and datasets separated from the model catalogue.",
         "benchmarks_generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
     })
     dump_json(META_PATH, metadata)

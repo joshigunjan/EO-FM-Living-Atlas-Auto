@@ -14,10 +14,10 @@
     "xiaoaoran-awesome-rsfms": {
       "name": "awesome-RSFMs",
       "repo": "xiaoaoran/awesome-RSFMs",
-      "url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md",
+      "url": "https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/readme.md",
       "priority": "high",
-      "status": "failed",
-      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/xiaoaoran/awesome-RSFMs/master/README.md"
+      "status": "configured",
+      "file": "readme.md"
     },
     "licongren-awesome-remote-sensing-foundation-models": {
       "name": "Awesome Remote Sensing Foundation Models mirror",
@@ -34,8 +34,8 @@
       "repo": "MemoryEchoTech/awesome-geospatial-foundation-models",
       "url": "https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md",
       "priority": "medium",
-      "status": "failed",
-      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/MemoryEchoTech/awesome-geospatial-foundation-models/main/README.md"
+      "status": "disabled",
+      "note": "Repository contains no catalogue README."
     },
     "homayounrezaie-awesome-geoai": {
       "name": "awesome-geoai",

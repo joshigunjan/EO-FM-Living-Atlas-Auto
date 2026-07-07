@@ -8,6 +8,8 @@ const els = {
   search: document.getElementById("benchmarkSearch"),
   typeFilter: document.getElementById("typeFilter"),
   accessFilter: document.getElementById("accessFilter"),
+  yearFilter: document.getElementById("benchmarkYearFilter"),
+  timeline: document.getElementById("benchmarkTimeline"),
   resetBtn: document.getElementById("benchmarkResetBtn"),
   tbody: document.querySelector("#benchmarksTable tbody"),
   resultCount: document.getElementById("benchmarkResultCount")
@@ -37,6 +39,24 @@ function linkButton(label, url) {
   return `<a class="link-pill" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
 }
 
+function reviewLabel(d) {
+  return String(d.review_status || "").startsWith("curated") ? "Reviewed" : "Auto-inferred";
+}
+
+function renderTimeline() {
+  const counts = {};
+  state.data.forEach(d => { if (d.publication_year) counts[d.publication_year] = (counts[d.publication_year] || 0) + 1; });
+  const years = Object.keys(counts).map(Number).sort((a,b) => a-b);
+  const max = Math.max(1, ...years.map(y => counts[y]));
+  els.timeline.innerHTML = years.map(y => `
+    <button class="timeline-item" data-year="${y}" title="${counts[y]} releases in ${y}">
+      <span class="timeline-count">${counts[y]}</span>
+      <span class="timeline-bar" style="height:${Math.max(12, Math.round(counts[y]/max*100))}%"></span>
+      <span class="timeline-year">${y}</span>
+    </button>`).join("") || '<span class="muted">No publication years recorded.</span>';
+  els.timeline.querySelectorAll(".timeline-item").forEach(btn => btn.addEventListener("click", () => { els.yearFilter.value = btn.dataset.year; applyFilters(); }));
+}
+
 function renderStats() {
   const total = state.data.length;
   const benchmarks = state.data.filter(d => String(d.benchmark_type || "").toLowerCase().includes("benchmark")).length;
@@ -57,11 +77,14 @@ function buildFilters() {
   for (const a of uniq(state.data.map(d => d.access))) {
     els.accessFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`);
   }
+  for (const y of [...new Set(state.data.map(d => d.publication_year).filter(Boolean))].sort((a,b) => b-a)) {
+    els.yearFilter.insertAdjacentHTML("beforeend", `<option value="${y}">${y}</option>`);
+  }
 }
 
 function rowText(d) {
   return [
-    d.name, d.title, d.scope, d.benchmark_type, d.tasks, d.modalities, d.access, d.paper_url, d.code_url, d.dataset_url, d.project_url,
+    d.name, d.publication_year, d.title, d.scope, d.benchmark_type, d.tasks, d.modalities, d.access, d.paper_url, d.code_url, d.dataset_url, d.project_url,
   ].join(" ").toLowerCase();
 }
 
@@ -69,10 +92,12 @@ function applyFilters() {
   const q = els.search.value.trim().toLowerCase();
   const type = els.typeFilter.value;
   const access = els.accessFilter.value;
+  const year = els.yearFilter.value;
   state.filtered = state.data.filter(d => {
     if (q && !rowText(d).includes(q)) return false;
     if (type && d.benchmark_type !== type) return false;
     if (access && d.access !== access) return false;
+    if (year && String(d.publication_year || "") !== year) return false;
     return true;
   });
   renderTable();
@@ -86,6 +111,8 @@ function renderTable() {
     const datasetUrl = d.dataset_url || d.project_url;
     tr.innerHTML = `
       <td class="name"><span>${escapeHtml(d.name)}</span></td>
+      <td>${escapeHtml(d.publication_year || "—")}</td>
+      <td>${tag(reviewLabel(d), reviewLabel(d) === "Reviewed" ? "reviewed" : "inferred")}</td>
       <td>${tag(d.benchmark_type || "Needs review", "paradigm")}</td>
       <td><strong>${escapeHtml(truncate(d.title, 120))}</strong><div class="task-preview">${escapeHtml(truncate(d.scope, 150))}</div></td>
       <td class="tasks-cell"><div class="task-preview">${escapeHtml(truncate(d.tasks, 180))}</div></td>
@@ -104,9 +131,10 @@ async function init() {
   state.data = await res.json();
   state.filtered = state.data.slice();
   renderStats();
+  renderTimeline();
   buildFilters();
   renderTable();
-  [els.search, els.typeFilter, els.accessFilter].forEach(el => {
+  [els.search, els.typeFilter, els.accessFilter, els.yearFilter].forEach(el => {
     el.addEventListener("input", applyFilters);
     el.addEventListener("change", applyFilters);
   });
@@ -114,6 +142,7 @@ async function init() {
     els.search.value = "";
     els.typeFilter.value = "";
     els.accessFilter.value = "";
+    els.yearFilter.value = "";
     applyFilters();
   });
 }

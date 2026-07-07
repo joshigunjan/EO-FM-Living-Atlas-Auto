@@ -1,31 +1,32 @@
 [
   {
     "id": "terramind",
-    "name": "TerraMind",
+    "name": "TerraMind 1.0",
     "scope": "Earth observation foundation model",
-    "input_modality": "9 geospatial modalities. Reported sources include Sentinel-1 SAR, Sentinel-2 optical, land-use/land-cover, NDVI/vegetation, DEM/elevation, geographic coordinates, and text/captions.",
+    "input_modality": "Nine geospatial modalities including Sentinel-1 SAR, Sentinel-2 optical imagery, LULC, NDVI, DEM/elevation, geographic coordinates, and text/captions.",
     "modality_tags": [
       "optical",
       "SAR",
       "DEM",
-      "text"
+      "text",
+      "temporal"
     ],
-    "architecture": "4M-style any-to-any multimodal masked modeling; symmetric Transformer encoder-decoder; dual-scale token-level and pixel-level training; supports Thinking-in-Modalities generation.",
+    "architecture": "Any-to-any dual-scale Transformer encoder-decoder using token-level and pixel-level masked modeling, modality-specific tokenizers, and diffusion decoders for image-like outputs.",
     "architecture_tags": [
       "Transformer",
       "MAE/MIM",
       "Diffusion/Generative"
     ],
-    "downstream_tasks": "9 PANGAEA benchmark tasks: wildfire burn-scar segmentation, marine debris/oil-spill segmentation, agricultural parcel/crop segmentation, flood/water-body segmentation, urban land-cover segmentation, DynamicEarthNet land-cover segmentation, crop-type mapping in South Sudan, SpaceNet7 building/change detection, AI4SmallFarms agricultural segmentation. Also reports zero-shot / generative tasks: land-use segmentation, water-body mapping, vegetation mapping, geolocation, captioning, text-to-image, and modality-to-modality generation.",
-    "training_scale": "Pretrained on >500B tokens; TerraMesh dataset around 9M samples. Large/base variants reported; training used large-scale GPU/HPC setup.",
+    "downstream_tasks": "9 PANGAEA benchmark tasks plus 7 zero-shot/generative capabilities: land-use segmentation, water-body mapping, vegetation mapping, geolocation, captioning, text-to-image generation, and modality-to-modality generation.",
+    "training_scale": "TerraMind 1.0 was pretrained on 500B tokens from about 9M spatiotemporally aligned TerraMesh samples; base and large variants were trained on 32 NVIDIA A100 GPUs.",
     "openness_text": "Open source: model weights, code, and pretraining dataset reported as open/permissive.",
     "openness": "open",
     "fm_strength": "Strong EO FM",
-    "notes": "One of the strongest current EO FMs because it is multimodal, generative, benchmarked, and open.",
+    "notes": "Primary-source curated. The count combines benchmark tasks and explicitly demonstrated zero-shot/generative capabilities; it is not a performance score.",
     "primary_source_url": "https://arxiv.org/abs/2504.11171",
     "paper_url": "https://arxiv.org/abs/2504.11171",
     "code_url": "https://github.com/IBM/terramind",
-    "weights_url": "",
+    "weights_url": "https://huggingface.co/ibm-esa-geospatial/TerraMind-1.0-base",
     "project_url": "",
     "category": "Multimodal / generative EO FM",
     "task_tags": [
@@ -46,7 +47,8 @@
     "modality_complexity_tier": "Generalist models",
     "modality_complexity_score": 4,
     "reported_downstream_task_count": 16,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "9_pangaea_tasks_plus_7_zero_shot_or_generative_capabilities",
+    "title": "TerraMind: Large-Scale Generative Multimodality for Earth Observation"
   },
   {
     "id": "copernicus-fm",
@@ -178,7 +180,7 @@
     "reported_downstream_task_count_basis": "curated_reported_evaluations"
   },
   {
-    "id": "dofa",
+    "id": "dofa-plus",
     "name": "DOFA+",
     "scope": "Earth observation foundation model",
     "input_modality": "Same DOFA idea extended to stronger non-EO and EO initialization; spectral EO images with wavelength-aware conditioning.",
@@ -211,13 +213,16 @@
       "water-body mapping"
     ],
     "openness_label": "Partial / unclear",
-    "modelling_paradigm_key": "generative_hybrid",
-    "modelling_paradigm": "Any-to-any generative / hybrid multimodal system",
+    "modelling_paradigm_key": "transformer_masked",
+    "modelling_paradigm": "Transformer / masked-reconstruction encoder",
     "modality_complexity_tier_key": "multi_modality",
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 22,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "curated_reported_evaluations",
+    "allow_shared_paper_url": true,
+    "allow_shared_code_repo": true,
+    "allow_versioned_release": true
   },
   {
     "id": "galileo",
@@ -301,8 +306,9 @@
     "modality_complexity_tier_key": "single_modality",
     "modality_complexity_tier": "Single-modality encoders",
     "modality_complexity_score": 1,
-    "reported_downstream_task_count": 4,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count": 5,
+    "reported_downstream_task_count_basis": "curated_reported_evaluations",
+    "title": "Foundation Models for Generalist Geospatial Artificial Intelligence"
   },
   {
     "id": "prithvi-eo-2-0",
@@ -346,7 +352,8 @@
     "modality_complexity_tier": "Single-modality encoders",
     "modality_complexity_score": 1,
     "reported_downstream_task_count": 7,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "curated_reported_evaluations",
+    "title": "Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications"
   },
   {
     "id": "tessera",
@@ -379,7 +386,7 @@
       "regression / estimation"
     ],
     "openness_label": "Open",
-    "modelling_paradigm_key": "embedding_field",
+    "modelling_paradigm_key": "embedding_product",
     "modelling_paradigm": "Embedding product / representation field",
     "modality_complexity_tier_key": "multi_modality",
     "modality_complexity_tier": "Multi-modality encoders",
@@ -420,13 +427,14 @@
       "regression / estimation"
     ],
     "openness_label": "Closed",
-    "modelling_paradigm_key": "embedding_field",
+    "modelling_paradigm_key": "embedding_product",
     "modelling_paradigm": "Embedding product / representation field",
     "modality_complexity_tier_key": "generalist",
     "modality_complexity_tier": "Generalist models",
     "modality_complexity_score": 4,
     "reported_downstream_task_count": 8,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "curated_reported_evaluations",
+    "publication_year": 2025
   },
   {
     "id": "clay-v1-5",
@@ -471,7 +479,8 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 7,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2025
   },
   {
     "id": "satmae",
@@ -514,7 +523,7 @@
     "reported_downstream_task_count_basis": "curated_reported_evaluations"
   },
   {
-    "id": "satmae",
+    "id": "satmae-plus-plus",
     "name": "SatMAE++",
     "scope": "Earth observation foundation model",
     "input_modality": "Multispectral and temporal satellite image streams; focuses on spectral-temporal adaptation.",
@@ -552,7 +561,8 @@
     "modality_complexity_tier": "Single-modality encoders",
     "modality_complexity_score": 1,
     "reported_downstream_task_count": 4,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "allow_versioned_release": true
   },
   {
     "id": "scale-mae",
@@ -633,7 +643,7 @@
     "modality_complexity_tier_key": "multi_modality",
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
-    "reported_downstream_task_count": 5,
+    "reported_downstream_task_count": 6,
     "reported_downstream_task_count_basis": "curated_reported_evaluations"
   },
   {
@@ -677,7 +687,7 @@
     "reported_downstream_task_count_basis": "curated_reported_evaluations"
   },
   {
-    "id": "skysense",
+    "id": "skysense-plus-plus",
     "name": "SkySense++",
     "scope": "Earth observation foundation model",
     "input_modality": "Multimodal remote-sensing images; expanded multimodal corpus relative to SkySense.",
@@ -710,7 +720,9 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 12,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "curated_reported_evaluations",
+    "allow_versioned_release": true,
+    "publication_year": 2025
   },
   {
     "id": "skysense-v2",
@@ -975,7 +987,8 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 3,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2023
   },
   {
     "id": "gfm-billion-scale-rsfm",
@@ -1088,7 +1101,8 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 2,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2024
   },
   {
     "id": "presto",
@@ -1147,7 +1161,7 @@
     "openness_text": "Partial / unclear.",
     "openness": "partial",
     "fm_strength": "Emerging EO FM",
-    "notes": "More forecasting-oriented than segmentation benchmark-oriented.",
+    "notes": "Autoregressive optical time-series foundation model; single sensor family rather than a generalist multimodal model.",
     "primary_source_url": "https://arxiv.org/abs/2309.07207",
     "paper_url": "https://arxiv.org/abs/2309.07207",
     "code_url": "https://github.com/aspiaspace/EarthPT",
@@ -1160,13 +1174,15 @@
       "time-series analysis"
     ],
     "openness_label": "Partial / unclear",
-    "modelling_paradigm_key": "embedding_field",
-    "modelling_paradigm": "Embedding product / representation field",
-    "modality_complexity_tier_key": "generalist",
-    "modality_complexity_tier": "Generalist models",
-    "modality_complexity_score": 4,
+    "modelling_paradigm_key": "transformer_masked",
+    "modelling_paradigm": "Transformer / masked-reconstruction encoder",
+    "modality_complexity_tier_key": "single_modality",
+    "modality_complexity_tier": "Single-modality encoders",
+    "modality_complexity_score": 1,
     "reported_downstream_task_count": 3,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "title": "EarthPT: a time series foundation model for Earth Observation",
+    "publication_year": 2023
   },
   {
     "id": "earthmae-earthview",
@@ -1283,27 +1299,27 @@
   },
   {
     "id": "olmoearth",
-    "name": "OlmoEarth",
-    "scope": "Multimodal Earth observation foundation model",
-    "input_modality": "Multimodal spatio-temporal EO imagery and auxiliary geospatial modalities.",
+    "name": "OlmoEarth v1",
+    "scope": "Multimodal, spatio-temporal Earth observation foundation-model family.",
+    "input_modality": "Three satellite observation modalities (Sentinel-2, Sentinel-1, Landsat) with six derived map modalities used during pretraining.",
     "modality_tags": [
-      "optical",
+      "multispectral",
       "SAR",
-      "DEM",
-      "climate",
-      "time series"
+      "temporal",
+      "DEM"
     ],
-    "architecture": "Stable latent image modeling for multimodal Earth observation.",
+    "architecture": "Encoder-decoder Vision Transformer trained with masked image modeling and latent contrastive objectives across multimodal, multitemporal EO inputs.",
     "architecture_tags": [
-      "Generative",
-      "Representation learning"
+      "Transformer",
+      "MAE/MIM",
+      "Contrastive"
     ],
-    "downstream_tasks": "Embeddings evaluated on 24 tasks; full fine-tuning reported on 29 tasks, including classification, segmentation, regression, and mapping applications. Exact task list should be checked against the paper when needed.",
-    "training_scale": "To be verified from the paper; source code, training data, and pretrained weights are reported as available.",
+    "downstream_tasks": "Embeddings evaluated on 24 tasks and full fine-tuning reported on 29 tasks across classification, segmentation, regression, and mapping applications.",
+    "training_scale": "Pretrained on 285,288 global 2.56 km × 2.56 km samples with incomplete modality/time coverage; released in Nano, Tiny, Base, and Large variants.",
     "openness_text": "Open source: code, training data, and pretrained weights reported available.",
     "openness": "open",
     "fm_strength": "Strong / emerging EO FM",
-    "notes": "Important open multimodal EO foundation model. Full task names should be verified before using the count in a publication table.",
+    "notes": "Primary-source curated multimodal encoder family; not classified as an any-to-any generalist model.",
     "primary_source_url": "https://arxiv.org/abs/2511.13655",
     "paper_url": "https://arxiv.org/abs/2511.13655",
     "code_url": "https://github.com/allenai/olmoearth_pretrain",
@@ -1316,13 +1332,13 @@
       "regression / estimation"
     ],
     "openness_label": "Open",
-    "modelling_paradigm_key": "generative_hybrid",
-    "modelling_paradigm": "Any-to-any generative / hybrid multimodal system",
-    "modality_complexity_tier_key": "generalist",
-    "modality_complexity_tier": "Generalist models",
-    "modality_complexity_score": 4,
+    "modelling_paradigm_key": "transformer_masked",
+    "modelling_paradigm": "Transformer / masked-reconstruction encoder",
+    "modality_complexity_tier_key": "multi_modality",
+    "modality_complexity_tier": "Multi-modality encoders",
+    "modality_complexity_score": 2,
     "reported_downstream_task_count": 29,
-    "reported_downstream_task_count_basis": "curated_reported_evaluations"
+    "reported_downstream_task_count_basis": "primary_paper_reports_24_embedding_tasks_and_29_full_finetuning_tasks"
   },
   {
     "id": "satmamba",
@@ -1546,7 +1562,8 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 3,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2022
   },
   {
     "id": "ringmo-sense",
@@ -1581,7 +1598,8 @@
     "modality_complexity_tier": "Multi-modality encoders",
     "modality_complexity_score": 2,
     "reported_downstream_task_count": 2,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2023
   },
   {
     "id": "ringmo-aerial",
@@ -2304,7 +2322,8 @@
     "modality_complexity_tier": "Vision-language / MLLM",
     "modality_complexity_score": 3,
     "reported_downstream_task_count": 3,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2024
   },
   {
     "id": "lhrs-bot",
@@ -2381,7 +2400,8 @@
     "modality_complexity_tier": "Vision-language / MLLM",
     "modality_complexity_score": 3,
     "reported_downstream_task_count": 3,
-    "reported_downstream_task_count_basis": "task_label_count_fallback"
+    "reported_downstream_task_count_basis": "task_label_count_fallback",
+    "publication_year": 2024
   },
   {
     "id": "skysensegpt",

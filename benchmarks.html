@@ -21,7 +21,7 @@
     <div class="hero-content narrow">
       <p class="eyebrow">Benchmark datasets</p>
       <h1>Benchmarks and datasets</h1>
-      <p class="subtitle">Evaluation benchmarks, pre-training datasets, embedding resources, and dataset links detected from upstream EO-FM lists.</p>
+      <p class="subtitle">Evaluation benchmarks, pre-training datasets, and embedding resources for EO foundation models.</p>
     </div>
   </header>
 
@@ -33,9 +33,14 @@
         <input id="benchmarkSearch" type="search" placeholder="Search benchmark, dataset, task, modality, paper...">
         <select id="typeFilter"><option value="">All benchmark/dataset types</option></select>
         <select id="accessFilter"><option value="">All access types</option></select>
+        <select id="benchmarkYearFilter"><option value="">All years</option></select>
         <button id="benchmarkResetBtn">Reset</button>
       </div>
-      <div class="hint">Auto-detected from upstream benchmark, dataset, pre-training dataset, and embedding-data sections. Entries should be reviewed before being cited as verified.</div>
+    </section>
+
+    <section class="panel timeline-panel">
+      <div class="table-headline"><div><h2>Benchmark progression</h2><p class="muted">Number of benchmark and dataset releases by publication year.</p></div></div>
+      <div id="benchmarkTimeline" class="timeline-bars"></div>
     </section>
 
     <section class="panel table-panel full-width-panel">
@@ -50,6 +55,8 @@
           <thead>
             <tr>
               <th>Name</th>
+              <th>Year</th>
+              <th>Status</th>
               <th>Type</th>
               <th>Title / scope</th>
               <th>Tasks / attributes</th>
@@ -70,6 +77,6 @@
     <p>EO-FM Living Atlas · A curated living catalogue for Earth observation foundation models and benchmark datasets.</p>
   </footer>
 
-  <script src="benchmarks.js?v=20260706-3"></script>
+  <script src="benchmarks.js?v=20260707-4"></script>
 </body>
 </html>

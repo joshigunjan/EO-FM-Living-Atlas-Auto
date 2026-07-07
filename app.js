@@ -12,6 +12,8 @@ const els = {
   modalityFilter: document.getElementById("modalityFilter"),
   taskFilter: document.getElementById("taskFilter"),
   paradigmFilter: document.getElementById("paradigmFilter"),
+  yearFilter: document.getElementById("yearFilter"),
+  timeline: document.getElementById("modelTimeline"),
   resetBtn: document.getElementById("resetBtn"),
   clearSelection: document.getElementById("clearSelection"),
   tbody: document.querySelector("#catalogueTable tbody"),
@@ -67,12 +69,34 @@ function buildFilters() {
   const modalities = uniq(state.data.flatMap(d => d.modality_tags || []));
   const tasks = uniq(state.data.flatMap(d => d.task_tags || []));
   const paradigms = uniq(state.data.map(d => d.modelling_paradigm));
+  const years = [...new Set(state.data.map(d => d.publication_year).filter(Boolean))].sort((a,b) => b-a);
 
   for (const s of categories) els.categoryFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`);
   for (const o of openness) els.opennessFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(o)}">${escapeHtml(accessOptionLabel(o))}</option>`);
   for (const m of modalities) els.modalityFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`);
   for (const t of tasks) els.taskFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`);
   for (const p of paradigms) els.paradigmFilter.insertAdjacentHTML("beforeend", `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`);
+  for (const y of years) els.yearFilter.insertAdjacentHTML("beforeend", `<option value="${y}">${y}</option>`);
+}
+
+function renderTimeline() {
+  const counts = {};
+  state.data.forEach(d => { if (d.publication_year) counts[d.publication_year] = (counts[d.publication_year] || 0) + 1; });
+  const years = Object.keys(counts).map(Number).sort((a,b) => a-b);
+  const max = Math.max(1, ...years.map(y => counts[y]));
+  els.timeline.innerHTML = years.map(y => `
+    <button class="timeline-item" data-year="${y}" title="${counts[y]} model releases in ${y}">
+      <span class="timeline-count">${counts[y]}</span>
+      <span class="timeline-bar" style="height:${Math.max(12, Math.round(counts[y]/max*100))}%"></span>
+      <span class="timeline-year">${y}</span>
+    </button>`).join("") || '<span class="muted">No publication years recorded.</span>';
+  els.timeline.querySelectorAll(".timeline-item").forEach(btn => btn.addEventListener("click", () => {
+    els.yearFilter.value = btn.dataset.year; applyFilters();
+  }));
+}
+
+function reviewLabel(d) {
+  return String(d.review_status || "").startsWith("curated") ? "Reviewed" : "Auto-inferred";
 }
 
 function renderStats() {
@@ -91,7 +115,7 @@ function renderStats() {
 
 function rowText(d) {
   return [
-    d.name, d.category, d.scope, d.modelling_paradigm, d.input_modality, d.architecture, d.downstream_tasks,
+    d.name, d.publication_year, d.category, d.scope, d.modelling_paradigm, d.input_modality, d.architecture, d.downstream_tasks,
     d.training_scale, d.openness_text, d.fm_strength, d.notes, d.paper_url, d.code_url,
     d.weights_url, d.project_url,
     ...(d.modality_tags || []), ...(d.architecture_tags || []), ...(d.task_tags || [])
@@ -105,6 +129,7 @@ function applyFilters() {
   const mod = els.modalityFilter.value;
   const task = els.taskFilter.value;
   const paradigm = els.paradigmFilter.value;
+  const year = els.yearFilter.value;
 
   state.filtered = state.data.filter(d => {
     if (q && !rowText(d).includes(q)) return false;
@@ -113,6 +138,7 @@ function applyFilters() {
     if (mod && !(d.modality_tags || []).includes(mod)) return false;
     if (task && !(d.task_tags || []).includes(task)) return false;
     if (paradigm && d.modelling_paradigm !== paradigm) return false;
+    if (year && String(d.publication_year || "") !== year) return false;
     return true;
   });
   renderTable();
@@ -129,6 +155,8 @@ function renderTable() {
     const moreTasks = (d.task_tags || []).length > 5 ? `<span class="more">+${(d.task_tags || []).length - 5}</span>` : "";
     tr.innerHTML = `
       <td class="name"><span>${escapeHtml(d.name)}</span></td>
+      <td>${escapeHtml(d.publication_year || "—")}</td>
+      <td>${tag(reviewLabel(d), reviewLabel(d) === "Reviewed" ? "reviewed" : "inferred")}</td>
       <td>${escapeHtml(d.scope)}</td>
       <td>${tag(d.modelling_paradigm || "Unknown", "paradigm")}</td>
       <td>${(d.modality_tags || []).map(x => tag(x)).join("") || escapeHtml(truncate(d.input_modality, 80))}</td>
@@ -156,6 +184,8 @@ function renderDetails(d) {
   els.details.innerHTML = `
     <div class="detail-actions">${linkButton("Original paper", d.paper_url)}${linkButton("Code", d.code_url)}${linkButton("Weights", d.weights_url)}${linkButton("Project page", d.project_url)}</div>
     <div class="detail-section"><h3>Scientific scope</h3><p>${escapeHtml(d.scope)}</p></div>
+    <div class="detail-section"><h3>Publication year</h3><p>${escapeHtml(d.publication_year || "Unknown")}</p></div>
+    <div class="detail-section"><h3>Status</h3><p>${escapeHtml(reviewLabel(d))}</p></div>
     <div class="detail-section"><h3>Modelling paradigm</h3><p>${escapeHtml(d.modelling_paradigm || "Unknown")}</p></div>
     <div class="detail-section"><h3>Modalities</h3><p>${escapeHtml(d.input_modality)}</p><div>${(d.modality_tags || []).map(x => tag(x)).join("")}</div></div>
     <div class="detail-section"><h3>Architecture</h3><p>${escapeHtml(d.architecture)}</p><div>${(d.architecture_tags || []).map(x => tag(x, "arch")).join("")}</div></div>
@@ -186,7 +216,7 @@ async function init() {
   renderStats();
   renderTable();
 
-  [els.search, els.categoryFilter, els.opennessFilter, els.modalityFilter, els.taskFilter, els.paradigmFilter].forEach(el => {
+  [els.search, els.categoryFilter, els.opennessFilter, els.modalityFilter, els.taskFilter, els.paradigmFilter, els.yearFilter].forEach(el => {
     el.addEventListener("input", applyFilters);
     el.addEventListener("change", applyFilters);
   });
@@ -197,6 +227,7 @@ async function init() {
     els.modalityFilter.value = "";
     els.taskFilter.value = "";
     els.paradigmFilter.value = "";
+    els.yearFilter.value = "";
     applyFilters();
   });
   els.clearSelection.addEventListener("click", clearDetails);

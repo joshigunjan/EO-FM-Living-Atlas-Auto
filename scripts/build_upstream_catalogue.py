@@ -22,6 +22,7 @@ from public_fields import (
     clean_text,
     is_placeholder,
     landscape_score,
+    derive_publication_year,
 )
 from lib_utils import DATA, dump_json, infer_access, infer_architecture_tags, infer_modality_tags, load_json, slugify
 
@@ -38,7 +39,7 @@ SUPPLEMENT_PATH = DATA / "supplemental_catalogue.json"
 REPORT_PATH = DATA / "candidates" / "publication-report.json"
 
 FIELDNAMES = [
-    "id", "name", "scope", "category", "input_modality", "modality_tags", "architecture", "architecture_tags",
+    "id", "name", "publication_year", "scope", "category", "input_modality", "modality_tags", "architecture", "architecture_tags",
     "modelling_paradigm_key", "modelling_paradigm", "downstream_tasks", "task_tags", "training_scale",
     "openness", "openness_label", "openness_text", "paper_url", "code_url", "weights_url", "project_url",
     "modality_complexity_tier_key", "modality_complexity_tier", "modality_complexity_score",
@@ -83,11 +84,16 @@ def stage_from_candidate(c: dict, modality_tags: list[str], category: str, text:
 
     t = f"{category} {text}".lower()
     tags = {m.lower() for m in modality_tags}
-    if "vision-language" in t or "language" in t or "mllm" in t or "llm" in t or "text" in tags:
+    if "vision-language" in t or "vision language" in t or "mllm" in t or "llm" in t or "text" in tags:
         return "vision_language", "Vision-language / MLLM", 3
-    if "generative" in t or "agent" in t or "any-to-any" in t or "generalist" in t:
+    # Generalist is a capability tier, not a keyword in a paper title. Require
+    # explicit any-to-any / modality-to-modality behavior or a broad generative
+    # model with at least four recorded modalities.
+    if any(term in t for term in ["any-to-any", "modality-to-modality", "thinking-in-modalities", "sensor-agnostic"]):
         return "generalist", "Generalist models", 4
-    if len(tags) > 1 or "multi" in t or "sar" in tags and ("multispectral" in tags or "optical" in tags):
+    if "generative" in t and len(tags) >= 4:
+        return "generalist", "Generalist models", 4
+    if len(tags) > 1 or "multi-modality" in t or "multimodal" in t or ("sar" in tags and ("multispectral" in tags or "optical" in tags)):
         return "multi_modality", "Multi-modality encoders", 2
     if tags:
         return "single_modality", "Single-modality encoders", 1
@@ -129,227 +135,8 @@ def is_benchmark_like(c: dict) -> bool:
 
 
 
-BAD_MODEL_NAMES_PUBLIC = {"", "-", "—", "–", "n/a", "na", "none", "unknown", "entry", "unnamed candidate", "unnamed entry"}
-
-PAPER_TITLE_STARTS = (
-    "a ", "an ", "the ", "towards ", "toward ",
-    "a review", "review of", "survey of", "a survey",
-    "a genealogy", "challenges and applications",
-    "self-supervised learning of", "self-supervised vision transformers for",
-)
-
-
-def _clean_public_name(value: str) -> str:
-    value = str(value or "").strip()
-    if value.lower() in BAD_MODEL_NAMES_PUBLIC:
-        return ""
-    return value
-
-
-def _url_tail_name(url: str) -> str:
-    url = str(url or "").split("?")[0].rstrip("/")
-    if not url:
-        return ""
-    parts = [p for p in url.split("/") if p]
-    lower = url.lower()
-    if ("github.com" in lower or "huggingface.co" in lower) and len(parts) >= 2:
-        return _clean_public_name(parts[-1])
-    return ""
-
-
-def _title_prefix_name(title: str) -> str:
-    title = str(title or "").strip()
-    if ":" not in title:
-        return ""
-    prefix = _clean_public_name(title.split(":", 1)[0])
-    if not prefix:
-        return ""
-    low = prefix.lower()
-    if low.startswith(("a ", "an ", "the ", "towards ", "toward ", "review ", "survey ")):
-        return ""
-    if len(prefix.split()) > 5 or len(prefix) > 45:
-        return ""
-    return prefix
-
-
-def _looks_like_paper_title(name: str) -> bool:
-    n = str(name or "").strip()
-    low = n.lower()
-    normalized = low.replace("-", " ").replace("_", " ")
-    words = normalized.split()
-
-    bad_phrases = [
-        "agentic ai in remote sensing",
-        "brain inspired remote sensing foundation models",
-        "foundation models and open problems",
-        "open problems",
-        "genealogy of foundation models",
-        "charting new territories",
-        "awesome geospatial",
-        "awesome remote sensing",
-        "survey of",
-        "a survey",
-        "review of",
-        "a review",
-        "taxonomy",
-        "foundations taxonomy",
-        "challenges and applications",
-    ]
-
-    if any(phrase in normalized for phrase in bad_phrases):
-        return True
-
-    if low.startswith(("a review", "review ", "survey ", "a survey", "towards ", "toward ")):
-        return True
-
-    if low.startswith(("awesome-", "awesome_", "awesome ")):
-        return True
-
-    # Long sentence-like names are usually paper titles.
-    # Do not reject compact model names like A2-MAE, Prithvi-EO, SatMAE, Clay, AnySat.
-    if len(words) >= 6:
-        return True
-
-    return False
-
-
-def _has_model_like_name(name: str) -> bool:
-    n = _clean_public_name(name)
-    if not n:
-        return False
-    if _looks_like_paper_title(n):
-        return False
-
-    # Compact names are usually real model/framework names.
-    # Examples: A2-MAE, AgriFM, AnySat, Clay, SatMAE, Prithvi-EO.
-    if " " not in n and 2 <= len(n) <= 60:
-        return True
-
-    # Allow very short phrase names such as "Change-Agent" after normalization.
-    if len(n.replace("-", " ").replace("_", " ").split()) <= 3:
-        return True
-
-    return False
-
-
-def is_paper_only_candidate(c: dict) -> bool:
-    name = str(c.get("name") or "")
-    title = str(c.get("title") or "")
-    category = str(c.get("category") or "")
-    scope = str(c.get("scope") or "")
-
-    text = " ".join([name, title, category, scope]).lower()
-    normalized = text.replace("-", " ").replace("_", " ")
-
-    sections = []
-    for ev in c.get("source_evidence", []) or []:
-        if isinstance(ev, dict):
-            sections.append(str(ev.get("section") or "").lower())
-    section_text = " ".join(sections)
-
-    # These sections are not model catalogues.
-    if any(x in section_text for x in ["survey", "commentary", "review"]):
-        return True
-
-    bad_text = [
-        "survey",
-        "review",
-        "commentary",
-        "taxonomy",
-        "open problems",
-        "genealogy",
-        "charting new territories",
-        "awesome geospatial",
-        "awesome remote sensing",
-        "foundations taxonomy",
-    ]
-
-    if any(x in normalized for x in bad_text):
-        return True
-
-    if _looks_like_paper_title(name):
-        return True
-
-    has_model_link = bool(c.get("code_url") or c.get("weights_url") or c.get("project_url"))
-
-    # If there is no model/code/project link, require a compact model-like name.
-    if not has_model_link and not _has_model_like_name(name):
-        return True
-
-    return False
-
-def is_paper_only_candidate(c: dict) -> bool:
-    name = str(c.get("name") or "")
-    title = str(c.get("title") or "")
-    category = str(c.get("category") or "")
-    scope = str(c.get("scope") or "")
-
-    text = " ".join([name, title, category, scope]).lower()
-    normalized = text.replace("-", " ").replace("_", " ")
-
-    sections = []
-    for ev in c.get("source_evidence", []) or []:
-        if isinstance(ev, dict):
-            sections.append(str(ev.get("section") or "").lower())
-
-    section_text = " ".join(sections)
-
-    # Entire sections that are not model catalogues.
-    if any(x in section_text for x in ["survey", "commentary", "review"]):
-        return True
-
-    bad_text = [
-        "survey",
-        "review",
-        "commentary",
-        "taxonomy",
-        "open problems",
-        "genealogy",
-        "charting new territories",
-        "awesome geospatial",
-        "awesome remote sensing",
-        "foundations taxonomy",
-    ]
-
-    if any(x in normalized for x in bad_text):
-        return True
-
-    # No code/weights/project + long prose-like name = likely paper-only row.
-    has_model_link = bool(c.get("code_url") or c.get("weights_url") or c.get("project_url"))
-    if not has_model_link and len(name.replace("-", " ").split()) >= 5:
-        return True
-
-    return False
-
-def choose_public_model_name(c: dict) -> str:
-    if is_paper_only_candidate(c):
-        return ""
-    candidates = []
-
-    candidates.append(c.get("name", ""))
-
-    for alias in c.get("aliases", []) or []:
-        candidates.append(alias)
-
-    for field in ["code_url", "weights_url", "project_url"]:
-        candidates.append(_url_tail_name(c.get(field, "")))
-
-    candidates.append(_title_prefix_name(c.get("title", "")))
-
-    for ev in c.get("source_evidence", []) or []:
-        if isinstance(ev, dict):
-            candidates.append(ev.get("detected_name", ""))
-
-    for name in candidates:
-        name = _clean_public_name(name)
-        if not name:
-            continue
-        if _looks_like_paper_title(name):
-            continue
-        return name
-
-    return ""
-
+# Public inclusion is controlled by entry_type classification and curated-source precedence.
+# Legacy string filters were removed because they incorrectly rejected valid models.
 
 def to_catalogue_entry(c: dict, used_ids: Counter) -> dict:
     title = (c.get("title") or c.get("name") or "").strip()
@@ -388,7 +175,7 @@ def to_catalogue_entry(c: dict, used_ids: Counter) -> dict:
     stage_key, stage_label, stage_score = stage_from_candidate(c, modality_tags, category, raw_text)
     paradigm_key, paradigm_label = paradigm_from_candidate(c, architecture_tags, category, raw_text)
 
-    base_id = public_model_id(c) or slugify(c.get("id") or name)
+    base_id = slugify(c.get("id") or public_model_id(c) or name)
     used_ids[base_id] += 1
     entry_id = base_id if used_ids[base_id] == 1 else f"{base_id}-{used_ids[base_id]}"
 
@@ -403,6 +190,7 @@ def to_catalogue_entry(c: dict, used_ids: Counter) -> dict:
     return {
         "id": entry_id,
         "name": name,
+        "publication_year": derive_publication_year(c),
         "title": title,
         "scope": public_scope,
         "category": category,
@@ -504,10 +292,12 @@ def entry_keys(entry: dict) -> set[str]:
     keys = set()
     if entry.get("id"):
         keys.add("id:" + str(entry["id"]).lower())
-    if entry.get("name"):
+    if entry.get("name") and not entry.get("allow_versioned_release"):
         keys.add("name:" + slugify(str(entry["name"])))
     for field in ["paper_url", "code_url", "weights_url", "project_url", "primary_source_url"]:
         if field == "code_url" and entry.get("allow_shared_code_repo"):
+            continue
+        if field in {"paper_url", "primary_source_url"} and entry.get("allow_shared_paper_url"):
             continue
         value = str(entry.get(field) or "").strip().lower()
         if value:
@@ -553,16 +343,24 @@ def classify_candidate(c: dict) -> str:
     return entry_type
 
 
-def normalize_supplement_entry(entry: dict, used_ids: Counter) -> dict:
+def normalize_curated_entry(
+    entry: dict,
+    used_ids: Counter,
+    *,
+    review_status: str,
+    extraction_method: str,
+    source_name: str,
+) -> dict:
     candidate = dict(entry)
     candidate.setdefault("entry_type", "model")
-    candidate.setdefault("entry_type_reason", "Curated supplemental entry from primary public sources.")
-    candidate.setdefault("review_status", "curated_supplement")
+    candidate.setdefault("publication_year", derive_publication_year(candidate))
+    candidate.setdefault("entry_type_reason", "Curated model entry from reviewed primary sources.")
+    candidate.setdefault("review_status", review_status)
     candidate.setdefault("needs_review", False)
     candidate.setdefault("extraction_confidence", "high")
-    candidate.setdefault("extraction_method", "curated_supplement")
-    candidate.setdefault("source_names", ["Curated supplement"])
-    base_id = slugify(candidate.get("id") or candidate.get("name") or "supplement", fallback="supplement")
+    candidate.setdefault("extraction_method", extraction_method)
+    candidate.setdefault("source_names", [source_name])
+    base_id = slugify(candidate.get("id") or candidate.get("name") or "curated", fallback="curated")
     used_ids[base_id] += 1
     candidate["id"] = base_id if used_ids[base_id] == 1 else f"{base_id}-{used_ids[base_id]}"
     candidate.setdefault("openness_text", candidate.get("openness_label") or candidate.get("openness") or "Unknown")
@@ -603,13 +401,36 @@ def main() -> int:
                 "code_url": c.get("code_url", ""),
             })
 
+    # Curated entries take precedence over automatically inferred rows. This
+    # preserves reviewed modalities, task counts, architecture, version names,
+    # and tier assignments while still appending newly discovered models.
     supplement_entries = load_json(SUPPLEMENT_PATH, []) or []
-    supplemental_public_entries = []
-    for entry in supplement_entries:
-        if isinstance(entry, dict):
-            supplemental_public_entries.append(normalize_supplement_entry(entry, used_ids))
+    seed_entries = load_json(SEED_PATH, []) or []
+
+    supplemental_public_entries = [
+        normalize_curated_entry(
+            entry,
+            used_ids,
+            review_status="curated_supplement",
+            extraction_method="curated_supplement",
+            source_name="Curated supplement",
+        )
+        for entry in supplement_entries
+        if isinstance(entry, dict)
+    ]
+    seed_public_entries = [
+        normalize_curated_entry(
+            entry,
+            used_ids,
+            review_status="curated_seed",
+            extraction_method="curated_seed",
+            source_name="Manual curated seed catalogue",
+        )
+        for entry in seed_entries
+        if isinstance(entry, dict)
+    ]
     auto_entries = [to_catalogue_entry(c, used_ids) for c in model_candidates]
-    entries = merge_public_entries(supplemental_public_entries, auto_entries)
+    entries = merge_public_entries(supplemental_public_entries + seed_public_entries, auto_entries)
     entries.sort(key=lambda e: (e.get("category", ""), e.get("name", "").lower()))
 
     dump_json(OUT_PATH, entries)
@@ -624,13 +445,23 @@ def main() -> int:
     })
 
     metadata = load_json(META_PATH, {}) or {}
+    for stale_key in [
+        "catalogue_entries", "auto_candidates_published", "auto_candidates_held_for_review",
+        "paper_or_unnamed_candidates_held_for_review", "auto_model_candidates_detected",
+        "version", "generated_on", "latest_update",
+    ]:
+        metadata.pop(stale_key, None)
     metadata.update({
         "catalogue_mode": "entry_type_classified_upstream_catalogue",
         "entry_count": len(entries),
+        "model_year_count": sum(1 for entry in entries if entry.get("publication_year")),
+        "model_year_unknown_count": sum(1 for entry in entries if not entry.get("publication_year")),
         "auto_candidates_detected": len(candidates),
-        "auto_model_entries_published": len(entries),
+        "auto_model_entries_published": sum(1 for entry in entries if str(entry.get("review_status") or "").startswith("upstream")),
+        "curated_seed_entries_loaded": len(seed_public_entries),
+        "curated_supplement_entries_loaded": len(supplemental_public_entries),
         "entry_type_distribution": dict(type_counts),
-        "source": "Public catalogue generated automatically from upstream awesome-list sources. Entries are classified by the LLM (entry_type field) with section-based pre-classification as a fallback. Only 'model' entries appear here.",
+        "source": "Public catalogue merges reviewed curated entries with automatically classified upstream model entries. Curated rows take precedence when the same model is found automatically.",
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "review_note": "Entries classified as survey_review, paper_method, benchmark_dataset, or unknown are excluded from this catalogue and kept only in data/candidates/.",
         "manual_seed_catalogue": str(SEED_PATH.relative_to(DATA.parent)) if SEED_PATH.exists() else "",

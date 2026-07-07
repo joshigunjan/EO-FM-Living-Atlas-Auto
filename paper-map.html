@@ -41,14 +41,36 @@
     }
 
     .cluster-item {
-      width: 100%;
-      text-align: left;
-      border: 1px solid var(--line, #dbe3ef);
-      border-radius: 14px;
-      background: #fff;
-      padding: 12px 14px;
-      cursor: pointer;
-    }
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line, #dbe3ef);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink, #0f172a);
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.cluster-item:hover {
+  background: #f8fafc;
+  border-color: #2463eb;
+  color: #1d4ed8;
+}
+
+.cluster-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: inherit;
+}
+
+.cluster-item .muted {
+  display: block;
+  color: var(--muted, #64748b);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
 
     .cluster-item:hover {
       border-color: #2463eb;

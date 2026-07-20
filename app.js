@@ -80,6 +80,7 @@ function buildFilters() {
 }
 
 function renderTimeline() {
+if (!els.timeline) return;
   const counts = {};
   state.data.forEach(d => { if (d.publication_year) counts[d.publication_year] = (counts[d.publication_year] || 0) + 1; });
   const years = Object.keys(counts).map(Number).sort((a,b) => a-b);

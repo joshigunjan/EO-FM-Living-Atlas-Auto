@@ -943,3 +943,38 @@ body::before {
     white-space: normal;
   }
 }
+/* Landscape sidebar timeline */
+.side-timeline-panel {
+  margin: 14px 0 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.side-timeline-panel .table-headline {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.side-timeline-panel h2 {
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0 0 4px;
+}
+
+.side-timeline-panel .timeline-bars {
+  min-height: 135px;
+  padding: 10px 2px 2px;
+  gap: 0.32rem;
+}
+
+.side-timeline-panel .timeline-item {
+  min-width: 40px;
+  grid-template-rows: auto 86px auto;
+}
+
+.side-timeline-panel .timeline-bar {
+  width: 24px;
+  max-height: 86px;
+}

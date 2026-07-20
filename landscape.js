@@ -25,6 +25,8 @@ const L = {
   title: document.getElementById("landscapeTitle"),
   details: document.getElementById("landscapeDetails"),
   axisHint: document.getElementById("axisHint")
+  timelinePanel: document.getElementById("landscapeTimelinePanel"),
+  timeline: document.getElementById("modelTimeline"),
 };
 const OPENNESS_COLORS = {
   open: "#16a34a",
@@ -498,7 +500,35 @@ function shapeSvg(shape, cx, cy, r, cls = "", fill = "", stroke = "", strokeWidt
 function pointRadius(d) {
   return Math.max(6.5, Math.min(15, 5.5 + Math.sqrt(taskCount(d) + modalityCount(d)) * 1.5));
 }
+function renderLandscapeTimeline() {
+  if (!L.timeline) return;
 
+  const counts = {};
+  landscape.data.forEach(d => {
+    if (d.publication_year) {
+      counts[d.publication_year] = (counts[d.publication_year] || 0) + 1;
+    }
+  });
+
+  const years = Object.keys(counts).map(Number).sort((a, b) => a - b);
+  const max = Math.max(1, ...years.map(y => counts[y]));
+
+  L.timeline.innerHTML = years.map(y => `
+    <button class="timeline-item" data-year="${y}" title="${counts[y]} model releases in ${y}">
+      <span class="timeline-count">${counts[y]}</span>
+      <span class="timeline-bar" style="height:${Math.max(12, Math.round(counts[y] / max * 100))}%"></span>
+      <span class="timeline-year">${y}</span>
+    </button>
+  `).join("") || '<span class="muted">No publication years recorded.</span>';
+
+  L.timeline.querySelectorAll(".timeline-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      L.xMetric.value = "publication_year";
+      landscape.xMetric = "publication_year";
+      applyFilters();
+    });
+  });
+}
 function renderLandscape() {
   const w = 1160, h = 700;
   const m = { left: 92, right: 54, top: 46, bottom: 94 };
@@ -607,6 +637,9 @@ function renderLandscape() {
 
 function renderDetails(d) {
   landscape.selectedId = d.id;
+  if (L.timelinePanel) {
+  L.timelinePanel.style.display = "none";
+}
   const xMetric = METRICS[landscape.xMetric] || METRICS.modalities;
   const yMetric = METRICS[landscape.yMetric] || METRICS.tasks;
   L.title.textContent = d.name;
@@ -631,6 +664,7 @@ async function initLandscape() {
   landscape.filtered = landscape.data.slice();
   buildFilters();
   renderLegend();
+  renderLandscapeTimeline();
   renderLandscape();
   [L.search, L.open, L.modality, L.task, L.architecture, L.family, L.xMetric, L.yMetric].forEach(el => {
     el.addEventListener("input", applyFilters);
@@ -654,6 +688,9 @@ async function initLandscape() {
     L.labels.checked = false;
     landscape.labelMode = false;
     landscape.selectedId = null;
+    if (L.timelinePanel) {
+  L.timelinePanel.style.display = "";
+}
     L.title.textContent = "No model selected";
     L.details.className = "details empty";
     L.details.textContent = "Click a point on the landscape. The model summary and source links will open here.";

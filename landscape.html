@@ -72,11 +72,24 @@
         </div>
       </div>
 
-      <aside class="panel detail-panel landscape-detail-panel">
-        <p class="eyebrow dark">Selected model</p>
-        <h2 id="landscapeTitle">No model selected</h2>
-        <div id="landscapeDetails" class="details empty">Click a point on the landscape. The model summary and source links will open here.</div>
-      </aside>
+     <aside class="panel detail-panel landscape-detail-panel">
+  <p class="eyebrow dark">Selected model</p>
+  <h2 id="landscapeTitle">No model selected</h2>
+
+  <div id="landscapeTimelinePanel" class="side-timeline-panel">
+    <div class="table-headline">
+      <div>
+        <h2>Foundation model growth over time</h2>
+        <p class="muted">Recorded model releases by publication year.</p>
+      </div>
+    </div>
+    <div id="modelTimeline" class="timeline-bars"></div>
+  </div>
+
+  <div id="landscapeDetails" class="details empty">
+    Click a point on the landscape. The model summary and source links will open here.
+  </div>
+</aside>
     </section>
 
     <section class="panel compact-note"><b>Note.</b> Default positions use curated plotting fields; filters and axes are exploratory.</section>

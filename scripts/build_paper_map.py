@@ -5,33 +5,20 @@ Build a static semantic map of EO foundation-model and benchmark papers.
 The script:
 1. Reads data/catalogue.json and data/benchmarks.json.
 2. Collects one record per unique paper.
-3. Retrieves abstracts from arXiv, Crossref, OpenAlex, and optionally
-   Semantic Scholar.
+3. Retrieves abstracts from arXiv, Crossref, OpenAlex, and optionally Semantic Scholar.
 4. Creates OpenAI-compatible text embeddings.
 5. Reduces them to two dimensions with UMAP (PCA fallback).
 6. Clusters the original embeddings with K-Means.
-7. Generates concise TF-IDF cluster labels.
-8. Writes data/paper-map.json for a static GitHub Pages frontend.
+7. Writes data/paper-map.json for a static GitHub Pages frontend.
+
+Important change in this version:
+- TF-IDF keywords are kept as keywords only.
+- Public semantic-cluster names are never raw keyword strings such as
+  "benchmark · performance · olmoearth".
+- If the LLM naming step fails, curated keyword-based labels are used instead.
 
 The embedding endpoint is provider-independent. It can point to OpenAI,
 Blablador, LM Studio, or another OpenAI-compatible endpoint.
-
-Environment variables
----------------------
-EMBEDDING_MODEL
-    Required unless --allow-tfidf-fallback is used.
-EMBEDDING_API_KEY
-    Preferred API-key variable. Falls back to OPENAI_API_KEY and
-    LLM_BACKEND_AUTH_TOKEN.
-EMBEDDING_BASE_URL
-    Optional OpenAI-compatible base URL. Leave unset for the default
-    OpenAI endpoint.
-SEMANTIC_SCHOLAR_API_KEY
-    Optional. Used only as a final abstract-retrieval fallback.
-OPENALEX_MAILTO
-    Optional contact email sent to OpenAlex.
-CROSSREF_MAILTO
-    Optional contact email sent to Crossref.
 """
 
 from __future__ import annotations
@@ -46,7 +33,6 @@ import re
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
-from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -67,27 +53,31 @@ CACHE_DIR = DATA / "paper-map-cache"
 ABSTRACT_CACHE_PATH = CACHE_DIR / "abstracts.json"
 EMBEDDING_CACHE_PATH = CACHE_DIR / "embeddings.json"
 
+# Generic terms that are not useful as public cluster labels.
 GENERIC_CLUSTER_TERMS = {
-    "remote",
-    "sensing",
-    "earth",
-    "observation",
-    "model",
-    "models",
-    "foundation",
-    "image",
-    "images",
-    "data",
-    "dataset",
-    "datasets",
-    "task",
-    "tasks",
-    "paper",
-    "papers",
-    "approach",
-    "approaches",
-    "method",
-    "methods",
+    "remote", "sensing", "earth", "observation", "model", "models",
+    "foundation", "image", "images", "data", "dataset", "datasets",
+    "task", "tasks", "paper", "papers", "approach", "approaches",
+    "method", "methods", "using", "based", "towards", "toward",
+    "available", "existing", "various", "plus", "reported", "applications",
+}
+
+# Labels used when the LLM labeler is absent or returns a bad keyword string.
+# These are intentionally broad, readable themes for the public UI.
+CURATED_LABELS_BY_CURRENT_CLUSTER_ID = {
+    0: "Self-Supervised EO Encoders",
+    1: "Geospatial Reasoning and Agents",
+    2: "Remote-Sensing Vision Tasks",
+    3: "Representation Learning and Adaptation",
+    4: "Benchmarks and Evaluation",
+    5: "Vision-Language EO Models",
+    6: "Generative Geospatial Models",
+    7: "Scaling and Model Capacity",
+}
+
+BAD_LABEL_TOKENS = {
+    "olmoearth", "soundscape", "available", "existing", "various", "plus",
+    "performance · downstream", "learning · self", "vision-language · visual",
 }
 
 USER_AGENT = (
@@ -401,9 +391,7 @@ def enrich_abstracts(records: list[dict[str, Any]], offline: bool = False) -> No
             attempts.append(("Crossref", lambda: fetch_crossref_abstract(doi)))
             attempts.append(("OpenAlex", lambda: fetch_openalex_by_doi(doi)))
         if not offline:
-            attempts.append(
-                ("Semantic Scholar", lambda: fetch_semantic_scholar(record["paper_url"]))
-            )
+            attempts.append(("Semantic Scholar", lambda: fetch_semantic_scholar(record["paper_url"])))
 
         for source_name, operation in attempts:
             try:
@@ -417,8 +405,6 @@ def enrich_abstracts(records: list[dict[str, Any]], offline: bool = False) -> No
                 print(f"[abstract] {source_name} failed for {record['title']}: {exc}")
 
         if not abstract:
-            # Keep the paper in the map, but mark that the embedding is based on
-            # catalogue text rather than a primary-source abstract.
             abstract = clean_text(
                 " ".join(
                     part
@@ -629,17 +615,87 @@ def cluster_label_texts(
         names[cluster_id] = " · ".join(top_terms[:3]) or f"Cluster {cluster_id + 1}"
 
     return names, keywords
+
+
+def looks_like_bad_public_label(label: str) -> bool:
+    value = clean_text(label).strip().lower()
+    if not value:
+        return True
+    if "·" in value:
+        return True
+    if any(token in value for token in BAD_LABEL_TOKENS):
+        return True
+    words = value.split()
+    if len(words) < 2 or len(words) > 6:
+        return True
+    # A good label should usually look like title case, but allow acronyms.
+    if value == label.strip() and value.islower():
+        return True
+    return False
+
+
+def curated_label_for_cluster(
+    cluster_id: int,
+    keywords: list[str],
+    member_titles: list[str],
+) -> str:
+    text = " ".join(keywords + member_titles).lower()
+
+    if "vision-language" in text or "vlm" in text or "mllm" in text:
+        return "Vision-Language EO Models"
+    if "benchmark" in text or "evaluation" in text or "dataset" in text:
+        return "Benchmarks and Evaluation"
+    if "generation" in text or "diffusion" in text or "text2earth" in text or "generative" in text:
+        return "Generative Geospatial Models"
+    if "reasoning" in text or "agent" in text or "urban" in text:
+        return "Geospatial Reasoning and Agents"
+    if "classification" in text or "segmentation" in text or "detection" in text:
+        return "Remote-Sensing Vision Tasks"
+    if "parameter" in text or "scaling" in text or "capacity" in text:
+        return "Scaling and Model Capacity"
+    if "representation learning" in text or "adaptation" in text or "geography-aware" in text:
+        return "Representation Learning and Adaptation"
+    if "self-supervised" in text or "pre-training" in text or "pretraining" in text or "masked" in text:
+        return "Self-Supervised EO Encoders"
+
+    return CURATED_LABELS_BY_CURRENT_CLUSTER_ID.get(
+        cluster_id,
+        f"Semantic Theme {cluster_id + 1}",
+    )
+
+
+def curated_cluster_names(
+    records: list[dict[str, Any]],
+    labels: np.ndarray,
+    keywords: dict[int, list[str]],
+) -> dict[int, str]:
+    names: dict[int, str] = {}
+    for cluster_id in sorted(keywords):
+        member_titles = [
+            records[index]["title"]
+            for index, value in enumerate(labels)
+            if int(value) == cluster_id
+        ][:20]
+        names[cluster_id] = curated_label_for_cluster(
+            cluster_id,
+            keywords.get(cluster_id, []),
+            member_titles,
+        )
+    return names
+
+
 def improve_cluster_names_with_llm(
     records: list[dict[str, Any]],
     labels: np.ndarray,
     fallback_names: dict[int, str],
     keywords: dict[int, list[str]],
-) -> dict[int, str]:
+) -> tuple[dict[int, str], str]:
+    curated_names = curated_cluster_names(records, labels, keywords)
     model = os.getenv("CLUSTER_LABEL_MODEL", "").strip()
 
     if not model:
-        print("[clusters] CLUSTER_LABEL_MODEL not configured; using TF-IDF labels.")
-        return fallback_names
+        print("[clusters] CLUSTER_LABEL_MODEL not configured; using curated labels.")
+        return curated_names, "curated-keyword-labels"
 
     api_key = (
         os.getenv("EMBEDDING_API_KEY")
@@ -649,23 +705,22 @@ def improve_cluster_names_with_llm(
     ).strip()
 
     if not api_key:
-        print("[clusters] No API key available; using TF-IDF labels.")
-        return fallback_names
+        print("[clusters] No API key available; using curated labels.")
+        return curated_names, "curated-keyword-labels"
 
     base_url = os.getenv("EMBEDDING_BASE_URL", "").strip()
 
     cluster_descriptions: list[dict[str, Any]] = []
-
     for cluster_id in sorted(fallback_names):
         member_titles = [
             records[index]["title"]
             for index, value in enumerate(labels)
             if int(value) == cluster_id
-        ][:12]
-
+        ][:14]
         cluster_descriptions.append(
             {
                 "cluster_id": cluster_id,
+                "suggested_label_if_unsure": curated_names.get(cluster_id),
                 "keywords": keywords.get(cluster_id, []),
                 "paper_titles": member_titles,
             }
@@ -682,20 +737,23 @@ Rules:
 - Use Title Case.
 - Make every label unique.
 - Describe the scientific or methodological theme.
-- Avoid generic labels such as Remote Sensing, Earth Observation,
-  Foundation Models, Models, Papers, Data, or Methods by themselves.
-- Prefer labels such as:
-  Self-Supervised Representation Learning
-  Vision-Language Reasoning
-  Generative Satellite Imagery
-  Multisensor Fusion
-  Geospatial Agents
-  Benchmarks and Training Datasets
-  Urban Mapping and Geolocation
+- Do not output keyword lists joined by dots, commas, slashes, or semicolons.
+- Avoid generic labels such as Remote Sensing, Earth Observation, Foundation Models,
+  Models, Papers, Data, Methods, Performance, Available, Existing, or Learning.
+- If a cluster is unclear, use the provided suggested_label_if_unsure.
+- Good examples:
+  Self-Supervised EO Encoders
+  Vision-Language EO Models
+  Generative Geospatial Models
+  Multisensor Foundation Models
+  Geospatial Reasoning and Agents
+  Benchmarks and Evaluation
+  Representation Learning and Adaptation
+  Scaling and Model Capacity
 
 Return only one JSON object mapping cluster IDs to labels.
 Example:
-{{"0": "Vision-Language Reasoning", "1": "Multisensor Fusion"}}
+{{"0": "Vision-Language EO Models", "1": "Multisensor Foundation Models"}}
 
 Clusters:
 {json.dumps(cluster_descriptions, ensure_ascii=False, indent=2)}
@@ -705,10 +763,8 @@ Clusters:
         from openai import OpenAI
 
         client_args: dict[str, Any] = {"api_key": api_key}
-
         if base_url:
             client_args["base_url"] = base_url.rstrip("/")
-
         client = OpenAI(**client_args)
 
         response = client.chat.completions.create(
@@ -718,7 +774,7 @@ Clusters:
                     "role": "system",
                     "content": (
                         "You create concise, accurate labels for clusters of "
-                        "scientific publications."
+                        "scientific publications. Return only valid JSON."
                     ),
                 },
                 {"role": "user", "content": prompt},
@@ -728,7 +784,6 @@ Clusters:
 
         content = response.choices[0].message.content or ""
         match = re.search(r"\{.*\}", content, flags=re.S)
-
         if not match:
             raise ValueError("The cluster-label model did not return a JSON object.")
 
@@ -739,27 +794,19 @@ Clusters:
         for cluster_id in sorted(fallback_names):
             candidate = clean_text(generated.get(str(cluster_id), ""))
             candidate = candidate.strip(" .:-")
-            word_count = len(candidate.split())
-
-            if (
-                not candidate
-                or word_count < 2
-                or word_count > 6
-                or len(candidate) > 70
-                or candidate.lower() in used_labels
-            ):
-                candidate = fallback_names[cluster_id]
-
+            if looks_like_bad_public_label(candidate) or candidate.lower() in used_labels:
+                candidate = curated_names[cluster_id]
             improved[cluster_id] = candidate
             used_labels.add(candidate.lower())
 
-        print(f"[clusters] Generated readable labels with {model}")
-        return improved
+        print(f"[clusters] Generated readable labels with {model}; curated fallback active.")
+        return improved, "llm-with-curated-fallback"
 
     except Exception as exc:
         print(f"[clusters] LLM cluster naming failed: {exc}")
-        print("[clusters] Continuing with TF-IDF fallback labels.")
-        return fallback_names
+        print("[clusters] Continuing with curated labels, not TF-IDF labels.")
+        return curated_names, "curated-keyword-labels"
+
 
 def build_output(
     records: list[dict[str, Any]],
@@ -770,13 +817,14 @@ def build_output(
     clusterer = KMeans(n_clusters=n_clusters, random_state=42, n_init=20)
     labels = clusterer.fit_predict(embeddings)
     coordinates, reduction_method = reduce_embeddings(embeddings)
-    cluster_names, cluster_keywords = cluster_label_texts(records, labels)
-    cluster_names = improve_cluster_names_with_llm(
-    records,
-    labels,
-    cluster_names,
-    cluster_keywords,
-)
+    tfidf_names, cluster_keywords = cluster_label_texts(records, labels)
+    cluster_names, label_method = improve_cluster_names_with_llm(
+        records,
+        labels,
+        tfidf_names,
+        cluster_keywords,
+    )
+
     points = []
     for index, record in enumerate(records):
         cluster_id = int(labels[index])
@@ -827,11 +875,7 @@ def build_output(
         "clustering": {
             "method": "kmeans",
             "cluster_count": n_clusters,
-            "label_method": (
-    "llm-with-tfidf-fallback"
-    if os.getenv("CLUSTER_LABEL_MODEL")
-    else "tfidf"
-),
+            "label_method": label_method,
         },
         "clusters": clusters,
         "points": points,

@@ -24,10 +24,12 @@ const L = {
   familyLegend: document.getElementById("familyLegend"),
   title: document.getElementById("landscapeTitle"),
   details: document.getElementById("landscapeDetails"),
-  axisHint: document.getElementById("axisHint")
-  timelinePanel: document.getElementById("landscapeTimelinePanel"),
+  timelinePanel: documenth9xeim"
+  legend: document.getElementById("landscapeLegend"),
+  familyLegend: document.getElementById(".getElementById("landscapeTimelinePanel"),
   timeline: document.getElementById("modelTimeline"),
-};
+  axisHint: document.getElementById("axisHint")
+};};
 const OPENNESS_COLORS = {
   open: "#16a34a",
   partial: "#f59e0b",

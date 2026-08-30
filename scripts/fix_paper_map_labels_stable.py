@@ -7,14 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PAPER_MAP = ROOT / "data" / "paper-map.json"
 
 STABLE_CLUSTER_LABELS = {
-    0: "Self-Supervised EO Encoders",
-    1: "Geospatial Reasoning and Agents",
-    2: "Remote-Sensing Vision Tasks",
-    3: "Representation Learning and Adaptation",
-    4: "Benchmarks and Evaluation",
-    5: "Vision-Language EO Models",
-    6: "Generative Geospatial Models",
-    7: "Scaling and Model Capacity",
+    0: "Representation and Pretraining",
+    1: "Vision-Language and Geospatial Reasoning",
+    2: "Multimodal and Sensor Fusion",
+    3: "Generative and Simulation Models",
+    4: "Benchmarks, Datasets, and Evaluation",
+    5: "Application and Task-Specific EO Models",
 }
 
 data = json.loads(PAPER_MAP.read_text(encoding="utf-8"))

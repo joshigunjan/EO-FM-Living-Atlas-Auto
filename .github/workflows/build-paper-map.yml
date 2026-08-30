@@ -54,17 +54,16 @@ jobs:
 
       - name: Build semantic paper map
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           EMBEDDING_API_KEY: ${{ secrets.EMBEDDING_API_KEY }}
           EMBEDDING_BASE_URL: ${{ vars.EMBEDDING_BASE_URL }}
-          EMBEDDING_MODEL: ${{ vars.EMBEDDING_MODEL || 'text-embedding-3-small' }}
+          EMBEDDING_MODEL: ${{ vars.EMBEDDING_MODEL || 'alias-qwen3-8b-embeddings' }}
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
           OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
           CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
-          CLUSTER_LABEL_MODEL: ${{ vars.CLUSTER_LABEL_MODEL || 'alias-qwen36-35b' }}
           PAPER_MAP_CLUSTER_COUNT: ${{ vars.PAPER_MAP_CLUSTER_COUNT || '8' }}
         run: |
           python scripts/build_paper_map.py
+          python scripts/fix_paper_map_labels_stable.py
 
       - name: Commit generated semantic map
         run: |

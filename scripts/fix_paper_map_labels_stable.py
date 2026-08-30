@@ -1,20 +1,12 @@
 #!/usr/bin/env python3
-"""Fix public semantic-cluster labels in data/paper-map.json.
-
-Run from the repository root:
-    python scripts/fix_paper_map_labels_stable.py
-
-This does not recompute embeddings, UMAP, or KMeans. It only applies stable
-public labels by cluster id and synchronizes each point's cluster_label field.
-"""
-from __future__ import annotations
 
 import json
 from pathlib import Path
 
-PATH = Path("data/paper-map.json")
+ROOT = Path(__file__).resolve().parents[1]
+PAPER_MAP = ROOT / "data" / "paper-map.json"
 
-STABLE_LABELS_BY_CLUSTER_ID = {
+STABLE_CLUSTER_LABELS = {
     0: "Self-Supervised EO Encoders",
     1: "Geospatial Reasoning and Agents",
     2: "Remote-Sensing Vision Tasks",
@@ -25,23 +17,34 @@ STABLE_LABELS_BY_CLUSTER_ID = {
     7: "Scaling and Model Capacity",
 }
 
-payload = json.loads(PATH.read_text(encoding="utf-8"))
+data = json.loads(PAPER_MAP.read_text(encoding="utf-8"))
 
-labels_seen = set()
-for cluster in payload.get("clusters", []):
+for cluster in data.get("clusters", []):
     cluster_id = int(cluster["id"])
-    label = STABLE_LABELS_BY_CLUSTER_ID.get(cluster_id, f"Semantic Theme {cluster_id + 1}")
-    cluster["label"] = label
-    labels_seen.add(cluster_id)
-
-for point in payload.get("points", []):
-    cluster_id = int(point["cluster_id"])
-    point["cluster_label"] = STABLE_LABELS_BY_CLUSTER_ID.get(
+    cluster["label"] = STABLE_CLUSTER_LABELS.get(
         cluster_id,
-        f"Semantic Theme {cluster_id + 1}",
+        f"Semantic Cluster {cluster_id + 1}",
     )
 
-payload.setdefault("clustering", {})["label_method"] = "curated-stable-labels"
-PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+label_by_id = {
+    int(cluster["id"]): cluster["label"]
+    for cluster in data.get("clusters", [])
+}
 
-print(f"Updated {PATH} with stable labels for {len(labels_seen)} clusters.")
+for point in data.get("points", []):
+    cluster_id = int(point["cluster_id"])
+    point["cluster_label"] = label_by_id.get(
+        cluster_id,
+        f"Semantic Cluster {cluster_id + 1}",
+    )
+
+data.setdefault("clustering", {})["label_method"] = "curated-stable"
+
+PAPER_MAP.write_text(
+    json.dumps(data, indent=2, ensure_ascii=False),
+    encoding="utf-8",
+)
+
+print("Updated stable paper-map labels:")
+for cluster in data.get("clusters", []):
+    print(f'{cluster["id"]}: {cluster["label"]} ({cluster["size"]} papers)')
